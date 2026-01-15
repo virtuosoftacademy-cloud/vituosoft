@@ -1,14 +1,13 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Host_Grotesk, Sofia_Sans_Condensed } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const Sofia_Sans_Cond = Sofia_Sans_Condensed({
+  variable: "--font-sofia-condensed-sans",
+  weight:"700"
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const Host_Grot = Host_Grotesk({
+  variable: "--font-host-grotesk",
 });
 
 export const metadata = {
@@ -20,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${Sofia_Sans_Cond.variable} ${Host_Grot.variable} antialiased`}
       >
         {children}
       </body>
