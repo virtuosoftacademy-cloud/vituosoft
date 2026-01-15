@@ -3,11 +3,13 @@ import "./globals.css";
 
 const Sofia_Sans_Cond = Sofia_Sans_Condensed({
   variable: "--font-sofia-condensed-sans",
-  weight:"700"
+  weight: ["700"],
+  subsets: ['latin']
 });
 
 const Host_Grot = Host_Grotesk({
-  variable: "--font-host-grotesk",
+  variable: "--font-host-grotesk-sans",
+  subsets: ['latin']
 });
 
 export const metadata = {
