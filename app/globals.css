@@ -46,11 +46,10 @@
 }
 
 body{
-  font-family: var(--font-sofia-condensed-sans),sans-serif;
+  font-family: var(--font-host-grotesk-sans),sans-serif;
 }
 h1,h2,h3{
   font-family: var(--font-host-grotesk-sans),sans-serif;
-  font-style: italic;
 }
 
 :root {
@@ -130,3 +129,5 @@ h1,h2,h3{
     @apply bg-background text-foreground;
   }
 }
+
+

@@ -9,6 +9,7 @@ const Sofia_Sans_Cond = Sofia_Sans_Condensed({
 
 const Host_Grot = Host_Grotesk({
   variable: "--font-host-grotesk-sans",
+  weight: ["300"],
   subsets: ['latin']
 });
 
