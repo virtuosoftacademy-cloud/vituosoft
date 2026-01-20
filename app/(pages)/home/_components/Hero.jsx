@@ -11,7 +11,7 @@ import { HeroRegular, Italic, Regular } from "./Styles/StyleClasses"
 function Hero() {
   return (
     <>
-      <section className="relative mt-30">
+      <section className="relative mt-30 lg:mt-50">
         <div className="absolute inset-0">
           {/* <div style={{ width: '100%', height: '600px', position: 'relative' }}>
             <PixelSnow
@@ -31,7 +31,7 @@ function Hero() {
               <div className="flex flex-row lg:gap-4 text-3xl lg:text-[62px] items-baseline lg:-mt-7">
                 into
                 <h3 className={Italic}>Impact</h3>
-                <div className="bg-[#FF5500] rounded-full size-2 lg:size-4 mt-5" />
+                <div className="bg-chart-1 rounded-full size-2 lg:size-4 mt-5" />
               </div>
             </div>
           </div>
