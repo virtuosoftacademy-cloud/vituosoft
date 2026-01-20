@@ -54,12 +54,12 @@ h1,h2,h3{
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --foreground: oklch(17.00% 0.041 259.72);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(35.57% 0.157 261.35); /*Background Options (Gradients)*/
+  --primary: oklch(50.04% 0.232 262.03); /*Background Options (Gradients)*/
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);

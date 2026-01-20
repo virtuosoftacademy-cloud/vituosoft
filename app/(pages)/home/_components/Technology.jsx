@@ -70,7 +70,7 @@ function Technology() {
                             <div
                                 className="
             pointer-events-none absolute inset-0 rounded-[15px]
-            bg-linear-to-b from-[#005BFF] to-white p-0.5 -z-10
+            bg-linear-to-b from-primary to-white p-0.5 -z-10
           "
                             >
                                 <div className="h-full w-full rounded-[13px] bg-white" />
@@ -154,7 +154,6 @@ function Technology() {
                                             src={value.imageSrc}
                                             alt={value.alt}
                                             className="h-auto w-[100] sm:w-[110] lg:w-[120] mx-auto"
-                                            priority={index === 0}
                                         />
                                     </div>
 
