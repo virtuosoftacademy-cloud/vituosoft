@@ -42,7 +42,7 @@ export default function Nav() {
   }, []);
 
   const bg_animation =
-    "px-6 lg:px-10 w-[85%] bg-[#1B232E] py-8 rounded-2xl top-[69px] text-white shadow-[0_12px_35px_rgba(0,0,0,0.25)]";
+    "px-6 lg:px-10 w-[85%] bg-foreground py-8 rounded-2xl top-[69px] text-white shadow-[0_12px_35px_rgba(0,0,0,0.25)]";
 
   const services = [
     {

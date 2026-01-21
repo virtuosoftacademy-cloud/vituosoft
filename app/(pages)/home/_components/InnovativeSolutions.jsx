@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { CommonHead, HeroRegular, Italic } from "./Styles/StyleClasses"
+import { CommonHead, HeroRegular, Italic } from "../../../../components/Styles/StyleClasses"
 import Link from "next/link"
 import { cn } from "@/lib/utils";
 import { Card } from "@/components/ui/card";

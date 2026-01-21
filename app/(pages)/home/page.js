@@ -6,6 +6,7 @@ import LogoCloud from "./_components/LogoCloud"
 import { ReactLenis } from 'lenis/react'
 import Technology from "./_components/Technology"
 import Cta from "@/components/common/Cta"
+import Faq from "@/components/common/Faq"
 function Home() {
   return (
     <>
@@ -15,6 +16,9 @@ function Home() {
           <LogoCloud />
           <InnovativeSolutions />
           <Technology />
+          <div>
+          <Faq />
+          </div>
           <Cta />
         </div>
       </ReactLenis>

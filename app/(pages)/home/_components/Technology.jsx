@@ -1,7 +1,7 @@
 'use client'
 
 import { Card } from "@/components/ui/card"
-import { CommonHead } from "./Styles/StyleClasses"
+import { CommonHead } from "../../../../components/Styles/StyleClasses"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 
@@ -59,7 +59,7 @@ function Technology() {
         flex justify-start md:justify-center lg:justify-start
         py-6 md:py-8 lg:py-10
       "
-                    >   
+                    >
                         <Card
                             className="group relative w-full max-w-[380] lg:max-w-[380] rounded-2xl bg-white p-7 sm:p-8 lg:p-9
             shadow-[0_5px_15px_rgba(0,0,0,0.05)]
@@ -115,17 +115,17 @@ function Technology() {
                         </Card>
                     </div>
                 </div>
-                    <section
-                        className="
+                <section
+                    className="
         grid grid-cols-1 lg:grid-cols-3 justify-center gap-8 sm:gap-9 lg:gap-6 
         py-12 sm:py-14 lg:py-16
         bg-white
       "
-                    >
-                        {values.map((value, index) => (
-                            <div
-                                key={index}
-                                className="
+                >
+                    {values.map((value, index) => (
+                        <div
+                            key={index}
+                            className="
             group relative
             w-full max-w-[380] lg:max-w-[380]
             rounded-2xl bg-white
@@ -135,53 +135,53 @@ function Technology() {
             hover:-translate-y-1.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]
             overflow-hidden
           "
-                            >
-                                {/* Gradient border – reliable method */}
-                                <div
-                                    className="
+                        >
+                            {/* Gradient border – reliable method */}
+                            <div
+                                className="
               pointer-events-none absolute inset-0 rounded-2xl
               bg-linear-to-b from-blue-600 to-white p-0.5 -z-10
             "
-                                >
-                                    <div className="h-full w-full rounded-[14px] bg-white" />
+                            >
+                                <div className="h-full w-full rounded-[14px] bg-white" />
+                            </div>
+
+                            {/* Content */}
+                            <div className="relative z-10 space-y-5 sm:space-y-6">
+                                {/* Icon */}
+                                <div className="transition-transform duration-400 group-hover:-translate-y-7">
+                                    <img
+                                        src={value.imageSrc}
+                                        alt={value.alt}
+                                        className="h-auto w-[100] sm:w-[110] lg:w-[120] mx-auto"
+                                    />
                                 </div>
 
-                                {/* Content */}
-                                <div className="relative z-10 space-y-5 sm:space-y-6">
-                                    {/* Icon */}
-                                    <div className="transition-transform duration-400 group-hover:-translate-y-7">
-                                        <img
-                                            src={value.imageSrc}
-                                            alt={value.alt}
-                                            className="h-auto w-[100] sm:w-[110] lg:w-[120] mx-auto"
-                                        />
-                                    </div>
-
-                                    {/* Title */}
-                                    <h3
-                                        className="
+                                {/* Title */}
+                                <h3
+                                    className="
                 font-['Sofia_Sans_Condensed'] italic font-bold
                 text-4xl sm:text-5xl lg:text-[47px]
                 leading-tight text-gray-900
               "
-                                    >
-                                        {value.title}
-                                    </h3>
+                                >
+                                    {value.title}
+                                </h3>
 
-                                    {/* Description */}
-                                    <p
-                                        className="
+                                {/* Description */}
+                                <p
+                                    className="
                 font-['Host_Grotesk']
                 text-base sm:text-[15.5px] lg:text-[16px]
                 leading-relaxed text-gray-600
               "
-                                    >
-                                        {value.description}
-                                    </p>
-                                </div>
+                                >
+                                    {value.description}
+                                </p>
                             </div>
-                        ))}
-                    </section>
+                        </div>
+                    ))}
+                </section>
 
             </div>
         </>

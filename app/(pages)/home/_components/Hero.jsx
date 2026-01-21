@@ -1,13 +1,11 @@
-'use client'
 
 import CountUp from "@/components/ui/CountUp"
-import { Dot } from "lucide-react"
 import Star from '@/public/assets/Images/star.png'
 import Fire from '@/public/assets/Images/fire.png'
 import Tic from '@/public/assets/Images/tic.png'
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { HeroRegular, Italic, Regular } from "./Styles/StyleClasses"
+import { HeroRegular, Italic} from "../../../../components/Styles/StyleClasses"
 function Hero() {
   return (
     <>

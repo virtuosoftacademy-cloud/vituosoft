@@ -1,6 +1,7 @@
 import { Host_Grotesk, Sofia_Sans_Condensed } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/common/Nav";
+import Footer from "@/components/common/Footer";
 
 const Sofia_Sans_Cond = Sofia_Sans_Condensed({
   variable: "--font-sofia-condensed-sans",
@@ -23,12 +24,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body
         className={`${Sofia_Sans_Cond.variable} ${Host_Grot.variable} antialiased`}
       >
         <Nav/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
