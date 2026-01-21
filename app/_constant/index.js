@@ -230,6 +230,7 @@ export const socialLinks = [
         img: 'https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/Group-1000001552.png',
     },
 ];
+
 // FAQ Data for Home Page
 export const Faq_Home = [
     {

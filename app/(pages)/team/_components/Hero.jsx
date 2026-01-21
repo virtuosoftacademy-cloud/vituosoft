@@ -1,14 +1,14 @@
 'use client'
 
 import { CommonHead, HeroHead, HeroHeadPages, HeroRegular, Italic } from "@/components/Styles/StyleClasses"
-import OurTeamImg from '@/public/assets/Images/ourteam.png'
+import OurTeamImg from '@/public/assets/Images/team/ourteam.png'
 import Image from "next/image"
 function Hero() {
     return (
         <div className="relative mt-30 max-w-7xl lg:mt-50 mx-auto">
             <div className="flex justify-center items-center flex-col h-80 px-10 text-center">
                 <div className="flex flex-col justify-center items-center text-6xl">
-                    <h4 className={HeroRegular}>Meet the Visionaries Of</h4>
+                    <h4 className={`${HeroRegular}`}>Meet the Visionaries Of</h4>
                     <h2 className={`py-2 ${HeroHeadPages}`}>
                         <strong className="flex flex-row gap-1 lg:gap-2">
                             <em>
