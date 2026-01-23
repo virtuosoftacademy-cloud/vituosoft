@@ -1,0 +1,8 @@
+.hs-text {
+  font-family: var(--font-host-grotesk), sans-serif;
+  font-size: clamp(5rem, 18vw, 14rem);
+  font-weight: 900;
+  color: #000;
+  white-space: nowrap;
+  line-height: 1;
+}
