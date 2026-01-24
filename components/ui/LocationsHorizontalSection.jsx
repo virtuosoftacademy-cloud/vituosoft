@@ -19,22 +19,12 @@ export default function LocationsHorizontalSection() {
 
   useEffect(() => {
     function updateOffset() {
-      if (typeof window === "undefined") return;
       const width = window.innerWidth;
 
-      if (width < 640) {
-        // Mobile phones
-        setStartOffset(width * 0.4);
-      } else if (width >= 640 && width < 1024) {
-        // Tablets / small laptops
-        setStartOffset(width * 0.25);
-      } else if (width >= 1024 && width < 1280) {
-        // Laptops
-        setStartOffset(width * 0.3);
-      } else {
-        // Large desktops
-        setStartOffset(width * 0.2);
-      }
+      if (width < 640) setStartOffset(width * 0.4);
+      else if (width < 1024) setStartOffset(width * 0.25);
+      else if (width < 1280) setStartOffset(width * 0.3);
+      else setStartOffset(width * 0.2);
     }
 
     updateOffset();
@@ -44,11 +34,19 @@ export default function LocationsHorizontalSection() {
 
   return (
     <HorizontalScrollWrapper
-      height="60vh"          // laptop / desktop height
-      mobileHeight="55vh"    // mobile height
+      height="60vh"
+      mobileHeight="55vh"
       startOffset={startOffset}
     >
-    <div className="flex items-center gap-8 ml-[-20vw] mt-20 sm:mt-0 sm:ml-[-10vw] lg:ml-[-7%] pr-12 sm:pr-16 lg:pr-24 pb-12 min-h-full">
+     <div className="
+  flex items-center gap-8
+  max-[639px]:ml-[-20vw]
+  sm:ml-[-15vw]
+  lg:ml-[-7%]
+  pr-20 sm:pr-16 lg:pr-24
+  pb-12 min-h-full
+">
+
 
         {/* LEFT TEXT */}
         <div className="min-w-[280px] sm:min-w-[360px]">
@@ -76,9 +74,8 @@ export default function LocationsHorizontalSection() {
 
             <div className="absolute inset-x-0 bottom-6 flex justify-center">
               <span className="text-white text-base sm:text-xl font-bold tracking-wide">
-  {loc.name}
-</span>
-
+                {loc.name}
+              </span>
             </div>
           </div>
         ))}

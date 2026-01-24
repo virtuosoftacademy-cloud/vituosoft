@@ -231,13 +231,13 @@ export default function AboutUsPage() {
     alt="Virtuosoft Logo"
     width={160}            // base size for desktop
     height={120}
-    className="w-[120px] sm:w-[140px] md:w-[160px] md:mt-[-20px] h-auto"  // responsive width
+    className="w-[100px] sm:w-[140px] md:w-[160px] md:mt-[-20px] h-auto"  // responsive width
     priority
   />
 </div>
 
 {/* MISSION TEXT */}
-<p className="mt-10 md:mt-20 max-w-3xl mx-auto text-center font-host text-lg sm:text-xl md:text-[25px] px-4 text-[#333]">
+<p className="mt-10 md:mt-20 max-w-3xl mx-auto text-center font-host text-sm sm:text-xl md:text-[25px] px-4 text-[#333]">
   At <span className="font-bold">Virtuosoft</span>, we focus on human values over
   traditional KPIs and profitability. Our mission is to deliver innovative
   software solutions that drive success for both clients and employees.
@@ -251,7 +251,7 @@ export default function AboutUsPage() {
 
       {/* GROWTH HEADER */}
       <div className="mt-16 md:mt-20 font-host px-4 ml-10 md:px-6 md:ml-20 text-left  md:text-left">
-        <h2 className="text-3xl md:text-5xl lg:text-6xl  font-light text-[#2B3439]">
+        <h2 className="text-2xl sm:text-sm md:text-5xl lg:text-6xl  font-light text-[#2B3439]">
           Driven by <strong>Growth</strong>
           <span className="inline-block w-3 h-3 bg-orange-500  rounded-full align-middle ml-2"></span>
         </h2>
@@ -260,7 +260,7 @@ export default function AboutUsPage() {
           Our Ongoing <strong>Rise</strong>
         </span>
 
-        <h3 className=" mt-1 sm:mt-3 text-3xl md:text-5xl lg:text-6xl font-semibold text-gray-300 leading-normal">
+        <h3 className=" mt-1 sm:mt-3 text-2xl md:text-5xl lg:text-6xl font-semibold text-gray-300 leading-normal">
           The Journey
         </h3>
       </div>

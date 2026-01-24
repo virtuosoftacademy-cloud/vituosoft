@@ -2,18 +2,18 @@ import Image from "next/image";
 
 export default function FounderSection() {
   return (
-    <section className="relative bg-white py-12 overflow-visible">
-      <div className="relative max-w-5xl mx-auto px-6 md:px-0 lg:px-0 ">
+    <section className="relative bg-white py-12 overflow-visible max-[321px]:hidden">
+      <div className="relative max-w-5xl mx-auto px-2 md:px-0 lg:px-0 ">
 
          {/* RIGHT MOST BLUE OUTLINE */}
    <div
   className="
-    absolute top-10
+    absolute top-10 hidden md:block
     z-0 pointer-events-none
-    -right-6        /* default:  -1.5rem (desktop) */
-    md:right-[-50px]     /* tablet: right 0 */
+    -right-6       
+    md:right-[-50px]    
     lg:-right-6 
-    h-380    /* reset on laptop+ */
+    h-380    
   "
   style={{
     height: 380,
@@ -40,54 +40,92 @@ export default function FounderSection() {
         </div>
 
 
-        {/* MAIN BLUE CARD */}
-       <div className="
-  relative z-10 bg-[#0B5CFF] rounded-[40px]
-  h-[350px] md:h-[280px] lg:h-[350px]
-  md:w-[650px] lg:w-[752px] xl:w-[976px]
-  px-16 md:px-1 lg:px-10 xl:px-16
-  flex items-center gap-12 md:gap-6 lg:gap-12 overflow-visible
-  md:-ml-10          /* Move left 2.5rem (40px) on tablet */
-  lg:ml-0            /* Reset margin-left on laptop+ */
-">
+      <div
+  className="
+    relative z-10
+    bg-transparent md:bg-[#0B5CFF]
+    rounded-[10px] md:rounded-[40px]
+    h-[140px] md:h-[280px] lg:h-[320px] xl:h-[350px]
+    md:w-[650px] lg:w-[752px] xl:w-[976px]
+    px-2 md:px-1 lg:px-10 xl:px-16
+    flex items-center gap-12 md:gap-2 lg:gap-12 overflow-visible
+    md:-ml-10
+    lg:ml-0
+  "
+>
 
 
-          <div
-  className="absolute left-0 top-0 h-full w-[220px] md:w-[100px] lg:w-[220px] xl:w-[220px] bg-white z-0 rounded-l-[40px]"
-  style={{
-    border: "none",
-    boxShadow: "none",
-  }}
+
+      <div
+  className="
+    absolute left-0 top-0 h-full
+    hidden md:block
+    md:w-[115px] lg:w-[210px] xl:w-[220px]
+    bg-white z-0 rounded-l-[40px]
+  "
+/>
+
+{/* MOBILE ONLY half blue background on right side */}
+<div
+  className="
+    absolute top-0 right-0
+    h-full
+    w-6/7
+    bg-[#0B5CFF]
+    rounded-r-[10px]
+    md:hidden
+    z-0
+  "
 />
 
 
-          {/* IMAGE */}
-          <div
-            className="relative z-10 mt-0 w-[380px] md:w-[300px] md:mt-[-75px] lg:mt-[-85px] lg:w-[380px] shrink-0"
-            style={{ height: 520, marginBottom: "-51px" }}
-          >
-            <Image
-              src="/SR-1.svg"
-              alt="Founder"
-              fill
-              className="object-contain rounded-[40px]"
-            />
+{/* SR-1 IMAGE */}
+<div
+  className="
+    relative z-10
+    w-[150px] h-[200px]           /* MOBILE */
+    -left-3 mt-[-10px]
 
- <div
+    md:w-[290px] md:h-[340px]     /* TABLET */
+    md:left-[-5px] md:mt-[-14px]
+
+    lg:w-[350px] lg:h-[420px]     /* LAPTOP */
+    lg:mt-[-33px]
+
+    xl:w-[380px] xl:h-[460px] xl:mt-[-14px]   /* DESKTOP */
+    shrink-0
+  "
+>
+  <Image
+    src="/SR-1.svg"
+    alt="Founder"
+    fill
+    className="object-contain rounded-[40px] mt-[-1px] xl:mt-[-10px]"
+  />
+
+
+{/* SR-2 IMAGE */}
+<div
   className="
     absolute z-20
-    h-[342px] w-[300px] mt-0          /* DESKTOP DEFAULT */
-    md:h-[250px] md:w-[200px] md:mt-[32px]  /* TABLET ONLY */
-    lg:h-[342px] lg:w-[300px] lg:mt-0          /* RESET FOR LAPTOP+ */
-    md:translate-x-[40px] md:translate-y-[20px]  /* move left (less X), down on tablet */
-    lg:translate-x-[68px] lg:translate-y-0       /* reset for laptop+ */
-  "
-  style={{
-    top: 110,
-    right: -70,
-  }}
->
 
+    /* MOBILE */
+    w-[100px] h-[150px]
+    top-[30px] right-[-30px]
+
+    /* TABLET */
+    md:w-[190px] md:h-[250px]
+    md:top-[67px] md:right-[-20px]
+
+    /* LAPTOP */
+    lg:w-[280px] lg:h-[300px]
+    lg:top-[86px] lg:left-[30%]
+
+    /* DESKTOP */
+    xl:w-[300px] xl:h-[342px]
+    xl:top-[70px] xl:left-[160px]
+  "
+>
   <Image
     src="/SR-2.svg"
     alt="Overlay"
@@ -96,31 +134,52 @@ export default function FounderSection() {
   />
 </div>
 
+
             
           </div>
 
           {/* TEXT */}
-          <div className="relative z-10 text-white max-w-xl flex flex-col justify-center lg:mt-[10px] xl:mt-0">
-           <p
-  className="
-    font-light leading-relaxed
-    text-base 
-    md:text-sm md:px-5             /* DEFAULT (desktop-safe) */
-    lg:text-sm  lg:px-0          /* LAPTOP ONLY */
-    xl:text-lg             /* DESKTOP RESET */
-  "
+   <div
+  className="relative z-10 text-white mt-2 w-full max-w-[90vw] text-xs px-2 md:mt-0 md:max-w-xl md:w-auto md:px-0"
 >
 
-              “We believe in achieving global harmony through our operational
-              values and strong relationships with clients and partners. Thank
-              you for considering Virtuosoft as your technology partner. We look
-              forward to helping your business thrive.”
-            </p>
+  <p
+  className="
+    font-light
+    text-xs leading-tight
+    ml-[-70px]        /* reset negative margin on small & medium mobiles */
+    sm:w-[80vw] /* keep some width margin on small mobiles */
+    sm:ml-0
+    md:w-full md:ml-0 md:mt-0 md:px-5 md:leading-relaxed xl:text-lg
+    sm:text-sm sm:leading-normal
+    tracking-wide
+  "
+>
+  “We work to achieve global harmony through strong values and trusted partnerships. Thank you for considering Virtuosoft, We look forward to helping your business thrive.”
+</p>
 
-            <div className="mt-10">
-              <h3 className="text-3xl font-bold md:text-1xl md:px-5 lg:text-2xl lg:px-0 xl:text-3xl">Shoaib Rehman</h3>
-              <p className="text-white/80 mt-1  md:px-5 lg:px-0">Founder & CEO</p>
-            </div>
+<div className="mt-2 md:mt-10 text-left  relative inline-block max-w-full lg:ml-[20px]">
+
+  <h3
+    className="
+      text-lg font-bold
+      ml-[-70px] mt-[-4px] sm:ml-0 md:ml-0 md:px-5
+      sm:text-sm md:text-xl md:mt-0 lg:text-2xl xl:text-3xl lg:px-0
+    "
+  >
+    Shoaib Rehman
+
+  </h3>
+
+  {/* Desktop and tablet only Founder & CEO below name */}
+  <p className="hidden md:block text-white/80 mt-1 text-xs sm:text-sm md:px-5 lg:px-0 ">
+    Founder & CEO
+  </p>
+
+</div>
+
+
+
           </div>
         </div>
       </div>
