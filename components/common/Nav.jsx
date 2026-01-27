@@ -160,14 +160,16 @@ export default function Nav() {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-10">
-          <Link href="/" className="font-medium hover:text-primary transition-colors">
+          <Link href="/about" className="font-medium hover:text-primary transition-colors">
             About Us
           </Link>
-          <NavigationMenu >
+          <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="hover:text-primary transition-colors">
-                  Services
+                  <Link href="/services">
+                    Services
+                  </Link>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-6 p-6 lg:w-[840] lg:grid-cols-[0.9fr_1.25fr_1fr]">
@@ -191,14 +193,17 @@ export default function Nav() {
                             {services[activeService].subPages ? (
                               <div className="space-y-2.5">
                                 {services[activeService].subPages.map((sub, i) => (
-                                  <div key={i} className="flex items-center gap-3">
-                                    <DotSquare size={20} className="flex items-center text-primary" />
-                                    <Link
-                                      href={sub.href}
-                                      className="text-lg font-medium text-primary hover:underline"
-                                    >
-                                      {sub.label}
-                                    </Link>
+                                  <div key={i} className="flex items-center  gap-3">
+                                    {/* <Dot size={20} className="flex items-center text-primary" /> */}
+                                    <div className="flex items-center justify-center bg-black h-2 w-2" />
+                                    <div>
+                                      <Link
+                                        href={sub.href}
+                                        className="text-sm font-medium text-primary hover:underline"
+                                      >
+                                        {sub.label}
+                                      </Link>
+                                    </ div>
                                   </div>
                                 ))}
                               </div>
@@ -247,7 +252,7 @@ export default function Nav() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          
+
           <Link href="/team" className="font-medium hover:text-primary transition-colors">
             Our Team
           </Link>

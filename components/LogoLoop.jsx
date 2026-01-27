@@ -8,7 +8,7 @@ const doubledLogos = [...logos, ...logos];
 
 export default function LogoLoop() {
   return (
-    <div className="w-full overflow-hidden py-12 md:py-16 bg-white/5">
+    <div className="w-full overflow-hidden py-12 md:py-30 bg-white/5">
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
         <motion.div
           className="flex items-center whitespace-nowrap"

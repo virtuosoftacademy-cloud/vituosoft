@@ -14,7 +14,7 @@ function Hero() {
                             <em>
                                 Virtuosoft
                             </em>
-                            <div className="bg-chart-1 rounded-full size-2 lg:size-4 mt-10 lg:mt-14" />
+                            <div className="bg-chart-1 rounded-full size-2 lg:size-4 mt-10 lg:mt-12" />
                         </strong>
                     </h2>
                 </div>
@@ -22,7 +22,7 @@ function Hero() {
                     <p className="text-center font-light lg:w-xl text-[#6D7786]">Guided by passion and purpose, the minds behind Virtuosoft redefine what’s possible in technology. Their leadership inspires progress, innovation, and excellence at every step.</p>
                 </div>
             </div>
-            <div className="lg:mt-10 flex justify-center items-center px-10 lg:px-50">
+            <div className="lg:mt-6 flex justify-center items-center px-10 lg:px-50">
                 <Image src={OurTeamImg} alt="Our Team" className="w-full h-auto" />
             </div>
         </div>

@@ -75,6 +75,7 @@ function InnovativeSolutions() {
             ],
         },
     ];
+    
     return (
         <div className="max-w-7xl mx-auto px-10 my-8 lg:my-10">
             <div className="-space-y-3 lg:-space-y-4">

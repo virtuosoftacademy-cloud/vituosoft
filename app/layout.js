@@ -28,9 +28,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${Sofia_Sans_Cond.variable} ${Host_Grot.variable} antialiased`}
       >
-        <Nav/>
         {children}
-        <Footer/>
       </body>
     </html>
   );

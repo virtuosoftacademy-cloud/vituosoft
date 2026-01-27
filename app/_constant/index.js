@@ -1,5 +1,5 @@
 
-// Client Logos
+//Home Page // Client Logos
 export const logos = [
     { src: "https://virtuosoft.pk/wp-content/uploads/2025/10/Tarabut_logo_black-1.png", alt: "Tarabut" },
     { src: "https://virtuosoft.pk/wp-content/uploads/2025/10/image-223.png", alt: "Client" },
@@ -12,7 +12,7 @@ export const logos = [
     { src: "https://virtuosoft.pk/wp-content/uploads/2025/10/image-239.png", alt: "Client" },
 ];
 
-// Our Team
+// Our Team Page
 const imageBaseUrl = "assets/Images/team";
 export const teamMembers = [
     {
@@ -26,7 +26,7 @@ export const teamMembers = [
         name: "Amir Akhtar Jamili",
         role: "Director Cyber Security and IT - Governance",
         description: "Mr. Amir Akhtar Jamili is a Senior Consultant at Virtuosoft Private Limited, specializing in information security and business continuity. With over 18 years of experience, he has worked with leading multinational and national IT companies across various domains including cybersecurity, IT services, governance, and disaster management. He holds multiple professional certifications and is pursuing a Ph.D. in Cyber Security from Management and Science University Malaysia. Mr. Jamili has been recognized with several prestigious awards, including the CISO Cyber Sentinels Award (2023, 2024) and the CIO 200 Award over the past five years.",
-        image: `/${imageBaseUrl}/ceo.png`,
+        image: `/${imageBaseUrl}/directorcs.png`,
         linkedin: "#"
     },
     {
@@ -48,7 +48,7 @@ export const teamMembers = [
         name: "Syed Ibrahim Ahmed",
         role: "Head of HR",
         description: "With over 13 years of experience, Syed Ibrahim is a distinguished HR Manager known for his strategic leadership and contributions to organizational grow…",
-        image: `/${imageBaseUrl}/ceo.png`,
+        image: `/${imageBaseUrl}/headofhr.png`,
         linkedin: "#"
     },
     {
@@ -269,3 +269,181 @@ export const Faq_Home = [
         answer: "We implement rigorous security protocols including data encryption, access controls and approval workflows. Human oversight options ensure sensitive operations receive mandatory review, maintaining compliance and risk management throughout all automated processes."
     }
 ]
+
+// Advisory//Technical Feasibility Study
+// const subsection_services_advisory_technical_feasibility_study = {
+//     title: 'IT Service Management',
+//     items: [
+//         { label: 'Project Discovery', description: "Lay the groundwork for project success with Virtuosoft’s Discovery Workshops. We align teams, clarify business goals and uncover technical insights, building a shared roadmap that keeps every stakeholder focused and informed." },
+//         { label: 'Product Strategy', description: "Define, refine, and position your product for growth. Our strategic planning services help you identify market gaps, validate product concepts and create data-driven roadmaps for long-term success." },
+//     ],
+// }
+
+
+// Services Page Sections
+const accentImg = "assets/Images/service"
+export const aiCategory = {
+    title: 'Artificial Intelligence & Data',
+    subtitletop: 'Turning Data into Intelligent Action',
+    subtitlebottom: "Artificial Intelligence and Data are transforming how businesses operate and grow. With the right tools and strategy, data becomes a powerful engine for automation, prediction and smarter decision-making.",
+    bgColor: 'bg-linear-to-br from-primary to-[#003799]',
+    textColor: 'text-white',
+    accentImage: `/${accentImg}/ai_data_service.png`,
+    services: [
+        { label: 'AI Agents', description: "Create intelligent digital assistants and automation tools that work around the clock, reducing manual effort and boosting efficiency." },
+        { label: 'Generative AI', description: 'Bring ideas to life with AI that writes, designs and creates, helping your teams move from concept to content in seconds.', },
+        { label: 'Machine Learning', description: "Turn your data into foresight. Discover hidden patterns, forecast trends and make decisions with confidence." },
+        { label: 'Conversational AI', description: "Engage your customers with chatbots that actually understand, delivering natural, human-like conversations that enhance satisfaction." },
+        { label: 'Computer Vision', description: "Empower your systems to see and understand the world, from detecting objects to automating visual quality control." },
+        { label: 'Data Science & MLOps', description: "Build reliable data models that evolve with your business, backed by streamlined workflows and continuous improvement." },
+    ],
+}
+
+export const cloudCategory = {
+    title: 'Cloud Services',
+    subtitletop: 'Powering Agility in a Connected World',
+    subtitlebottom: 'Cloud is more than storage, it’s a foundation for innovation. Our cloud services help you scale effortlessly, cut costs and build secure environments that grow with your needs.',
+    accentImage: `/${accentImg}/cs_service.png`,
+    textColor: 'text-white',
+    bgColor: 'bg-linear-to-br from-[#734F9A] to-[#300032]',
+    services: [
+        {
+            label: 'Cloud Engineering & Architecture',
+            description: "Design the perfect cloud setup with secure, flexible and built to support your business goals."
+        },
+        {
+            label: 'Cloud Migration',
+            description: "Move to the cloud without the chaos. We handle the transition smoothly while keeping your data safe."
+        },
+        {
+            label: "DevOps & CI/CD Implementation",
+            description: "Accelerate your development cycle with automation, continuous integration and faster deployment."
+        },
+        {
+            label: "Cloud Cost Optimization",
+            description: "Get more value from your cloud by streamlining resources and minimizing unnecessary costs."
+        },
+        {
+            label: "Managed Services & Support",
+            description: "Stay focused on growth while we manage, monitor and maintain your cloud infrastructure 24/7."
+        }
+    ],
+}
+
+export const advisoryCategory = {
+    title: 'Advisory & Strategy',
+    subtitletop: 'From Vision to Real-World Impact',
+    subtitlebottom: 'Every great product begins with a clear strategy. Our advisory services help you uncover opportunities, reduce risk and shape a roadmap that turns big ideas into sustainable results.',
+    accentImage: `/${accentImg}/as_service.png`,
+    textColor: 'text-white',
+    bgColor: 'bg-linear-to-br from-[#084387] to-[#021021]',
+    services: [
+        {
+            label: 'Discovery Workshops',
+            description: "Collaborate with experts to explore ideas, define goals and set a clear direction for your digital journey."
+        },
+        {
+            label: 'Technical Feasibility Study',
+            description: "Know what’s possible and what’s not. We evaluate your concepts from every angle before development begins."
+        },
+        {
+            label: "Product Strategy & Roadmapping",
+            description: "Turn your product vision into a detailed, achievable plan with defined milestones and measurable outcomes."
+        }, {
+            label: "UX / UI Consulting",
+            description: "Design experiences that people love, blending usability, simplicity and aesthetic appeal."
+        }, {
+            label: "Digital Transformation Consulting",
+            description: "Reimagine your organization with strategies that connect technology, people and processes for long-term growth."
+        }
+    ],
+}
+
+export const engineeringCategory = {
+    title: 'Engineering & Development',
+    subtitletop: 'Building the Future, One Line at a Time',
+    subtitlebottom: 'From web platforms to enterprise applications, our engineering team turns ideas into scalable digital solutions. Every product is crafted for reliability, performance and real-world impact.',
+    accentImage: `/${accentImg}/ed_service.png`,
+    textColor: 'text-white',
+    bgColor: 'bg-linear-to-br from-[#0E3043] to-[#485861]',
+    services: [
+        {
+            label: 'Web & Mobile App Development',
+            description: "Create sleek, high-performing apps that engage users and deliver seamless experiences across all devices."
+        },
+        {
+            label:"SaaS & Cloud-based App Development",
+            description:"Develop scalable platforms that grow with your business and keep you connected anytime, anywhere."
+        },
+        {
+            label:"Product Development (MVP to Enterprise Scale)",
+            description:"Whether it’s an early prototype or a large-scale system, we bring your ideas to life with speed and precision."
+        },
+        {
+            label:"App Modernization & Migration",
+            description:"Upgrade old systems with modern technology while enhancing security, performance and flexibility."
+        },
+        {
+            label:"API & Legacy System Integration",
+            description:"Connect everything. Integrate your tools, systems and platforms to work together as one efficient ecosystem."
+        },
+        {
+            label:"QA Automation & Testing",
+            description:"Deliver flawless products with testing that ensures every release is fast, stable and ready for users."
+        }
+    ],
+}
+
+export const optimizationCategory = {
+    title: 'Optimization & Enablement',
+    subtitletop: 'Making Systems Smarter and Teams Stronger',
+    subtitlebottom: 'Optimization is about doing more with less. We help you refine your systems, automate your processes and enhance performance so your business keeps running smoothly and scaling confidently.',
+    accentImage: `/${accentImg}/oe_service.png`,
+    textColor: 'text-white',
+    bgColor: 'bg-linear-to-br from-[#498968] to-[#00192E]',
+    services: [
+        {
+            label: 'Software Audits',
+            description: "Get a clear view of your software health, uncover gaps, inefficiencies and opportunities for improvement."
+        },
+        {
+            label:"Quality Assurance",
+            description:"Ensure every release works as intended. Our QA team tests, validates and refines to deliver flawless user experiences."
+        },
+        {
+            label:"Support & Maintenance",
+            description:"Keep everything running perfectly with continuous monitoring, updates and technical support."
+        },
+        {
+            label:"Process Automation",
+            description:"Automate repetitive tasks and free your teams to focus on what really drives growth."
+        }
+    ],
+}
+
+export const engagementCategory = {
+    title: 'Engagement Models',
+    subtitletop: 'Flexible Partnerships that Fit Your Goals',
+    subtitlebottom: 'Every business is unique and so is the way it builds technology. Our engagement models are designed to adapt, whether you need long-term collaboration, short-term support or expert talent on demand.',
+    accentImage: `/${accentImg}/em_models_service.png`,
+    textColor: 'text-white',
+    bgColor: 'bg-linear-to-br from-[#8F6982]/90 to-[#33004A]',
+    services: [
+        {
+            label: 'Dedicated Development Team',
+            description: "A team that works exclusively for you fully aligned with your goals and timelines."
+        },
+        {
+         label:"Offshore / Remote Team Setup",
+         description:"Extend your capabilities globally with skilled remote teams that deliver around the clock."    
+        },
+        {
+            label:"Fixed Price Projects",
+            description:"Ideal for clearly defined goals. Predictable budgets, timelines and deliverables with zero surprises."
+        },
+        {
+            label:"Staff Augmentation",
+            description:"Scale your team instantly with specialists who blend seamlessly into your projects."
+        }
+    ],
+}
