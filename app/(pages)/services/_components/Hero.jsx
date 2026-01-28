@@ -5,7 +5,7 @@ function Hero() {
     <>
       <section className="mt-30 lg:mt-50">
         <div className="flex justify-center items-center flex-col h-60 lg:h-80 px-10">
-          <div className=" text-center">
+          <div className="text-center">
             <h4 className={`text-4xl lg:text-6xl font-light`}>Shaping the future of</h4>
                 <h4 className={`flex gap-2 text-5xl lg:text-[80px] font-black italic `}>
                   <strong>

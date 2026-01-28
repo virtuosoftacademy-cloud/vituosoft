@@ -2,8 +2,6 @@
 
 import { Card } from "@/components/ui/card"
 import { CommonHead } from "../../../../components/Styles/StyleClasses"
-import { cn } from "@/lib/utils"
-import Image from "next/image"
 
 function Technology() {
     const values = [
@@ -37,7 +35,7 @@ function Technology() {
                     <div className="lg:-space-y-4">
                         <div className="flex flex-row items-baseline gap-1 lg:gap-2 text-5xl lg:text-[62px]">
                             <h4 className={`${CommonHead}`}>
-                                <strong className="">
+                                <strong>
                                     Technology with{" "}
                                 </strong>
                                 <br />

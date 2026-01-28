@@ -9,6 +9,7 @@ export default function ServiceCard({ category, className = "" }) {
     subtitlebottom,
     bgColor,
     textColor,
+    imagePosition,
     accentImage,
     services,
   } = category
@@ -29,12 +30,12 @@ export default function ServiceCard({ category, className = "" }) {
           <img
             src={accentImage}
             alt={title}
-            className="
-          w-[360]
-          absolute -top-10 -right-10 hidden lg:flex
+            className=
+          {`${imagePosition} w-[360]
+          absolute hidden lg:flex
           object-contain object-top-right 
           opacity-90 pointer-events-none z-10
-          "
+          `}
             aria-hidden="true"
           />
         }
@@ -43,7 +44,7 @@ export default function ServiceCard({ category, className = "" }) {
             <p className="text-lg md:text-3xl font-light">
               {subtitletop}
             </p>
-            <h2 className="text-4xl pb-2 lg:pb-0 sm:text-5xl md:text-6xl lg:text-7xl font-extrabold italic leading-tight mt-2">
+            <h2 className="text-4xl pb-2 lg:pb-0 sm:text-5xl md:text-6xl lg:text-7xl font-semibold italic leading-tight mt-2">
               {title}
             </h2>
             <p className="text-sm md:text-sm opacity-90 max-w-lg font-light">
@@ -54,11 +55,11 @@ export default function ServiceCard({ category, className = "" }) {
             className={`
               grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:auto-rows-fr gap-6 lg:gap-8
               `}>
-            {services.map((service) =>
-              <Card
-                key={service.id}
+            {services.map((service,index) =>
+              <div
+                key={index}
                 className=
-                "group relative w-full max-w-[380] border-0 bg-transparent p-9 overflow-hidden"
+                "group relative w-full max-w-[380] bg-transparent p-9  overflow-hidden"
               >
                 {/* Animated glowing border on hover – using ::after via Tailwind arbitrary variants */}
                 <div
@@ -101,7 +102,7 @@ export default function ServiceCard({ category, className = "" }) {
 
                   </p>
                 </div>
-              </Card>
+              </div>
             )}
 
           </div>

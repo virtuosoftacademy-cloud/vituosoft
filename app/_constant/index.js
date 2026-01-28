@@ -289,6 +289,7 @@ export const aiCategory = {
     bgColor: 'bg-linear-to-br from-primary to-[#003799]',
     textColor: 'text-white',
     accentImage: `/${accentImg}/ai_data_service.png`,
+    imagePosition: "-top-6 -right-4",
     services: [
         { label: 'AI Agents', description: "Create intelligent digital assistants and automation tools that work around the clock, reducing manual effort and boosting efficiency." },
         { label: 'Generative AI', description: 'Bring ideas to life with AI that writes, designs and creates, helping your teams move from concept to content in seconds.', },
@@ -306,6 +307,7 @@ export const cloudCategory = {
     accentImage: `/${accentImg}/cs_service.png`,
     textColor: 'text-white',
     bgColor: 'bg-linear-to-br from-[#734F9A] to-[#300032]',
+    imagePosition: "-top-6 -right-4",
     services: [
         {
             label: 'Cloud Engineering & Architecture',
@@ -337,6 +339,7 @@ export const advisoryCategory = {
     accentImage: `/${accentImg}/as_service.png`,
     textColor: 'text-white',
     bgColor: 'bg-linear-to-br from-[#084387] to-[#021021]',
+    imagePosition: "top-0 right-0",
     services: [
         {
             label: 'Discovery Workshops',
@@ -366,30 +369,31 @@ export const engineeringCategory = {
     accentImage: `/${accentImg}/ed_service.png`,
     textColor: 'text-white',
     bgColor: 'bg-linear-to-br from-[#0E3043] to-[#485861]',
+    imagePosition: "top-0 right-0",
     services: [
         {
             label: 'Web & Mobile App Development',
             description: "Create sleek, high-performing apps that engage users and deliver seamless experiences across all devices."
         },
         {
-            label:"SaaS & Cloud-based App Development",
-            description:"Develop scalable platforms that grow with your business and keep you connected anytime, anywhere."
+            label: "SaaS & Cloud-based App Development",
+            description: "Develop scalable platforms that grow with your business and keep you connected anytime, anywhere."
         },
         {
-            label:"Product Development (MVP to Enterprise Scale)",
-            description:"Whether it’s an early prototype or a large-scale system, we bring your ideas to life with speed and precision."
+            label: "Product Development (MVP to Enterprise Scale)",
+            description: "Whether it’s an early prototype or a large-scale system, we bring your ideas to life with speed and precision."
         },
         {
-            label:"App Modernization & Migration",
-            description:"Upgrade old systems with modern technology while enhancing security, performance and flexibility."
+            label: "App Modernization & Migration",
+            description: "Upgrade old systems with modern technology while enhancing security, performance and flexibility."
         },
         {
-            label:"API & Legacy System Integration",
-            description:"Connect everything. Integrate your tools, systems and platforms to work together as one efficient ecosystem."
+            label: "API & Legacy System Integration",
+            description: "Connect everything. Integrate your tools, systems and platforms to work together as one efficient ecosystem."
         },
         {
-            label:"QA Automation & Testing",
-            description:"Deliver flawless products with testing that ensures every release is fast, stable and ready for users."
+            label: "QA Automation & Testing",
+            description: "Deliver flawless products with testing that ensures every release is fast, stable and ready for users."
         }
     ],
 }
@@ -401,22 +405,23 @@ export const optimizationCategory = {
     accentImage: `/${accentImg}/oe_service.png`,
     textColor: 'text-white',
     bgColor: 'bg-linear-to-br from-[#498968] to-[#00192E]',
+    imagePosition: "top-0 right-0",
     services: [
         {
             label: 'Software Audits',
             description: "Get a clear view of your software health, uncover gaps, inefficiencies and opportunities for improvement."
         },
         {
-            label:"Quality Assurance",
-            description:"Ensure every release works as intended. Our QA team tests, validates and refines to deliver flawless user experiences."
+            label: "Quality Assurance",
+            description: "Ensure every release works as intended. Our QA team tests, validates and refines to deliver flawless user experiences."
         },
         {
-            label:"Support & Maintenance",
-            description:"Keep everything running perfectly with continuous monitoring, updates and technical support."
+            label: "Support & Maintenance",
+            description: "Keep everything running perfectly with continuous monitoring, updates and technical support."
         },
         {
-            label:"Process Automation",
-            description:"Automate repetitive tasks and free your teams to focus on what really drives growth."
+            label: "Process Automation",
+            description: "Automate repetitive tasks and free your teams to focus on what really drives growth."
         }
     ],
 }
@@ -428,22 +433,76 @@ export const engagementCategory = {
     accentImage: `/${accentImg}/em_models_service.png`,
     textColor: 'text-white',
     bgColor: 'bg-linear-to-br from-[#8F6982]/90 to-[#33004A]',
+    imagePosition: "top-0 right-0",
     services: [
         {
             label: 'Dedicated Development Team',
             description: "A team that works exclusively for you fully aligned with your goals and timelines."
         },
         {
-         label:"Offshore / Remote Team Setup",
-         description:"Extend your capabilities globally with skilled remote teams that deliver around the clock."    
+            label: "Offshore / Remote Team Setup",
+            description: "Extend your capabilities globally with skilled remote teams that deliver around the clock."
         },
         {
-            label:"Fixed Price Projects",
-            description:"Ideal for clearly defined goals. Predictable budgets, timelines and deliverables with zero surprises."
+            label: "Fixed Price Projects",
+            description: "Ideal for clearly defined goals. Predictable budgets, timelines and deliverables with zero surprises."
         },
         {
-            label:"Staff Augmentation",
-            description:"Scale your team instantly with specialists who blend seamlessly into your projects."
+            label: "Staff Augmentation",
+            description: "Scale your team instantly with specialists who blend seamlessly into your projects."
         }
     ],
 }
+// Careers Page Collaboration Section
+const iconCollab = "assets/images/careers/"
+export const collabCard = [
+    {
+        icon: `/${iconCollab}/collab_app.png`,
+        translate_y: "translate-0 lg:-translate-y-2",
+        max_w: "max-w-2",
+        label: "Application Review",
+        description: "We review applications to find the best fit."
+    },
+    {
+        translate_y: "translate-0 lg:translate-y-20",
+        max_w: "max-w-2",
+        icon: `/${iconCollab}/collab_first.png`,
+        label: "First Interview",
+        description: "We discuss experience, goals and introduce Virtuosoft."
+    },
+    {
+        icon: `/${iconCollab}/collab_skill.png`,
+        translate_y: "translate-y-0",
+        label: "Skill / Technical Round",
+        description: "We test technical skills through practical, role-specific challenges."
+    },
+    {
+        icon: `/${iconCollab}/collab_final.png`,
+        translate_y: "translate-0 lg:translate-y-20",
+        label: "Final Culture Fit & Other",
+        description: "We confirm cultural alignment and extend the offer."
+    },
+]
+const iconDifferent = "assets/images/service/"
+export const differentCard = [
+    {
+        icon: `/${iconDifferent}/different_success.png`,
+        label: "Your Success",
+        description: "We measure our success by the business results we drive for you."
+    },
+    {
+        icon: `/${iconDifferent}/different_built.png`,
+        label: "Built for Users",
+        description: "We create intuitive experiences that feel natural from the very first click."
+    },
+    {
+        icon: `/${iconDifferent}/different_proven.png`,
+        label: "Proven Experts",
+        description: "Your project is handled by our experts, ensuring quality and reliability."
+    },
+    {
+        icon: `/${iconDifferent}/different_launch.png`,
+        label: "Launch Faster",
+        description: "Our agile process gets your product to market in weeks, not months."
+    },
+]

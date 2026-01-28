@@ -1,5 +1,4 @@
 
-'use client'
 
 import ServiceCard from "./ServiceCard"
 import { advisoryCategory, aiCategory, cloudCategory, engagementCategory, engineeringCategory, optimizationCategory } from "@/app/_constant"
