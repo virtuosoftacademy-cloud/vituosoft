@@ -298,6 +298,7 @@ export const aiCategory = {
         { label: 'Computer Vision', description: "Empower your systems to see and understand the world, from detecting objects to automating visual quality control." },
         { label: 'Data Science & MLOps', description: "Build reliable data models that evolve with your business, backed by streamlined workflows and continuous improvement." },
     ],
+    cta: "Discover AI Agents with Virtuosoft",
 }
 
 export const cloudCategory = {
@@ -453,6 +454,32 @@ export const engagementCategory = {
         }
     ],
 }
+
+// Services Page What Make Us Different? Section
+const iconDifferent = "assets/images/service"
+export const differentCard = [
+    {
+        icon: `/${iconDifferent}/different_success.png`,
+        label: "Your Success",
+        description: "We measure our success by the business results we drive for you."
+    },
+    {
+        icon: `/${iconDifferent}/different_built.png`,
+        label: "Built for Users",
+        description: "We create intuitive experiences that feel natural from the very first click."
+    },
+    {
+        icon: `/${iconDifferent}/different_proven.png`,
+        label: "Proven Experts",
+        description: "Your project is handled by our experts, ensuring quality and reliability."
+    },
+    {
+        icon: `/${iconDifferent}/different_launch.png`,
+        label: "Launch Faster",
+        description: "Our agile process gets your product to market in weeks, not months."
+    },
+]
+
 // Careers Page Collaboration Section
 const iconCollab = "assets/images/careers/"
 export const collabCard = [
@@ -483,26 +510,4 @@ export const collabCard = [
         description: "We confirm cultural alignment and extend the offer."
     },
 ]
-const iconDifferent = "assets/images/service/"
-export const differentCard = [
-    {
-        icon: `/${iconDifferent}/different_success.png`,
-        label: "Your Success",
-        description: "We measure our success by the business results we drive for you."
-    },
-    {
-        icon: `/${iconDifferent}/different_built.png`,
-        label: "Built for Users",
-        description: "We create intuitive experiences that feel natural from the very first click."
-    },
-    {
-        icon: `/${iconDifferent}/different_proven.png`,
-        label: "Proven Experts",
-        description: "Your project is handled by our experts, ensuring quality and reliability."
-    },
-    {
-        icon: `/${iconDifferent}/different_launch.png`,
-        label: "Launch Faster",
-        description: "Our agile process gets your product to market in weeks, not months."
-    },
-]
+

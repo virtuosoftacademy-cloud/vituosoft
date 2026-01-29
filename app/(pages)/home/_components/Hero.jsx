@@ -6,16 +6,17 @@ import Tic from '@/public/assets/Images/home/tic.png'
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { HeroRegular, Italic } from "../../../../components/Styles/StyleClasses"
+import HeroImg from '@/public/assets/images/home/home-bg.png'
 function Hero() {
   return (
     <>
       <section className="relative">
         <div className="absolute inset-0 -z-10 lg:h-screen">
-            <Image
-              src="/assets/images/home/home-bg.png"
-              alt="Technology"
-              fill
-            />
+          <Image
+            src={HeroImg}
+            alt="Technology"
+            fill
+          />
         </div>
         <div className="flex justify-center items-center flex-col px-10 pt-40 lg:pt-60">
           <div className="-space-y-3 lg:-space-y-8">
@@ -31,72 +32,74 @@ function Hero() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center text-xs lg:text-lg">
+          <div className="flex justify-center text-xs md:text-sm xl:text-lg">
             <p className="text-center font-light lg:w-2xl">We design technology that empowers businesses to innovate, evolve and lead with purpose, helping them to stay ahead and create real value.</p>
           </div>
         </div>
         <div>
 
           {/* Counter + Button */}
-          <div className="py-10 lg:py-6 flex justify-center items-center flex-col lg:flex-row gap-8 lg:gap-6">
-            <div className="flex items-center justify-center">
-              <div className="rounded-full bg-linear-[-90deg,white_5%,#D3E2FF] flex py-5 px-5 flex-col">
-                <div className="text-[14px] font-bold">
-                  <CountUp
-                    from={0}
-                    to={10}
-                    separator=","
-                    direction="up"
-                    duration={1}
-                    className="count-up-text"
-                  />+
+          <div className="py-10 lg:py-6  flex items-center justify-center flex-col lg:flex-row gap-8 lg:gap-6 px-4">
+            <div className="flex justify-center items-center gap-6">
+              <div className="flex items-center justify-center">
+                <div className="rounded-full bg-linear-[-90deg,white_5%,#D3E2FF] flex py-5 px-5 flex-col">
+                  <div className="text-[14px] font-bold">
+                    <CountUp
+                      from={0}
+                      to={10}
+                      separator=","
+                      direction="up"
+                      duration={1}
+                      className="count-up-text"
+                    />+
+                  </div>
+                </div>
+                <div className="relative -top-5 -left-4">
+                  <Image src={Star} className="max-w-2xl md:size-6" alt="Star Icon" />
+                </div>
+                <div className="font-light text-xs md:text-sm">
+                  <div>Years of<br />Excellence</div>
                 </div>
               </div>
-              <div className="relative -top-5 -left-4">
-                <Image src={Star} className="size-6" alt="Star Icon" />
-              </div>
-              <div className="font-light text-sm">
-                <div>Years of<br />Excellence</div>
-              </div>
-            </div>
-            <div className="flex items-center lg:justify-center justify-start -ml-3">
-              <div className="rounded-full bg-linear-[-90deg,white_5%,#D3E2FF] flex py-5 px-4 flex-col">
-                <div className="text-[14px] font-bold">
-                  <CountUp
-                    from={0}
-                    to={92}
-                    separator=","
-                    direction="up"
-                    duration={1}
-                    className="count-up-text"
-                  />%
+              <div className="flex items-center lg:justify-center justify-start -ml-3">
+                <div className="rounded-full bg-linear-[-90deg,white_5%,#D3E2FF] flex py-5 px-4 flex-col">
+                  <div className="text-[14px] font-bold">
+                    <CountUp
+                      from={0}
+                      to={92}
+                      separator=","
+                      direction="up"
+                      duration={1}
+                      className="count-up-text"
+                    />%
+                  </div>
+                </div>
+                <div className="relative -top-5 -left-4">
+                  <Image src={Fire} className="max-w-2xl md:size-6" alt="Fire Icon" />
+                </div>
+                <div >
+                  <div className="font-light text-xs md:text-sm">Success<br />Rate</div>
                 </div>
               </div>
-              <div className="relative -top-5 -left-4">
-                <Image src={Fire} className="size-6" alt="Fire Icon" />
-              </div>
-              <div >
-                <div className="font-light text-sm">Success<br />Rate</div>
-              </div>
-            </div>
-            <div className="flex items-center justify-center -ml-3">
-              <div className="rounded-full bg-linear-[-90deg,white_5%,#D3E2FF] flex py-5 px-3 flex-col">
-                <div className="text-[14px] font-bold">
-                  <CountUp
-                    from={0}
-                    to={100}
-                    separator=","
-                    direction="up"
-                    duration={1}
-                    className="count-up-text"
-                  />+
+              <div className="flex items-center justify-center -ml-3">
+                <div className="rounded-full bg-linear-[-90deg,white_5%,#D3E2FF] flex py-5 px-3 flex-col">
+                  <div className="text-[14px] font-bold">
+                    <CountUp
+                      from={0}
+                      to={100}
+                      separator=","
+                      direction="up"
+                      duration={1}
+                      className="count-up-text"
+                    />+
+                  </div>
                 </div>
-              </div>
-              <div className="relative -top-5 -left-4">
-                <Image src={Tic} className="size-6" alt="Tic Icon" />
-              </div>
-              <div >
-                <div className="font-light text-sm">Thriving<br />Projects</div>
+                <div className="relative -top-5 -left-4">
+                  <Image src={Tic} className="max-w-2xl md:size-6" alt="Tic Icon" />
+                </div>
+                <div >
+                  <div className="font-light text-xs md:text-sm">Thriving<br />Projects</div>
+                </div>
               </div>
             </div>
             <Button variant="default" className="font-sans">Let's Talk</Button>

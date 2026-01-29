@@ -78,10 +78,10 @@ function InnovativeSolutions() {
     
     return (
         <div className="max-w-7xl mx-auto px-10 my-8 lg:my-10">
-            <div className="-space-y-3 lg:-space-y-4">
+            <div className="-space-y-2 lg:-space-y-4">
                 <h4 className={`font-normal ${CommonHead}`}>
                     Innovation{" "}
-                    <span className="italic">
+                    <span className="">
                         <strong>
                             <em>
                                 Solutions
@@ -115,10 +115,10 @@ function InnovativeSolutions() {
         "
             >
                 {services.map((service) => (
-                    <Card
+                    <div
                         key={service.id}
                         className={cn(
-                            "group relative overflow-hidden rounded-xl cursor-pointer border-0",
+                            "group relative overflow-hidden cursor-pointer",
                             "flex flex-col justify-end",
                             "transition-all duration-300 ease-out",
                             "hover:-translate-y-1 hover:shadow-2xl",
@@ -141,7 +141,7 @@ function InnovativeSolutions() {
                         <div
                             className={cn(
                                 "relative z-10 px-6 md:px-7",
-                                "transition-transform duration-700 ease-out",
+                                "md:transition-transform duration-700 ease-out",
                                 service.hoverTranslate
                             )}
                         >
@@ -155,8 +155,8 @@ function InnovativeSolutions() {
 
                             <div
                                 className="flex flex-wrap gap-2.5
-                  opacity-0 translate-y-4 transition-all duration-500 ease-out
-                  group-hover:opacity-100 group-hover:translate-y-0
+                  md:opacity-0 md:translate-y-4 md:transition-all duration-500 ease-out
+                  md:group-hover:opacity-100 md:group-hover:translate-y-0
                 "
                             >
                                 {service.buttons.map((btn, idx) => (
@@ -175,7 +175,7 @@ function InnovativeSolutions() {
                                 ))}
                             </div>
                         </div>
-                    </Card>
+                    </div>
                 ))}
             </div>
 
