@@ -181,7 +181,7 @@ function InnovativeSolutions() {
 
             <div className="text-center mt-8 lg:mt-10">
                 <Button variant="outline">
-                    <Link href="/">
+                    <Link href="/services">
                         Load More
                     </Link>
                 </Button>

@@ -22,10 +22,10 @@ export default function Job() {
 
                         </div>
                     </div>
-                    <div className="flex flex-wrap lg:flex-nowrap lg:flex-col justify-center items-center gap-8 transform transition-all">
+                    <div className="flex justify-center items-center flex-col gap-8 transform transition-all">
                         <div
                             className={` mt-14
-                                        group relative max-w-2xl rounded-xl bg-white py-4 px-16
+                                        group relative max-w-2xl rounded-xl bg-white py-4 px-8 lg:px-16
                                     shadow-[0_10px_25px_rgba(0,0,0,0.05)]
                                 translate-0
                                     overflow-hidden`}                        >
@@ -42,7 +42,7 @@ export default function Job() {
                             <div className="relative z-10 space-y-1 sm:space-y-2">
 
                                 {/* Heading */}
-                                <h4 className={`font-bold text-3xl`}>
+                                <h4 className={`font-bold lg:text-3xl`}>
                                     <strong>
                                         <em>
                                             UI/UX Designer
@@ -51,14 +51,21 @@ export default function Job() {
                                 </h4>
 
                                 {/* Paragraph */}
-                                <h4 className="text-[18px] text-gray-500 font-light">
+                                <h4 className="lg:text-[18px] text-gray-500 font-light">
                                     5-10 yr Experience / On Office / Full-time
                                 </h4>
                             </div>
                         </div>
+                        <div className="flex gap-4 justify-center items-center">
+                            <div className="w-64 bg-gray-300 h-[1] rounded-full" />
+                            <div className="font-medium lg:text-lg text-gray-400">
+                                <h4>Or</h4>
+                            </div>
+                            <div className="w-64 bg-gray-300 h-[1] rounded-full" />
+                        </div>
+
                         <div
-                            className={` mt-14
-                                        group relative max-w-2xl rounded-xl bg-white py-4 px-16
+                            className={`group relative max-w-2xl rounded-xl bg-white py-4 px-18 lg:px-16
                                     shadow-[0_10px_25px_rgba(0,0,0,0.05)]
                                 translate-0
                                     overflow-hidden`}                        >
@@ -75,7 +82,7 @@ export default function Job() {
                             <div className="relative z-10 space-y-1 sm:space-y-2">
 
                                 {/* Heading */}
-                                <h4 className={`font-bold text-2xl -mb-1`}>
+                                <h4 className={`font-bold lg:text-2xl -mb-1`}>
                                     <strong>
                                         <em>
                                             Didn't find your domain or  job?
@@ -84,10 +91,10 @@ export default function Job() {
                                 </h4>
 
                                 {/* Paragraph */}
-                                <p className="text-2xl text-gray-500 font-light -mb-1">
+                                <p className="lg:text-2xl text-gray-500 font-light -mb-1">
                                     Don't worry you can still
                                 </p>
-                                <h4 className={`font-bold text-2xl`}>
+                                <h4 className={`font-bold lg:text-2xl`}>
                                     <strong>
                                         <em>
                                             Drop us a CV.
