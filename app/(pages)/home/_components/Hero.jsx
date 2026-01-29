@@ -12,7 +12,7 @@ function Hero() {
       <section className="relative">
         <div className="absolute inset-0 -z-10 lg:h-screen">
             <Image
-              src="assets/images/home/home-bg.png"
+              src="/assets/images/home/home-bg.png"
               alt="Technology"
               fill
             />
