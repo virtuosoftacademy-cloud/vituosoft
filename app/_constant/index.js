@@ -456,7 +456,7 @@ export const engagementCategory = {
 }
 
 // Services Page What Make Us Different? Section
-const iconDifferent = "assets/images/service"
+const iconDifferent = "assets/Images/service"
 export const differentCard = [
     {
         icon: `/${iconDifferent}/different_success.png`,
@@ -481,7 +481,7 @@ export const differentCard = [
 ]
 
 // Careers Page Collaboration Section
-const iconCollab = "assets/images/careers/"
+const iconCollab = "assets/Images/careers/"
 export const collabCard = [
     {
         icon: `/${iconCollab}/collab_app.png`,
