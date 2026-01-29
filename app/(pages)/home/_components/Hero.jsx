@@ -6,7 +6,7 @@ import Tic from '@/public/assets/Images/home/tic.png'
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { HeroRegular, Italic } from "../../../../components/Styles/StyleClasses"
-import HeroImg from '@/public/assets/images/home/home-bg.png'
+import HeroImg from '@/public/assets/Images/home/home-bg.png'
 function Hero() {
   return (
     <>
