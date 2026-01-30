@@ -128,10 +128,3 @@ h1,h2,h3{
     @apply bg-background text-foreground;
   }
 }
-
-.line-clamp {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-

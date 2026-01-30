@@ -64,8 +64,10 @@ function InnovativeSolutions() {
             bgColor: "bg-[#2a2d30]",
             textColor: "text-white",
             bgImage: "https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/Untitled-design-7-1-1.png",
-            gridClasses: "col-span-full md:col-span-2 lg:col-span-2 lg:row-span-1 lg:min-h-[300px]",
-            hoverTranslate: "translate-y-20 group-hover:-translate-y-16 lg:group-hover:-translate-y-10",
+            gridClasses: "col-span-full md:col-span-2 lg:col-span-2 lg:row-span-1 min-h-[300px]",
+            hoverTranslate: "translate-y-50 md:translate-y-20 md:group-hover:-translate-y-16 lg:group-hover:-translate-y-10",
+            isBusiness: true,
+            MoreBtn:"/",
             buttons: [
                 { label: "Custom Software Development", href: "https://virtuosoft.pk/virtuosoft/?page_id=10690" },
                 { label: "App Development", href: "https://virtuosoft.pk/virtuosoft/?page_id=10698" },
@@ -155,8 +157,8 @@ function InnovativeSolutions() {
 
                             <div
                                 className="flex flex-wrap gap-2.5
-                  md:opacity-0 md:translate-y-4 md:transition-all duration-500 ease-out
-                  md:group-hover:opacity-100 md:group-hover:translate-y-0
+                opacity-0 translate-y-4 transition-all duration-500 ease-out
+                  group-hover:opacity-100 group-hover:translate-y-0
                 "
                             >
                                 {service.buttons.map((btn, idx) => (
@@ -173,6 +175,7 @@ function InnovativeSolutions() {
                                         <a href={btn.href}>{btn.label}</a>
                                     </Button>
                                 ))}
+                        {/* <Button className={''}><Link href={'/'}>More</Link></Button> */}
                             </div>
                         </div>
                     </div>
