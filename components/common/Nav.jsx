@@ -160,7 +160,7 @@ export default function Nav() {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-10">
-          <Link href="/about" className="font-medium hover:text-primary transition-colors">
+          <Link href="/about-us" className="font-medium hover:text-primary transition-colors">
             About Us
           </Link>
           <NavigationMenu>
@@ -277,7 +277,7 @@ export default function Nav() {
       {mobileOpen && (
         <div className="lg:hidden mt-4 px-4">
           <div className="flex flex-col items-center p-8 gap-8 text-xl font-medium bg-accent/95 backdrop-blur rounded-2xl border border-border/50">
-            <Link href="/about" onClick={() => setMobileOpen(false)}>
+            <Link href="/about-us" onClick={() => setMobileOpen(false)}>
               About Us
             </Link>
 
