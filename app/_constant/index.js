@@ -1,5 +1,5 @@
 
-//Home Page // Client Logos
+// Client Logos
 export const logos = [
     { src: "https://virtuosoft.pk/wp-content/uploads/2025/10/Tarabut_logo_black-1.png", alt: "Tarabut" },
     { src: "https://virtuosoft.pk/wp-content/uploads/2025/10/image-223.png", alt: "Client" },
@@ -12,7 +12,7 @@ export const logos = [
     { src: "https://virtuosoft.pk/wp-content/uploads/2025/10/image-239.png", alt: "Client" },
 ];
 
-// Our Team Page
+// Our Team
 const imageBaseUrl = "assets/Images/team";
 export const teamMembers = [
     {
@@ -26,7 +26,7 @@ export const teamMembers = [
         name: "Amir Akhtar Jamili",
         role: "Director Cyber Security and IT - Governance",
         description: "Mr. Amir Akhtar Jamili is a Senior Consultant at Virtuosoft Private Limited, specializing in information security and business continuity. With over 18 years of experience, he has worked with leading multinational and national IT companies across various domains including cybersecurity, IT services, governance, and disaster management. He holds multiple professional certifications and is pursuing a Ph.D. in Cyber Security from Management and Science University Malaysia. Mr. Jamili has been recognized with several prestigious awards, including the CISO Cyber Sentinels Award (2023, 2024) and the CIO 200 Award over the past five years.",
-        image: `/${imageBaseUrl}/directorcs.png`,
+        image: `/${imageBaseUrl}/ceo.png`,
         linkedin: "#"
     },
     {
@@ -48,7 +48,7 @@ export const teamMembers = [
         name: "Syed Ibrahim Ahmed",
         role: "Head of HR",
         description: "With over 13 years of experience, Syed Ibrahim is a distinguished HR Manager known for his strategic leadership and contributions to organizational grow…",
-        image: `/${imageBaseUrl}/headofhr.png`,
+        image: `/${imageBaseUrl}/ceo.png`,
         linkedin: "#"
     },
     {
@@ -267,247 +267,1585 @@ export const Faq_Home = [
         value: "item-7",
         question: "How secure is AI Agent implementation?",
         answer: "We implement rigorous security protocols including data encryption, access controls and approval workflows. Human oversight options ensure sensitive operations receive mandatory review, maintaining compliance and risk management throughout all automated processes."
-    }
-]
+    },
+];
 
-// Advisory//Technical Feasibility Study
-// const subsection_services_advisory_technical_feasibility_study = {
-//     title: 'IT Service Management',
-//     items: [
-//         { label: 'Project Discovery', description: "Lay the groundwork for project success with Virtuosoft’s Discovery Workshops. We align teams, clarify business goals and uncover technical insights, building a shared roadmap that keeps every stakeholder focused and informed." },
-//         { label: 'Product Strategy', description: "Define, refine, and position your product for growth. Our strategic planning services help you identify market gaps, validate product concepts and create data-driven roadmaps for long-term success." },
-//     ],
-// }
+export const Faq_softwareeng_SoftwareDevelopment = [
+     {
+    value: "item-1",
+    question: "What is Custom Software Development?",
+    answer:
+      "Custom Software Development is the process of designing, creating, deploying and maintaining software specifically for a set of users, functions or organizations, as opposed to off-the-shelf software."
+  },
+  {
+    value: "item-2",
+    question: "How can custom software transform my business operations?",
+    answer:
+      "It automates and streamlines your unique workflows, breaks down data silos, provides a competitive market advantage and scales precisely with your growth, driving efficiency and innovation."
+  },
+  {
+    value: "item-3",
+    question: "What is the typical timeline for a custom software project?",
+    answer:
+      "A minimum viable product (MVP) can often be delivered in 8-12 weeks. A comprehensive, enterprise-grade application typically takes 4-8 months, delivered iteratively in agile sprints."
+  },
+  {
+    value: "item-4",
+    question: "How do you ensure the software aligns perfectly with our business needs?",
+    answer:
+      "Our process begins with deep discovery and strategic planning. We involve your key stakeholders throughout, using prototypes and regular demos to ensure every feature delivers tangible business value."
+  },
+  {
+    value: "item-5",
+    question: "Can you integrate the new software with our existing systems?",
+    answer:
+      "Yes. Seamless integration is a core part of our service. We build custom APIs and middleware to ensure your new solution works in harmony with your current ERP, CRM, databases and other tools."
+  },
+  {
+    value: "item-6",
+    question: "Who owns the intellectual property of the custom software?",
+    answer:
+      "You retain 100% ownership of the source code, design and all intellectual property developed during the project, as stipulated in our contract."
+  },
+  {
+    value: "item-7",
+    question: "What about ongoing maintenance and support after launch?",
+    answer:
+      "We offer flexible support and maintenance plans that include performance monitoring, security updates, bug fixes and feature enhancements to ensure your software evolves with your business."
+  },
+  {
+    value: "item-8",
+    question: "Is custom software development cost-effective compared to SaaS subscriptions?",
+    answer:
+      "For core business operations, custom software offers superior long-term ROI. It eliminates recurring license fees, provides a competitive edge and avoids the limitations and cost escalations of generic SaaS platforms."
+  },
+];
 
+export const Faq_softwareeng_ApplicationDevelopment = [
+  {
+    value: "item-1",
+    question: "What is the application development process?",
+    answer:
+      "It's a process of designing, building and deploying custom web and mobile applications tailored to your specific business requirements and user needs, using agile methodologies."
+  },
+  {
+    value: "item-2",
+    question: "What types of applications do you develop?",
+    answer:
+      "We create web applications, native mobile apps (iOS/Android), cross-platform solutions and complex enterprise software systems for various industries."
+  },
+  {
+    value: "item-3",
+    question: "Do you develop for both iOS and Android platforms?",
+    answer:
+      "Yes, we build native applications using Swift and Kotlin, plus cross-platform solutions using Flutter and React Native for maximum market reach."
+  },
+  {
+    value: "item-4",
+    question: "Can you integrate with our existing systems?",
+    answer:
+      "Yes. We seamlessly connect new applications with your current CRM, ERP, payment gateways and other third-party services through secure APIs."
+  },
+  {
+    value: "item-5",
+    question: "What is your typical project pricing structure?",
+    answer:
+      "We offer fixed-price projects for defined scopes and time-and-materials arrangements for more flexible, evolving project requirements and timelines."
+  },
+  {
+    value: "item-6",
+    question: "Do you provide ongoing maintenance and support?",
+    answer:
+      "Yes, we offer comprehensive support packages including bug fixes, performance optimization, security updates and feature enhancements post-launch."
+  },
+  {
+    value: "item-7",
+    question: "How do you ensure application quality?",
+    answer:
+      "We implement rigorous testing protocols including unit testing, integration testing and user acceptance testing throughout the development lifecycle."
+  },
+  {
+    value: "item-8",
+    question: "What is your typical project timeline?",
+    answer:
+      "Most projects range from 8-20 weeks depending on complexity, with working prototypes delivered within the first 2-4 weeks of development."
+  },
+  {
+    value: "item-9",
+    question: "Who owns the intellectual property?",
+    answer:
+      "You retain full IP rights to all code, designs and deliverables created during our engagement, as specified in our contract agreement."
+  },
+  {
+    value: "item-10",
+    question: "How do we get started?",
+    answer:
+      "Begin with our discovery workshop to define your requirements, scope and timeline, followed by a detailed proposal and project plan."
+  },
+];
 
-// Services Page Sections
-const accentImg = "assets/Images/service"
-export const aiCategory = {
-    title: 'Artificial Intelligence & Data',
-    subtitletop: 'Turning Data into Intelligent Action',
-    subtitlebottom: "Artificial Intelligence and Data are transforming how businesses operate and grow. With the right tools and strategy, data becomes a powerful engine for automation, prediction and smarter decision-making.",
-    bgColor: 'bg-linear-to-br from-primary to-[#003799]',
-    textColor: 'text-white',
-    accentImage: `/${accentImg}/ai_data_service.png`,
-    imagePosition: "-top-6 -right-4",
-    services: [
-        { label: 'AI Agents', description: "Create intelligent digital assistants and automation tools that work around the clock, reducing manual effort and boosting efficiency." },
-        { label: 'Generative AI', description: 'Bring ideas to life with AI that writes, designs and creates, helping your teams move from concept to content in seconds.', },
-        { label: 'Machine Learning', description: "Turn your data into foresight. Discover hidden patterns, forecast trends and make decisions with confidence." },
-        { label: 'Conversational AI', description: "Engage your customers with chatbots that actually understand, delivering natural, human-like conversations that enhance satisfaction." },
-        { label: 'Computer Vision', description: "Empower your systems to see and understand the world, from detecting objects to automating visual quality control." },
-        { label: 'Data Science & MLOps', description: "Build reliable data models that evolve with your business, backed by streamlined workflows and continuous improvement." },
-    ],
-    cta: "Discover AI Agents with Virtuosoft",
-}
+export const Faq_softwareeng_ApplicationModernization = [
+  {
+    value: "item-1",
+    question: "What is application modernization?",
+    answer:
+      "Application modernization involves transforming your outdated software into modern, cloud-native applications that deliver better performance, security and user experience while reducing maintenance costs."
+  },
+  {
+    value: "item-2",
+    question: "Why should we modernize our applications?",
+    answer:
+      "Modernization boosts operational efficiency, enhances security compliance, improves customer experience and enables integration with new technologies and business platforms."
+  },
+  {
+    value: "item-3",
+    question: "How long does modernization typically take?",
+    answer:
+      "Projects typically range from 8-24 weeks, depending on application complexity and whether we're refactoring, replatforming or completely rebuilding your systems."
+  },
+  {
+    value: "item-4",
+    question: "What are the biggest modernization challenges?",
+    answer:
+      "Common challenges include legacy code dependencies, data migration complexity and ensuring business continuity during the transition, all areas where we have proven expertise."
+  },
+  {
+    value: "item-5",
+    question: "Can you migrate our on-premise applications to the cloud?",
+    answer:
+      "Yes, we specialize in secure cloud migration to AWS, Azure, or Google Cloud, ensuring optimal performance, scalability and cost-efficiency for your specific needs."
+  },
+  {
+    value: "item-6",
+    question: "What technologies do you use for modernization?",
+    answer:
+      "We leverage cloud-native architectures, microservices, containerization and modern frameworks to build scalable, maintainable solutions tailored to your technology stack."
+  },
+  {
+    value: "item-7",
+    question: "How do you ensure security during modernization?",
+    answer:
+      "We implement security-by-design principles, conduct regular vulnerability assessments and ensure compliance with industry regulations throughout the modernization lifecycle."
+  },
+  {
+    value: "item-8",
+    question: "Will our business operations be disrupted?",
+    answer:
+      "We use phased migration strategies and parallel testing to ensure zero business disruption, maintaining your existing operations while deploying modernized solutions."
+  },
+  {
+    value: "item-9",
+    question: "Do you provide post-launch support?",
+    answer:
+      "Yes, we offer comprehensive support packages including performance monitoring, security updates and feature enhancements to keep your applications running optimally."
+  },
+  {
+    value: "item-10",
+    question: "How do you handle complex legacy systems?",
+    answer:
+      "We analyze your legacy architecture and business processes to create a tailored modernization roadmap that preserves business logic while enabling future growth."
+  },
+];
 
-export const cloudCategory = {
-    title: 'Cloud Services',
-    subtitletop: 'Powering Agility in a Connected World',
-    subtitlebottom: 'Cloud is more than storage, it’s a foundation for innovation. Our cloud services help you scale effortlessly, cut costs and build secure environments that grow with your needs.',
-    accentImage: `/${accentImg}/cs_service.png`,
-    textColor: 'text-white',
-    bgColor: 'bg-linear-to-br from-[#734F9A] to-[#300032]',
-    imagePosition: "-top-6 -right-4",
-    services: [
-        {
-            label: 'Cloud Engineering & Architecture',
-            description: "Design the perfect cloud setup with secure, flexible and built to support your business goals."
-        },
-        {
-            label: 'Cloud Migration',
-            description: "Move to the cloud without the chaos. We handle the transition smoothly while keeping your data safe."
-        },
-        {
-            label: "DevOps & CI/CD Implementation",
-            description: "Accelerate your development cycle with automation, continuous integration and faster deployment."
-        },
-        {
-            label: "Cloud Cost Optimization",
-            description: "Get more value from your cloud by streamlining resources and minimizing unnecessary costs."
-        },
-        {
-            label: "Managed Services & Support",
-            description: "Stay focused on growth while we manage, monitor and maintain your cloud infrastructure 24/7."
-        }
-    ],
-}
+export const Faq_softwareeng_databaseMigration = [
+  {
+    value: "item-1",
+    question: "What is database migration?",
+    answer:
+      "Database migration is the process of moving data from one database system to another while maintaining accuracy, security, and performance."
+  },
+  {
+    value: "item-2",
+    question: "Will my business experience downtime during migration?",
+    answer:
+      "We design migration strategies to minimize or completely eliminate downtime whenever possible."
+  },
+  {
+    value: "item-3",
+    question: "Can you migrate large and complex databases?",
+    answer:
+      "Yes. We specialize in handling high-volume, mission-critical databases with complex dependencies."
+  },
+  {
+    value: "item-4",
+    question: "Do you support cloud database migrations?",
+    answer:
+      "Absolutely. We migrate databases to AWS, Azure, Google Cloud, and hybrid environments."
+  },
+  {
+    value: "item-5",
+    question: "How do you ensure data security during migration?",
+    answer:
+      "We use encryption, secure transfer protocols, access controls, and audit logs throughout the process."
+  },
+  {
+    value: "item-6",
+    question: "What databases do you work with?",
+    answer:
+      "We support Oracle, MySQL, PostgreSQL, SQL Server, MongoDB, DynamoDB, and many more."
+  },
+  {
+    value: "item-7",
+    question: "How long does a database migration take?",
+    answer:
+      "Timelines vary based on data size and complexity, but most projects range from weeks to a few months."
+  },
+  {
+    value: "item-8",
+    question: "Do you offer post-migration support?",
+    answer:
+      "Yes. We provide optimization, monitoring, and ongoing maintenance after migration."
+  },
+  {
+    value: "item-9",
+    question: "Can you help modernize database architecture during migration?",
+    answer:
+      "Yes. We often re-architect databases for scalability, performance, and cloud readiness."
+  },
+  {
+    value: "item-10",
+    question: "How do we get started?",
+    answer:
+      "Begin with a database assessment to define scope, risks, and the optimal migration roadmap."
+  },
+];
 
-export const advisoryCategory = {
-    title: 'Advisory & Strategy',
-    subtitletop: 'From Vision to Real-World Impact',
-    subtitlebottom: 'Every great product begins with a clear strategy. Our advisory services help you uncover opportunities, reduce risk and shape a roadmap that turns big ideas into sustainable results.',
-    accentImage: `/${accentImg}/as_service.png`,
-    textColor: 'text-white',
-    bgColor: 'bg-linear-to-br from-[#084387] to-[#021021]',
-    imagePosition: "top-0 right-0",
-    services: [
-        {
-            label: 'Discovery Workshops',
-            description: "Collaborate with experts to explore ideas, define goals and set a clear direction for your digital journey."
-        },
-        {
-            label: 'Technical Feasibility Study',
-            description: "Know what’s possible and what’s not. We evaluate your concepts from every angle before development begins."
-        },
-        {
-            label: "Product Strategy & Roadmapping",
-            description: "Turn your product vision into a detailed, achievable plan with defined milestones and measurable outcomes."
-        }, {
-            label: "UX / UI Consulting",
-            description: "Design experiences that people love, blending usability, simplicity and aesthetic appeal."
-        }, {
-            label: "Digital Transformation Consulting",
-            description: "Reimagine your organization with strategies that connect technology, people and processes for long-term growth."
-        }
-    ],
-}
+export const Faq_softwareeng_thirdPartyIntegration = [
+  {
+    value: "item-1",
+    question: "What is third-party integration?",
+    answer:
+      "It’s the process of connecting external systems, APIs or platforms with your application to enable data sharing and functionality."
+  },
+  {
+    value: "item-2",
+    question: "Which systems can you integrate with?",
+    answer:
+      "We integrate CRMs, ERPs, payment gateways, analytics tools, cloud platforms and custom APIs."
+  },
+  {
+    value: "item-3",
+    question: "Are integrations secure?",
+    answer:
+      "Yes. We follow industry best practices including encryption, authentication and access control."
+  },
+  {
+    value: "item-4",
+    question: "Can you integrate legacy systems?",
+    answer:
+      "Absolutely. We support both modern and legacy systems through APIs and middleware."
+  },
+  {
+    value: "item-5",
+    question: "How long does an integration project take?",
+    answer:
+      "Timelines vary by complexity but most integrations are completed within weeks."
+  },
+  {
+    value: "item-6",
+    question: "Do you support real-time integrations?",
+    answer:
+      "Yes. We build real-time and event-driven integrations using webhooks and messaging systems."
+  },
+  {
+    value: "item-7",
+    question: "What happens if an integration fails?",
+    answer:
+      "We implement error handling, retries, logging and alerts to ensure reliability."
+  },
+  {
+    value: "item-8",
+    question: "Can integrations scale with business growth?",
+    answer:
+      "Yes. Our integrations are designed to handle increased volume and complexity."
+  },
+  {
+    value: "item-9",
+    question: "Do you provide ongoing support?",
+    answer:
+      "Yes. We offer monitoring, maintenance and optimization services post-deployment."
+  },
+  {
+    value: "item-10",
+    question: "How do we get started?",
+    answer:
+      "Start with an integration assessment to define scope, risks and the best architecture."
+  },
+];
+export const Faq_cloudeng_cloudConsulting = [
+  {
+    value: "item-1",
+    question: "What is cloud consulting?",
+    answer:
+      "Cloud consulting helps organizations plan, design and optimize cloud adoption aligned with business goals, security, and cost efficiency."
+  },
+  {
+    value: "item-2",
+    question: "Do you work with AWS, Azure, and Google Cloud?",
+    answer:
+      "Yes. We provide vendor-neutral consulting across AWS, Microsoft Azure and Google Cloud Platform."
+  },
+  {
+    value: "item-3",
+    question: "Is cloud consulting only for large enterprises?",
+    answer:
+      "No. Startups, mid-sized businesses and enterprises all benefit from a clear cloud strategy."
+  },
+  {
+    value: "item-4",
+    question: "Can you help us reduce our cloud costs?",
+    answer:
+      "Yes. Cost optimization and FinOps are core parts of our consulting approach."
+  },
+  {
+    value: "item-5",
+    question: "Do you handle implementation as well?",
+    answer:
+      "Yes. We can guide strategy only or support full implementation with our cloud engineering teams."
+  },
+  {
+    value: "item-6",
+    question: "How long does a cloud consulting engagement take?",
+    answer:
+      "Typically 2–6 weeks for assessments and strategy, depending on complexity."
+  },
+  {
+    value: "item-7",
+    question: "Will cloud consulting help with security and compliance?",
+    answer:
+      "Yes. We design cloud environments with security, governance and compliance built in."
+  },
+  {
+    value: "item-8",
+    question: "Can you help with multi-cloud or hybrid setups?",
+    answer:
+      "Yes. We specialize in designing and managing complex hybrid and multi-cloud strategies."
+  },
+  {
+    value: "item-9",
+    question: "How do you measure cloud success?",
+    answer:
+      "Through KPIs such as cost efficiency, performance, scalability, security posture and business outcomes."
+  },
+  {
+    value: "item-10",
+    question: "How do we get started?",
+    answer:
+      "Start with a cloud readiness assessment to define your current state and future roadmap."
+  },
+];
 
-export const engineeringCategory = {
-    title: 'Engineering & Development',
-    subtitletop: 'Building the Future, One Line at a Time',
-    subtitlebottom: 'From web platforms to enterprise applications, our engineering team turns ideas into scalable digital solutions. Every product is crafted for reliability, performance and real-world impact.',
-    accentImage: `/${accentImg}/ed_service.png`,
-    textColor: 'text-white',
-    bgColor: 'bg-linear-to-br from-[#0E3043] to-[#485861]',
-    imagePosition: "top-0 right-0",
-    services: [
-        {
-            label: 'Web & Mobile App Development',
-            description: "Create sleek, high-performing apps that engage users and deliver seamless experiences across all devices."
-        },
-        {
-            label: "SaaS & Cloud-based App Development",
-            description: "Develop scalable platforms that grow with your business and keep you connected anytime, anywhere."
-        },
-        {
-            label: "Product Development (MVP to Enterprise Scale)",
-            description: "Whether it’s an early prototype or a large-scale system, we bring your ideas to life with speed and precision."
-        },
-        {
-            label: "App Modernization & Migration",
-            description: "Upgrade old systems with modern technology while enhancing security, performance and flexibility."
-        },
-        {
-            label: "API & Legacy System Integration",
-            description: "Connect everything. Integrate your tools, systems and platforms to work together as one efficient ecosystem."
-        },
-        {
-            label: "QA Automation & Testing",
-            description: "Deliver flawless products with testing that ensures every release is fast, stable and ready for users."
-        }
-    ],
-}
+export const Faq_cloudeng_cloudMigration = [
+  {
+    value: "item-1",
+    question: "What is cloud migration?",
+    answer:
+      "Cloud migration is the process of moving applications, data and infrastructure from on-premises or legacy environments to the cloud."
+  },
+  {
+    value: "item-2",
+    question: "Which cloud platforms do you support?",
+    answer:
+      "We support AWS, Microsoft Azure and Google Cloud Platform."
+  },
+  {
+    value: "item-3",
+    question: "Will there be downtime during migration?",
+    answer:
+      "We plan migrations carefully to minimize or eliminate downtime wherever possible."
+  },
+  {
+    value: "item-4",
+    question: "How long does a cloud migration take?",
+    answer:
+      "Timelines vary by complexity but typically range from a few weeks to a few months."
+  },
+  {
+    value: "item-5",
+    question: "Is cloud migration secure?",
+    answer:
+      "Yes. We implement encryption, access controls and compliance best practices throughout the process."
+  },
+  {
+    value: "item-6",
+    question: "Can you migrate legacy applications?",
+    answer:
+      "Yes. We specialize in migrating and modernizing legacy systems."
+  },
+  {
+    value: "item-7",
+    question: "Do you help reduce cloud costs after migration?",
+    answer:
+      "Yes. Post-migration optimization is a core part of our service."
+  },
+  {
+    value: "item-8",
+    question: "What migration approach do you recommend?",
+    answer:
+      "It depends on your goals. We assess whether rehosting, refactoring or rebuilding is best."
+  },
+  {
+    value: "item-9",
+    question: "Can you support hybrid cloud migrations?",
+    answer:
+      "Yes. We design phased hybrid strategies to ensure continuity and flexibility."
+  },
+  {
+    value: "item-10",
+    question: "How do we get started?",
+    answer:
+      "Begin with a cloud readiness assessment to define your migration roadmap."
+  },
+];
 
-export const optimizationCategory = {
-    title: 'Optimization & Enablement',
-    subtitletop: 'Making Systems Smarter and Teams Stronger',
-    subtitlebottom: 'Optimization is about doing more with less. We help you refine your systems, automate your processes and enhance performance so your business keeps running smoothly and scaling confidently.',
-    accentImage: `/${accentImg}/oe_service.png`,
-    textColor: 'text-white',
-    bgColor: 'bg-linear-to-br from-[#498968] to-[#00192E]',
-    imagePosition: "top-0 right-0",
-    services: [
-        {
-            label: 'Software Audits',
-            description: "Get a clear view of your software health, uncover gaps, inefficiencies and opportunities for improvement."
-        },
-        {
-            label: "Quality Assurance",
-            description: "Ensure every release works as intended. Our QA team tests, validates and refines to deliver flawless user experiences."
-        },
-        {
-            label: "Support & Maintenance",
-            description: "Keep everything running perfectly with continuous monitoring, updates and technical support."
-        },
-        {
-            label: "Process Automation",
-            description: "Automate repetitive tasks and free your teams to focus on what really drives growth."
-        }
-    ],
-}
+export const Faq_cloudeng_managedCloudServices = [
+  {
+    value: "item-1",
+    question: "What are Managed Cloud Services?",
+    answer:
+      "Managed Cloud Services involve outsourcing cloud operations, monitoring, security and optimization to experts."
+  },
+  {
+    value: "item-2",
+    question: "Which cloud platforms do you manage?",
+    answer:
+      "We manage AWS, Microsoft Azure and Google Cloud environments."
+  },
+  {
+    value: "item-3",
+    question: "Do you provide 24/7 support?",
+    answer:
+      "Yes. We offer round-the-clock monitoring and incident response."
+  },
+  {
+    value: "item-4",
+    question: "Will we still have control over our cloud environment?",
+    answer:
+      "Absolutely. You retain full ownership and visibility while we handle operations."
+  },
+  {
+    value: "item-5",
+    question: "How do you help reduce cloud costs?",
+    answer:
+      "Through continuous monitoring, rightsizing and FinOps best practices."
+  },
+  {
+    value: "item-6",
+    question: "Is security included in managed services?",
+    answer:
+      "Yes. Security, compliance and threat monitoring are core components."
+  },
+  {
+    value: "item-7",
+    question: "Can you support hybrid or multi-cloud setups?",
+    answer:
+      "Yes. We manage hybrid and multi-cloud environments seamlessly."
+  },
+  {
+    value: "item-8",
+    question: "What SLAs do you offer?",
+    answer:
+      "We provide SLA-backed uptime, response and resolution commitments."
+  },
+  {
+    value: "item-9",
+    question: "Can services scale as our business grows?",
+    answer:
+      "Yes. Our managed services scale with your workloads and business needs."
+  },
+  {
+    value: "item-10",
+    question: "How do we get started?",
+    answer:
+      "Start with a cloud assessment to define the right managed service model for your environment."
+  },
+];
 
-export const engagementCategory = {
-    title: 'Engagement Models',
-    subtitletop: 'Flexible Partnerships that Fit Your Goals',
-    subtitlebottom: 'Every business is unique and so is the way it builds technology. Our engagement models are designed to adapt, whether you need long-term collaboration, short-term support or expert talent on demand.',
-    accentImage: `/${accentImg}/em_models_service.png`,
-    textColor: 'text-white',
-    bgColor: 'bg-linear-to-br from-[#8F6982]/90 to-[#33004A]',
-    imagePosition: "top-0 right-0",
-    services: [
-        {
-            label: 'Dedicated Development Team',
-            description: "A team that works exclusively for you fully aligned with your goals and timelines."
-        },
-        {
-            label: "Offshore / Remote Team Setup",
-            description: "Extend your capabilities globally with skilled remote teams that deliver around the clock."
-        },
-        {
-            label: "Fixed Price Projects",
-            description: "Ideal for clearly defined goals. Predictable budgets, timelines and deliverables with zero surprises."
-        },
-        {
-            label: "Staff Augmentation",
-            description: "Scale your team instantly with specialists who blend seamlessly into your projects."
-        }
-    ],
-}
+export const Faq_cloudeng_devOpsConsulting = [
+  {
+    value: "item-1",
+    question: "What is DevOps consulting?",
+    answer:
+      "DevOps consulting helps organizations automate software delivery and align development and operations for faster, reliable releases."
+  },
+  {
+    value: "item-2",
+    question: "Which tools do you work with?",
+    answer:
+      "We work with Jenkins, GitHub Actions, GitLab, Azure DevOps, Terraform, Docker, Kubernetes and more."
+  },
+  {
+    value: "item-3",
+    question: "Do you support cloud-native DevOps?",
+    answer:
+      "Yes. We specialize in DevOps for AWS, Azure and GCP environments."
+  },
+  {
+    value: "item-4",
+    question: "Can you integrate security into DevOps?",
+    answer:
+      "Yes. We implement DevSecOps with automated security checks and compliance controls."
+  },
+  {
+    value: "item-5",
+    question: "How long does DevOps implementation take?",
+    answer:
+      "Initial pipelines can be live in weeks; maturity builds continuously over time."
+  },
+  {
+    value: "item-6",
+    question: "Will DevOps reduce deployment failures?",
+    answer:
+      "Yes. Automation and testing significantly reduce human error and failures."
+  },
+  {
+    value: "item-7",
+    question: "Do you train our internal teams?",
+    answer:
+      "Yes. We provide hands-on coaching and knowledge transfer."
+  },
+  {
+    value: "item-8",
+    question: "Can DevOps work with legacy systems?",
+    answer:
+      "Yes. We modernize workflows incrementally without disrupting operations."
+  },
+  {
+    value: "item-9",
+    question: "Is DevOps suitable for small teams?",
+    answer:
+      "Yes. DevOps improves efficiency regardless of team size."
+  },
+  {
+    value: "item-10",
+    question: "How do we start?",
+    answer:
+      "Begin with a DevOps readiness assessment to define the right roadmap."
+  },
+];
 
-// Services Page What Make Us Different? Section
-const iconDifferent = "assets/Images/service"
-export const differentCard = [
+export const Faq_cloudeng_devsecops = [
+  {
+    value: "item-1",
+    question: "What is DevSecOps?",
+    answer:
+      "DevSecOps integrates security into DevOps workflows, making security continuous, automated and proactive."
+  },
+  {
+    value: "item-2",
+    question: "How is DevSecOps different from DevOps?",
+    answer:
+      "DevOps focuses on speed and reliability; DevSecOps adds built-in security and compliance at every stage."
+  },
+  {
+    value: "item-3",
+    question: "Can DevSecOps slow down development?",
+    answer:
+      "No. Automation reduces manual checks and actually accelerates secure releases."
+  },
+  {
+    value: "item-4",
+    question: "Which compliance standards do you support?",
+    answer:
+      "We support ISO 27001, SOC 2, PCI DSS, GDPR, HIPAA and more."
+  },
+  {
+    value: "item-5",
+    question: "Do you support cloud-native security?",
+    answer:
+      "Yes. We specialize in securing AWS, Azure and GCP environments."
+  },
+  {
+    value: "item-6",
+    question: "Can DevSecOps work with existing pipelines?",
+    answer:
+      "Absolutely. We integrate security into your current CI/CD workflows."
+  },
+  {
+    value: "item-7",
+    question: "What security tools do you use?",
+    answer:
+      "We work with industry-leading SAST, DAST, IAM, CSPM and SIEM tools."
+  },
+  {
+    value: "item-8",
+    question: "How do you handle secrets management?",
+    answer:
+      "We implement secure vaults, encryption and access controls."
+  },
+  {
+    value: "item-9",
+    question: "Is DevSecOps suitable for regulated industries?",
+    answer:
+      "Yes. It’s ideal for finance, healthcare and enterprises with strict compliance needs."
+  },
+  {
+    value: "item-10",
+    question: "How do we get started?",
+    answer:
+      "Start with a DevSecOps maturity assessment to identify gaps and define a secure roadmap."
+  },
+];
+
+//Custom Agent 
+export const Faq_AI_CustomAgent = [
     {
-        icon: `/${iconDifferent}/different_success.png`,
-        label: "Your Success",
-        description: "We measure our success by the business results we drive for you."
+        value: "item-1",
+        question: "What is an AI Agent?",
+        answer: "An AI Agent is a smart system that operates independently to complete complex tasks. It analyzes situations, makes decisions and executes actions across business functions like customer service, operations and data management without constant human oversight."
     },
     {
-        icon: `/${iconDifferent}/different_built.png`,
-        label: "Built for Users",
-        description: "We create intuitive experiences that feel natural from the very first click."
+        value: "item-2",
+        question: "How do AI Agents function?",
+        answer: "These systems combine advanced language models with reasoning engines and specialized tools. They process information from their environment, evaluate options against set objectives and autonomously execute workflows, whether handling support tickets or optimizing supply chains."
     },
     {
-        icon: `/${iconDifferent}/different_proven.png`,
-        label: "Proven Experts",
-        description: "Your project is handled by our experts, ensuring quality and reliability."
+        value: "item-3",
+        question: "What capabilities do AI Agents possess?",
+        answer: "Core capabilities include strategic planning for goal achievement, contextual understanding through data analysis, autonomous task execution, collaborative operation with human teams and continuous learning from interactions to improve performance over time."
     },
     {
-        icon: `/${iconDifferent}/different_launch.png`,
-        label: "Launch Faster",
-        description: "Our agile process gets your product to market in weeks, not months."
+        value: "item-4",
+        question: "How do AI Agents differ from basic automation tools?",
+        answer: "Unlike simple bots following rigid rules, AI Agents handle complex, multi-step processes requiring judgment. They adapt to new scenarios and make context-aware decisions, while traditional automation only repeats predefined actions without intelligence."
     },
-]
+    {
+        value: "item-5",
+        question: "What business processes can AI Agents handle?",
+        answer: "They automate diverse operations including customer inquiry resolution, financial report generation, employee onboarding workflows, inventory management, content creation and data analysis, essentially any rule-based but complex workflow."
+    },
+    {
+        value: "item-6",
+        question: "Can multiple AI Agents coordinate together?",
+        answer: "Yes. Multi-agent systems enable specialized AI Agents to collaborate on intricate processes. For instance, separate Agents can simultaneously manage order fulfillment, logistics coordination and customer communication while sharing relevant data."
+    },
+    {
+        value: "item-7",
+        question: "How secure is AI Agent implementation?",
+        answer: "We implement rigorous security protocols including data encryption, access controls and approval workflows. Human oversight options ensure sensitive operations receive mandatory review, maintaining compliance and risk management throughout all automated processes."
+    },
+];
 
-// Careers Page Collaboration Section
-const iconCollab = "assets/Images/careers/"
-export const collabCard = [
-    {
-        icon: `/${iconCollab}/collab_app.png`,
-        translate_y: "translate-0 lg:-translate-y-2",
-        max_w: "max-w-2",
-        label: "Application Review",
-        description: "We review applications to find the best fit."
-    },
-    {
-        translate_y: "translate-0 lg:translate-y-20",
-        max_w: "max-w-2",
-        icon: `/${iconCollab}/collab_first.png`,
-        label: "First Interview",
-        description: "We discuss experience, goals and introduce Virtuosoft."
-    },
-    {
-        icon: `/${iconCollab}/collab_skill.png`,
-        translate_y: "translate-y-0",
-        label: "Skill / Technical Round",
-        description: "We test technical skills through practical, role-specific challenges."
-    },
-    {
-        icon: `/${iconCollab}/collab_final.png`,
-        translate_y: "translate-0 lg:translate-y-20",
-        label: "Final Culture Fit & Other",
-        description: "We confirm cultural alignment and extend the offer."
-    },
-]
 
+export const Faq_AI_GenerativeAI = [
+    {
+        value: "item-1",
+        question: "What is Generative AI?",
+        answer: "Generative AI is a branch of artificial intelligence that leverages advanced machine learning models such as GANs, VAEs and Transformers, to produce original content, including text, images, audio and other digital media."
+    },
+    {
+        value: "item-2",
+        question: "How does Generative AI create content?",
+        answer: "It analyzes vast amounts of data to understand patterns and relationships, then generates new material that matches the style, structure and context of your original input and requirements."
+    },
+    {
+        value: "item-3",
+        question: "What business applications does Generative AI serve?",
+        answer: "It powers marketing content creation, product design ideation, customer service automation, technical documentation and code generation, essentially any content-heavy business process."
+    },
+    {
+        value: "item-4",
+        question: "Does Generative AI possess true creativity?",
+        answer: "No, it's an advanced pattern recognition engine that remixes learned information. It enhances human creativity by providing starting points and variations, but doesn't replace original thought."
+    },
+    {
+        value: "item-5",
+        question: "How does Generative AI differ from traditional AI?",
+        answer: "While traditional AI analyzes and classifies existing data, Generative AI produces new content, writing documents, creating designs or developing code that didn't previously exist."
+    },
+    {
+        value: "item-6",
+        question: "Can Generative AI replace human creative teams?",
+        answer: "It serves as a powerful collaborator that accelerates production, but strategic direction, emotional intelligence and final quality control still require human expertise and judgment."
+    },
+    {
+        value: "item-7",
+        question: "Who owns the content created by Generative AI?",
+        answer: "You maintain full rights to all generated content created for your projects. We implement measures to ensure originality and protect against intellectual property infringement."
+    },
+    {
+        value: "item-8",
+        question: "What ethical safeguards do you implement?",
+        answer: "We establish clear usage guidelines, bias detection protocols and human review processes to ensure responsible and ethical deployment that aligns with your brand values."
+    },
+    {
+        value: "item-9",
+        question: "How can businesses practically use Generative AI?",
+        answer: "Applications include automated report generation, personalized marketing campaigns, product prototype designs, customer communication templates and internal documentation creation."
+    },
+    {
+        value: "item-10",
+        question: "What future capabilities are emerging?",
+        answer: "We're moving toward industry-specific models that offer deeper domain expertise, multi-format content generation and more seamless integration into existing business workflows and platforms."
+    },
+];
+
+
+export const Faq_AI_DataScience_MLOps = [
+    {
+        value: "item-1",
+        question: "What’s the difference between Data Science and MLOps?",
+        answer: "Data Science builds insights and models. MLOps deploys, manages, monitors and scales those models in production."
+    },
+    {
+        value: "item-2",
+        question: "Do we need both Data Science and MLOps?",
+        answer: "Yes. Data Science creates value, MLOps ensures that value is delivered reliably and continuously."
+    },
+    {
+        value: "item-3",
+        question: "How long does an AI project typically take?",
+        answer: "Initial insights: 4–8 weeks. Full deployment: 3–6 months depending on complexity."
+    },
+    {
+        value: "item-4",
+        question: "Can you integrate with our existing systems?",
+        answer: "Yes, including cloud, on-prem, hybrid, ERP, CRM and legacy systems."
+    },
+    {
+        value: "item-5",
+        question: "How do you handle data privacy?",
+        answer: "We follow strict governance protocols and comply with GDPR, HIPAA, PCI and other global standards."
+    },
+    {
+        value: "item-6",
+        question: "What do you monitor in production models?",
+        answer: "Accuracy, drift, latency, resource usage, prediction errors, business KPIs and system health."
+    },
+    {
+        value: "item-7",
+        question: "Can you manage our entire ML lifecycle?",
+        answer: "Yes. From data ingestion to long-term monitoring and retraining."
+    },
+    {
+        value: "item-8",
+        question: "What industries do you support?",
+        answer: "Finance, healthcare, retail, logistics, manufacturing, SaaS, education and more."
+    },
+    {
+        value: "item-9",
+        question: "What tools and platforms do you use?",
+        answer: "Azure, AWS, GCP, Kubernetes, Docker, MLflow, Spark, TensorFlow, PyTorch and other enterprise tooling."
+    },
+    {
+        value: "item-10",
+        question: "How do we get started?",
+        answer: "Begin with a Data & AI Readiness Assessment to uncover high-impact opportunities."
+    },
+];
+
+
+export const Faq_AI_ConversationalAI = [
+    {
+        value: "item-1",
+        question: "What is Conversational AI?",
+        answer: "It's technology that enables natural, human-like dialogue between computers and users. We build AI-powered chatbots and virtual assistants that understand intent and provide instant, intelligent responses."
+    },
+    {
+        value: "item-2",
+        question: "How can it benefit my business?",
+        answer: "Our solutions deliver 24/7 customer service, significantly reduce support costs, accelerate response times and generate qualified leads, boosting both efficiency and customer satisfaction."
+    },
+    {
+        value: "item-3",
+        question: "Can it understand multiple languages?",
+        answer: "Yes. Our platform is built with multi-language support from the start, allowing you to engage a global audience seamlessly."
+    },
+    {
+        value: "item-4",
+        question: "Is it difficult to integrate?",
+        answer: "No. We specialize in seamless integration with your existing tools, including CRM, helpdesk and payment systems, for a hassle-free setup."
+    },
+    {
+        value: "item-5",
+        question: "How does it handle complex queries?",
+        answer: "For sophisticated issues, our AI is designed to smoothly escalate the conversation to a human agent, ensuring no customer request goes unresolved."
+    },
+    {
+        value: "item-6",
+        question: "Can I customize it to match my brand?",
+        answer: "Yes. We tailor the AI's personality, tone and knowledge to perfectly reflect your unique brand voice and guidelines."
+    },
+    {
+        value: "item-7",
+        question: "How secure is customer data?",
+        answer: "Security is paramount. We adhere to strict data privacy protocols (like GDPR/CCPA) and ensure all customer interactions are handled with enterprise-grade security."
+    },
+    {
+        value: "item-8",
+        question: "What is the typical deployment time?",
+        answer: "Most of our conversational AI solutions are up and running within a few weeks, depending on the complexity and integration scope."
+    },
+    {
+        value: "item-9",
+        question: "How do you keep the AI effective long-term?",
+        answer: "We provide continuous performance monitoring and optimization based on real user interactions, ensuring the AI adapts and improves over time."
+    },
+    {
+        value: "item-10",
+        question: "Can it really drive sales?",
+        answer: "Yes. By engaging users proactively, providing personalized product recommendations and guiding them through transactions, it directly increases conversions and revenue."
+    },
+];
+
+export const Faq_AI_ComputerVision = [
+    {
+        value: "item-1",
+        question: "What is Computer Vision?",
+        answer: "Computer Vision is an AI technology that enables machines to interpret, analyze and make decisions based on visual data such as images and videos, just as the human visual system does, but at scale and speed."
+    },
+    {
+        value: "item-2",
+        question: "How can Computer Vision transform my business operations?",
+        answer: "It automates visual inspection tasks, enhances security through real-time monitoring, enables advanced analytics from visual data and creates innovative user experiences, driving efficiency, safety and new revenue streams."
+    },
+    {
+        value: "item-3",
+        question: "What types of visual data can your Computer Vision solutions process?",
+        answer: "Our solutions process images, live video feeds, thermal imaging, satellite imagery and medical scans, extracting meaningful insights for quality control, surveillance, diagnostics and more."
+    },
+    {
+        value: "item-4",
+        question: "How accurate are your Computer Vision models in real-world conditions?",
+        answer: "We build robust models with accuracy often exceeding 95-98% in production, using techniques like synthetic data generation and continuous learning to perform reliably in varied lighting, angles and environmental conditions."
+    },
+    {
+        value: "item-5",
+        question: "Can Computer Vision integrate with our existing cameras and IoT infrastructure?",
+        answer: "Yes. We design solutions that work with your current camera systems, drones and IoT sensors, providing easy integration through APIs and edge computing devices without requiring a full infrastructure overhaul."
+    },
+    {
+        value: "item-6",
+        question: "What about data privacy and security when processing visual data?",
+        answer: "We implement privacy-by-design principles, including on-premise processing options, data anonymization, edge AI (processing on-device) and compliance with regulations to ensure sensitive visual data is fully protected."
+    },
+    {
+        value: "item-7",
+        question: "What is the typical development and deployment timeline?",
+        answer: "A pilot or proof-of-concept can be delivered in 4-6 weeks. A full-scale, customized Computer Vision system typically takes 8-16 weeks, depending on complexity and integration needs."
+    },
+    {
+        value: "item-8",
+        question: "Do you offer ongoing model training and maintenance?",
+        answer: "Yes, we provide continuous model improvement services. Our systems can be retrained on new data to adapt to changes, such as new product designs or evolving security threats, ensuring long-term accuracy and relevance."
+    },
+];
+
+export const Faq_AI_OCR = [
+    {
+        value: "item-1",
+        question: "What is Optical Character Recognition (OCR)?",
+        answer: "OCR is an AI-powered technology that automatically extracts text and data from scanned documents, images and PDFs, converting it into editable, searchable and machine-readable digital content."
+    },
+    {
+        value: "item-2",
+        question: "How can OCR benefit my business processes?",
+        answer: "OCR automates manual data entry from invoices, forms and reports, significantly reducing errors, speeding up processing times and freeing your team for higher-value strategic work."
+    },
+    {
+        value: "item-3",
+        question: "What types of documents can your OCR solution process?",
+        answer: "Our advanced OCR handles structured forms (tax returns, applications), semi-structured documents (invoices, receipts) and unstructured text (contracts, letters), including handwritten notes with high accuracy."
+    },
+    {
+        value: "item-4",
+        question: "How accurate is your OCR technology, especially with poor-quality scans?",
+        answer: "We utilize AI-enhanced OCR that achieves over 99% accuracy on clean documents and maintains high reliability on low-quality scans through pre-processing and contextual validation techniques."
+    },
+    {
+        value: "item-5",
+        question: "Can your OCR solution integrate with our existing systems?",
+        answer: "Yes, we deliver OCR as an API or embed it directly into your existing workflow systems (like ERP, CRM or DMS), ensuring seamless data flow without disrupting your current operations."
+    },
+    {
+        value: "item-6",
+        question: "How do you handle sensitive or confidential documents?",
+        answer: "We implement enterprise-grade security including encrypted data processing, secure cloud or on-premise deployment options and full compliance with data privacy regulations like GDPR and HIPAA."
+    },
+    {
+        value: "item-7",
+        question: "What is the typical implementation timeline for an OCR solution?",
+        answer: "Most OCR integrations are operational within 2-4 weeks, including configuration, testing and training, allowing you to automate document processing rapidly."
+    },
+    {
+        value: "item-8",
+        question: "Do you provide post-deployment support and accuracy optimization?",
+        answer: "Yes, we offer ongoing support, performance monitoring and model retraining services to continuously improve accuracy as you process new document types and formats."
+    },
+];
+
+export const Faq_CyberSecurity_SecurityDeployment = [
+  {
+    value: "item-1",
+    question: "What does your solution deployment service include?",
+    answer:
+      "We provide end-to-end deployment of security tools, from initial architecture and installation to configuration, integration and testing, ensuring each solution is optimized for your specific environment and threat landscape."
+  },
+  {
+    value: "item-2",
+    question: "How do you choose which security solutions to deploy?",
+    answer:
+      "We base recommendations on your compliance requirements, existing infrastructure, threat assessment results and business objectives, never pushing one-size-fits-all tools but architecting a layered defense that fits your needs."
+  },
+  {
+    value: "item-3",
+    question: "Do you handle both on-premise and cloud security deployments?",
+    answer:
+      "Yes. We specialize in hybrid environments, deploying and integrating solutions across on-premise data centers, private clouds and public cloud platforms (AWS, Azure, GCP) with consistent security policies."
+  },
+  {
+    value: "item-4",
+    question: "What is included in your ongoing management service?",
+    answer:
+      "Our management includes 24/7 monitoring, alert triage, regular patching and updates, performance tuning, policy review, threat intelligence integration and detailed reporting, all aligned with clear SLAs."
+  },
+  {
+    value: "item-5",
+    question: "How do you ensure new tools integrate with our existing systems?",
+    answer:
+      "Integration is a core phase of our process. We ensure seamless connectivity with your Active Directory, network infrastructure, existing security stack and business applications to create a unified security ecosystem."
+  },
+  {
+    value: "item-6",
+    question: "What’s the typical timeline for deploying a complete security stack?",
+    answer:
+      "While timelines vary by scope, a comprehensive deployment, including assessment, architecture, implementation and testing, typically takes 4-10 weeks, with critical controls prioritized for early deployment."
+  },
+  {
+    value: "item-7",
+    question: "How do you measure the effectiveness of deployed solutions?",
+    answer:
+      "We track key operational metrics like threat detection rate, mean time to respond (MTTR), system uptime, false positive rates and compliance status, providing you with clear visibility into ROI and performance."
+  },
+  {
+    value: "item-8",
+    question: "Do you provide training for our team during handover?",
+    answer:
+      "Yes. We include comprehensive documentation and hands-on training sessions for your IT and security staff, ensuring they are confident in daily operation, basic troubleshooting and understanding of security alerts."
+  }
+];
+
+
+export const Faq_CyberSecurity_GovernanceCompliance = [
+  {
+    value: "item-1",
+    question: "What is the difference between governance and compliance?",
+    answer:
+      "Governance is the framework of policies, roles and processes that guide how your organization manages security and risk. Compliance is the act of meeting specific external regulatory requirements (like GDPR or ISO 27001). Strong governance enables sustainable compliance."
+  },
+  {
+    value: "item-2",
+    question: "Which compliance frameworks do you specialize in?",
+    answer:
+      "We have deep expertise in major global standards, including ISO 27001, SOC 2, NIST CSF, GDPR, HIPAA and PCI DSS. We tailor our approach to your specific industry and regulatory landscape."
+  },
+  {
+    value: "item-3",
+    question: "How long does it typically take to achieve a certification like ISO 27001?",
+    answer:
+      "The timeline varies based on your organization's starting maturity but a typical journey from assessment to certification readiness takes 6-12 months. We focus on building a sustainable system, not just passing an audit."
+  },
+  {
+    value: "item-4",
+    question: "Do you help with both creating policies and implementing technical controls?",
+    answer:
+      "Yes. Our service is end-to-end. We develop the governance documentation (policies, procedures) and work alongside your team or our technical experts to implement the necessary security controls and monitoring tools."
+  },
+  {
+    value: "item-5",
+    question: "How do you ensure compliance remains ongoing and not just a one-time project?",
+    answer:
+      "We build continuous compliance into your operations through automated monitoring, scheduled internal audits, ongoing policy reviews and by establishing clear ownership and accountability within your teams."
+  },
+  {
+    value: "item-6",
+    question: "Can you help us manage third-party and vendor risk?",
+    answer:
+      "Yes. A key part of modern governance is extending control to your supply chain. We help you establish vendor risk assessment processes, contractual security requirements and ongoing monitoring protocols."
+  },
+  {
+    value: "item-7",
+    question: "What is your approach to audit readiness and support?",
+    answer:
+      "We prepare you throughout the process by conducting mock audits, helping assemble evidence and coaching your team. We can also act as a liaison with external auditors to ensure a smooth and successful certification audit."
+  },
+  {
+    value: "item-8",
+    question: "Do you provide training for our staff on new policies and procedures?",
+    answer:
+      "Yes. We develop and deliver role-specific training programs to ensure everyone understands their responsibilities within the new governance framework, which is critical for both adoption and audit success."
+  }
+];
+
+export const Faq_CyberSecurity_CyberAssessment = [
+  {
+    value: "item-1",
+    question: "What is the main goal of a cyber assessment?",
+    answer:
+      "The primary goal is to identify vulnerabilities and evaluate your overall security maturity before attackers do. We provide a clear, prioritized roadmap to strengthen your defenses and ensure your security program aligns with business risks and compliance requirements."
+  },
+  {
+    value: "item-2",
+    question: "What’s the difference between a vulnerability assessment and a penetration test?",
+    answer:
+      "A vulnerability assessment scans for known weaknesses across your systems. A penetration test (ethical hacking) actively exploits those weaknesses to simulate a real attack, demonstrating potential business impact and validating security controls."
+  },
+  {
+    value: "item-3",
+    question: "How often should we conduct these assessments?",
+    answer:
+      "We recommend at least annual comprehensive assessments. For high-risk environments or after major system changes, more frequent testing, such as quarterly vulnerability scans or bi-annual penetration tests is advisable."
+  },
+  {
+    value: "item-4",
+    question: "Which compliance frameworks do your assessments cover?",
+    answer:
+      "Our methodology is mapped to all major frameworks, including NIST CSF, ISO 27001, PCI DSS, SOC 2, HIPAA and GDPR. We can tailor the assessment to meet specific audit requirements you’re preparing for."
+  },
+  {
+    value: "item-5",
+    question: "What does your “SOC Maturity Assessment” involve?",
+    answer:
+      "We evaluate your Security Operations Center’s people, processes and technology. This includes reviewing monitoring coverage, alert quality, incident response playbooks, analyst skills and tool effectiveness to provide a maturity score and improvement plan."
+  },
+  {
+    value: "item-6",
+    question: "How do you ensure assessments don’t disrupt our operations?",
+    answer:
+      "We follow strict rules of engagement agreed upon upfront, schedule tests during maintenance windows if needed and use controlled, non-destructive techniques. Our goal is to provide insight without causing downtime."
+  },
+  {
+    value: "item-7",
+    question: "What will the final report include?",
+    answer:
+      "You’ll receive a clear, actionable report with an executive summary of risk posture, detailed technical findings prioritized by severity and business impact, evidence of vulnerabilities and a step-by-step remediation plan."
+  },
+  {
+    value: "item-8",
+    question: "Do you help fix the vulnerabilities you find?",
+    answer:
+      "While our core service is assessment and advisory, we offer remediation support services. We can provide detailed guidance to your IT team or work with our deployment specialists to implement the necessary patches, configurations or controls."
+  }
+];
+
+
+export const Faq_CyberSecurityManagedCybersecurity = [
+  {
+    value: "item-1",
+    question: "What exactly do your Managed Cybersecurity Services include?",
+    answer:
+      "Our service provides 24/7 Security Operations Center (SOC) monitoring, threat detection and response, vulnerability management, security tool management and compliance reporting. We act as an extension of your team, handling the day-to-day security operations so you can focus on your business."
+  },
+  {
+    value: "item-2",
+    question: "How does your 24/7 monitoring work?",
+    answer:
+      "Our SOC analysts use a combination of advanced SIEM/XDR platforms and global threat intelligence to monitor your networks, endpoints and cloud environments in real-time. We detect anomalies, investigate alerts and respond to incidents around the clock, 365 days a year."
+  },
+  {
+    value: "item-3",
+    question: "What is the difference between your service and just buying security software?",
+    answer:
+      "Software alone requires constant tuning, monitoring and expertise. We provide the expert analysts, processes and intelligence to operate that software effectively. We turn tools into a complete security outcome, managing everything from configuration to incident response."
+  },
+  {
+    value: "item-4",
+    question: "How quickly do you respond to a security incident?",
+    answer:
+      "Our SLA guarantees initial investigation and response initiation within 30 minutes of a validated high-severity alert. Our goal is containment within the first critical hour to minimize business impact."
+  },
+  {
+    value: "item-5",
+    question: "Can you manage our existing security tools or do we need to switch to yours?",
+    answer:
+      "We are tool-agnostic. We can onboard and manage your current stack (like CrowdStrike, SentinelOne, Microsoft Defender etc.) or recommend and deploy best-of-breed solutions as part of our service package."
+  },
+  {
+    value: "item-6",
+    question: "How do you keep us compliant with regulations like SOC 2 or ISO 27001?",
+    answer:
+      "Our service includes continuous monitoring and logging of required security controls. We provide the audit-ready reports, evidence collection and change management documentation you need to demonstrate compliance during audits."
+  },
+  {
+    value: "item-7",
+    question: "What kind of reporting will we receive?",
+    answer:
+      "You’ll get regular executive summaries with high-level risk posture, detailed technical reports on incidents and vulnerabilities and compliance-specific dashboards, all designed to provide clear visibility for both leadership and IT teams."
+  },
+  {
+    value: "item-8",
+    question: "How do we get started, and what’s the onboarding process like?",
+    answer:
+      "We begin with a Security Posture Assessment to understand your environment. Then, we establish secure data feeds, configure monitoring, define escalation protocols and integrate with your team, typically transitioning to full management within 2-4 weeks."
+  }
+];
+
+export const Faq_CyberSecurity_RiskManagement = [
+  {
+    value: "item-1",
+    question: "What is cybersecurity risk management?",
+    answer:
+      "It is the process of identifying, assessing, prioritizing and mitigating cyber risks that could impact business operations, data or reputation."
+  },
+  {
+    value: "item-2",
+    question: "How is governance different from compliance?",
+    answer:
+      "Governance defines how security decisions are made and owned, while compliance ensures adherence to regulations and standards."
+  },
+  {
+    value: "item-3",
+    question: "Which frameworks do you work with?",
+    answer:
+      "We support ISO 27001, NIST CSF, NIST 800-53, PCI DSS, HIPAA, GDPR, SOC and custom governance models."
+  },
+  {
+    value: "item-4",
+    question: "Do we need governance if we already have security tools?",
+    answer:
+      "Yes. Tools alone don’t define ownership, accountability or decision-making, governance ensures tools are used effectively."
+  },
+  {
+    value: "item-5",
+    question: "How long does it take to establish a governance framework?",
+    answer:
+      "Initial governance and risk frameworks typically take 4–8 weeks, depending on organization size and complexity."
+  },
+  {
+    value: "item-6",
+    question: "Can you help us prepare for audits?",
+    answer:
+      "Yes. We provide audit readiness, evidence preparation, control mapping and remediation support."
+  },
+  {
+    value: "item-7",
+    question: "How do you measure cyber risk?",
+    answer:
+      "We assess likelihood, impact, asset criticality and threat exposure using qualitative and quantitative methods."
+  },
+  {
+    value: "item-8",
+    question: "Is risk management only for large enterprises?",
+    answer:
+      "No. Scalable governance and risk frameworks benefit organizations of all sizes, especially growing businesses."
+  },
+  {
+    value: "item-9",
+    question: "How often should cyber risks be reviewed?",
+    answer:
+      "Continuously. We recommend ongoing monitoring with formal reviews quarterly or after major changes."
+  },
+  {
+    value: "item-10",
+    question: "How does governance support business growth?",
+    answer:
+      "Strong governance reduces uncertainty, enables faster decisions and builds trust with customers, partners and regulators."
+  }
+];
+
+export const Faq_Advisory_ProductStrategy = [
+  {
+    value: "item-1",
+    question: "What is product strategy?",
+    answer:
+      "It's your product's master plan. We define how your product will achieve key business objectives, align with market needs and deliver lasting competitive advantage."
+  },
+  {
+    value: "item-2",
+    question: "Why is it crucial?",
+    answer:
+      "Without a clear strategy, products often fail to find market fit. A strong strategy aligns your team, optimizes resources and directly fuels sustainable growth."
+  },
+  {
+    value: "item-3",
+    question: "How does it differ from product management?",
+    answer:
+      "Strategy sets the long-term vision, goals and \"why.\" Product management focuses on the tactical execution and \"how\" of building and shipping the product."
+  },
+  {
+    value: "item-4",
+    question: "What are the key components?",
+    answer:
+      "We focus on a core foundation: market and user research, competitive analysis, clear value propositions, measurable business goals and a pragmatic roadmap."
+  },
+  {
+    value: "item-5",
+    question: "Is it important for both startups and enterprises?",
+    answer:
+      "Yes. For startups, it's about finding product-market fit. For enterprises, it's about sustaining innovation and defending market position."
+  },
+  {
+    value: "item-6",
+    question: "How do you ensure the strategy stays relevant?",
+    answer:
+      "We build adaptability from the start. Our process includes continuous market analysis and user feedback loops to ensure your strategy evolves with the market."
+  },
+  {
+    value: "item-7",
+    question: "How do you collaborate with our team?",
+    answer:
+      "We integrate as a partner, facilitating workshops and maintaining transparent communication to ensure alignment and a unified vision across all stakeholders."
+  },
+  {
+    value: "item-8",
+    question: "What frameworks do you use?",
+    answer:
+      "We leverage proven frameworks like Lean Canvas and Jobs-to-be-Done, but tailor our approach specifically to your industry, company size and unique challenges."
+  }
+];
+
+
+export const Faq_Advisory_DigitalTransformation = [
+  {
+    value: "item-1",
+    question: "What is digital transformation?",
+    answer:
+      "Digital transformation integrates modern technology such as cloud computing, ERP systems, and AI-driven tools, into all business areas, fundamentally changing how you operate and deliver value to customers in the digital economy."
+  },
+  {
+    value: "item-2",
+    question: "Why is digital transformation essential for my business?",
+    answer:
+      "Digital transformation is essential for your business as it drives productivity through automated workflows, reduces costs with efficient cloud solutions, enhances customer engagement with personalized experiences, delivers real-time insights, and enables agile adaptation to changing market trends and needs."
+  },
+  {
+    value: "item-3",
+    question: "What services do you provide?",
+    answer:
+      "We offer strategic roadmap development, cloud migration, process automation, data analytics implementation, and change management to ensure successful adoption."
+  },
+  {
+    value: "item-4",
+    question: "How long does transformation typically take?",
+    answer:
+      "Transformation is an ongoing journey, but most organizations see significant initial results within 6-12 months of starting their strategic implementation."
+  },
+  {
+    value: "item-5",
+    question: "Can you create industry-specific solutions?",
+    answer:
+      "Absolutely. We develop tailored strategies for healthcare, manufacturing, retail, and financial services that address your sector's unique challenges and opportunities."
+  },
+  {
+    value: "item-6",
+    question: "How important is data in transformation?",
+    answer:
+      "Data is the foundation. We help you collect, analyze, and leverage data to drive decisions, predict trends, and create personalized customer experiences."
+  },
+  {
+    value: "item-7",
+    question: "What security measures do you implement?",
+    answer:
+      "We embed security throughout the process with encryption, access controls, compliance frameworks, and continuous monitoring to protect your digital assets."
+  },
+  {
+    value: "item-8",
+    question: "What support do you provide after implementation?",
+    answer:
+      "We offer ongoing optimization, performance monitoring, and innovation consulting to ensure your digital capabilities continue evolving with your business needs."
+  },
+  {
+    value: "item-9",
+    question: "How do we begin our transformation journey?",
+    answer:
+      "Start with our strategic assessment to evaluate your current state and co-create a phased transformation roadmap aligned with your business objectives."
+  }
+];
+
+
+export const Faq_DataServices_DataStrategy = [
+  {
+    value: "item-1",
+    question: "What makes your data strategy consulting different?",
+    answer:
+      "We bridge the gap between business leadership and technical execution. Our consultants are fluent in both boardroom priorities and data engineering realities, ensuring the strategy we create is both strategically sound and technically feasible to implement."
+  },
+  {
+    value: "item-2",
+    question: "We already have some data tools and a team. Do we still need a strategy?",
+    answer:
+      "Yes. A strategy ensures your existing investments and team efforts are aligned and directed toward the highest-priority business outcomes. It’s about optimizing and focusing on what you have, not just buying new things."
+  },
+  {
+    value: "item-3",
+    question: "How long does it take to develop a data strategy?",
+    answer:
+      "A comprehensive, enterprise-wide data strategy engagement typically takes 6 to 10 weeks. This allows for thorough discovery, collaborative workshops and the development of a detailed, actionable roadmap."
+  },
+  {
+    value: "item-4",
+    question: "What is the deliverable at the end of the engagement?",
+    answer:
+      "You will receive a complete Data Strategy Playbook. This is an actionable document containing your current state assessment, future state vision, architectural blueprint, governance model, prioritized roadmap and a detailed business case for investment."
+  },
+  {
+    value: "item-5",
+    question: "Do you help implement the strategy, or is it just a plan?",
+    answer:
+      "While our core consulting service delivers the strategic blueprint, we offer follow-on implementation advisory services. We can guide your team, help select partners and provide oversight to ensure successful execution of the roadmap we design together."
+  },
+  {
+    value: "item-6",
+    question: "How do you ensure the strategy accounts for data security and privacy?",
+    answer:
+      "Governance, security and privacy are foundational pillars of our strategy framework. We bake in compliance requirements (like GDPR, HIPAA) from the start, designing controls for data classification, access and protection as a core part of the architecture and operating model."
+  },
+  {
+    value: "item-7",
+    question: "Is this service relevant for mid-sized companies, or just large enterprises?",
+    answer:
+      "Data strategy is critical for any organization where data is an asset. For mid-sized companies, we focus on pragmatic, scalable approaches that deliver quick wins while laying a foundation for growth, ensuring the strategy is proportionate to your size and ambition."
+  }
+];
+
+
+export const Faq_DataServices_DataWarehouse = [
+  {
+    value: "item-1",
+    question: "What makes your data warehouse implementation approach unique?",
+    answer:
+      "We focus on building a business-ready analytics platform, not just a database in the cloud. Our methodology ensures the warehouse is optimized for end-user consumption, with strong governance, performance and clear data models from the outset, accelerating time-to-value."
+  },
+  {
+    value: "item-2",
+    question: "Which cloud data warehouse platform do you recommend?",
+    answer:
+      "We are platform-agnostic. Our recommendation is based on your specific needs, Snowflake for ease-of-use and concurrency, BigQuery for serverless power, Redshift for deep AWS integration. We conduct a thorough analysis to determine the best technical and financial fit."
+  },
+  {
+    value: "item-3",
+    question: "How long does a typical data warehouse implementation take?",
+    answer:
+      "A greenfield implementation for a mid-sized company typically takes 8 to 14 weeks. A complex migration or large enterprise project can take 4 to 6 months. We work in agile phases to deliver incremental value quickly."
+  },
+  {
+    value: "item-4",
+    question: "What is the ballpark cost for a project like this?",
+    answer:
+      "Costs vary significantly by scope, data volume and platform choice. We provide transparent pricing with two main components: implementation services (project-based or time & materials) and the ongoing cloud platform consumption costs, which we help you model and optimize."
+  },
+  {
+    value: "item-5",
+    question: "How do you handle data security and compliance in the cloud?",
+    answer:
+      "Security is foundational. We implement enterprise-grade measures: encryption (at rest and in transit), private networking (VPCs), granular role-based access controls (RBAC), and audit logging. We design the warehouse to help meet compliance standards like SOC 2, HIPAA and GDPR."
+  },
+  {
+    value: "item-6",
+    question: "Will our existing BI tools (like Tableau) still work?",
+    answer:
+      "Yes. A core goal of the modern data warehouse is to be the high-performance engine for your existing BI tools. We ensure seamless, optimized connectivity so your analysts can work faster and more effectively with the new platform."
+  },
+  {
+    value: "item-7",
+    question: "Do you provide training and ongoing support?",
+    answer:
+      "Yes. We include comprehensive knowledge transfer and user/admin training as part of the project. We also offer managed services for ongoing performance tuning, monitoring and support to ensure your investment continues to deliver maximum ROI."
+  }
+];
+
+
+export const Faq_DataServices_AnalyticsBI = [
+  {
+    value: "item-1",
+    question: "What makes your analytics and BI services different?",
+    answer:
+      "We focus on business adoption and action, not just dashboard delivery. Our process starts with the business question, involves users throughout design and ensures the final solution is intuitive and drives actual decisions, leading to measurable ROI."
+  },
+  {
+    value: "item-2",
+    question: "Which BI platform do you recommend (Power BI, Tableau, etc.)?",
+    answer:
+      "We are certified partners with all major platforms. Our recommendation is unbiased and based on your ecosystem, user skill levels and specific needs. We often recommend Microsoft Power BI for deep integration with Office 365 and cost-effectiveness or Tableau for superior visual design flexibility."
+  },
+  {
+    value: "item-3",
+    question: "How long does it take to build a set of dashboards?",
+    answer:
+      "A pilot dashboard for a key business area can be delivered in 2-3 weeks. A department-wide rollout with 5-10 core dashboards typically takes 6-10 weeks. We work iteratively to deliver quick wins and expand based on feedback."
+  },
+  {
+    value: "item-4",
+    question: "Do you need a data warehouse to start with analytics?",
+    answer:
+      "It is highly recommended for scalability and performance, but it's not always a prerequisite. We can often start by connecting directly to your core operational databases to deliver initial value while concurrently planning a longer-term data warehouse strategy."
+  },
+  {
+    value: "item-5",
+    question: "How do you ensure data security and governance in self-service BI?",
+    answer:
+      "Governance is key. We implement a layered security model with role-based permissions at the data source, semantic layer and dashboard level. We establish clear ownership and usage policies to enable exploration without compromising data integrity or security."
+  },
+  {
+    value: "item-6",
+    question: "Can you train our team to use and maintain the dashboards?",
+    answer:
+      "Yes. We provide role-specific training for end-users, report consumers and power users/administrators. We also deliver full technical documentation to empower your team to build new content and manage the environment."
+  },
+  {
+    value: "item-7",
+    question: "Do you offer ongoing support and enhancement services?",
+    answer:
+      "Yes. We offer analytics managed services that include performance monitoring, dashboard optimization and incremental development of new reports and features as your business needs evolve."
+  }
+];
+
+export const Faq_ITGovernance_RegulatoryCompliance = [
+  {
+    value: "item-1",
+    question: "What is your regulatory compliance service?",
+    answer:
+      "We provide end-to-end compliance management, helping you navigate complex legal requirements, implement necessary controls and maintain ongoing adherence to relevant regulations."
+  },
+  {
+    value: "item-2",
+    question: "Why is proactive compliance management important?",
+    answer:
+      "It prevents costly fines and legal issues, builds customer trust and creates a framework for secure, ethical operations that support business growth."
+  },
+  {
+    value: "item-3",
+    question: "How do you stay updated on changing regulations?",
+    answer:
+      "Our team continuously monitors regulatory changes across jurisdictions and industries, ensuring your compliance strategies remain current and effective."
+  },
+  {
+    value: "item-4",
+    question: "What industries do you specialize in?",
+    answer:
+      "We have deep expertise in technology, healthcare, finance and e-commerce sectors, with specific knowledge of GDPR, HIPAA, SOC 2 and other key frameworks."
+  },
+  {
+    value: "item-5",
+    question: "How do you handle data privacy compliance?",
+    answer:
+      "We implement comprehensive data protection measures, privacy-by-design principles, and ensure proper documentation for regulations like GDPR, CCPA, and emerging privacy laws."
+  },
+  {
+    value: "item-6",
+    question: "What's your implementation process?",
+    answer:
+      "We follow a structured approach: assessment of current state, gap analysis, control implementation and ongoing monitoring with regular compliance audits."
+  },
+  {
+    value: "item-7",
+    question: "Can you help with certification processes?",
+    answer:
+      "Yes, we guide you through entire certification processes for standards like SOC 2, ISO 27001 and others, from preparation to audit completion."
+  },
+  {
+    value: "item-8",
+    question: "How do you ensure ongoing compliance?",
+    answer:
+      "We establish continuous monitoring systems, conduct regular assessments and provide updates on regulatory changes to maintain compliance over time."
+  }
+];
+
+
+export const Faq_ITGovernance_GovernanceFrameworkDev = [
+  {
+    value: "item-1",
+    question: "What is an IT governance framework and why do we need one?",
+    answer:
+      "An IT governance framework is a formal structure that aligns your technology strategy with business goals. It establishes clear decision-making authority, accountability and processes to ensure your technology investments are secure, compliant and deliver measurable value."
+  },
+  {
+    value: "item-2",
+    question: "How is this different from our existing IT policies?",
+    answer:
+      "Policies are individual rules. A governance framework is the overarching system that connects all your policies, standards and procedures into a cohesive strategy, ensuring they work together to support business objectives and manage risk effectively."
+  },
+  {
+    value: "item-3",
+    question: "What are the key components of a successful framework?",
+    answer:
+      "We focus on five core components: strategic alignment with business goals, a defined value delivery model, robust risk management, clear resource management and performance measurement with relevant metrics."
+  },
+  {
+    value: "item-4",
+    question: "Which industry standards do you incorporate?",
+    answer:
+      "We tailor frameworks based on proven standards like COBIT, ITIL and ISO/IEC 38500, adapting them to fit your specific industry, company size and strategic objectives rather than applying a one-size-fits-all model."
+  },
+  {
+    value: "item-5",
+    question: "How long does it typically take to develop and implement a framework?",
+    answer:
+      "The timeline varies by organizational complexity, but most initial frameworks are developed and ready for phased implementation within 4-8 weeks."
+  },
+  {
+    value: "item-6",
+    question: "How do you ensure the framework remains relevant as our business evolves?",
+    answer:
+      "We build adaptability into the framework's design, establishing regular review cycles and governance committees to ensure it evolves with your business strategy and the changing technology landscape."
+  },
+  {
+    value: "item-7",
+    question: "What is our team's involvement in the development process?",
+    answer:
+      "We act as facilitators and experts. Your key stakeholders are actively involved through workshops and reviews to ensure the framework reflects your business reality and gains company-wide buy-in."
+  },
+  {
+    value: "item-8",
+    question: "Can you help us demonstrate the ROI of good governance?",
+    answer:
+      "Yes. We help you establish key performance indicators (KPIs) that link governance activities to business outcomes like reduced operational costs, faster project delivery, improved compliance scores and lower audit findings."
+  }
+];
+
+export const Faq_ITGovernance_ResourceAugmentation = [
+  {
+    value: "item-1",
+    question: "What is resource augmentation?",
+    answer:
+      "Resource augmentation is a flexible hiring model where you extend your team with pre-vetted external experts who work as part of your in-house staff, without long hiring cycles or long-term commitments."
+  },
+  {
+    value: "item-2",
+    question: "How quickly can we onboard a resource?",
+    answer:
+      "In most cases, we can match and place a qualified expert within 48–72 hours, depending on the skill set and project requirements."
+  },
+  {
+    value: "item-3",
+    question: "Will the augmented resource work in our timezone?",
+    answer:
+      "Yes. We provide talent across multiple regions and ensure they align with your preferred work hours for smooth collaboration."
+  },
+  {
+    value: "item-4",
+    question: "Do the augmented team members follow our processes?",
+    answer:
+      "Yes. They integrate into your tools, sprints, meetings and workflows exactly like your internal team, no disruption, only support."
+  },
+  {
+    value: "item-5",
+    question: "Is this model cost-effective?",
+    answer:
+      "Yes. You save on recruitment, training, infrastructure, employee benefits and long-term commitments, while still getting senior-level expertise."
+  },
+  {
+    value: "item-6",
+    question: "How do you ensure the quality of talent?",
+    answer:
+      "Each candidate goes through a multi-stage vetting process including technical assessments, communication evaluation and problem-solving tests. Only the top 2% are shortlisted for your review."
+  },
+  {
+    value: "item-7",
+    question: "Can we scale the team up or down as needed?",
+    answer:
+      "Yes. You can increase or reduce resources anytime based on project phases, no penalties, no long-term lock-ins."
+  },
+  {
+    value: "item-8",
+    question: "How do you handle confidentiality and IP protection?",
+    answer:
+      "All resources sign strict NDAs and we enforce secure processes to ensure your data, code and intellectual property stay fully protected."
+  },
+  {
+    value: "item-9",
+    question: "What if the resource isn’t the right fit?",
+    answer:
+      "We replace them immediately at no extra cost. Our talent success team stays involved to ensure you always have the perfect match for your project."
+  }
+];
