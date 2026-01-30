@@ -1,5 +1,4 @@
 'use client'
-import MaxLines from "@/components/maxLines"
 import LinkedinIcon from "@/public/assets/Images/linkedin.png"
 import Image from "next/image"
 import Link from "next/link"
