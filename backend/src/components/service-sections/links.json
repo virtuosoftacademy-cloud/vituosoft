@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_service_sections_links",
+  "info": {
+    "displayName": "links"
+  },
+  "options": {},
+  "attributes": {
+    "link1": {
+      "type": "blocks"
+    },
+    "link2": {
+      "type": "blocks"
+    },
+    "link3": {
+      "type": "blocks"
+    },
+    "link4": {
+      "type": "blocks"
+    },
+    "link5": {
+      "type": "blocks"
+    },
+    "link6": {
+      "type": "blocks"
+    },
+    "Link": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}
