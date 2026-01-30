@@ -1,5 +1,4 @@
 'use client'
-import { CommonHead, HeroHeadPages, HeroRegular, Italic } from "../../../../components/Styles/StyleClasses"
 function Hero() {
   return (
     <>
