@@ -76,7 +76,7 @@ export default function AboutUsPage() {
     absolute left-1/2 z-30 -translate-x-1/2
 
     /* MEDIUM + LARGE MOBILES (DEFAULT) */
-    left-1
+    md:left-1
     top-[-10]
     w-[50%]
 
@@ -85,7 +85,7 @@ export default function AboutUsPage() {
     max-[375px]:w-[50%]
 
     /* TABLET */
-    md:top-[-60px]
+    md:top-[-60]
     md:w-[50%]
 
     /* DESKTOP */
@@ -111,26 +111,26 @@ export default function AboutUsPage() {
     absolute z-40 origin-left
 
     /* MEDIUM + LARGE MOBILES */
-    left-[10px]
-    top-[-20px]
+    left-[10]
+    top-[-20]
     scale-[0.34]
 
     /* SMALL MOBILES */
-    max-[375px]:left-[5px]
+    max-[375px]:left-[5]
     max-[375px]:top-[5%]
     max-[375px]:scale-[0.35]
 
     /* TABLET */
-    md:left-[20px]
+    md:left-[20]
     md:top-[7%]
     md:scale-[0.61]
 
     /* DESKTOP */
-    lg:left-[-60px]
+    lg:left-[-60]
     lg:top-[15%]
     lg:scale-[0.75]
 
-    xl:left-[-50px]
+    xl:left-[-50]
     xl:top-[20%]
     xl:scale-[0.9]
   ">
@@ -159,7 +159,7 @@ export default function AboutUsPage() {
 
     /* TABLET */
     md:left-1/2
-    md:bottom-[40px]
+    md:bottom-[40]
     md:top-[37%]
     md:w-[50%]
 
@@ -182,27 +182,27 @@ export default function AboutUsPage() {
           {/* Right Image */}
           <div
            className="
-  absolute z-20 origin-left
+  absolute z-20 md:origin-left
 
     /* MEDIUM + LARGE MOBILES */
-    right-[-250px]
+    right-[-250]
     top-[2%]
     scale-[0.35]
 
     /* SMALL MOBILES */
-    max-[375px]:right-[-260px]
-    max-[375px]:top-[-2px]
+    max-[375px]:right-[-260]
+    max-[375px]:top-[-2]
     max-[375px]:scale-[0.32]
 
-  md:right-[-130px]
+  md:right-[-130]
   md:top-[15%]
   md:scale-[0.60]
 
-  lg:right-[-150px]
+  lg:right-[-150]
   lg:top-[24%]
   lg:scale-[0.85]
 
-  xl:right-[-100px]
+  xl:right-[-100]
   xl:top-[30%]
   xl:scale-100
 
@@ -225,13 +225,13 @@ export default function AboutUsPage() {
       <HorizontalScroll text="VIRTUOSOFT" />
 
       {/* LOGO */}
-<div className="flex justify-center my-4 px-4 sm:px-0 md:mb-[-12px]">
+<div className="flex justify-center my-4 px-4 sm:px-0 md:mb-[-12]">
   <Image
     src="/Virtuosoft-logo.svg"
     alt="Virtuosoft Logo"
     width={160}            // base size for desktop
     height={120}
-    className="w-[100px] sm:w-[140px] md:w-[160px] md:mt-[-20px] h-auto"  // responsive width
+    className="w-[100] sm:w-[140] md:w-[160] md:mt-[-20] h-auto"  // responsive width
     priority
   />
 </div>

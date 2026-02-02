@@ -32,10 +32,11 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeService, setActiveService] = useState(0);
-
+  const [NavHidden, setNavHidden] = useState(false)
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 100);
+      setNavHidden(window.scrollY > 4000)
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -142,7 +143,8 @@ export default function Nav() {
     <nav
       className={cn(
         "fixed top-8 left-1/2 z-50 -translate-x-1/2 w-full mx-auto transition-all duration-500 max-w-7xl",
-        scrolled ? bg_animation : "bg-transparent py-5 shadow-none"
+        scrolled ? bg_animation : "bg-transparent py-5 shadow-none",
+        NavHidden && 'opacity-0 pointer-events-none'
       )}
     >
       <div className="flex items-center justify-between px-10 lg:px-0">
