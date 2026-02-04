@@ -98,14 +98,14 @@ export default function Nav() {
 
   function getSpotlightVideo(title) {
     const videoMap = {
-      "Advisory": "https://www.youtube.com/embed/bcppeHN_mD8",
-      "Mobile Apps": "https://www.youtube.com/embed/X7rTL_Y54oI",
-      "UI/UX Design": "https://www.youtube.com/embed/rUUaNWD_wNs",
-      "Digital Marketing": "https://www.youtube.com/embed/Zrrvt7qTyNY",
-      "Cloud Solutions": "https://www.youtube.com/embed/4Ap7yl4X8Zo",
-      "Branding": "https://www.youtube.com/embed/WUniTVTi_Jk",
+      "Advisory": "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?q=90&w=1120&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Artificial Intelligence": "https://images.unsplash.com/photo-1678347123725-2d0d31bc06bd?q=80&w=1102&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Software Engineering": "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Data Service": "https://plus.unsplash.com/premium_photo-1740363268539-cd9093c3b5d1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Digital Marketing": "https://plus.unsplash.com/premium_photo-1684225764999-3597a8da10ab?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Business Enablement": "https://images.unsplash.com/photo-1720289024474-946b6feabfcb?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     };
-    return videoMap[title] || "https://www.youtube.com/embed/dQw4w9WgXcQ";
+    return videoMap[title] || "https://images.unsplash.com/photo-1720289024474-946b6feabfcb?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
   }
 
   const ActiveIcon = services[activeService].icon;
@@ -231,9 +231,17 @@ export default function Nav() {
                     {/* RIGHT - Spotlight Video */}
                     <div className="row-span-2 flex flex-col">
                       <h4 className="text-lg font-semibold mb-3">Spotlight</h4>
-                      <div className="flex-1 bg-muted/40 rounded-lg overflow-hidden border border-border">
-                        <div className="aspect-video w-full">
-                          <iframe
+                      {/* <div className="flex-1 bg-muted/40 rounded-lg overflow-hidden border border-border"> */}
+                        <div className="aspect-square w-full">
+                          <Image
+                            width="100"
+                            height="100"
+                            alt="/"
+                            src={getSpotlightVideo(services[activeService].title)}
+                            title={`${services[activeService].title} Spotlight Video`}
+                            className="w-6xl"
+                          />
+                          {/* <iframe
                             width="100%"
                             height="100%"
                             src={getSpotlightVideo(services[activeService].title)}
@@ -241,14 +249,14 @@ export default function Nav() {
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
-                          />
+                          /> */}
                         </div>
                       </div>
-                      <p className="text-xs text-muted-foreground mt-2.5 text-center">
+                      {/* <p className="text-xs text-muted-foreground mt-2.5 text-center">
                         Watch a quick demo / showcase related to this service
-                      </p>
+                      </p> */}
                     </div>
-                  </div>
+                  {/* </div> */}
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>

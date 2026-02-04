@@ -1,10 +1,10 @@
 import React from 'react'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../../../../components/ui/accordion'
 import { Faq_Home } from '@/app/_constant'
-import FaqCard from '../ui/FaqCard'
+import FaqCard from '../../../../components/ui/FaqCard'
 
 function Faq() {
-    return (
+return (
         <div className='mx-auto max-w-[850] px-12 text-foreground'>
             <h4 className='lg:text-[42px] text-center mb-10'>Frequently Asked <span className='font-bold'>
                 Questions

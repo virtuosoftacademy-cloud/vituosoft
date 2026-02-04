@@ -6,7 +6,7 @@ import LogoCloud from "./_components/LogoCloud"
 import { ReactLenis } from 'lenis/react'
 import Technology from "./_components/Technology"
 import Cta from "@/components/common/Cta"
-import Faq from "@/components/common/Faq"
+import Faq from "@/app/(pages)/home/_components/Faq"
 function Home() {
   return (
     <>

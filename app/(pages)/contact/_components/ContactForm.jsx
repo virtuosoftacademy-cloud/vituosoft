@@ -55,7 +55,7 @@ function ContactForm() {
     ]
     return (
         <>
-            <div className="grid lg:grid-cols-2 gap-8 py-10">
+            <div className="flex justify-center gap-8 py-10">
                 {/* Contact Form */}
                 <div className="group relative rounded-xl text-left bg-white p-12
             shadow-[0_10px_25px_rgba(0,0,0,0.05)] overflow-hidden translate-0">
@@ -144,7 +144,8 @@ function ContactForm() {
 
                 {/* Contact Information */}
                 <div className="space-y-8">
-                    <div className="p-8 group relative rounded-xl text-left bg-white
+                
+                    {/* <div className="p-8 group relative rounded-xl text-left bg-white
             shadow-[0_10px_25px_rgba(0,0,0,0.05)] overflow-hidden translate-0">
                         <div
                             className="
@@ -181,9 +182,9 @@ function ContactForm() {
                                     <div className="text-foreground-300">Los Angeles, CA</div>
                                     <div className="text-sm text-foreground-400">Professional home studio</div>
                                 </div>
-                            </div>
+                                </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* <div className="bg-slate-100 rounded-2xl p-6">
                 <h4 className="text-lg font-semibold mb-4 text-primary">Quick Facts</h4>
@@ -206,15 +207,12 @@ function ContactForm() {
                   </div>
                 </div>
               </div> */}
-                    <div className="text-center">
-                        <h4 className="text-4xl py-8 font-extrabold tracking-wider">Trusted By</h4>
-                        <div className="space-y-8 md:space-y-12">
-                            <LogoCloud direction="right" duration={46} />   {/* row 2: left → right, slightly different speed */}
-                        </div>
-                            <LogoCloud />             
-                    </div>
                 </div>
             </div>
+                <div className="text-center pb-10">
+                    <h3 className="text-4xl py-8 font-extrabold tracking-wider">Trusted By</h3>
+                        <LogoCloud />             
+                </div>
         </>
     )
 }

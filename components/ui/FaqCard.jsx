@@ -2,8 +2,8 @@
 
 import { AccordionContent, AccordionItem, AccordionTrigger } from "./accordion";
 
-export default function FaqCard({faq}) {
-    const{ answer,question,value } = faq;
+export default function FaqCard({ faq }) {
+    const { answer, question, value } = faq;
     return (
         <>
             <AccordionItem value={value}>

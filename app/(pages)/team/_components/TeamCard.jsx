@@ -11,9 +11,9 @@ export default function TeamCard({ teammember }) {
   return (
     <div className="flex flex-col shadow-2xl pb-6">
       <Image
-        className="bg-accent hover:bg-primary transition-all duration-700 cursor-pointer"
+        className="bg-accent hover:bg-primary transition-all duration-700 cursor-pointer h-2/3"
         width={380}
-        height={380}
+        height={280}
         src={image}
         alt={name}
       />

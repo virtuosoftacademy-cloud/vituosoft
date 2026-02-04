@@ -10,13 +10,13 @@ export default function AboutUsPage() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="relative bg-white py-16 md:py-24 overflow-hidden font-host">
+      <section className="relative bg-white pt-40 md:pt-60 overflow-hidden">
         {/* Text */}
         <div className="mx-auto max-w-5xl text-center px-4 md:px-6 relative z-20">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight text-[#2B3439]">
+          <h1 className="text-3xl md:text-[62px] font-light leading-tight text-[#2B3439]">
             Where innovation meets <br />
             vision to unlock <br />
-            <span className="block mt-2 text-5xl sm:text-6xl md:text-8xl font-sofia font-bold italic text-gray-900">
+            <span className="block mt-2 py-2 text-6xl lg:text-[80px] font-black italic text-gray-900">
               Potential
             </span>
           </h1>
