@@ -1,4 +1,7 @@
 'use client'
+
+import dynamic from 'next/dynamic';
+
 const AboutUs = dynamic(() => import('./AboutUs'), {
   ssr: false, 
 });
