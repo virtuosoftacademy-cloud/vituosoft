@@ -1,6 +1,6 @@
 'use client'
 
-import { CommonHead, HeroHead, HeroHeadPages, HeroRegular, Italic } from "@/components/Styles/StyleClasses"
+import { HeroHeadPages, HeroRegular, Italic } from "@/components/Styles/StyleClasses"
 import CareerImg1 from '@/public/assets/Images/careers/careersImg1.png'
 import CareerImg2 from '@/public/assets/Images/careers/careersImg2.png'
 import CareerImg3 from '@/public/assets/Images/careers/careersImg3.png'
@@ -23,7 +23,7 @@ function Hero() {
             </div>
             <div className="flex flex-wrap md:flex-nowrap justify-center items-center lg:gap-12 transition-all w-full lg:space-y-4 mt-14">
                 <div className="flex flex-col transform -translate-y-18 w-4xl space-y-3">
-                    <Image src={CareerImg1} alt="Our Career" width={400} height={400} className="w-2xl" />
+                    <Image src={CareerImg2} alt="Our Career" width={400} height={400} className="w-2xl" />
                     <p className="text-lg">
                         <span className="font-bold">
                             At Virtuosoft,
@@ -31,7 +31,7 @@ function Hero() {
                     </p>
                 </div>
                 <div className="flex flex-col w-4xl space-y-3">
-                    <Image src={CareerImg2} alt="Our Career" width={400} height={400} className="w-2xl " />
+                    <Image src={CareerImg1} alt="Our Career" width={400} height={400} className="w-2xl " />
                     <p className="text-[16px]">
                         <span className="font-bold">
                             We believe in balance: great work deserves great fun.

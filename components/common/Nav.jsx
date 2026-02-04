@@ -50,49 +50,61 @@ export default function Nav() {
       icon: Code2,
       title: "Advisory",
       subPages: [
-        { label: "Product Strategy & Roadmapping", href: "/services/advisory/product-strategy" },
-        { label: "Digital Transformation", href: "/services/advisory/digital-transformation" },
+        { label: "Product Strategy & Roadmapping", href: "#" },
+        { label: "Digital Transformation", href: "#" },
       ],
     },
     {
       icon: Smartphone,
       title: "Artificial Intelligence",
       subPages: [
-        { label: "Custom Agent Development", href: "/services/advisory/product-strategy" },
-        { label: "Generative A.I", href: "/services/advisory/digital-transformation" },
-        { label: "Data Science & MLOps", href: "/services/advisory/digital-transformation" },
-        { label: "Conservational Intelligence", href: "/services/advisory/digital-transformation" },
-        { label: "Computer Vision", href: "/services/advisory/digital-transformation" },
-        { label: "Optical Character Recognition", href: "/services/advisory/digital-transformation" },
+        { label: "Custom Agent Development", href: "#" },
+        { label: "Generative A.I", href: "#" },
+        { label: "Data Science & MLOps", href: "#" },
+        { label: "Conservational Intelligence", href: "#" },
+        { label: "Computer Vision", href: "#" },
+        { label: "Optical Character Recognition", href: "#" },
       ],
     },
     {
       icon: Palette,
       title: "Software Engineering",
       subPages: [
-        { label: "Product Strategy & Roadmapping", href: "/services/advisory/product-strategy" },
-        { label: "Digital Transformation", href: "/services/advisory/digital-transformation" },
+        { label: "Custom Software Development", href: "#" },
+        { label: "Application Development (Mobile & Web)", href: "#" },
+        { label: "Application Modernization", href: "#" },
+        { label: "Database Migration", href: "#" },
+        { label: "Third-Party Integrations", href: "#" },
       ],
     },
     {
       icon: Globe,
       title: "Data Service",
-      href: "/services/cloud",
-      description: "AWS, Azure & DevOps",
+      subPages: [
+        { label: "Data Consulting ", href: "#" },
+        { label: "Data Warehouse Solutions", href: "#" },
+        { label: "Data Analytics & BI", href: "#" },
+      ],
     },
     {
       icon: LineChart,
       title: "Digital Marketing",
       subPages: [
-        { label: "Product Strategy & Roadmapping", href: "/services/advisory/product-strategy" },
-        { label: "Digital Transformation", href: "/services/advisory/digital-transformation" },
+        { label: "Content Creation", href: "#" },
+        { label: "Social Media Management", href: "#" },
+        { label: "Video Editing", href: "#" },
+        { label: "Ads Managment", href: "#" },
+        { label: "Copywriting", href: "#" },
+        { label: "Design & Creative Solutions", href: "#" },
       ],
     },
     {
       icon: Megaphone,
       title: "Business Enablement",
-      href: "/services/branding",
-      description: "Brand identity & strategy",
+      subPages: [
+        { label: "Account & Finance", href: "#" },
+        { label: "Hr & Recruitment", href: "#" },
+      ],
     },
   ];
 
@@ -144,7 +156,7 @@ export default function Nav() {
       className={cn(
         "fixed top-8 left-1/2 z-50 -translate-x-1/2 w-full mx-auto transition-all duration-500 max-w-7xl",
         scrolled ? bg_animation : "bg-transparent py-5 shadow-none",
-        NavHidden && 'opacity-0 pointer-events-none'
+        // NavHidden && 'opacity-0 pointer-events-none'
       )}
     >
       <div className="flex items-center justify-between px-10 lg:px-0">
@@ -155,7 +167,7 @@ export default function Nav() {
             alt="Company Logo"
             width={160}
             height={48}
-            className={`transition-all duration-500 ${scrolled ? "brightness-0 invert" : ""}`}
+            className={`transition-all duration-500 ${scrolled && "brightness-0 invert"}`}
             priority
           />
         </Link>
@@ -232,16 +244,16 @@ export default function Nav() {
                     <div className="row-span-2 flex flex-col">
                       <h4 className="text-lg font-semibold mb-3">Spotlight</h4>
                       {/* <div className="flex-1 bg-muted/40 rounded-lg overflow-hidden border border-border"> */}
-                        <div className="aspect-square w-full">
-                          <Image
-                            width="100"
-                            height="100"
-                            alt="/"
-                            src={getSpotlightVideo(services[activeService].title)}
-                            title={`${services[activeService].title} Spotlight Video`}
-                            className="w-6xl"
-                          />
-                          {/* <iframe
+                      <div className="aspect-square w-full">
+                        <Image
+                          width="100"
+                          height="100"
+                          alt="/"
+                          src={getSpotlightVideo(services[activeService].title)}
+                          title={`${services[activeService].title} Spotlight Video`}
+                          className="w-6xl"
+                        />
+                        {/* <iframe
                             width="100%"
                             height="100%"
                             src={getSpotlightVideo(services[activeService].title)}
@@ -250,12 +262,12 @@ export default function Nav() {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                           /> */}
-                        </div>
                       </div>
-                      {/* <p className="text-xs text-muted-foreground mt-2.5 text-center">
+                    </div>
+                    {/* <p className="text-xs text-muted-foreground mt-2.5 text-center">
                         Watch a quick demo / showcase related to this service
                       </p> */}
-                    </div>
+                  </div>
                   {/* </div> */}
                 </NavigationMenuContent>
               </NavigationMenuItem>
