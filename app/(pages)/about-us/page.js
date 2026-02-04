@@ -1,4 +1,4 @@
-
+'use client'
 const AboutUs = dynamic(() => import('./AboutUs'), {
   ssr: false, 
 });

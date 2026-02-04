@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import HorizontalScroll from "@/components/ui/HorizontalScroll";
 import FounderSection from "@/components/ui/FounderSection";
