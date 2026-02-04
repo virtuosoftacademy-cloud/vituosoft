@@ -13,8 +13,10 @@ function Careers() {
         <ReactLenis root>
           <Hero />
           <Collaboration/>
-          <Job/>
+          {/* <Job/> */}
+          <div className='pt-10'>
           <Cta />
+          </div>
         </ReactLenis>
       </div>
     </>

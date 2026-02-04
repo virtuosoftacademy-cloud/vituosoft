@@ -34,7 +34,7 @@ export default function AboutUsPage() {
             relative z-10 mx-auto mt-16 md:mt-24
             max-w-full lg:max-w-3xl xl:max-w-4xl
             px-4 md:px-6
-            h-[360] sm:h-[450] md:h-[480] lg:h-[550] xl:h-[550]
+            h-[360px] sm:h-[450px] md:h-[480px] lg:h-[550px] xl:h-[550px]
           "
         >
       <div
@@ -76,8 +76,8 @@ export default function AboutUsPage() {
     absolute left-1/2 z-30 -translate-x-1/2
 
     /* MEDIUM + LARGE MOBILES (DEFAULT) */
-    md:left-1
-    top-[-10]
+    left-1
+    top-[-10px]
     w-[50%]
 
     /* SMALL MOBILES ONLY */
@@ -85,7 +85,7 @@ export default function AboutUsPage() {
     max-[375px]:w-[50%]
 
     /* TABLET */
-    md:top-[-60]
+    md:top-[-60px]
     md:w-[50%]
 
     /* DESKTOP */
@@ -111,26 +111,26 @@ export default function AboutUsPage() {
     absolute z-40 origin-left
 
     /* MEDIUM + LARGE MOBILES */
-    left-[10]
-    top-[-20]
+    left-[10px]
+    top-[-20px]
     scale-[0.34]
 
     /* SMALL MOBILES */
-    max-[375px]:left-[5]
+    max-[375px]:left-[5px]
     max-[375px]:top-[5%]
     max-[375px]:scale-[0.35]
 
     /* TABLET */
-    md:left-[20]
+    md:left-[20px]
     md:top-[7%]
     md:scale-[0.61]
 
     /* DESKTOP */
-    lg:left-[-60]
+    lg:left-[-60px]
     lg:top-[15%]
     lg:scale-[0.75]
 
-    xl:left-[-50]
+    xl:left-[-50px]
     xl:top-[20%]
     xl:scale-[0.9]
   ">
@@ -159,7 +159,7 @@ export default function AboutUsPage() {
 
     /* TABLET */
     md:left-1/2
-    md:bottom-[40]
+    md:bottom-[40px]
     md:top-[37%]
     md:w-[50%]
 
@@ -182,27 +182,27 @@ export default function AboutUsPage() {
           {/* Right Image */}
           <div
            className="
-  absolute z-20 md:origin-left
+  absolute z-20 origin-left
 
     /* MEDIUM + LARGE MOBILES */
-    right-[-250]
+    right-[-250px]
     top-[2%]
     scale-[0.35]
 
     /* SMALL MOBILES */
-    max-[375px]:right-[-260]
-    max-[375px]:top-[-2]
+    max-[375px]:right-[-260px]
+    max-[375px]:top-[-2px]
     max-[375px]:scale-[0.32]
 
-  md:right-[-130]
+  md:right-[-130px]
   md:top-[15%]
   md:scale-[0.60]
 
-  lg:right-[-150]
+  lg:right-[-150px]
   lg:top-[24%]
   lg:scale-[0.85]
 
-  xl:right-[-100]
+  xl:right-[-100px]
   xl:top-[30%]
   xl:scale-100
 
@@ -225,13 +225,13 @@ export default function AboutUsPage() {
       <HorizontalScroll text="VIRTUOSOFT" />
 
       {/* LOGO */}
-<div className="flex justify-center my-4 px-4 sm:px-0 md:mb-[-12]">
+<div className="flex justify-center my-4 px-4 sm:px-0 md:mb-[-12px]">
   <Image
     src="/Virtuosoft-logo.svg"
     alt="Virtuosoft Logo"
     width={160}            // base size for desktop
     height={120}
-    className="w-[100] sm:w-[140] md:w-[160] md:mt-[-20] h-auto"  // responsive width
+    className="w-[100px] sm:w-[140px] md:w-[160px] md:mt-[-20px] h-auto"  // responsive width
     priority
   />
 </div>

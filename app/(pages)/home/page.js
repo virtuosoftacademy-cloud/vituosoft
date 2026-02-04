@@ -13,7 +13,9 @@ function Home() {
       <ReactLenis root>
         <div className="mx-auto">
           <Hero />
+          <div className="py-10">
           <LogoCloud />
+          </div>
           <InnovativeSolutions />
           <Technology />
           <div>

@@ -264,7 +264,7 @@ export default function Nav() {
         </div>
 
         <Button asChild size="lg" className="hidden lg:flex">
-          <Link href="/consultation">Book Consultation</Link>
+          <Link href="/contact">Book Consultation</Link>
         </Button>
 
         {/* Mobile Menu Button */}

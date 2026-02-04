@@ -10,11 +10,12 @@ import HeroImg from '@/public/assets/Images/home/home-bg.png'
 function Hero() {
   return (
     <>
-      <section className="relative">
-        <div className="absolute inset-0 -z-10 lg:h-screen">
+      <section className="relative min-h-[570] md:h-screen lg:h-screen">
+        <div className="absolute inset-0 -z-10">
           <Image
             src={HeroImg}
             alt="Technology"
+            className="h-full object-cover"
             fill
           />
         </div>

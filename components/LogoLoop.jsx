@@ -1,24 +1,32 @@
-'use client'
+
 import { logos } from "@/app/_constant";
 import { motion } from "framer-motion";
-import React from "react";
 
+export default function LogoCloud({
+  animate,                                    // if passed, overrides everything
+  direction = "left",                         // default = your original direction
+  duration = 40,
+}) {
+  // Choose animation based on direction (unless custom animate is passed)
+  const defaultAnimate =
+    direction === "right"
+      ? { x: ["-50%", "0%"] }                 // left → right scrolling
+      : { x: ["0%", "-50%"] };                // right → left scrolling (your original)
 
-const doubledLogos = [...logos, ...logos];
-
-export default function LogoLoop() {
+  const finalAnimate = animate || defaultAnimate;
+const doubledLogos = [...logos,...logos]
   return (
-    <div className="w-full overflow-hidden py-12 md:py-30 bg-white/5">
+    <div className="w-full overflow-hidden bg-white/5">
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
         <motion.div
           className="flex items-center whitespace-nowrap"
-          animate={{ x: ["0%", "-50%"] }}
+          animate={finalAnimate}
           transition={{
-            duration: 40,
+            duration: duration,
             ease: "linear",
             repeat: Infinity,
           }}
-          whileHover={{ animationPlayState: "paused"}} // pause on hover
+          whileHover={{ animationPlayState: "paused" }}
         >
           {doubledLogos.map((logo, i) => (
             <div
