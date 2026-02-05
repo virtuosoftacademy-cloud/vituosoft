@@ -60,7 +60,7 @@ function ValueSection() {
               key={index}
               className={`
                 group relative
-                bg-gradient-to-br from-blue-50/80 to-indigo-50/60
+                bg-linear-to-br from-blue-50/80 to-indigo-50/60
                 rounded-2xl p-6 md:p-7
                 overflow-hidden
                 transition-all duration-300

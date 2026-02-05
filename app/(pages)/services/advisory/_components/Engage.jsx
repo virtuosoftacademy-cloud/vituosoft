@@ -25,8 +25,8 @@ function Engage() {
     return (
         <div className='bg-foreground px-10 mb-10 py-20'>
             <div className='max-w-7xl mx-auto'>
-                <h2 className="text-white text-3xl md:text-4xl lg:text-6xl font-extrabold tracking-tight max-w-2xl">
-                    Empower Your Operations with AI Agents
+                <h2 className="text-white text-3xl md:text-4xl lg:text-6xl font-extrabold tracking-tight max-w-2xl capitalize">
+                   How can we engage?
                 </h2>
                 <div className='mt-10'>
                     {/* Cards */}
@@ -40,7 +40,7 @@ function Engage() {
                                 transition-all duration-300 hover:shadow-xl
                                 flex flex-col
                                 w-full
-                                min-h-[320px]
+                                min-h-72
                                 `}
                             >
                             <item.icon size={60}/>
@@ -50,9 +50,9 @@ function Engage() {
                                 <p className="text-[#D8D8D8] text-sm md:text-[0.95em]">
                                     {item.description}
                                 </p>
-                                <div className='my-auto'>
+                                {/* <div className='my-auto'>
                                 <Button variant='outline' className={'bg-transparent border-white text-accent'}>Scale with Experts</Button>
-                                </div>
+                                </div> */}
                             </div>
                         ))}
                     </div>

@@ -8,11 +8,11 @@ const stats = [
 
 function Success() {
     return (
-        <div className=''>
+        <div>
 
-            <section className="relative bg-[rgba(1,90,252,0.8)] text-white rounded-[4] overflow-hidden text-left font-['Host_Grotesk',sans-serif]
+            <section className="relative bg-primary/80 text-white rounded overflow-hidden text-left
       pt-[50] px-5 pb-[50]
-      md:pt-[90] md:px-[60] md:pb-[100]
+      md:pt-[90] md:px-[60] md:pb-20
       max-md:text-center
       ">
                 {/* Large Star Background */}
@@ -31,18 +31,17 @@ function Success() {
         "
       /> */}
 
-                <div className="relative z-10 max-w-[1000] mx-auto md:mx-0">
-                    <h2 className="font-light text-[28px] mb-[10] md:text-[48.85px]">
+                <div className="relative z-10 max-w-7xl mx-auto md:mx-0">
+                    <h4 className="font-light text-3xl md:text-6xl">
                         Transforming Vision into
-                    </h2>
-                    <h1 className="font-bold text-[34px] mb-[25] md:text-[48.89px] md:mb-[30]">
+                    </h4>
+                    <h4 className="font-bold text-4xl mb-[25] md:text-5xl md:mb-[30]">
                         Digital Success
-                    </h1>
-
+                    </h4>
                     <a
-                        href="#"
-                        className="inline-block bg-white text-[#005BFF] px-[28] py-[12] rounded-[6px] font-semibold text-[14px] shadow-[0_4px_20px_rgba(0,0,0,0.15)]
-          transition-all duration-300 hover:bg-[#003799] hover:text-white hover:shadow-[0_6px_25px_rgba(0,0,0,0.25)] hover:-translate-y-[2]
+                        href="/contact"
+                        className="inline-block bg-white text-primary/80 px-[28] py-[12] rounded-[6px] font-semibold text-[14px] shadow-[0_4px_20px_rgba(0,0,0,0.15)]
+          transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-[0_6px_25px_rgba(0,0,0,0.25)] hover:-translate-y-[2]
           md:px-[34] md:py-[14] md:text-[16px]
           "
                     >
