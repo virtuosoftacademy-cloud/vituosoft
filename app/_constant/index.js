@@ -421,7 +421,8 @@ export const secondarySections = [
 ];
 
 export const solutions = ['Microsoft Dynamics 365', 'Power BI', 'BMC Helix', 'Odoo'];
-const IconSocial = "assets/Images"
+
+const IconSocial = "assets/Images/"
 export const socialLinks = [
   {
     name: 'LinkedIn',

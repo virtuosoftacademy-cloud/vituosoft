@@ -2,12 +2,14 @@
 import { secondarySections, servicesData, socialLinks, solutions } from '@/app/_constant';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { use } from 'react';
-
+import React from 'react';
+import dmca from '@/public/assets/Images/dmca.svg'
+import Logo from '@/public/assets/Images/white_Logo.svg'
+import { Button } from '../ui/button';
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-accent py-16 px-6 md:px-10 lg:px-16 font-sans">
+    <footer className="bg-foreground text-accent/50 py-16 px-6 md:px-10 lg:px-16 font-sans">
       <div className="max-w-7xl mx-auto">
 
         {/* ROW 1: All main services – mapped from data */}
@@ -17,7 +19,7 @@ const Footer = () => {
               <h4 className="text-white uppercase text-xs tracking-wide font-semibold mb-6">
                 {section.title}
               </h4>
-              <ul className="space-y-3 text-[#6D7786] text-sm">
+              <ul className="space-y-3 text-sm">
                 {section.items.map((item) => (
                   <li key={item.label}>
                     <Link
@@ -40,7 +42,7 @@ const Footer = () => {
               <h4 className="text-white uppercase text-xs tracking-wide font-semibold mb-6">
                 {section.title}
               </h4>
-              <ul className="space-y-3 text-[#6D7786] text-sm">
+              <ul className="space-y-3 text-sm">
                 {section.items.map((item) => (
                   <li key={item.label}>
                     <Link
@@ -61,7 +63,7 @@ const Footer = () => {
               {solutions.map((solution) => (
                 <span
                   key={solution}
-                  className="bg-[#293547] text-[#BABDC4] px-3 py-1.5 rounded-full text-xs"
+                  className="bg-[#293547] px-3 py-1.5 rounded-full text-xs"
                 >
                   {solution}
                 </span>
@@ -74,7 +76,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16 border-t border-[#222b36] pt-10 mb-10">
           <div>
             <h4 className="text-white uppercase text-xs tracking-wide font-semibold mb-4">Address</h4>
-            <p className="text-[#6D7786] text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed">
               C, 35, Block 10 A, Gulshan-e-Iqbal,<br />Karachi, Pakistan
             </p>
           </div>
@@ -89,12 +91,12 @@ const Footer = () => {
                 placeholder="Get news by email"
                 className="flex-1 bg-transparent border border-[#8A94A4] rounded-lg px-4 py-3 text-white placeholder-[#8A94A4] focus:outline-none focus:border-[#0755E9] text-sm"
               />
-              <button
-                type="submit"
-                className="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary/70 transition-colors whitespace-nowrap"
+              <Button
+                // type="submit"
+                className="px-6 py-3"
               >
                 Subscribe
-              </button>
+              </Button>
             </form>
           </div>
 
@@ -128,18 +130,18 @@ const Footer = () => {
           <Image
             height={200}
             width={200}
-            src="assets/Images/white_Logo.svg"
+            src={Logo}
             alt="VirtuoSoft Logo"
             // className="w-50 h-10"
           />
           <Image
-            src="assets/Images/dmca.svg"
+            src={dmca}
             height={200}
-            width={200}
+            width={100}
             alt="VirtuoSoft Brand"
             className="h-8"
           />
-          <span className="text-[#6D7786] text-sm">
+          <span className="text-sm">
             © {new Date().getFullYear()} Virtuosoft | All rights reserved.
           </span>
         </div>

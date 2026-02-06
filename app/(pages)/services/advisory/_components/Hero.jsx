@@ -1,22 +1,13 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import Src from '@/public/assets/Images/service/ai_data_service.png'
 
-
-export default function Hero({ category, showAll = true }) {
-    const {
-        title,
-        subtitletop,
-        subtitlebottom,
-        bgColor,
-        textColor,
-        imagePosition,
-        accentImage,
-        cta,
-        services,
-    } = category
+export default function Hero() {
+    
     return (
         <div className={`px-6 md:px-10 lg:px-16 xl:px-30`}>
             <section
@@ -26,21 +17,22 @@ export default function Hero({ category, showAll = true }) {
         text-left 
         overflow-hidden 
         shadow-2xl shadow-black/15
-      ${bgColor} ${textColor}`}
+      bg-linear-to-br from-primary to-[#003799] text-white`}
             >
-                {accentImage &&
-                    <img
-                        src={accentImage}
-                        alt={title}
+                    <Image
+                        width={120}
+                        height={120}
+                        src={Src}
+                        alt="AI Agents"
                         className=
-                        {`${imagePosition} w-[360]
+                        {`-top-6 -right-4 w-[360]
           absolute hidden lg:flex
           object-contain object-top-right 
           opacity-90 pointer-events-none z-10
           `}
                         aria-hidden="true"
                     />
-                }
+                
                 <div>
                     <div className="max-w-4xl pb-10 md:pb-14 text-center md:text-left">
                         <p className="text-lg md:text-3xl font-light">
@@ -57,7 +49,7 @@ export default function Hero({ category, showAll = true }) {
                         <Button className={'text-sm bg-white text-primary border-2 hover:text-accent font-bold capitalize md:text-lg'}>
                             <Link href={'/contact'}>
                                 <h2>
-                                    {cta}
+                                    Discover AI Agents with Virtuosoft
                                 </h2>
                             </Link>
                         </Button>
