@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import dmca from '@/public/assets/Images/dmca.svg'
-import Logo from '@/public/assets/Images/white_Logo.svg'
+import Logo from '@/public/assets/Images/logowhite.svg'
 import { Button } from '../ui/button';
 
 const Footer = () => {
@@ -132,7 +132,7 @@ const Footer = () => {
             width={200}
             src={Logo}
             alt="VirtuoSoft Logo"
-            // className="w-50 h-10"
+            className="w-40 h-8"
           />
           <Image
             src={dmca}

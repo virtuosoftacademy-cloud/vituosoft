@@ -23,8 +23,9 @@ return (
     <HorizontalScrollWrapper
       height="100vh"
       mobileHeight="80vh"
+      marginTop="100px"
     >
-      <div className="relative px-8 sm:px-24 md:px-50 lg:px-80 xl:px-70 pt-20 xl:pt-25 font-host pb-16">
+      <div className="relative px-8 sm:px-24 md:px-50 lg:px-80 xl:px-70 pt-20 xl:pt-25 pb-16">
         
         {/* ONE CONTINUOUS TIMELINE LINE */}
         <div className="absolute top-32 md:left-[4.1%] md:right-[10.2%] lg:left-[6.2%] lg:right-[12%] xl:top-37 xl:left-[5.5%] xl:right-[11.5%] h-px bg-blue-500" />

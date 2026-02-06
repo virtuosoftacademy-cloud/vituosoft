@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/public/assets/Images/Logo.png";
+import Logo from "@/public/assets/Images/Logo.svg";
 import {
   ArrowRight,
   Menu,

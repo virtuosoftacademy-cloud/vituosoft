@@ -12,7 +12,7 @@ import {
   X,
 } from "lucide-react";
 // Client Logos
-const logoIcon = 'assets/Images/ClientLogo'
+const logoIcon = 'assets/Images/ClientLogo/'
 export const logos = [
   { src: `${logoIcon}/tarabut.svg`, alt: "Tarabut" },
   { src: `${logoIcon}/neogies.svg`, alt: "Client" },
@@ -80,20 +80,20 @@ export const services_Nav = [
   {
     title:"Solutions",
     subPages:[
-      {label:"ERP solutions",href:"#"},
-      {label:"BMC helix",href:"#"},
-      {label:"microsoft dynamics 365",href:"#"},
-      {label:"Manage Engine",href:"#"},
+      {label:"ERP solutions",href:"/"},
+      {label:"BMC helix",href:"/"},
+      {label:"microsoft dynamics 365",href:"/"},
+      {label:"Manage Engine",href:"/"},
     ]
   },
   {
     title:"Expertise",
     subPages:[
-      {label:"IT governance",href:"#"},
-      {label:"cybersecurity",href:"#"},
-      {label:"RPA",href:"#"},
-      {label:"DevOps",href:"#"},
-      {label:"IT service Management",href:"#"},
+      {label:"IT governance",href:"/"},
+      {label:"cybersecurity",href:"/"},
+      {label:"RPA",href:"/"},
+      {label:"DevOps",href:"/"},
+      {label:"IT service Management",href:"/"},
     ]
   }
   // {
@@ -117,9 +117,118 @@ export const services_Nav = [
   //   ],
   // },
 ];
+// Footer Links and Data
+export const servicesData = [
+  {
+    title: 'Advisory',
+    items: [
+      { label: 'Discovery Workshop', href:"/" },
+      { label: 'Technical Feasibility Study', href:"/" },
+      { label: 'UI/UX Design', href:"/" },
+      { label: 'Product Strategy and Roadmapping', href:"/" },
+      { label: 'Digital Transformation', href:"/" },
+    ],
+  },
+  {
+    title: 'Artificial Intelligence',
+    items: [
+      { label: 'AI Workshop', href:"/" },
+      { label: 'AI PoC & MVP', href:"/" },
+      { label: 'AI Agents', href:"/" },
+      { label: 'Generative AI', href:"/" },
+      { label: 'Data Science & MLOps', href:"/" },
+    ],
+  },
+  {
+    title: 'Engineering',
+    items: [
+      { label: 'Application Development', href:"/" },
+      { label: 'Application Modernization', href:"/" },
+      { label: 'POC Development', href:"/" },
+      { label: 'Cloud Engineering', href:"/" },
+      { label: 'Product Development', href:"/" },
+    ],
+  },
+  {
+    title: 'IT Governance',
+    items: [
+      { label: 'Regulatory Compliance', href:"/" },
+      { label: 'Risk Management', href:"/" },
+      { label: 'ITIL', href:"/" },
+      { label: 'Resource Augmentation', href:"/" },
+    ],
+  },
+  {
+    title: 'Digital Marketing',
+    items: [
+      { label: 'Content Creation', href:"/" },
+      { label: 'Social Media Management', href:"/" },
+      { label: 'Ads Management', href:"/" },
+      { label: 'Copywriting', href:"/" },
+      { label: 'Creative Solutions', href:"/" },
+      { label: 'Video Editing', href:"/" },
+    ],
+  },
+  {
+    title: 'Business Enablement',
+    items: [
+      { label: 'Accounts & Finance', href:"/" },
+      { label: 'HR & Recruitment', href:"/" },
+    ],
+  },
+];
+
+export const secondarySections = [
+  {
+    title: 'IT Service Management',
+    items: [
+      { label: 'BMC Helix', href:"/" },
+      { label: 'Manage Engine', href:"/" },
+    ],
+  },
+  {
+    title: 'Cyber Security',
+    items: [
+      { label: 'Solution Deployment', href:"/" },
+      { label: 'Governance & Compliance', href:"/" },
+      { label: 'Cyber Assessments', href:"/" },
+      { label: 'Managed Cybersecurity', href:"/" },
+    ],
+  },
+  {
+    title: 'Data & Analytics',
+    items: [
+      { label: 'Data Strategy Consulting', href:"/" },
+      { label: 'Data Warehouse', href:"/" },
+      { label: 'Data Analytics & BI', href:"/" },
+    ],
+  },
+];
+
+export const solutions = ['Microsoft Dynamics 365', 'Power BI', 'BMC Helix', 'Odoo'];
+
+const IconSocial = "assets/Images/"
+export const socialLinks = [
+  {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/virtuosoft.pk/',
+    img: `${IconSocial}/linkedin.svg`
+  },
+  {
+    name: 'Facebook',
+    href: 'https://www.facebook.com/share/1D7GPDPc44/?mibextid=LQQJ4d',
+    img: `${IconSocial}/facebook.svg`
+  },
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/virtuosoft_official?igsh=bHNzd2kxa2Z3eDhp&utm_source=qr',
+    img: `${IconSocial}/instagram.svg`
+  },
+];
+
 //Home
 // Services Section 
-const IconServices = "assets/Images/home"
+const IconServices = "assets/Images/home/"
 export const services_Section = [
   {
     id: "ai",
@@ -131,12 +240,12 @@ export const services_Section = [
     gridClasses: "col-span-full md:col-span-1 lg:row-span-2 lg:min-h-[600px]",
     hoverTranslate: "translate-y-48 group-hover:-translate-y-28 lg:group-hover:-translate-y-32",
     buttons: [
-      { label: "Custom Agent Development", href: "https://virtuosoft.pk/virtuosoft/?page_id=10576" },
-      { label: "Generative AI", href: "https://virtuosoft.pk/virtuosoft/?page_id=10496" },
-      { label: "Data Science & MLOps", href: "https://virtuosoft.pk/virtuosoft/?page_id=12388" },
-      { label: "Conversational Intelligence", href: "https://virtuosoft.pk/virtuosoft/?page_id=14338" },
-      { label: "Computer Vision", href: "https://virtuosoft.pk/virtuosoft/?page_id=14427" },
-      { label: "Optical character recognition", href: "https://virtuosoft.pk/virtuosoft/?page_id=14454" },
+      { label: "Custom Agent Development", href: "#" },
+      { label: "Generative AI", href: "#" },
+      { label: "Data Science & MLOps", href: "#" },
+      { label: "Conversational Intelligence", href: "#" },
+      { label: "Computer Vision", href: "#" },
+      { label: "Optical character recognition", href: "#" },
     ],
   },
   {
@@ -164,9 +273,9 @@ export const services_Section = [
     hoverTranslate: "translate-y-30 group-hover:-translate-y-20 lg:group-hover:-translate-y-2",
     isBusiness: true,
     buttons: [
-      { label: "Regulatory Compliance", href: "https://virtuosoft.pk/virtuosoft/?page_id=12097" },
-      { label: "Governance Framework Development", href: "https://virtuosoft.pk/virtuosoft/?page_id=12324" },
-      { label: "Resource Augmentation", href: "https://virtuosoft.pk/virtuosoft/?page_id=12405" },
+      { label: "Regulatory Compliance", href: "#" },
+      { label: "Governance Framework Development", href: "#" },
+      { label: "Resource Augmentation", href: "#" },
     ],
   },
   {
@@ -181,16 +290,16 @@ export const services_Section = [
     // isBusiness: true,
     MoreBtn: "/",
     buttons: [
-      { label: "Custom Software Development", href: "https://virtuosoft.pk/virtuosoft/?page_id=10690" },
-      { label: "App Development", href: "https://virtuosoft.pk/virtuosoft/?page_id=10698" },
-      { label: "App Modernization", href: "https://virtuosoft.pk/virtuosoft/?page_id=11314" },
+      { label: "Custom Software Development", href: "#" },
+      { label: "App Development", href: "#" },
+      { label: "App Modernization", href: "#" },
       { label: "Database Migration", href: "#" },
-      { label: "Third-Party Integrations", href: "https://virtuosoft.pk/virtuosoft/?page_id=10690" },
+      { label: "Third-Party Integrations", href: "#" },
     ],
   },
 ];
 // Values Section
-const IconValues = "assets/Images/home"
+const IconValues = "assets/Images/home/"
 export const values_Section = [
   {
     title: 'Teamwork',
@@ -214,7 +323,7 @@ export const values_Section = [
     alt: 'Reliability Icon',
   },
 ];
-// Our Team
+// Our Team Page
 const imageBaseUrl = "assets/Images/team";
 export const teamMembers = [
   {
@@ -249,7 +358,7 @@ export const teamMembers = [
   {
     name: "Asiya Nazeer",
     role: "HR Operations",
-    description: "Sadia Asif, a science graduate at Virtuosoft for three years, excels in designing and implementing service quality measures. Her impactful projects, locall…",
+    description: "Asiya Nazeer is an HR Executive who specializes in recruitment, employee engagement and improving day-to-day HR processes to support organizational efficiency. With a strong interest in building positive workplace cultures, she focuses on employee satisfaction, smooth coordination and continuous improvement. Asiya is committed to learning, growing her HR expertise and contributing to long-term business success.",
     image: `/${imageBaseUrl}/asiya-nazeer.png`,
     linkedin: "https://www.linkedin.com/in/asiya-nazeer"
   },
@@ -270,7 +379,7 @@ export const teamMembers = [
   {
     name: "Muhammad Rehan",
     role: "Head of Tecnology",
-    description: "",
+    description: "Muhammad Rehan is a Lead Full Stack Engineer at Virtuosoft with nearly 8 years of hands-on experience in software development. He has grown through multiple roles from Python Developer to Senior Engineer and now leads full stack development initiatives. His expertise includes backend systems, cloud infrastructure and scalable web applications using technologies such as Python, Node.js, AWS, Django and modern JavaScript frameworks. He plays a key role in building reliable, high-performance solutions for clients across different industries.",
     image: `/${imageBaseUrl}/m_rehan.png`,
     linkedin: "https://www.linkedin.com/in/rehan010/"
   },
@@ -282,16 +391,16 @@ export const teamMembers = [
     linkedin: "#"
   },
   {
-    name: "Azhar Rizvi",
+    name: "Adil Hasan",
     role: "Chief Operating Officer",
-    description: "Muhammad Adil Hassan boasts a proven track record of 20 years of excellence in the creative industry, where he has successfully led numerous high-impact projects. His extensive expertise covers a wide range of creative domains, including UI/UX design, web development, animations, app interfaces, social media marketing, explainer videos, storyboarding, logo creation, stationery, company profiles, branding, and illustrations. With significant experience designing for platforms like Android, iOS, and iPad, Adil focuses on crafting intuitive user experiences and developing prototypes that enhance usability and engagement. His portfolio includes a diverse array of websites across multiple platforms, including e-commerce stores, dashboards, online shops, and informational services, each tailored to meet specific client needs.",
+    description: "Adil Hasan is a UI/UX Designer and Digital Artist with over two decades of experience creating user-centered digital experiences. He holds a degree in Digital Media from Karachi School of Art (2013), which deepened his expertise in motion design and interactive media. Adil specializes in crafting intuitive interfaces, compelling digital artwork and engaging animations that balance aesthetic appeal with functional design. Known for his meticulous attention to detail and creative problem-solving, he helps organizations elevate their digital presence through thoughtful, human-centered design.",
     image: `/${imageBaseUrl}/azhar_rizvi.png`,
     linkedin: "#"
   },
   {
     name: "Ahmed Nawaz",
     role: "Sr. Business Development Manager",
-    description: "",
+    description: "Ahmed Nawaz is a Senior Manager of Business Operations at Virtuosoft with over 12 years of experience in business management and operations. He specializes in aligning strategy with execution, improving internal processes and managing cross-functional teams. Ahmed oversees core business functions including operations, administration, vendor management and compliance. Known for his practical approach and strong leadership, he helps drive efficiency, stability and long-term growth across the organization.",
     image: `/${imageBaseUrl}/ahmed_nawaz.png`,
     linkedin: "https://www.linkedin.com/in/ahnawaz17/"
   },
@@ -312,14 +421,14 @@ export const teamMembers = [
   {
     name: "Wasif Shariq",
     role: "Head of Growth",
-    description: "Mr. Owais Syed is a cybersecurity professional with over 15 years of experience in information security, risk management, and governance. Based in Melbourne, Owais has supported federal government agencies and large enterprises, specializing in security frameworks such as ISO 27001/2, NIST, and the Australian Protective Security Policy Framework (PSPF). Owais recently spent five years providing cybersecurity consultancy to the Australian Department of Defence, where he developed risk management strategies, conducted vulnerability assessments, and advised on compliance. As a skilled trainer and public speaker, he has conducted global cybersecurity training sessions for organizations like NBN Australia and the Australian Departments of Health and Defence. His expertise spans risk management, incident response, security accreditation, and advanced cybersecurity awareness.",
+    description: "Wasif Shariq leads strategic planning, internal operations, client relationships and external partnerships. His core focus is helping founders and businesses build strong development teams within 48–72 hours, modernize their technology stacks and scale with confidence. With hands-on experience in software development, SaaS and team building, Wasif works closely with clients to turn ideas into practical, growth-ready solutions.",
     image: `/${imageBaseUrl}/wasif_shariq.png`,
     linkedin: "https://www.linkedin.com/in/mwasifshariq/"
   },
   {
     name: "Usman ur rehman",
     role: "Director of IT Governance and Services",
-    description: "Saya J. Ahmed is a seasoned cybersecurity and legal professional with expertise across finance, automotive, aviation, aerospace, and humanitarian sectors. Fluent in English, Arabic, Persian, and Kurdish, with elementary proficiency in German, French, and Turkish, Saya combines technical expertise and strategic leadership to enhance operational resilience and regulatory compliance. As Director of Cybersecurity Practice at Law & Forensics, Saya has led the development of privacy and cybersecurity programs aligned with frameworks such as NIST, ISO, GDPR, and COBIT. She manages risk assessments, policy drafting, and cybersecurity strategy alignment with organizational goals. Saya also conducted 142 tabletop exercises annually and collaborated with CISOs and General Counsel. In addition, Saya has worked with UNICEF to provide policy recommendations adopted by 28 country offices and supported vulnerable populations with UNHCR. Her early career includes advising Iraq’s 2016 election to the Human Rights Council as a Political Advisor Intern. Core Competencies: Cybersecurity, Regulatory Compliance, Policy Drafting, Strategic Analysis, Multilingual Communication.",
+    description:"Usman ur Rehman is the Director of Software Quality Assurance Services at Virtuosoft. He leads the QA department with a strong focus on product reliability, performance and defect prevention. With a sharp eye for detail and deep testing expertise, he ensures that all software meets high quality standards before delivery. Known for his dedication and responsibility, Usman is trusted for handling critical testing, bug detection and overall quality assurance across projects.",
     image: `/${imageBaseUrl}/Usman-Ur-Rehman.png`,
     linkedin: "https://www.linkedin.com/in/usman-ur-rehman-64b67223/"
   },
@@ -332,114 +441,6 @@ export const teamMembers = [
   }
 ]
 
-// Footer Links and Data
-export const servicesData = [
-  {
-    title: 'Advisory',
-    items: [
-      { label: 'Discovery Workshop', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10604' },
-      { label: 'Technical Feasibility Study', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10620' },
-      { label: 'UI/UX Design', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10660' },
-      { label: 'Product Strategy and Roadmapping', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10650' },
-      { label: 'Digital Transformation', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10679' },
-    ],
-  },
-  {
-    title: 'Artificial Intelligence',
-    items: [
-      { label: 'AI Workshop', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10546' },
-      { label: 'AI PoC & MVP', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10346' },
-      { label: 'AI Agents', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10576' },
-      { label: 'Generative AI', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10496' },
-      { label: 'Data Science & MLOps', href: '#' },
-    ],
-  },
-  {
-    title: 'Engineering',
-    items: [
-      { label: 'Application Development', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10698' },
-      { label: 'Application Modernization', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10706' },
-      { label: 'POC Development', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10713' },
-      { label: 'Cloud Engineering', href: '#' },
-      { label: 'Product Development', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10690' },
-    ],
-  },
-  {
-    title: 'IT Governance',
-    items: [
-      { label: 'Regulatory Compliance', href: '#' },
-      { label: 'Risk Management', href: '#' },
-      { label: 'ITIL', href: '#' },
-      { label: 'Resource Augmentation', href: '#' },
-    ],
-  },
-  {
-    title: 'Digital Marketing',
-    items: [
-      { label: 'Content Creation', href: '#' },
-      { label: 'Social Media Management', href: '#' },
-      { label: 'Ads Management', href: '#' },
-      { label: 'Copywriting', href: '#' },
-      { label: 'Creative Solutions', href: '#' },
-      { label: 'Video Editing', href: '#' },
-    ],
-  },
-  {
-    title: 'Business Enablement',
-    items: [
-      { label: 'Accounts & Finance', href: '#' },
-      { label: 'HR & Recruitment', href: '#' },
-    ],
-  },
-];
-
-export const secondarySections = [
-  {
-    title: 'IT Service Management',
-    items: [
-      { label: 'BMC Helix', href: '#' },
-      { label: 'Manage Engine', href: '#' },
-    ],
-  },
-  {
-    title: 'Cyber Security',
-    items: [
-      { label: 'Solution Deployment', href: '#' },
-      { label: 'Governance & Compliance', href: '#' },
-      { label: 'Cyber Assessments', href: '#' },
-      { label: 'Managed Cybersecurity', href: '#' },
-    ],
-  },
-  {
-    title: 'Data & Analytics',
-    items: [
-      { label: 'Data Strategy Consulting', href: '#' },
-      { label: 'Data Warehouse', href: '#' },
-      { label: 'Data Analytics & BI', href: '#' },
-    ],
-  },
-];
-
-export const solutions = ['Microsoft Dynamics 365', 'Power BI', 'BMC Helix', 'Odoo'];
-
-const IconSocial = "assets/Images/"
-export const socialLinks = [
-  {
-    name: 'LinkedIn',
-    href: 'https://www.linkedin.com/company/virtuosoft.pk/',
-    img: `${IconSocial}/linkedin.svg`
-  },
-  {
-    name: 'Facebook',
-    href: 'https://www.facebook.com/share/1D7GPDPc44/?mibextid=LQQJ4d',
-    img: `${IconSocial}/facebook.svg`
-  },
-  {
-    name: 'Instagram',
-    href: 'https://www.instagram.com/virtuosoft_official?igsh=bHNzd2kxa2Z3eDhp&utm_source=qr',
-    img: `${IconSocial}/instagram.svg`
-  },
-];
 
 // Services Page Sections
 const accentImg = "assets/Images/service"
@@ -458,8 +459,7 @@ export const aiCategory = {
     { label: 'Conversational AI', description: "Engage your customers with chatbots that actually understand, delivering natural, human-like conversations that enhance satisfaction." },
     { label: 'Computer Vision', description: "Empower your systems to see and understand the world, from detecting objects to automating visual quality control." },
     { label: 'Data Science & MLOps', description: "Build reliable data models that evolve with your business, backed by streamlined workflows and continuous improvement." },
-  ],
-  cta: "Discover AI Agents with Virtuosoft",
+  ]
 }
 
 export const cloudCategory = {
@@ -642,7 +642,7 @@ export const differentCard = [
 ]
 
 // Careers Page Collaboration Section
-const iconCollab = "assets/Images/careers/"
+const iconCollab = "assets/Images/careers"
 export const collabCard = [
   {
     icon: `/${iconCollab}/collab_app.png`,

@@ -11,9 +11,9 @@ export default function CollageSection() {
     visible: (custom) => ({
       opacity: 1,
       transition: {
-        duration: 1.1,
+        duration: 2.1,
         ease: [0.19, 1, 0.22, 1],
-        delay: 0.15 + custom * 0.15,
+        delay: 1.15 + custom * 1.15,
       },
     }),
   }

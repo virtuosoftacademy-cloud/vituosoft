@@ -3,7 +3,9 @@
 import { CommonHead, HeroHeadPages, HeroRegular, Italic } from "@/components/Styles/StyleClasses"
 import TeamCard from "./TeamCard"
 import { teamMembers } from "@/app/_constant"
+import { useState } from "react";
 function OurTeam() {
+  const [openIndex, setOpenIndex] = useState(null); // null = all closed
   return (
     <div className="mx-auto max-w-7xl px-10 py-12">
       <div className="my-10">
@@ -21,7 +23,11 @@ function OurTeam() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         {/* Team Member Card */}
         {teamMembers.map((member, index) => (
-          <TeamCard key={index} teammember={member} />
+          <TeamCard 
+          key={index} 
+          teammember={member}
+          isOpen={openIndex === index}
+          onToggle={() => setOpenIndex(openIndex === index ? null : index)} />
         ))}
       </div>
 

@@ -4,14 +4,14 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 
-export default function TeamCard({ teammember }) {
+export default function TeamCard({ teammember,onToggle,isOpen }) {
   const { name, role, description, image,linkedin } = teammember;
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(0);
 
   return (
-    <div className="flex flex-col shadow-2xl pb-6">
+    <div className="flex flex-col pb-6">
       <Image
-        className="bg-accent hover:bg-primary transition-all duration-700 cursor-pointer h-2/3"
+        className="bg-accent hover:bg-primary transition-all duration-700 cursor-pointer max-h-2/3"
         width={380}
         height={280}
         src={image}
@@ -26,7 +26,7 @@ export default function TeamCard({ teammember }) {
             transition-colors duration-200
             hover:text-primary
           `}
-          onClick={() => setExpanded(!expanded)}
+          onClick={onToggle}
         >
           {name}
         </h4>
@@ -41,16 +41,15 @@ export default function TeamCard({ teammember }) {
         </Link>
       </div>
 
-      <h5 className="text-[18px] font-medium text-muted-foreground py-0 px-4">
+      <h5 className="text-[18px] font-medium text-muted-foreground px-4">
         {role}
       </h5>
 
       <div
-        className={`
-    overflow-hidden transition-[max-height,opacity] duration-800 ease-in-out px-4
-    ${expanded ? 'opacity-100' : 'opacity-90'}
-  `}
-        style={{ maxHeight: expanded ? '700px' : '4.5rem' }} // generous when open
+       className={`
+          overflow-hidden transition-all duration-500 ease-in-out px-4
+          ${isOpen ? 'max-h-96 opacity-100 pb-6' : 'max-h-[3em] opacity-90'}
+        `}
       >
         <p className="text-base leading-relaxed text-gray-700">
           {description}

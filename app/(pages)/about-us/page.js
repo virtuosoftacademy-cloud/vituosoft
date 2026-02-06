@@ -8,7 +8,7 @@ const AboutUs = dynamic(() => import('./AboutUs'), {
 export default function Page() {
   return (
     <>
-    <ReactLenis root={true}>
+    <ReactLenis root>
       <AboutUs />;
     </ReactLenis>
     </>
