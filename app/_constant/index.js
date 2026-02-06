@@ -1,514 +1,716 @@
-
+import {
+  ArrowRight,
+  Code2,
+  Dot,
+  DotSquare,
+  Globe,
+  LineChart,
+  Megaphone,
+  Palette,
+  Smartphone,
+  Menu,
+  X,
+} from "lucide-react";
 // Client Logos
+const logoIcon = 'assets/Images/ClientLogo'
 export const logos = [
-    { src: "https://virtuosoft.pk/wp-content/uploads/2025/10/Tarabut_logo_black-1.png", alt: "Tarabut" },
-    { src: "https://virtuosoft.pk/wp-content/uploads/2025/10/image-223.png", alt: "Client" },
-    { src: "https://virtuosoft.pk/wp-content/uploads/2025/10/AMAX-Logo.png", alt: "AMAX" },
-    { src: "https://virtuosoft.pk/wp-content/uploads/2025/10/eye_care_professional_horizontal-1.png", alt: "Eye Care Professional" },
-    { src: "https://virtuosoft.pk/wp-content/uploads/2025/10/Frame-1000001217.png", alt: "Client" },
-    { src: "https://virtuosoft.pk/wp-content/uploads/2025/10/insijam_logo_final-01-1.png", alt: "Insijam" },
-    { src: "https://virtuosoft.pk/wp-content/uploads/2025/10/image-227.png", alt: "Client" },
-    { src: "https://virtuosoft.pk/wp-content/uploads/2025/10/image-226.png", alt: "Client" },
-    { src: "https://virtuosoft.pk/wp-content/uploads/2025/10/image-239.png", alt: "Client" },
+  { src: `${logoIcon}/tarabut.svg`, alt: "Tarabut" },
+  { src: `${logoIcon}/neogies.svg`, alt: "Client" },
+  { src: `${logoIcon}/amax.svg`, alt: "AMAX" },
+  { src: `${logoIcon}/eyecare.svg`, alt: "Eye Care Professional" },
+  { src: `${logoIcon}/dvago.svg`, alt: "Client" },
+  { src: `${logoIcon}/instijam.svg`, alt: "Insijam" },
+  { src: `${logoIcon}/hbl.svg`, alt: "Client" },
+  { src: `${logoIcon}/lmkr.svg`, alt: "Client" },
+  { src: `${logoIcon}/ncc.svg`, alt: "Client" },
 ];
-
+//Navbar
+export function getSpotlightVideo(title) {
+  const videoMap = {
+    "Advisory": "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?q=90&w=1120&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "Artificial Intelligence": "https://images.unsplash.com/photo-1678347123725-2d0d31bc06bd?q=80&w=1102&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "Software Engineering": "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "Data Service": "https://plus.unsplash.com/premium_photo-1740363268539-cd9093c3b5d1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "Solutions": "https://plus.unsplash.com/premium_photo-1684225764999-3597a8da10ab?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "Expertise": "https://images.unsplash.com/photo-1720289024474-946b6feabfcb?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  };
+  return videoMap[title] || "https://images.unsplash.com/photo-1720289024474-946b6feabfcb?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+}
+export const services_Nav = [
+  {
+    icon: Code2,
+    title: "Advisory",
+    subPages: [
+      { label: "Product Strategy & Roadmapping", href: "#" },
+      { label: "Digital Transformation", href: "#" },
+    ],
+  },
+  {
+    icon: Smartphone,
+    title: "Artificial Intelligence",
+    subPages: [
+      { label: "Custom Agent Development", href: "#" },
+      { label: "Generative A.I", href: "#" },
+      { label: "Data Science & MLOps", href: "#" },
+      { label: "Conversational Intelligence", href: "#" },
+      { label: "Computer Vision", href: "#" },
+      { label: "Optical Character Recognition", href: "#" },
+    ],
+  },
+  {
+    icon: Palette,
+    title: "Software Engineering",
+    subPages: [
+      { label: "Custom Software Development", href: "#" },
+      { label: "Application Development (Mobile & Web)", href: "#" },
+      { label: "Application Modernization", href: "#" },
+      { label: "Database Migration", href: "#" },
+      { label: "Third-Party Integrations", href: "#" },
+    ],
+  },
+  {
+    icon: Globe,
+    title: "Data Service",
+    subPages: [
+      { label: "Data Consulting ", href: "#" },
+      { label: "Data Warehouse Solutions", href: "#" },
+      { label: "Data Analytics & BI", href: "#" },
+    ],
+  },
+  {
+    title:"Solutions",
+    subPages:[
+      {label:"ERP solutions",href:"#"},
+      {label:"BMC helix",href:"#"},
+      {label:"microsoft dynamics 365",href:"#"},
+      {label:"Manage Engine",href:"#"},
+    ]
+  },
+  {
+    title:"Expertise",
+    subPages:[
+      {label:"IT governance",href:"#"},
+      {label:"cybersecurity",href:"#"},
+      {label:"RPA",href:"#"},
+      {label:"DevOps",href:"#"},
+      {label:"IT service Management",href:"#"},
+    ]
+  }
+  // {
+  //   icon: LineChart,
+  //   title: "Digital Marketing",
+  //   subPages: [
+  //     { label: "Content Creation", href: "#" },
+  //     { label: "Social Media Management", href: "#" },
+  //     { label: "Video Editing", href: "#" },
+  //     { label: "Ads Managment", href: "#" },
+  //     { label: "Copywriting", href: "#" },
+  //     { label: "Design & Creative Solutions", href: "#" },
+  //   ],
+  // },
+  // {
+  //   icon: Megaphone,
+  //   title: "Business Enablement",
+  //   subPages: [
+  //     { label: "Account & Finance", href: "#" },
+  //     { label: "Hr & Recruitment", href: "#" },
+  //   ],
+  // },
+];
+//Home
+// Services Section 
+const IconServices = "assets/Images/home"
+export const services_Section = [
+  {
+    id: "ai",
+    title: "Artificial Intelligence",
+    description: "AI Solutions That Automate And Innovate",
+    bgColor: "bg-[#0E3782]",
+    textColor: "text-white",
+    bgImage: `${IconServices}/ai.svg`,
+    gridClasses: "col-span-full md:col-span-1 lg:row-span-2 lg:min-h-[600px]",
+    hoverTranslate: "translate-y-48 group-hover:-translate-y-28 lg:group-hover:-translate-y-32",
+    buttons: [
+      { label: "Custom Agent Development", href: "https://virtuosoft.pk/virtuosoft/?page_id=10576" },
+      { label: "Generative AI", href: "https://virtuosoft.pk/virtuosoft/?page_id=10496" },
+      { label: "Data Science & MLOps", href: "https://virtuosoft.pk/virtuosoft/?page_id=12388" },
+      { label: "Conversational Intelligence", href: "https://virtuosoft.pk/virtuosoft/?page_id=14338" },
+      { label: "Computer Vision", href: "https://virtuosoft.pk/virtuosoft/?page_id=14427" },
+      { label: "Optical character recognition", href: "https://virtuosoft.pk/virtuosoft/?page_id=14454" },
+    ],
+  },
+  {
+    id: "advisory",
+    title: "Advisory & Strategy",
+    description: "Expert guidance to drive digital growth.",
+    bgColor: "bg-[#003366]",
+    textColor: "text-white",
+    bgImage: `${IconServices}/advisory.svg`,
+    gridClasses: "col-span-full md:col-span-1 lg:row-span-1 lg:min-h-[300]",
+    hoverTranslate: "translate-y-20 group-hover:-translate-y-20 lg:group-hover:-translate-y-10",
+    buttons: [
+      { label: "Product Strategy & Roadmapping", href: "#" },
+      { label: "Digital Transformation", href: "#" },
+    ],
+  },
+  {
+    id: "business",
+    title: "IT governance",
+    description: "Structured Governance That Strengthens Control And Accountability",
+    bgColor: "bg-[#e6e6e6]",
+    textColor: "text-[#111]",
+    bgImage: `${IconServices}/be.svg`,
+    gridClasses: "col-span-full md:col-span-1 lg:row-span-1 lg:min-h-[300]",
+    hoverTranslate: "translate-y-30 group-hover:-translate-y-20 lg:group-hover:-translate-y-2",
+    isBusiness: true,
+    buttons: [
+      { label: "Regulatory Compliance", href: "https://virtuosoft.pk/virtuosoft/?page_id=12097" },
+      { label: "Governance Framework Development", href: "https://virtuosoft.pk/virtuosoft/?page_id=12324" },
+      { label: "Resource Augmentation", href: "https://virtuosoft.pk/virtuosoft/?page_id=12405" },
+    ],
+  },
+  {
+    id: "engineering",
+    title: "Software Engineering",
+    description: "Designing, building, and modernizing digital systems that scale with your business.",
+    bgColor: "bg-[#2a2d30]",
+    textColor: "text-white",
+    bgImage: `${IconServices}/engineering.svg`,
+    gridClasses: "col-span-full md:col-span-2 lg:col-span-2 lg:row-span-1 min-h-[300px]",
+    hoverTranslate: "translate-y-50 md:translate-y-20 md:group-hover:-translate-y-16 lg:group-hover:-translate-y-10",
+    // isBusiness: true,
+    MoreBtn: "/",
+    buttons: [
+      { label: "Custom Software Development", href: "https://virtuosoft.pk/virtuosoft/?page_id=10690" },
+      { label: "App Development", href: "https://virtuosoft.pk/virtuosoft/?page_id=10698" },
+      { label: "App Modernization", href: "https://virtuosoft.pk/virtuosoft/?page_id=11314" },
+      { label: "Database Migration", href: "#" },
+      { label: "Third-Party Integrations", href: "https://virtuosoft.pk/virtuosoft/?page_id=10690" },
+    ],
+  },
+];
+// Values Section
+const IconValues = "assets/Images/home"
+export const values_Section = [
+  {
+    title: 'Teamwork',
+    description:
+      'We believe great ideas come from great collaboration. Our strength lies in the way we work together, across teams, disciplines and perspectives. At Virtuosoft, everyone contributes, challenges and supports one another to bring out their best. This culture of shared ownership drives innovation, fuels creativity and ensures every success is a collective one.',
+    imageSrc: `${IconValues}/teamwork.svg`,
+    alt: 'Teamwork Icon',
+  },
+  {
+    title: 'Integrity',
+    description:
+      'Integrity is the backbone of everything we do. It guides our choices, shapes our culture and defines our relationships. We stand by our word, follow through on our commitments and always choose fairness and honesty, even when no one’s watching. For us, integrity isn’t a statement of ethics; it’s a daily practice of doing what’s right.',
+    imageSrc: `${IconValues}/integrity.svg`,
+    alt: 'Integrity Icon',
+  },
+  {
+    title: 'Reliability',
+    description:
+      'What our clients value most is knowing we’re there, steady, responsive and committed to their success. From the smallest task to the most complex project, Virtuosoft stands for consistency, precision and accountability. We don’t just aim to meet expectations, we make sure our partners can rely on us to exceed them, every time.',
+    imageSrc: `${IconValues}/relability.svg`,
+    alt: 'Reliability Icon',
+  },
+];
 // Our Team
 const imageBaseUrl = "assets/Images/team";
 export const teamMembers = [
-    {
-        name: "M.Lukman",
-        role: "Chair Man",
-        description:"Mr. Muhammad Lukman, Chairman of Virtuosoft, served as the Chief Executive Officer (CEO) of the National Clearing Company of Pakistan Limited.",
-        image: `/${imageBaseUrl}/lukman.png`,
-        linkedin: "https://www.linkedin.com/in/muhammad-lukman-888288116"
-    },
-    {
-        name: "Shoaib Ur Rehman",
-        role: "Chief Executive Officer",
-        description: "Shoaib Ur Rehman, CEO of Virtuosoft, brings over 20 years of expertise in Software Development, Cloud Computing, Big Data, and Open Source solutions.",
-        image: `/${imageBaseUrl}/ceo.png`,
-        linkedin: "https://www.linkedin.com/in/shoaib-rehman-226b621a"
-    },
-    {
-        name: "Amir Akhtar Jamili",
-        role: "Director Cyber Security and IT - Governance",
-        description: "Mr. Amir Akhtar Jamili is a Senior Consultant at Virtuosoft Private Limited, specializing in information security and business continuity. With over 18 years of experience, he has worked with leading multinational and national IT companies across various domains including cybersecurity, IT services, governance, and disaster management. He holds multiple professional certifications and is pursuing a Ph.D. in Cyber Security from Management and Science University Malaysia. Mr. Jamili has been recognized with several prestigious awards, including the CISO Cyber Sentinels Award (2023, 2024) and the CIO 200 Award over the past five years.",
-        image: `/${imageBaseUrl}/directorcs.png`,
-        linkedin: "https://www.linkedin.com/in/amir-jamili-a3b343a"
-    },
-    {
-        name: "Azhar Rizvi",
-        role: "Chief Operating Officer",
-        description: "Mr. Azher, an MBA graduate from SZABIST University, Dubai, is a seasoned Regional Marketing Manager with a strong background in market segm…",
-        image: `/${imageBaseUrl}/azhar-2.png`,
-        linkedin: "https://www.linkedin.com/in/azher-rizvi"
+  {
+    name: "M.Lukman",
+    role: "Chair Man",
+    description: "Mr. Muhammad Lukman, Chairman of Virtuosoft, served as the Chief Executive Officer (CEO) of the National Clearing Company of Pakistan Limited.",
+    image: `/${imageBaseUrl}/lukman.png`,
+    linkedin: "https://www.linkedin.com/in/muhammad-lukman-888288116"
+  },
+  {
+    name: "Shoaib Ur Rehman",
+    role: "Chief Executive Officer",
+    description: "Shoaib Ur Rehman, CEO of Virtuosoft, brings over 20 years of expertise in Software Development, Cloud Computing, Big Data, and Open Source solutions.",
+    image: `/${imageBaseUrl}/ceo.png`,
+    linkedin: "https://www.linkedin.com/in/shoaib-rehman-226b621a"
+  },
+  {
+    name: "Amir Akhtar Jamili",
+    role: "Director Cyber Security and IT - Governance",
+    description: "Mr. Amir Akhtar Jamili is a Senior Consultant at Virtuosoft Private Limited, specializing in information security and business continuity. With over 18 years of experience, he has worked with leading multinational and national IT companies across various domains including cybersecurity, IT services, governance, and disaster management. He holds multiple professional certifications and is pursuing a Ph.D. in Cyber Security from Management and Science University Malaysia. Mr. Jamili has been recognized with several prestigious awards, including the CISO Cyber Sentinels Award (2023, 2024) and the CIO 200 Award over the past five years.",
+    image: `/${imageBaseUrl}/directorcs.png`,
+    linkedin: "https://www.linkedin.com/in/amir-jamili-a3b343a"
+  },
+  {
+    name: "Azhar Rizvi",
+    role: "Chief Operating Officer",
+    description: "Mr. Azher, an MBA graduate from SZABIST University, Dubai, is a seasoned Regional Marketing Manager with a strong background in market segm…",
+    image: `/${imageBaseUrl}/azhar-2.png`,
+    linkedin: "https://www.linkedin.com/in/azher-rizvi"
 
-    },
-    {
-        name: "Asiya Nazeer",
-        role: "HR Operations",
-        description: "Sadia Asif, a science graduate at Virtuosoft for three years, excels in designing and implementing service quality measures. Her impactful projects, locall…",
-        image: `/${imageBaseUrl}/asiya-nazeer.png`,
-        linkedin: "https://www.linkedin.com/in/asiya-nazeer"
-    },
-    {
-        name: "Syed Ibrahim Ahmed",
-        role: "Head of HR",
-        description: "With over 13 years of experience, Syed Ibrahim is a distinguished HR Manager known for his strategic leadership and contributions to organizational grow…",
-        image: `/${imageBaseUrl}/ibrahim.png`,
-        linkedin: "https://www.linkedin.com/in/syedibrahimahmed-hr/"
-    },
-    {
-        name: "Saad Athar",
-        role: "Head Of Business Development, Middle East",
-        description: "Saad Athar, a seasoned Chartered Accountant, serves as the Business Development Head for the Middle East. With over 15 years of experience in the MENA region and a career spanning nine countries, Saad brings unparalleled expertise in business development, strategy, and organizational growth. His specializations include systems and process optimization, budgeting, cost recovery models, project management, and ERP implementation. Proficient in English, Arabic, and Urdu, Saad is adept at fostering cross-border collaborations and negotiating contracts. An alumnus of the University of East London and Warwick Business School, with certifications from the International Council of Shopping Centres and Covey Labs, Saad embodies a commitment to excellence. His multicultural insights and strategic vision have been instrumental in expanding operations and driving success for the organization in the Middle East region.",
-        image: `/${imageBaseUrl}/saad.png`,
-        linkedin: "https://www.linkedin.com/in/saadathar-strategist/"
-    },
-    {
-        name: "Muhammad Rehan",
-        role: "Head of Tecnology",
-        description: "",
-        image: `/${imageBaseUrl}/m_rehan.png`,
-        linkedin: "https://www.linkedin.com/in/rehan010/"
-    },
-    {
-        name: "Aumare javed",
-        role: "Business Development Consultant , Europe",
-        description: "Currently contributing to Caansoft, a sister concern of Virtuosoft, with over a decade of expertise in delivering cutting-edge software solutions. With a strong focus on user-centric design, they excel in enhancing efficiency and quality. Skilled in leading teams to craft solutions tailored to diverse business needs, they prioritize exceptional user experiences and aesthetic excellence, ensuring alignment with organizational goals",
-        image: `/${imageBaseUrl}/aumair_javed.png`,
-        linkedin: "#"
-    },
-    {
-        name: "Azhar Rizvi",
-        role: "Chief Operating Officer",
-        description: "Muhammad Adil Hassan boasts a proven track record of 20 years of excellence in the creative industry, where he has successfully led numerous high-impact projects. His extensive expertise covers a wide range of creative domains, including UI/UX design, web development, animations, app interfaces, social media marketing, explainer videos, storyboarding, logo creation, stationery, company profiles, branding, and illustrations. With significant experience designing for platforms like Android, iOS, and iPad, Adil focuses on crafting intuitive user experiences and developing prototypes that enhance usability and engagement. His portfolio includes a diverse array of websites across multiple platforms, including e-commerce stores, dashboards, online shops, and informational services, each tailored to meet specific client needs.",
-        image: `/${imageBaseUrl}/azhar_rizvi.png`,
-        linkedin: "#"
-    },
-    {
-        name: "Ahmed Nawaz",
-        role: "Sr. Business Development Manager",
-        description: "",
-        image: `/${imageBaseUrl}/ahmed_nawaz.png`,
-        linkedin: "https://www.linkedin.com/in/ahnawaz17/"
-    },
-    {
-        name: "Adnan Malik",
-        role: "Cyber Security Expert",
-        description: "Mr. Adnan, holds a Bachelor’s in Computer System Engineering, from the University of Engineering & Technology, Peshawar.He is an adept cybersecurity professional with expertise in Security Operations, PCI DSS compliance, VAPT, Ethical Hacking, Cyber  Security Risk Management, ISO 27001, Cloud Security, and SIEM. He excels in Threat and Vulnerability Management,",
-        image: `/${imageBaseUrl}/adnan_malik.png`,
-        linkedin: "https://www.linkedin.com/in/adnanmalikinfo/"
-    },
-    {
-        name: "Sohail malik",
-        role: "Head of Financial BPO",
-        description: "Sohail Imdad is an Associate Chartered Accountant from ICAR he has more than ten years of working experience. During the course of employment in PwC, he gained valuable experience of audit and Assurance, Taxation and Accounting & Book Keeping of multiple industries. He has also served in fastest growing pharmaceutical of Pakistan as a Lead Treasury and also in the the top FMCG of Pakistan as the Head of Taxation.",
-        image: `/${imageBaseUrl}/sohail_malik.png`,
-        linkedin: "https://www.linkedin.com/in/suhail-imdad/"
-    },
-    {
-        name: "Wasif Shariq",
-        role: "Head of Growth",
-        description: "Mr. Owais Syed is a cybersecurity professional with over 15 years of experience in information security, risk management, and governance. Based in Melbourne, Owais has supported federal government agencies and large enterprises, specializing in security frameworks such as ISO 27001/2, NIST, and the Australian Protective Security Policy Framework (PSPF). Owais recently spent five years providing cybersecurity consultancy to the Australian Department of Defence, where he developed risk management strategies, conducted vulnerability assessments, and advised on compliance. As a skilled trainer and public speaker, he has conducted global cybersecurity training sessions for organizations like NBN Australia and the Australian Departments of Health and Defence. His expertise spans risk management, incident response, security accreditation, and advanced cybersecurity awareness.",
-        image: `/${imageBaseUrl}/wasif_shariq.png`,
-        linkedin: "https://www.linkedin.com/in/mwasifshariq/"
-    },
-    {
-        name: "Usman ur rehman",
-        role: "Director of IT Governance and Services",
-        description: "Saya J. Ahmed is a seasoned cybersecurity and legal professional with expertise across finance, automotive, aviation, aerospace, and humanitarian sectors. Fluent in English, Arabic, Persian, and Kurdish, with elementary proficiency in German, French, and Turkish, Saya combines technical expertise and strategic leadership to enhance operational resilience and regulatory compliance. As Director of Cybersecurity Practice at Law & Forensics, Saya has led the development of privacy and cybersecurity programs aligned with frameworks such as NIST, ISO, GDPR, and COBIT. She manages risk assessments, policy drafting, and cybersecurity strategy alignment with organizational goals. Saya also conducted 142 tabletop exercises annually and collaborated with CISOs and General Counsel. In addition, Saya has worked with UNICEF to provide policy recommendations adopted by 28 country offices and supported vulnerable populations with UNHCR. Her early career includes advising Iraq’s 2016 election to the Human Rights Council as a Political Advisor Intern. Core Competencies: Cybersecurity, Regulatory Compliance, Policy Drafting, Strategic Analysis, Multilingual Communication.",
-        image: `/${imageBaseUrl}/Usman-Ur-Rehman.png`,
-        linkedin: "https://www.linkedin.com/in/usman-ur-rehman-64b67223/"
-    },
-    {
-        name: "Tahir aziz",
-        role: "Business Development Consultant, USA",
-        description: "Data Engineering and Analytics Expert with over 14 years of experience in designing, developing, and implementing complex data warehousing and big data solutions. Proficient in ETL, data modeling, and data mining techniques using industry-leading tools like Teradata, Informatica, and Hadoop. Skilled in cloud technologies like AWS and Snowflake. Passionate about leveraging data to drive business insights and improve decision-making.",
-        image: `/${imageBaseUrl}/tahir.png`,
-        linkedin: "https://www.linkedin.com/in/mrtaz/"
-    }
+  },
+  {
+    name: "Asiya Nazeer",
+    role: "HR Operations",
+    description: "Sadia Asif, a science graduate at Virtuosoft for three years, excels in designing and implementing service quality measures. Her impactful projects, locall…",
+    image: `/${imageBaseUrl}/asiya-nazeer.png`,
+    linkedin: "https://www.linkedin.com/in/asiya-nazeer"
+  },
+  {
+    name: "Syed Ibrahim Ahmed",
+    role: "Head of HR",
+    description: "With over 13 years of experience, Syed Ibrahim is a distinguished HR Manager known for his strategic leadership and contributions to organizational grow…",
+    image: `/${imageBaseUrl}/Ibrahim.png`,
+    linkedin: "https://www.linkedin.com/in/syedibrahimahmed-hr/"
+  },
+  {
+    name: "Saad Athar",
+    role: "Head Of Business Development, Middle East",
+    description: "Saad Athar, a seasoned Chartered Accountant, serves as the Business Development Head for the Middle East. With over 15 years of experience in the MENA region and a career spanning nine countries, Saad brings unparalleled expertise in business development, strategy, and organizational growth. His specializations include systems and process optimization, budgeting, cost recovery models, project management, and ERP implementation. Proficient in English, Arabic, and Urdu, Saad is adept at fostering cross-border collaborations and negotiating contracts. An alumnus of the University of East London and Warwick Business School, with certifications from the International Council of Shopping Centres and Covey Labs, Saad embodies a commitment to excellence. His multicultural insights and strategic vision have been instrumental in expanding operations and driving success for the organization in the Middle East region.",
+    image: `/${imageBaseUrl}/saad.png`,
+    linkedin: "https://www.linkedin.com/in/saadathar-strategist/"
+  },
+  {
+    name: "Muhammad Rehan",
+    role: "Head of Tecnology",
+    description: "",
+    image: `/${imageBaseUrl}/m_rehan.png`,
+    linkedin: "https://www.linkedin.com/in/rehan010/"
+  },
+  {
+    name: "Aumare javed",
+    role: "Business Development Consultant , Europe",
+    description: "Currently contributing to Caansoft, a sister concern of Virtuosoft, with over a decade of expertise in delivering cutting-edge software solutions. With a strong focus on user-centric design, they excel in enhancing efficiency and quality. Skilled in leading teams to craft solutions tailored to diverse business needs, they prioritize exceptional user experiences and aesthetic excellence, ensuring alignment with organizational goals",
+    image: `/${imageBaseUrl}/aumair_javed.png`,
+    linkedin: "#"
+  },
+  {
+    name: "Azhar Rizvi",
+    role: "Chief Operating Officer",
+    description: "Muhammad Adil Hassan boasts a proven track record of 20 years of excellence in the creative industry, where he has successfully led numerous high-impact projects. His extensive expertise covers a wide range of creative domains, including UI/UX design, web development, animations, app interfaces, social media marketing, explainer videos, storyboarding, logo creation, stationery, company profiles, branding, and illustrations. With significant experience designing for platforms like Android, iOS, and iPad, Adil focuses on crafting intuitive user experiences and developing prototypes that enhance usability and engagement. His portfolio includes a diverse array of websites across multiple platforms, including e-commerce stores, dashboards, online shops, and informational services, each tailored to meet specific client needs.",
+    image: `/${imageBaseUrl}/azhar_rizvi.png`,
+    linkedin: "#"
+  },
+  {
+    name: "Ahmed Nawaz",
+    role: "Sr. Business Development Manager",
+    description: "",
+    image: `/${imageBaseUrl}/ahmed_nawaz.png`,
+    linkedin: "https://www.linkedin.com/in/ahnawaz17/"
+  },
+  {
+    name: "Adnan Malik",
+    role: "Cyber Security Expert",
+    description: "Mr. Adnan, holds a Bachelor’s in Computer System Engineering, from the University of Engineering & Technology, Peshawar.He is an adept cybersecurity professional with expertise in Security Operations, PCI DSS compliance, VAPT, Ethical Hacking, Cyber  Security Risk Management, ISO 27001, Cloud Security, and SIEM. He excels in Threat and Vulnerability Management,",
+    image: `/${imageBaseUrl}/adnan_malik.png`,
+    linkedin: "https://www.linkedin.com/in/adnanmalikinfo/"
+  },
+  {
+    name: "Sohail malik",
+    role: "Head of Financial BPO",
+    description: "Sohail Imdad is an Associate Chartered Accountant from ICAR he has more than ten years of working experience. During the course of employment in PwC, he gained valuable experience of audit and Assurance, Taxation and Accounting & Book Keeping of multiple industries. He has also served in fastest growing pharmaceutical of Pakistan as a Lead Treasury and also in the the top FMCG of Pakistan as the Head of Taxation.",
+    image: `/${imageBaseUrl}/sohail_malik.png`,
+    linkedin: "https://www.linkedin.com/in/suhail-imdad/"
+  },
+  {
+    name: "Wasif Shariq",
+    role: "Head of Growth",
+    description: "Mr. Owais Syed is a cybersecurity professional with over 15 years of experience in information security, risk management, and governance. Based in Melbourne, Owais has supported federal government agencies and large enterprises, specializing in security frameworks such as ISO 27001/2, NIST, and the Australian Protective Security Policy Framework (PSPF). Owais recently spent five years providing cybersecurity consultancy to the Australian Department of Defence, where he developed risk management strategies, conducted vulnerability assessments, and advised on compliance. As a skilled trainer and public speaker, he has conducted global cybersecurity training sessions for organizations like NBN Australia and the Australian Departments of Health and Defence. His expertise spans risk management, incident response, security accreditation, and advanced cybersecurity awareness.",
+    image: `/${imageBaseUrl}/wasif_shariq.png`,
+    linkedin: "https://www.linkedin.com/in/mwasifshariq/"
+  },
+  {
+    name: "Usman ur rehman",
+    role: "Director of IT Governance and Services",
+    description: "Saya J. Ahmed is a seasoned cybersecurity and legal professional with expertise across finance, automotive, aviation, aerospace, and humanitarian sectors. Fluent in English, Arabic, Persian, and Kurdish, with elementary proficiency in German, French, and Turkish, Saya combines technical expertise and strategic leadership to enhance operational resilience and regulatory compliance. As Director of Cybersecurity Practice at Law & Forensics, Saya has led the development of privacy and cybersecurity programs aligned with frameworks such as NIST, ISO, GDPR, and COBIT. She manages risk assessments, policy drafting, and cybersecurity strategy alignment with organizational goals. Saya also conducted 142 tabletop exercises annually and collaborated with CISOs and General Counsel. In addition, Saya has worked with UNICEF to provide policy recommendations adopted by 28 country offices and supported vulnerable populations with UNHCR. Her early career includes advising Iraq’s 2016 election to the Human Rights Council as a Political Advisor Intern. Core Competencies: Cybersecurity, Regulatory Compliance, Policy Drafting, Strategic Analysis, Multilingual Communication.",
+    image: `/${imageBaseUrl}/Usman-Ur-Rehman.png`,
+    linkedin: "https://www.linkedin.com/in/usman-ur-rehman-64b67223/"
+  },
+  {
+    name: "Tahir aziz",
+    role: "Business Development Consultant, USA",
+    description: "Data Engineering and Analytics Expert with over 14 years of experience in designing, developing, and implementing complex data warehousing and big data solutions. Proficient in ETL, data modeling, and data mining techniques using industry-leading tools like Teradata, Informatica, and Hadoop. Skilled in cloud technologies like AWS and Snowflake. Passionate about leveraging data to drive business insights and improve decision-making.",
+    image: `/${imageBaseUrl}/tahir.png`,
+    linkedin: "https://www.linkedin.com/in/mrtaz/"
+  }
 ]
 
 // Footer Links and Data
 export const servicesData = [
-    {
-        title: 'Advisory',
-        items: [
-            { label: 'Discovery Workshop', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10604' },
-            { label: 'Technical Feasibility Study', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10620' },
-            { label: 'UI/UX Design', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10660' },
-            { label: 'Product Strategy and Roadmapping', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10650' },
-            { label: 'Digital Transformation', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10679' },
-        ],
-    },
-    {
-        title: 'Artificial Intelligence',
-        items: [
-            { label: 'AI Workshop', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10546' },
-            { label: 'AI PoC & MVP', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10346' },
-            { label: 'AI Agents', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10576' },
-            { label: 'Generative AI', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10496' },
-            { label: 'Data Science & MLOps', href: '#' },
-        ],
-    },
-    {
-        title: 'Engineering',
-        items: [
-            { label: 'Application Development', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10698' },
-            { label: 'Application Modernization', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10706' },
-            { label: 'POC Development', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10713' },
-            { label: 'Cloud Engineering', href: '#' },
-            { label: 'Product Development', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10690' },
-        ],
-    },
-    {
-        title: 'IT Governance',
-        items: [
-            { label: 'Regulatory Compliance', href: '#' },
-            { label: 'Risk Management', href: '#' },
-            { label: 'ITIL', href: '#' },
-            { label: 'Resource Augmentation', href: '#' },
-        ],
-    },
-    {
-        title: 'Digital Marketing',
-        items: [
-            { label: 'Content Creation', href: '#' },
-            { label: 'Social Media Management', href: '#' },
-            { label: 'Ads Management', href: '#' },
-            { label: 'Copywriting', href: '#' },
-            { label: 'Creative Solutions', href: '#' },
-            { label: 'Video Editing', href: '#' },
-        ],
-    },
-    {
-        title: 'Business Enablement',
-        items: [
-            { label: 'Accounts & Finance', href: '#' },
-            { label: 'HR & Recruitment', href: '#' },
-        ],
-    },
+  {
+    title: 'Advisory',
+    items: [
+      { label: 'Discovery Workshop', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10604' },
+      { label: 'Technical Feasibility Study', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10620' },
+      { label: 'UI/UX Design', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10660' },
+      { label: 'Product Strategy and Roadmapping', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10650' },
+      { label: 'Digital Transformation', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10679' },
+    ],
+  },
+  {
+    title: 'Artificial Intelligence',
+    items: [
+      { label: 'AI Workshop', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10546' },
+      { label: 'AI PoC & MVP', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10346' },
+      { label: 'AI Agents', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10576' },
+      { label: 'Generative AI', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10496' },
+      { label: 'Data Science & MLOps', href: '#' },
+    ],
+  },
+  {
+    title: 'Engineering',
+    items: [
+      { label: 'Application Development', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10698' },
+      { label: 'Application Modernization', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10706' },
+      { label: 'POC Development', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10713' },
+      { label: 'Cloud Engineering', href: '#' },
+      { label: 'Product Development', href: 'https://virtuosoft.pk/virtuosoft/?page_id=10690' },
+    ],
+  },
+  {
+    title: 'IT Governance',
+    items: [
+      { label: 'Regulatory Compliance', href: '#' },
+      { label: 'Risk Management', href: '#' },
+      { label: 'ITIL', href: '#' },
+      { label: 'Resource Augmentation', href: '#' },
+    ],
+  },
+  {
+    title: 'Digital Marketing',
+    items: [
+      { label: 'Content Creation', href: '#' },
+      { label: 'Social Media Management', href: '#' },
+      { label: 'Ads Management', href: '#' },
+      { label: 'Copywriting', href: '#' },
+      { label: 'Creative Solutions', href: '#' },
+      { label: 'Video Editing', href: '#' },
+    ],
+  },
+  {
+    title: 'Business Enablement',
+    items: [
+      { label: 'Accounts & Finance', href: '#' },
+      { label: 'HR & Recruitment', href: '#' },
+    ],
+  },
 ];
 
 export const secondarySections = [
-    {
-        title: 'IT Service Management',
-        items: [
-            { label: 'BMC Helix', href: '#' },
-            { label: 'Manage Engine', href: '#' },
-        ],
-    },
-    {
-        title: 'Cyber Security',
-        items: [
-            { label: 'Solution Deployment', href: '#' },
-            { label: 'Governance & Compliance', href: '#' },
-            { label: 'Cyber Assessments', href: '#' },
-            { label: 'Managed Cybersecurity', href: '#' },
-        ],
-    },
-    {
-        title: 'Data & Analytics',
-        items: [
-            { label: 'Data Strategy Consulting', href: '#' },
-            { label: 'Data Warehouse', href: '#' },
-            { label: 'Data Analytics & BI', href: '#' },
-        ],
-    },
+  {
+    title: 'IT Service Management',
+    items: [
+      { label: 'BMC Helix', href: '#' },
+      { label: 'Manage Engine', href: '#' },
+    ],
+  },
+  {
+    title: 'Cyber Security',
+    items: [
+      { label: 'Solution Deployment', href: '#' },
+      { label: 'Governance & Compliance', href: '#' },
+      { label: 'Cyber Assessments', href: '#' },
+      { label: 'Managed Cybersecurity', href: '#' },
+    ],
+  },
+  {
+    title: 'Data & Analytics',
+    items: [
+      { label: 'Data Strategy Consulting', href: '#' },
+      { label: 'Data Warehouse', href: '#' },
+      { label: 'Data Analytics & BI', href: '#' },
+    ],
+  },
 ];
 
 export const solutions = ['Microsoft Dynamics 365', 'Power BI', 'BMC Helix', 'Odoo'];
-
+const IconSocial = "assets/Images"
 export const socialLinks = [
-    {
-        name: 'LinkedIn',
-        href: 'https://www.linkedin.com/company/virtuosoft.pk/',
-        img: 'https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/Group-1000001550.png',
-    },
-    {
-        name: 'Facebook',
-        href: 'https://www.facebook.com/share/1D7GPDPc44/?mibextid=LQQJ4d',
-        img: 'https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/Group-1000001551.png',
-    },
-    {
-        name: 'Instagram',
-        href: 'https://www.instagram.com/virtuosoft_official?igsh=bHNzd2kxa2Z3eDhp&utm_source=qr',
-        img: 'https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/Group-1000001552.png',
-    },
+  {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/virtuosoft.pk/',
+    img: `${IconSocial}/linkedin.svg`
+  },
+  {
+    name: 'Facebook',
+    href: 'https://www.facebook.com/share/1D7GPDPc44/?mibextid=LQQJ4d',
+    img: `${IconSocial}/facebook.svg`
+  },
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/virtuosoft_official?igsh=bHNzd2kxa2Z3eDhp&utm_source=qr',
+    img: `${IconSocial}/instagram.svg`
+  },
 ];
 
 // Services Page Sections
 const accentImg = "assets/Images/service"
 export const aiCategory = {
-    title: 'Artificial Intelligence & Data',
-    subtitletop: 'Turning Data into Intelligent Action',
-    subtitlebottom: "Artificial Intelligence and Data are transforming how businesses operate and grow. With the right tools and strategy, data becomes a powerful engine for automation, prediction and smarter decision-making.",
-    bgColor: 'bg-linear-to-br from-primary to-[#003799]',
-    textColor: 'text-white',
-    accentImage: `/${accentImg}/ai_data_service.png`,
-    imagePosition: "-top-6 -right-4",
-    services: [
-        { label: 'AI Agents', description: "Create intelligent digital assistants and automation tools that work around the clock, reducing manual effort and boosting efficiency." },
-        { label: 'Generative AI', description: 'Bring ideas to life with AI that writes, designs and creates, helping your teams move from concept to content in seconds.', },
-        { label: 'Machine Learning', description: "Turn your data into foresight. Discover hidden patterns, forecast trends and make decisions with confidence." },
-        { label: 'Conversational AI', description: "Engage your customers with chatbots that actually understand, delivering natural, human-like conversations that enhance satisfaction." },
-        { label: 'Computer Vision', description: "Empower your systems to see and understand the world, from detecting objects to automating visual quality control." },
-        { label: 'Data Science & MLOps', description: "Build reliable data models that evolve with your business, backed by streamlined workflows and continuous improvement." },
-    ],
-    cta: "Discover AI Agents with Virtuosoft",
+  title: 'Artificial Intelligence & Data',
+  subtitletop: 'Turning Data into Intelligent Action',
+  subtitlebottom: "Artificial Intelligence and Data are transforming how businesses operate and grow. With the right tools and strategy, data becomes a powerful engine for automation, prediction and smarter decision-making.",
+  bgColor: 'bg-linear-to-br from-primary to-[#003799]',
+  textColor: 'text-white',
+  accentImage: `/${accentImg}/ai_data_service.png`,
+  imagePosition: "-top-6 -right-4",
+  services: [
+    { label: 'AI Agents', description: "Create intelligent digital assistants and automation tools that work around the clock, reducing manual effort and boosting efficiency." },
+    { label: 'Generative AI', description: 'Bring ideas to life with AI that writes, designs and creates, helping your teams move from concept to content in seconds.', },
+    { label: 'Machine Learning', description: "Turn your data into foresight. Discover hidden patterns, forecast trends and make decisions with confidence." },
+    { label: 'Conversational AI', description: "Engage your customers with chatbots that actually understand, delivering natural, human-like conversations that enhance satisfaction." },
+    { label: 'Computer Vision', description: "Empower your systems to see and understand the world, from detecting objects to automating visual quality control." },
+    { label: 'Data Science & MLOps', description: "Build reliable data models that evolve with your business, backed by streamlined workflows and continuous improvement." },
+  ],
+  cta: "Discover AI Agents with Virtuosoft",
 }
 
 export const cloudCategory = {
-    title: 'Cloud Services',
-    subtitletop: 'Powering Agility in a Connected World',
-    subtitlebottom: 'Cloud is more than storage, it’s a foundation for innovation. Our cloud services help you scale effortlessly, cut costs and build secure environments that grow with your needs.',
-    accentImage: `/${accentImg}/cs_service.png`,
-    textColor: 'text-white',
-    bgColor: 'bg-linear-to-br from-[#734F9A] to-[#300032]',
-    imagePosition: "-top-6 -right-4",
-    services: [
-        {
-            label: 'Cloud Engineering & Architecture',
-            description: "Design the perfect cloud setup with secure, flexible and built to support your business goals."
-        },
-        {
-            label: 'Cloud Migration',
-            description: "Move to the cloud without the chaos. We handle the transition smoothly while keeping your data safe."
-        },
-        {
-            label: "DevOps & CI/CD Implementation",
-            description: "Accelerate your development cycle with automation, continuous integration and faster deployment."
-        },
-        {
-            label: "Cloud Cost Optimization",
-            description: "Get more value from your cloud by streamlining resources and minimizing unnecessary costs."
-        },
-        {
-            label: "Managed Services & Support",
-            description: "Stay focused on growth while we manage, monitor and maintain your cloud infrastructure 24/7."
-        }
-    ],
+  title: 'Cloud Services',
+  subtitletop: 'Powering Agility in a Connected World',
+  subtitlebottom: 'Cloud is more than storage, it’s a foundation for innovation. Our cloud services help you scale effortlessly, cut costs and build secure environments that grow with your needs.',
+  accentImage: `/${accentImg}/cs_service.png`,
+  textColor: 'text-white',
+  bgColor: 'bg-linear-to-br from-[#734F9A] to-[#300032]',
+  imagePosition: "-top-6 -right-4",
+  services: [
+    {
+      label: 'Cloud Engineering & Architecture',
+      description: "Design the perfect cloud setup with secure, flexible and built to support your business goals."
+    },
+    {
+      label: 'Cloud Migration',
+      description: "Move to the cloud without the chaos. We handle the transition smoothly while keeping your data safe."
+    },
+    {
+      label: "DevOps & CI/CD Implementation",
+      description: "Accelerate your development cycle with automation, continuous integration and faster deployment."
+    },
+    {
+      label: "Cloud Cost Optimization",
+      description: "Get more value from your cloud by streamlining resources and minimizing unnecessary costs."
+    },
+    {
+      label: "Managed Services & Support",
+      description: "Stay focused on growth while we manage, monitor and maintain your cloud infrastructure 24/7."
+    }
+  ],
 }
 
 export const advisoryCategory = {
-    title: 'Advisory & Strategy',
-    subtitletop: 'From Vision to Real-World Impact',
-    subtitlebottom: 'Every great product begins with a clear strategy. Our advisory services help you uncover opportunities, reduce risk and shape a roadmap that turns big ideas into sustainable results.',
-    accentImage: `/${accentImg}/as_service.png`,
-    textColor: 'text-white',
-    bgColor: 'bg-linear-to-br from-[#084387] to-[#021021]',
-    imagePosition: "top-0 right-0",
-    services: [
-        {
-            label: 'Discovery Workshops',
-            description: "Collaborate with experts to explore ideas, define goals and set a clear direction for your digital journey."
-        },
-        {
-            label: 'Technical Feasibility Study',
-            description: "Know what’s possible and what’s not. We evaluate your concepts from every angle before development begins."
-        },
-        {
-            label: "Product Strategy & Roadmapping",
-            description: "Turn your product vision into a detailed, achievable plan with defined milestones and measurable outcomes."
-        }, {
-            label: "UX / UI Consulting",
-            description: "Design experiences that people love, blending usability, simplicity and aesthetic appeal."
-        }, {
-            label: "Digital Transformation Consulting",
-            description: "Reimagine your organization with strategies that connect technology, people and processes for long-term growth."
-        }
-    ],
+  title: 'Advisory & Strategy',
+  subtitletop: 'From Vision to Real-World Impact',
+  subtitlebottom: 'Every great product begins with a clear strategy. Our advisory services help you uncover opportunities, reduce risk and shape a roadmap that turns big ideas into sustainable results.',
+  accentImage: `/${accentImg}/as_service.png`,
+  textColor: 'text-white',
+  bgColor: 'bg-linear-to-br from-[#084387] to-[#021021]',
+  imagePosition: "top-0 right-0",
+  services: [
+    {
+      label: 'Discovery Workshops',
+      description: "Collaborate with experts to explore ideas, define goals and set a clear direction for your digital journey."
+    },
+    {
+      label: 'Technical Feasibility Study',
+      description: "Know what’s possible and what’s not. We evaluate your concepts from every angle before development begins."
+    },
+    {
+      label: "Product Strategy & Roadmapping",
+      description: "Turn your product vision into a detailed, achievable plan with defined milestones and measurable outcomes."
+    }, {
+      label: "UX / UI Consulting",
+      description: "Design experiences that people love, blending usability, simplicity and aesthetic appeal."
+    }, {
+      label: "Digital Transformation Consulting",
+      description: "Reimagine your organization with strategies that connect technology, people and processes for long-term growth."
+    }
+  ],
 }
 
 export const engineeringCategory = {
-    title: 'Engineering & Development',
-    subtitletop: 'Building the Future, One Line at a Time',
-    subtitlebottom: 'From web platforms to enterprise applications, our engineering team turns ideas into scalable digital solutions. Every product is crafted for reliability, performance and real-world impact.',
-    accentImage: `/${accentImg}/ed_service.png`,
-    textColor: 'text-white',
-    bgColor: 'bg-linear-to-br from-[#0E3043] to-[#485861]',
-    imagePosition: "top-0 right-0",
-    services: [
-        {
-            label: 'Web & Mobile App Development',
-            description: "Create sleek, high-performing apps that engage users and deliver seamless experiences across all devices."
-        },
-        {
-            label: "SaaS & Cloud-based App Development",
-            description: "Develop scalable platforms that grow with your business and keep you connected anytime, anywhere."
-        },
-        {
-            label: "Product Development (MVP to Enterprise Scale)",
-            description: "Whether it’s an early prototype or a large-scale system, we bring your ideas to life with speed and precision."
-        },
-        {
-            label: "App Modernization & Migration",
-            description: "Upgrade old systems with modern technology while enhancing security, performance and flexibility."
-        },
-        {
-            label: "API & Legacy System Integration",
-            description: "Connect everything. Integrate your tools, systems and platforms to work together as one efficient ecosystem."
-        },
-        {
-            label: "QA Automation & Testing",
-            description: "Deliver flawless products with testing that ensures every release is fast, stable and ready for users."
-        }
-    ],
+  title: 'Engineering & Development',
+  subtitletop: 'Building the Future, One Line at a Time',
+  subtitlebottom: 'From web platforms to enterprise applications, our engineering team turns ideas into scalable digital solutions. Every product is crafted for reliability, performance and real-world impact.',
+  accentImage: `/${accentImg}/ed_service.png`,
+  textColor: 'text-white',
+  bgColor: 'bg-linear-to-br from-[#0E3043] to-[#485861]',
+  imagePosition: "top-0 right-0",
+  services: [
+    {
+      label: 'Web & Mobile App Development',
+      description: "Create sleek, high-performing apps that engage users and deliver seamless experiences across all devices."
+    },
+    {
+      label: "SaaS & Cloud-based App Development",
+      description: "Develop scalable platforms that grow with your business and keep you connected anytime, anywhere."
+    },
+    {
+      label: "Product Development (MVP to Enterprise Scale)",
+      description: "Whether it’s an early prototype or a large-scale system, we bring your ideas to life with speed and precision."
+    },
+    {
+      label: "App Modernization & Migration",
+      description: "Upgrade old systems with modern technology while enhancing security, performance and flexibility."
+    },
+    {
+      label: "API & Legacy System Integration",
+      description: "Connect everything. Integrate your tools, systems and platforms to work together as one efficient ecosystem."
+    },
+    {
+      label: "QA Automation & Testing",
+      description: "Deliver flawless products with testing that ensures every release is fast, stable and ready for users."
+    }
+  ],
 }
 
 export const optimizationCategory = {
-    title: 'Optimization & Enablement',
-    subtitletop: 'Making Systems Smarter and Teams Stronger',
-    subtitlebottom: 'Optimization is about doing more with less. We help you refine your systems, automate your processes and enhance performance so your business keeps running smoothly and scaling confidently.',
-    accentImage: `/${accentImg}/oe_service.png`,
-    textColor: 'text-white',
-    bgColor: 'bg-linear-to-br from-[#498968] to-[#00192E]',
-    imagePosition: "top-0 right-0",
-    services: [
-        {
-            label: 'Software Audits',
-            description: "Get a clear view of your software health, uncover gaps, inefficiencies and opportunities for improvement."
-        },
-        {
-            label: "Quality Assurance",
-            description: "Ensure every release works as intended. Our QA team tests, validates and refines to deliver flawless user experiences."
-        },
-        {
-            label: "Support & Maintenance",
-            description: "Keep everything running perfectly with continuous monitoring, updates and technical support."
-        },
-        {
-            label: "Process Automation",
-            description: "Automate repetitive tasks and free your teams to focus on what really drives growth."
-        }
-    ],
+  title: 'Optimization & Enablement',
+  subtitletop: 'Making Systems Smarter and Teams Stronger',
+  subtitlebottom: 'Optimization is about doing more with less. We help you refine your systems, automate your processes and enhance performance so your business keeps running smoothly and scaling confidently.',
+  accentImage: `/${accentImg}/oe_service.png`,
+  textColor: 'text-white',
+  bgColor: 'bg-linear-to-br from-[#498968] to-[#00192E]',
+  imagePosition: "top-0 right-0",
+  services: [
+    {
+      label: 'Software Audits',
+      description: "Get a clear view of your software health, uncover gaps, inefficiencies and opportunities for improvement."
+    },
+    {
+      label: "Quality Assurance",
+      description: "Ensure every release works as intended. Our QA team tests, validates and refines to deliver flawless user experiences."
+    },
+    {
+      label: "Support & Maintenance",
+      description: "Keep everything running perfectly with continuous monitoring, updates and technical support."
+    },
+    {
+      label: "Process Automation",
+      description: "Automate repetitive tasks and free your teams to focus on what really drives growth."
+    }
+  ],
 }
 
 export const engagementCategory = {
-    title: 'Engagement Models',
-    subtitletop: 'Flexible Partnerships that Fit Your Goals',
-    subtitlebottom: 'Every business is unique and so is the way it builds technology. Our engagement models are designed to adapt, whether you need long-term collaboration, short-term support or expert talent on demand.',
-    accentImage: `/${accentImg}/em_models_service.png`,
-    textColor: 'text-white',
-    bgColor: 'bg-linear-to-br from-[#8F6982]/90 to-[#33004A]',
-    imagePosition: "top-0 right-0",
-    services: [
-        {
-            label: 'Dedicated Development Team',
-            description: "A team that works exclusively for you fully aligned with your goals and timelines."
-        },
-        {
-            label: "Offshore / Remote Team Setup",
-            description: "Extend your capabilities globally with skilled remote teams that deliver around the clock."
-        },
-        {
-            label: "Fixed Price Projects",
-            description: "Ideal for clearly defined goals. Predictable budgets, timelines and deliverables with zero surprises."
-        },
-        {
-            label: "Staff Augmentation",
-            description: "Scale your team instantly with specialists who blend seamlessly into your projects."
-        }
-    ],
+  title: 'Engagement Models',
+  subtitletop: 'Flexible Partnerships that Fit Your Goals',
+  subtitlebottom: 'Every business is unique and so is the way it builds technology. Our engagement models are designed to adapt, whether you need long-term collaboration, short-term support or expert talent on demand.',
+  accentImage: `/${accentImg}/em_models_service.png`,
+  textColor: 'text-white',
+  bgColor: 'bg-linear-to-br from-[#8F6982]/90 to-[#33004A]',
+  imagePosition: "top-0 right-0",
+  services: [
+    {
+      label: 'Dedicated Development Team',
+      description: "A team that works exclusively for you fully aligned with your goals and timelines."
+    },
+    {
+      label: "Offshore / Remote Team Setup",
+      description: "Extend your capabilities globally with skilled remote teams that deliver around the clock."
+    },
+    {
+      label: "Fixed Price Projects",
+      description: "Ideal for clearly defined goals. Predictable budgets, timelines and deliverables with zero surprises."
+    },
+    {
+      label: "Staff Augmentation",
+      description: "Scale your team instantly with specialists who blend seamlessly into your projects."
+    }
+  ],
 }
 
 // Services Page What Make Us Different? Section
 const iconDifferent = "assets/Images/service"
 export const differentCard = [
-    {
-        icon: `/${iconDifferent}/different_success.png`,
-        label: "Your Success",
-        description: "We measure our success by the business results we drive for you."
-    },
-    {
-        icon: `/${iconDifferent}/different_built.png`,
-        label: "Built for Users",
-        description: "We create intuitive experiences that feel natural from the very first click."
-    },
-    {
-        icon: `/${iconDifferent}/different_proven.png`,
-        label: "Proven Experts",
-        description: "Your project is handled by our experts, ensuring quality and reliability."
-    },
-    {
-        icon: `/${iconDifferent}/different_launch.png`,
-        label: "Launch Faster",
-        description: "Our agile process gets your product to market in weeks, not months."
-    },
+  {
+    icon: `/${iconDifferent}/different_success.png`,
+    label: "Your Success",
+    description: "We measure our success by the business results we drive for you."
+  },
+  {
+    icon: `/${iconDifferent}/different_built.png`,
+    label: "Built for Users",
+    description: "We create intuitive experiences that feel natural from the very first click."
+  },
+  {
+    icon: `/${iconDifferent}/different_proven.png`,
+    label: "Proven Experts",
+    description: "Your project is handled by our experts, ensuring quality and reliability."
+  },
+  {
+    icon: `/${iconDifferent}/different_launch.png`,
+    label: "Launch Faster",
+    description: "Our agile process gets your product to market in weeks, not months."
+  },
 ]
 
 // Careers Page Collaboration Section
 const iconCollab = "assets/Images/careers/"
 export const collabCard = [
-    {
-        icon: `/${iconCollab}/collab_app.png`,
-        translate_y: "translate-0 lg:-translate-y-2",
-        max_w: "max-w-2",
-        label: "Application Review",
-        description: "We review applications to find the best fit."
-    },
-    {
-        translate_y: "translate-0 lg:translate-y-20",
-        max_w: "max-w-2",
-        icon: `/${iconCollab}/collab_first.png`,
-        label: "First Interview",
-        description: "We discuss experience, goals and introduce Virtuosoft."
-    },
-    {
-        icon: `/${iconCollab}/collab_skill.png`,
-        translate_y: "translate-y-0",
-        label: "Skill / Technical Round",
-        description: "We test technical skills through practical, role-specific challenges."
-    },
-    {
-        icon: `/${iconCollab}/collab_final.png`,
-        translate_y: "translate-0 lg:translate-y-20",
-        label: "Final Culture Fit & Other",
-        description: "We confirm cultural alignment and extend the offer."
-    },
+  {
+    icon: `/${iconCollab}/collab_app.png`,
+    translate_y: "translate-0 lg:-translate-y-2",
+    max_w: "max-w-2",
+    label: "Application Review",
+    description: "We review applications to find the best fit."
+  },
+  {
+    translate_y: "translate-0 lg:translate-y-20",
+    max_w: "max-w-2",
+    icon: `/${iconCollab}/collab_first.png`,
+    label: "First Interview",
+    description: "We discuss experience, goals and introduce Virtuosoft."
+  },
+  {
+    icon: `/${iconCollab}/collab_skill.png`,
+    translate_y: "translate-y-0",
+    label: "Skill / Technical Round",
+    description: "We test technical skills through practical, role-specific challenges."
+  },
+  {
+    icon: `/${iconCollab}/collab_final.png`,
+    translate_y: "translate-0 lg:translate-y-20",
+    label: "Final Culture Fit & Other",
+    description: "We confirm cultural alignment and extend the offer."
+  },
 ]
 // FAQ Data for Home Page
 export const Faq_Home = [
-    {
-        value: "item-1",
-        question: "What is an AI Agent?",
-        answer: "An AI Agent is a smart system that operates independently to complete complex tasks. It analyzes situations, makes decisions and executes actions across business functions like customer service, operations and data management without constant human oversight."
-    },
-    {
-        value: "item-2",
-        question: "How do AI Agents function?",
-        answer: "Yes. It comes with default styles that matches the other components."
-    },
-    {
-        value: "item-3",
-        question: "What capabilities do AI Agents possess?",
-        answer: "Core capabilities include strategic planning for goal achievement, contextual understanding through data analysis, autonomous task execution, collaborative operation with human teams and continuous learning from interactions to improve performance over time."
-    },
-    {
-        value: "item-4",
-        question: "How do AI Agents differ from basic automation tools?",
-        answer: "Unlike simple bots following rigid rules, AI Agents handle complex, multi-step processes requiring judgment. They adapt to new scenarios and make context-aware decisions, while traditional automation only repeats predefined actions without intelligence."
-    },
-    {
-        value: "item-5",
-        question: "What business processes can AI Agents handle?",
-        answer: "They automate diverse operations including customer inquiry resolution, financial report generation, employee onboarding workflows, inventory management, content creation and data analysis, essentially any rule-based but complex workflow."
-    },
-    {
-        value: "item-6",
-        question: "Can multiple AI Agents coordinate together?",
-        answer: "Yes. Multi-agent systems enable specialized AI Agents to collaborate on intricate processes. For instance, separate Agents can simultaneously manage order fulfillment, logistics coordination and customer communication while sharing relevant data."
-    },
-    {
-        value: "item-7",
-        question: "How secure is AI Agent implementation?",
-        answer: "We implement rigorous security protocols including data encryption, access controls and approval workflows. Human oversight options ensure sensitive operations receive mandatory review, maintaining compliance and risk management throughout all automated processes."
-    },
+  {
+    value: "item-1",
+    question: "What is an AI Agent?",
+    answer: "An AI Agent is a smart system that operates independently to complete complex tasks. It analyzes situations, makes decisions and executes actions across business functions like customer service, operations and data management without constant human oversight."
+  },
+  {
+    value: "item-2",
+    question: "How do AI Agents function?",
+    answer: "Yes. It comes with default styles that matches the other components."
+  },
+  {
+    value: "item-3",
+    question: "What capabilities do AI Agents possess?",
+    answer: "Core capabilities include strategic planning for goal achievement, contextual understanding through data analysis, autonomous task execution, collaborative operation with human teams and continuous learning from interactions to improve performance over time."
+  },
+  {
+    value: "item-4",
+    question: "How do AI Agents differ from basic automation tools?",
+    answer: "Unlike simple bots following rigid rules, AI Agents handle complex, multi-step processes requiring judgment. They adapt to new scenarios and make context-aware decisions, while traditional automation only repeats predefined actions without intelligence."
+  },
+  {
+    value: "item-5",
+    question: "What business processes can AI Agents handle?",
+    answer: "They automate diverse operations including customer inquiry resolution, financial report generation, employee onboarding workflows, inventory management, content creation and data analysis, essentially any rule-based but complex workflow."
+  },
+  {
+    value: "item-6",
+    question: "Can multiple AI Agents coordinate together?",
+    answer: "Yes. Multi-agent systems enable specialized AI Agents to collaborate on intricate processes. For instance, separate Agents can simultaneously manage order fulfillment, logistics coordination and customer communication while sharing relevant data."
+  },
+  {
+    value: "item-7",
+    question: "How secure is AI Agent implementation?",
+    answer: "We implement rigorous security protocols including data encryption, access controls and approval workflows. Human oversight options ensure sensitive operations receive mandatory review, maintaining compliance and risk management throughout all automated processes."
+  },
 ];
 
 export const Faq_softwareeng_SoftwareDevelopment = [
-     {
+  {
     value: "item-1",
     question: "What is Custom Software Development?",
     answer:
@@ -1126,289 +1328,289 @@ export const Faq_cloudeng_devsecops = [
 
 //Custom Agent 
 export const Faq_AI_CustomAgent = [
-    {
-        value: "item-1",
-        question: "What is an AI Agent?",
-        answer: "An AI Agent is a smart system that operates independently to complete complex tasks. It analyzes situations, makes decisions and executes actions across business functions like customer service, operations and data management without constant human oversight."
-    },
-    {
-        value: "item-2",
-        question: "How do AI Agents function?",
-        answer: "These systems combine advanced language models with reasoning engines and specialized tools. They process information from their environment, evaluate options against set objectives and autonomously execute workflows, whether handling support tickets or optimizing supply chains."
-    },
-    {
-        value: "item-3",
-        question: "What capabilities do AI Agents possess?",
-        answer: "Core capabilities include strategic planning for goal achievement, contextual understanding through data analysis, autonomous task execution, collaborative operation with human teams and continuous learning from interactions to improve performance over time."
-    },
-    {
-        value: "item-4",
-        question: "How do AI Agents differ from basic automation tools?",
-        answer: "Unlike simple bots following rigid rules, AI Agents handle complex, multi-step processes requiring judgment. They adapt to new scenarios and make context-aware decisions, while traditional automation only repeats predefined actions without intelligence."
-    },
-    {
-        value: "item-5",
-        question: "What business processes can AI Agents handle?",
-        answer: "They automate diverse operations including customer inquiry resolution, financial report generation, employee onboarding workflows, inventory management, content creation and data analysis, essentially any rule-based but complex workflow."
-    },
-    {
-        value: "item-6",
-        question: "Can multiple AI Agents coordinate together?",
-        answer: "Yes. Multi-agent systems enable specialized AI Agents to collaborate on intricate processes. For instance, separate Agents can simultaneously manage order fulfillment, logistics coordination and customer communication while sharing relevant data."
-    },
-    {
-        value: "item-7",
-        question: "How secure is AI Agent implementation?",
-        answer: "We implement rigorous security protocols including data encryption, access controls and approval workflows. Human oversight options ensure sensitive operations receive mandatory review, maintaining compliance and risk management throughout all automated processes."
-    },
+  {
+    value: "item-1",
+    question: "What is an AI Agent?",
+    answer: "An AI Agent is a smart system that operates independently to complete complex tasks. It analyzes situations, makes decisions and executes actions across business functions like customer service, operations and data management without constant human oversight."
+  },
+  {
+    value: "item-2",
+    question: "How do AI Agents function?",
+    answer: "These systems combine advanced language models with reasoning engines and specialized tools. They process information from their environment, evaluate options against set objectives and autonomously execute workflows, whether handling support tickets or optimizing supply chains."
+  },
+  {
+    value: "item-3",
+    question: "What capabilities do AI Agents possess?",
+    answer: "Core capabilities include strategic planning for goal achievement, contextual understanding through data analysis, autonomous task execution, collaborative operation with human teams and continuous learning from interactions to improve performance over time."
+  },
+  {
+    value: "item-4",
+    question: "How do AI Agents differ from basic automation tools?",
+    answer: "Unlike simple bots following rigid rules, AI Agents handle complex, multi-step processes requiring judgment. They adapt to new scenarios and make context-aware decisions, while traditional automation only repeats predefined actions without intelligence."
+  },
+  {
+    value: "item-5",
+    question: "What business processes can AI Agents handle?",
+    answer: "They automate diverse operations including customer inquiry resolution, financial report generation, employee onboarding workflows, inventory management, content creation and data analysis, essentially any rule-based but complex workflow."
+  },
+  {
+    value: "item-6",
+    question: "Can multiple AI Agents coordinate together?",
+    answer: "Yes. Multi-agent systems enable specialized AI Agents to collaborate on intricate processes. For instance, separate Agents can simultaneously manage order fulfillment, logistics coordination and customer communication while sharing relevant data."
+  },
+  {
+    value: "item-7",
+    question: "How secure is AI Agent implementation?",
+    answer: "We implement rigorous security protocols including data encryption, access controls and approval workflows. Human oversight options ensure sensitive operations receive mandatory review, maintaining compliance and risk management throughout all automated processes."
+  },
 ];
 
 
 export const Faq_AI_GenerativeAI = [
-    {
-        value: "item-1",
-        question: "What is Generative AI?",
-        answer: "Generative AI is a branch of artificial intelligence that leverages advanced machine learning models such as GANs, VAEs and Transformers, to produce original content, including text, images, audio and other digital media."
-    },
-    {
-        value: "item-2",
-        question: "How does Generative AI create content?",
-        answer: "It analyzes vast amounts of data to understand patterns and relationships, then generates new material that matches the style, structure and context of your original input and requirements."
-    },
-    {
-        value: "item-3",
-        question: "What business applications does Generative AI serve?",
-        answer: "It powers marketing content creation, product design ideation, customer service automation, technical documentation and code generation, essentially any content-heavy business process."
-    },
-    {
-        value: "item-4",
-        question: "Does Generative AI possess true creativity?",
-        answer: "No, it's an advanced pattern recognition engine that remixes learned information. It enhances human creativity by providing starting points and variations, but doesn't replace original thought."
-    },
-    {
-        value: "item-5",
-        question: "How does Generative AI differ from traditional AI?",
-        answer: "While traditional AI analyzes and classifies existing data, Generative AI produces new content, writing documents, creating designs or developing code that didn't previously exist."
-    },
-    {
-        value: "item-6",
-        question: "Can Generative AI replace human creative teams?",
-        answer: "It serves as a powerful collaborator that accelerates production, but strategic direction, emotional intelligence and final quality control still require human expertise and judgment."
-    },
-    {
-        value: "item-7",
-        question: "Who owns the content created by Generative AI?",
-        answer: "You maintain full rights to all generated content created for your projects. We implement measures to ensure originality and protect against intellectual property infringement."
-    },
-    {
-        value: "item-8",
-        question: "What ethical safeguards do you implement?",
-        answer: "We establish clear usage guidelines, bias detection protocols and human review processes to ensure responsible and ethical deployment that aligns with your brand values."
-    },
-    {
-        value: "item-9",
-        question: "How can businesses practically use Generative AI?",
-        answer: "Applications include automated report generation, personalized marketing campaigns, product prototype designs, customer communication templates and internal documentation creation."
-    },
-    {
-        value: "item-10",
-        question: "What future capabilities are emerging?",
-        answer: "We're moving toward industry-specific models that offer deeper domain expertise, multi-format content generation and more seamless integration into existing business workflows and platforms."
-    },
+  {
+    value: "item-1",
+    question: "What is Generative AI?",
+    answer: "Generative AI is a branch of artificial intelligence that leverages advanced machine learning models such as GANs, VAEs and Transformers, to produce original content, including text, images, audio and other digital media."
+  },
+  {
+    value: "item-2",
+    question: "How does Generative AI create content?",
+    answer: "It analyzes vast amounts of data to understand patterns and relationships, then generates new material that matches the style, structure and context of your original input and requirements."
+  },
+  {
+    value: "item-3",
+    question: "What business applications does Generative AI serve?",
+    answer: "It powers marketing content creation, product design ideation, customer service automation, technical documentation and code generation, essentially any content-heavy business process."
+  },
+  {
+    value: "item-4",
+    question: "Does Generative AI possess true creativity?",
+    answer: "No, it's an advanced pattern recognition engine that remixes learned information. It enhances human creativity by providing starting points and variations, but doesn't replace original thought."
+  },
+  {
+    value: "item-5",
+    question: "How does Generative AI differ from traditional AI?",
+    answer: "While traditional AI analyzes and classifies existing data, Generative AI produces new content, writing documents, creating designs or developing code that didn't previously exist."
+  },
+  {
+    value: "item-6",
+    question: "Can Generative AI replace human creative teams?",
+    answer: "It serves as a powerful collaborator that accelerates production, but strategic direction, emotional intelligence and final quality control still require human expertise and judgment."
+  },
+  {
+    value: "item-7",
+    question: "Who owns the content created by Generative AI?",
+    answer: "You maintain full rights to all generated content created for your projects. We implement measures to ensure originality and protect against intellectual property infringement."
+  },
+  {
+    value: "item-8",
+    question: "What ethical safeguards do you implement?",
+    answer: "We establish clear usage guidelines, bias detection protocols and human review processes to ensure responsible and ethical deployment that aligns with your brand values."
+  },
+  {
+    value: "item-9",
+    question: "How can businesses practically use Generative AI?",
+    answer: "Applications include automated report generation, personalized marketing campaigns, product prototype designs, customer communication templates and internal documentation creation."
+  },
+  {
+    value: "item-10",
+    question: "What future capabilities are emerging?",
+    answer: "We're moving toward industry-specific models that offer deeper domain expertise, multi-format content generation and more seamless integration into existing business workflows and platforms."
+  },
 ];
 
 
 export const Faq_AI_DataScience_MLOps = [
-    {
-        value: "item-1",
-        question: "What’s the difference between Data Science and MLOps?",
-        answer: "Data Science builds insights and models. MLOps deploys, manages, monitors and scales those models in production."
-    },
-    {
-        value: "item-2",
-        question: "Do we need both Data Science and MLOps?",
-        answer: "Yes. Data Science creates value, MLOps ensures that value is delivered reliably and continuously."
-    },
-    {
-        value: "item-3",
-        question: "How long does an AI project typically take?",
-        answer: "Initial insights: 4–8 weeks. Full deployment: 3–6 months depending on complexity."
-    },
-    {
-        value: "item-4",
-        question: "Can you integrate with our existing systems?",
-        answer: "Yes, including cloud, on-prem, hybrid, ERP, CRM and legacy systems."
-    },
-    {
-        value: "item-5",
-        question: "How do you handle data privacy?",
-        answer: "We follow strict governance protocols and comply with GDPR, HIPAA, PCI and other global standards."
-    },
-    {
-        value: "item-6",
-        question: "What do you monitor in production models?",
-        answer: "Accuracy, drift, latency, resource usage, prediction errors, business KPIs and system health."
-    },
-    {
-        value: "item-7",
-        question: "Can you manage our entire ML lifecycle?",
-        answer: "Yes. From data ingestion to long-term monitoring and retraining."
-    },
-    {
-        value: "item-8",
-        question: "What industries do you support?",
-        answer: "Finance, healthcare, retail, logistics, manufacturing, SaaS, education and more."
-    },
-    {
-        value: "item-9",
-        question: "What tools and platforms do you use?",
-        answer: "Azure, AWS, GCP, Kubernetes, Docker, MLflow, Spark, TensorFlow, PyTorch and other enterprise tooling."
-    },
-    {
-        value: "item-10",
-        question: "How do we get started?",
-        answer: "Begin with a Data & AI Readiness Assessment to uncover high-impact opportunities."
-    },
+  {
+    value: "item-1",
+    question: "What’s the difference between Data Science and MLOps?",
+    answer: "Data Science builds insights and models. MLOps deploys, manages, monitors and scales those models in production."
+  },
+  {
+    value: "item-2",
+    question: "Do we need both Data Science and MLOps?",
+    answer: "Yes. Data Science creates value, MLOps ensures that value is delivered reliably and continuously."
+  },
+  {
+    value: "item-3",
+    question: "How long does an AI project typically take?",
+    answer: "Initial insights: 4–8 weeks. Full deployment: 3–6 months depending on complexity."
+  },
+  {
+    value: "item-4",
+    question: "Can you integrate with our existing systems?",
+    answer: "Yes, including cloud, on-prem, hybrid, ERP, CRM and legacy systems."
+  },
+  {
+    value: "item-5",
+    question: "How do you handle data privacy?",
+    answer: "We follow strict governance protocols and comply with GDPR, HIPAA, PCI and other global standards."
+  },
+  {
+    value: "item-6",
+    question: "What do you monitor in production models?",
+    answer: "Accuracy, drift, latency, resource usage, prediction errors, business KPIs and system health."
+  },
+  {
+    value: "item-7",
+    question: "Can you manage our entire ML lifecycle?",
+    answer: "Yes. From data ingestion to long-term monitoring and retraining."
+  },
+  {
+    value: "item-8",
+    question: "What industries do you support?",
+    answer: "Finance, healthcare, retail, logistics, manufacturing, SaaS, education and more."
+  },
+  {
+    value: "item-9",
+    question: "What tools and platforms do you use?",
+    answer: "Azure, AWS, GCP, Kubernetes, Docker, MLflow, Spark, TensorFlow, PyTorch and other enterprise tooling."
+  },
+  {
+    value: "item-10",
+    question: "How do we get started?",
+    answer: "Begin with a Data & AI Readiness Assessment to uncover high-impact opportunities."
+  },
 ];
 
 
 export const Faq_AI_ConversationalAI = [
-    {
-        value: "item-1",
-        question: "What is Conversational AI?",
-        answer: "It's technology that enables natural, human-like dialogue between computers and users. We build AI-powered chatbots and virtual assistants that understand intent and provide instant, intelligent responses."
-    },
-    {
-        value: "item-2",
-        question: "How can it benefit my business?",
-        answer: "Our solutions deliver 24/7 customer service, significantly reduce support costs, accelerate response times and generate qualified leads, boosting both efficiency and customer satisfaction."
-    },
-    {
-        value: "item-3",
-        question: "Can it understand multiple languages?",
-        answer: "Yes. Our platform is built with multi-language support from the start, allowing you to engage a global audience seamlessly."
-    },
-    {
-        value: "item-4",
-        question: "Is it difficult to integrate?",
-        answer: "No. We specialize in seamless integration with your existing tools, including CRM, helpdesk and payment systems, for a hassle-free setup."
-    },
-    {
-        value: "item-5",
-        question: "How does it handle complex queries?",
-        answer: "For sophisticated issues, our AI is designed to smoothly escalate the conversation to a human agent, ensuring no customer request goes unresolved."
-    },
-    {
-        value: "item-6",
-        question: "Can I customize it to match my brand?",
-        answer: "Yes. We tailor the AI's personality, tone and knowledge to perfectly reflect your unique brand voice and guidelines."
-    },
-    {
-        value: "item-7",
-        question: "How secure is customer data?",
-        answer: "Security is paramount. We adhere to strict data privacy protocols (like GDPR/CCPA) and ensure all customer interactions are handled with enterprise-grade security."
-    },
-    {
-        value: "item-8",
-        question: "What is the typical deployment time?",
-        answer: "Most of our conversational AI solutions are up and running within a few weeks, depending on the complexity and integration scope."
-    },
-    {
-        value: "item-9",
-        question: "How do you keep the AI effective long-term?",
-        answer: "We provide continuous performance monitoring and optimization based on real user interactions, ensuring the AI adapts and improves over time."
-    },
-    {
-        value: "item-10",
-        question: "Can it really drive sales?",
-        answer: "Yes. By engaging users proactively, providing personalized product recommendations and guiding them through transactions, it directly increases conversions and revenue."
-    },
+  {
+    value: "item-1",
+    question: "What is Conversational AI?",
+    answer: "It's technology that enables natural, human-like dialogue between computers and users. We build AI-powered chatbots and virtual assistants that understand intent and provide instant, intelligent responses."
+  },
+  {
+    value: "item-2",
+    question: "How can it benefit my business?",
+    answer: "Our solutions deliver 24/7 customer service, significantly reduce support costs, accelerate response times and generate qualified leads, boosting both efficiency and customer satisfaction."
+  },
+  {
+    value: "item-3",
+    question: "Can it understand multiple languages?",
+    answer: "Yes. Our platform is built with multi-language support from the start, allowing you to engage a global audience seamlessly."
+  },
+  {
+    value: "item-4",
+    question: "Is it difficult to integrate?",
+    answer: "No. We specialize in seamless integration with your existing tools, including CRM, helpdesk and payment systems, for a hassle-free setup."
+  },
+  {
+    value: "item-5",
+    question: "How does it handle complex queries?",
+    answer: "For sophisticated issues, our AI is designed to smoothly escalate the conversation to a human agent, ensuring no customer request goes unresolved."
+  },
+  {
+    value: "item-6",
+    question: "Can I customize it to match my brand?",
+    answer: "Yes. We tailor the AI's personality, tone and knowledge to perfectly reflect your unique brand voice and guidelines."
+  },
+  {
+    value: "item-7",
+    question: "How secure is customer data?",
+    answer: "Security is paramount. We adhere to strict data privacy protocols (like GDPR/CCPA) and ensure all customer interactions are handled with enterprise-grade security."
+  },
+  {
+    value: "item-8",
+    question: "What is the typical deployment time?",
+    answer: "Most of our conversational AI solutions are up and running within a few weeks, depending on the complexity and integration scope."
+  },
+  {
+    value: "item-9",
+    question: "How do you keep the AI effective long-term?",
+    answer: "We provide continuous performance monitoring and optimization based on real user interactions, ensuring the AI adapts and improves over time."
+  },
+  {
+    value: "item-10",
+    question: "Can it really drive sales?",
+    answer: "Yes. By engaging users proactively, providing personalized product recommendations and guiding them through transactions, it directly increases conversions and revenue."
+  },
 ];
 
 export const Faq_AI_ComputerVision = [
-    {
-        value: "item-1",
-        question: "What is Computer Vision?",
-        answer: "Computer Vision is an AI technology that enables machines to interpret, analyze and make decisions based on visual data such as images and videos, just as the human visual system does, but at scale and speed."
-    },
-    {
-        value: "item-2",
-        question: "How can Computer Vision transform my business operations?",
-        answer: "It automates visual inspection tasks, enhances security through real-time monitoring, enables advanced analytics from visual data and creates innovative user experiences, driving efficiency, safety and new revenue streams."
-    },
-    {
-        value: "item-3",
-        question: "What types of visual data can your Computer Vision solutions process?",
-        answer: "Our solutions process images, live video feeds, thermal imaging, satellite imagery and medical scans, extracting meaningful insights for quality control, surveillance, diagnostics and more."
-    },
-    {
-        value: "item-4",
-        question: "How accurate are your Computer Vision models in real-world conditions?",
-        answer: "We build robust models with accuracy often exceeding 95-98% in production, using techniques like synthetic data generation and continuous learning to perform reliably in varied lighting, angles and environmental conditions."
-    },
-    {
-        value: "item-5",
-        question: "Can Computer Vision integrate with our existing cameras and IoT infrastructure?",
-        answer: "Yes. We design solutions that work with your current camera systems, drones and IoT sensors, providing easy integration through APIs and edge computing devices without requiring a full infrastructure overhaul."
-    },
-    {
-        value: "item-6",
-        question: "What about data privacy and security when processing visual data?",
-        answer: "We implement privacy-by-design principles, including on-premise processing options, data anonymization, edge AI (processing on-device) and compliance with regulations to ensure sensitive visual data is fully protected."
-    },
-    {
-        value: "item-7",
-        question: "What is the typical development and deployment timeline?",
-        answer: "A pilot or proof-of-concept can be delivered in 4-6 weeks. A full-scale, customized Computer Vision system typically takes 8-16 weeks, depending on complexity and integration needs."
-    },
-    {
-        value: "item-8",
-        question: "Do you offer ongoing model training and maintenance?",
-        answer: "Yes, we provide continuous model improvement services. Our systems can be retrained on new data to adapt to changes, such as new product designs or evolving security threats, ensuring long-term accuracy and relevance."
-    },
+  {
+    value: "item-1",
+    question: "What is Computer Vision?",
+    answer: "Computer Vision is an AI technology that enables machines to interpret, analyze and make decisions based on visual data such as images and videos, just as the human visual system does, but at scale and speed."
+  },
+  {
+    value: "item-2",
+    question: "How can Computer Vision transform my business operations?",
+    answer: "It automates visual inspection tasks, enhances security through real-time monitoring, enables advanced analytics from visual data and creates innovative user experiences, driving efficiency, safety and new revenue streams."
+  },
+  {
+    value: "item-3",
+    question: "What types of visual data can your Computer Vision solutions process?",
+    answer: "Our solutions process images, live video feeds, thermal imaging, satellite imagery and medical scans, extracting meaningful insights for quality control, surveillance, diagnostics and more."
+  },
+  {
+    value: "item-4",
+    question: "How accurate are your Computer Vision models in real-world conditions?",
+    answer: "We build robust models with accuracy often exceeding 95-98% in production, using techniques like synthetic data generation and continuous learning to perform reliably in varied lighting, angles and environmental conditions."
+  },
+  {
+    value: "item-5",
+    question: "Can Computer Vision integrate with our existing cameras and IoT infrastructure?",
+    answer: "Yes. We design solutions that work with your current camera systems, drones and IoT sensors, providing easy integration through APIs and edge computing devices without requiring a full infrastructure overhaul."
+  },
+  {
+    value: "item-6",
+    question: "What about data privacy and security when processing visual data?",
+    answer: "We implement privacy-by-design principles, including on-premise processing options, data anonymization, edge AI (processing on-device) and compliance with regulations to ensure sensitive visual data is fully protected."
+  },
+  {
+    value: "item-7",
+    question: "What is the typical development and deployment timeline?",
+    answer: "A pilot or proof-of-concept can be delivered in 4-6 weeks. A full-scale, customized Computer Vision system typically takes 8-16 weeks, depending on complexity and integration needs."
+  },
+  {
+    value: "item-8",
+    question: "Do you offer ongoing model training and maintenance?",
+    answer: "Yes, we provide continuous model improvement services. Our systems can be retrained on new data to adapt to changes, such as new product designs or evolving security threats, ensuring long-term accuracy and relevance."
+  },
 ];
 
 export const Faq_AI_OCR = [
-    {
-        value: "item-1",
-        question: "What is Optical Character Recognition (OCR)?",
-        answer: "OCR is an AI-powered technology that automatically extracts text and data from scanned documents, images and PDFs, converting it into editable, searchable and machine-readable digital content."
-    },
-    {
-        value: "item-2",
-        question: "How can OCR benefit my business processes?",
-        answer: "OCR automates manual data entry from invoices, forms and reports, significantly reducing errors, speeding up processing times and freeing your team for higher-value strategic work."
-    },
-    {
-        value: "item-3",
-        question: "What types of documents can your OCR solution process?",
-        answer: "Our advanced OCR handles structured forms (tax returns, applications), semi-structured documents (invoices, receipts) and unstructured text (contracts, letters), including handwritten notes with high accuracy."
-    },
-    {
-        value: "item-4",
-        question: "How accurate is your OCR technology, especially with poor-quality scans?",
-        answer: "We utilize AI-enhanced OCR that achieves over 99% accuracy on clean documents and maintains high reliability on low-quality scans through pre-processing and contextual validation techniques."
-    },
-    {
-        value: "item-5",
-        question: "Can your OCR solution integrate with our existing systems?",
-        answer: "Yes, we deliver OCR as an API or embed it directly into your existing workflow systems (like ERP, CRM or DMS), ensuring seamless data flow without disrupting your current operations."
-    },
-    {
-        value: "item-6",
-        question: "How do you handle sensitive or confidential documents?",
-        answer: "We implement enterprise-grade security including encrypted data processing, secure cloud or on-premise deployment options and full compliance with data privacy regulations like GDPR and HIPAA."
-    },
-    {
-        value: "item-7",
-        question: "What is the typical implementation timeline for an OCR solution?",
-        answer: "Most OCR integrations are operational within 2-4 weeks, including configuration, testing and training, allowing you to automate document processing rapidly."
-    },
-    {
-        value: "item-8",
-        question: "Do you provide post-deployment support and accuracy optimization?",
-        answer: "Yes, we offer ongoing support, performance monitoring and model retraining services to continuously improve accuracy as you process new document types and formats."
-    },
+  {
+    value: "item-1",
+    question: "What is Optical Character Recognition (OCR)?",
+    answer: "OCR is an AI-powered technology that automatically extracts text and data from scanned documents, images and PDFs, converting it into editable, searchable and machine-readable digital content."
+  },
+  {
+    value: "item-2",
+    question: "How can OCR benefit my business processes?",
+    answer: "OCR automates manual data entry from invoices, forms and reports, significantly reducing errors, speeding up processing times and freeing your team for higher-value strategic work."
+  },
+  {
+    value: "item-3",
+    question: "What types of documents can your OCR solution process?",
+    answer: "Our advanced OCR handles structured forms (tax returns, applications), semi-structured documents (invoices, receipts) and unstructured text (contracts, letters), including handwritten notes with high accuracy."
+  },
+  {
+    value: "item-4",
+    question: "How accurate is your OCR technology, especially with poor-quality scans?",
+    answer: "We utilize AI-enhanced OCR that achieves over 99% accuracy on clean documents and maintains high reliability on low-quality scans through pre-processing and contextual validation techniques."
+  },
+  {
+    value: "item-5",
+    question: "Can your OCR solution integrate with our existing systems?",
+    answer: "Yes, we deliver OCR as an API or embed it directly into your existing workflow systems (like ERP, CRM or DMS), ensuring seamless data flow without disrupting your current operations."
+  },
+  {
+    value: "item-6",
+    question: "How do you handle sensitive or confidential documents?",
+    answer: "We implement enterprise-grade security including encrypted data processing, secure cloud or on-premise deployment options and full compliance with data privacy regulations like GDPR and HIPAA."
+  },
+  {
+    value: "item-7",
+    question: "What is the typical implementation timeline for an OCR solution?",
+    answer: "Most OCR integrations are operational within 2-4 weeks, including configuration, testing and training, allowing you to automate document processing rapidly."
+  },
+  {
+    value: "item-8",
+    question: "Do you provide post-deployment support and accuracy optimization?",
+    answer: "Yes, we offer ongoing support, performance monitoring and model retraining services to continuously improve accuracy as you process new document types and formats."
+  },
 ];
 
 export const Faq_CyberSecurity_SecurityDeployment = [

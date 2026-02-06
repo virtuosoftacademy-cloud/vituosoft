@@ -6,15 +6,7 @@ import Image from "next/image";
 import Logo from "@/public/assets/Images/Logo.png";
 import {
   ArrowRight,
-  Code2,
-  Dot,
-  DotSquare,
-  Globe,
-  LineChart,
-  Megaphone,
   Menu,
-  Palette,
-  Smartphone,
   X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -27,6 +19,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { getSpotlightVideo, services_Nav } from "@/app/_constant";
 
 export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -44,87 +37,9 @@ export default function Nav() {
 
   const bg_animation =
     "px-6 lg:px-10 w-[85%] bg-foreground py-8 rounded-2xl top-[69px] text-white shadow-[0_12px_35px_rgba(0,0,0,0.25)]";
-
-  const services = [
-    {
-      icon: Code2,
-      title: "Advisory",
-      subPages: [
-        { label: "Product Strategy & Roadmapping", href: "#" },
-        { label: "Digital Transformation", href: "#" },
-      ],
-    },
-    {
-      icon: Smartphone,
-      title: "Artificial Intelligence",
-      subPages: [
-        { label: "Custom Agent Development", href: "#" },
-        { label: "Generative A.I", href: "#" },
-        { label: "Data Science & MLOps", href: "#" },
-        { label: "Conservational Intelligence", href: "#" },
-        { label: "Computer Vision", href: "#" },
-        { label: "Optical Character Recognition", href: "#" },
-      ],
-    },
-    {
-      icon: Palette,
-      title: "Software Engineering",
-      subPages: [
-        { label: "Custom Software Development", href: "#" },
-        { label: "Application Development (Mobile & Web)", href: "#" },
-        { label: "Application Modernization", href: "#" },
-        { label: "Database Migration", href: "#" },
-        { label: "Third-Party Integrations", href: "#" },
-      ],
-    },
-    {
-      icon: Globe,
-      title: "Data Service",
-      subPages: [
-        { label: "Data Consulting ", href: "#" },
-        { label: "Data Warehouse Solutions", href: "#" },
-        { label: "Data Analytics & BI", href: "#" },
-      ],
-    },
-    {
-      icon: LineChart,
-      title: "Digital Marketing",
-      subPages: [
-        { label: "Content Creation", href: "#" },
-        { label: "Social Media Management", href: "#" },
-        { label: "Video Editing", href: "#" },
-        { label: "Ads Managment", href: "#" },
-        { label: "Copywriting", href: "#" },
-        { label: "Design & Creative Solutions", href: "#" },
-      ],
-    },
-    {
-      icon: Megaphone,
-      title: "Business Enablement",
-      subPages: [
-        { label: "Account & Finance", href: "#" },
-        { label: "Hr & Recruitment", href: "#" },
-      ],
-    },
-  ];
-
-  function getSpotlightVideo(title) {
-    const videoMap = {
-      "Advisory": "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?q=90&w=1120&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "Artificial Intelligence": "https://images.unsplash.com/photo-1678347123725-2d0d31bc06bd?q=80&w=1102&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "Software Engineering": "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "Data Service": "https://plus.unsplash.com/premium_photo-1740363268539-cd9093c3b5d1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "Digital Marketing": "https://plus.unsplash.com/premium_photo-1684225764999-3597a8da10ab?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "Business Enablement": "https://images.unsplash.com/photo-1720289024474-946b6feabfcb?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    };
-    return videoMap[title] || "https://images.unsplash.com/photo-1720289024474-946b6feabfcb?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-  }
-
-  const ActiveIcon = services[activeService].icon;
+  // const ActiveIcon = services_Nav[activeService].icon;
 
   function ServiceItem({ service, isActive, onHover }) {
-    const { title, icon: Icon, description, subPages } = service;
-
     return (
       <li>
         <NavigationMenuLink asChild>
@@ -140,9 +55,9 @@ export default function Nav() {
             <div className="flex items-center gap-3">
               {/* <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-muted">
                 <Icon className="size-5" />
-              </div> */}
+              </div> */} 
               <div className="flex-1">
-                <div className="text-lg font-medium leading-none">{title}</div>
+                <div className="text-lg font-medium leading-none">{service.title}</div>
               </div>
             </div>
           </Link>
@@ -189,7 +104,7 @@ export default function Nav() {
                   <div className="grid gap-6 p-6 lg:w-[840] lg:grid-cols-[0.9fr_1.25fr_1fr]">
                     {/* LEFT - Service List */}
                     <ul className="row-span-3 grid gap-1.5">
-                      {services.map((service, index) => (
+                      {services_Nav.map((service, index) => (
                         <ServiceItem
                           key={service.title}
                           service={service}
@@ -204,9 +119,9 @@ export default function Nav() {
                       <div className="space-y-4">
                         <div className="flex items-start shrink-0 gap-4">
                           <div className="flex-1">
-                            {services[activeService].subPages ? (
+                            {services_Nav[activeService].subPages ? (
                               <div className="space-y-2.5">
-                                {services[activeService].subPages.map((sub, i) => (
+                                {services_Nav[activeService].subPages.map((sub, i) => (
                                   <div key={i} className="flex items-center  gap-3">
                                     {/* <Dot size={20} className="flex items-center text-primary" /> */}
                                     <div className="flex items-center justify-center bg-black h-2 w-2" />
@@ -230,7 +145,7 @@ export default function Nav() {
                         </div>
                       </div>
 
-                      {services[activeService].href && !services[activeService].subPages && (
+                      {services_Nav[activeService].href && !services[activeService].subPages && (
                         <Link
                           href={services[activeService].href}
                           className="inline-flex items-center text-base font-medium text-primary hover:underline"
@@ -249,8 +164,8 @@ export default function Nav() {
                           width="100"
                           height="100"
                           alt="/"
-                          src={getSpotlightVideo(services[activeService].title)}
-                          title={`${services[activeService].title} Spotlight Video`}
+                          src={getSpotlightVideo(services_Nav[activeService].title)}
+                          title={`${services_Nav[activeService].title} Spotlight Video`}
                           className="w-6xl"
                         />
                         {/* <iframe
@@ -305,7 +220,7 @@ export default function Nav() {
 
             <div className="w-full max-w-sm space-y-6">
               <div className="font-semibold text-lg">Services</div>
-              {services.map((item) => (
+              {services_Nav.map((item) => (
                 <Link
                   key={item.title}
                   href={item.href || "#"}

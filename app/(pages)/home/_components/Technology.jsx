@@ -2,31 +2,11 @@
 
 import { Card } from "@/components/ui/card"
 import { CommonHead } from "../../../../components/Styles/StyleClasses"
+import { values_Section } from "@/app/_constant"
+import Image from "next/image"
 
 function Technology() {
-    const values = [
-        {
-            title: 'Teamwork',
-            description:
-                'We believe great ideas come from great collaboration. Our strength lies in the way we work together, across teams, disciplines and perspectives. At Virtuosoft, everyone contributes, challenges and supports one another to bring out their best. This culture of shared ownership drives innovation, fuels creativity and ensures every success is a collective one.',
-            imageSrc: 'https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/chrome51.png',
-            alt: 'Teamwork Icon',
-        },
-        {
-            title: 'Integrity',
-            description:
-                'Integrity is the backbone of everything we do. It guides our choices, shapes our culture and defines our relationships. We stand by our word, follow through on our commitments and always choose fairness and honesty, even when no one’s watching. For us, integrity isn’t a statement of ethics; it’s a daily practice of doing what’s right.',
-            imageSrc: 'https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/chrome8.png',
-            alt: 'Integrity Icon',
-        },
-        {
-            title: 'Reliability',
-            description:
-                'What our clients value most is knowing we’re there, steady, responsive and committed to their success. From the smallest task to the most complex project, Virtuosoft stands for consistency, precision and accountability. We don’t just aim to meet expectations, we make sure our partners can rely on us to exceed them, every time.',
-            imageSrc: 'https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/s30-1.png',
-            alt: 'Reliability Icon',
-        },
-    ];
+    
     return (
         <>
             <div className="max-w-7xl mx-auto px-10 my-12 lg:my-14">
@@ -77,9 +57,9 @@ function Technology() {
                             {/* Content */}
                             <div className="relative z-10 space-y-5 sm:space-y-6">
                                 {/* Icon / Image */}
-                                <div className="relative mx-auto w-28 sm:w-32 md:w-36 lg:w-40 max-w-[140] transition-transform duration-400 group-hover:-translate-y-2.5">
-                                    <img
-                                        src="https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/s56-1.png"
+                                <div className="relative mx-auto w-28 sm:w-32 md:w-36 lg:w-40 max-w-[140] transition-transform duration-400 group-hover:-translate-y-2.5 -left-20">
+                                    <Image
+                                        src="assets/Images/home/transparency.svg"
                                         alt="Transparency Icon"
                                         width={160}
                                         height={160}
@@ -120,7 +100,7 @@ function Technology() {
         bg-white
       "
                 >
-                    {values.map((value, index) => (
+                    {values_Section.map((value, index) => (
                         <div
                             key={index}
                             className="
@@ -147,11 +127,13 @@ function Technology() {
                             {/* Content */}
                             <div className="relative z-10 space-y-5 sm:space-y-6">
                                 {/* Icon */}
-                                <div className="transition-transform duration-400 group-hover:-translate-y-7">
-                                    <img
+                                <div className="relative mx-auto w-28 sm:w-32 md:w-36 lg:w-40 max-w-[140] transition-transform duration-400 group-hover:-translate-y-2.5 -left-20">
+                                    <Image
                                         src={value.imageSrc}
-                                        alt={value.alt}
-                                        className="h-auto w-[100] sm:w-[110] lg:w-[120] mx-auto"
+                                        alt={value.title}
+                                        width={160}
+                                        height={160}
+                                        className="h-auto w-full object-contain"
                                     />
                                 </div>
 

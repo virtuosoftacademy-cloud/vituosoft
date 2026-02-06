@@ -1,6 +1,7 @@
 
 import { logos } from "@/app/_constant";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function LogoCloud({
   animate,                                    // if passed, overrides everything
@@ -14,7 +15,7 @@ export default function LogoCloud({
       : { x: ["0%", "-50%"] };                // right → left scrolling (your original)
 
   const finalAnimate = animate || defaultAnimate;
-const doubledLogos = [...logos,...logos]
+  const doubledLogos = [...logos, ...logos]
   return (
     <div className="w-full overflow-hidden bg-white/5">
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
@@ -33,10 +34,12 @@ const doubledLogos = [...logos,...logos]
               key={i}
               className="shrink-0 px-6 md:px-10 lg:px-12"
             >
-              <img
+              <Image
                 src={logo.src}
                 alt={logo.alt}
-                className="h-10 md:h-12 lg:h-14 w-auto max-w-[160] object-contain grayscale opacity-75 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-105"
+                width={380}
+                height={280}
+                className="h-10 md:h-12 lg:h-14 w-auto max-w-[160px] object-contain grayscale opacity-75 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-105"
                 loading="lazy"
               />
             </div>

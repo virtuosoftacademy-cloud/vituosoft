@@ -1,5 +1,6 @@
 ' use client'
 import { secondarySections, servicesData, socialLinks, solutions } from '@/app/_constant';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { use } from 'react';
 
@@ -99,7 +100,7 @@ const Footer = () => {
 
           <div className="flex flex-col items-start">
             <h4 className="text-white uppercase text-xs tracking-wide font-semibold mb-4">Follow Us</h4>
-            <div className="flex gap-6">
+            <div className="flex gap-6 mt-1">
               {socialLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -107,11 +108,14 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.name}
+                  className='border border-accent/20 rounded p-2'
                 >
-                  <img
+                  <Image
                     src={link.img}
                     alt={link.name}
-                    className="w-8 h-8 hover:opacity-70 transition-opacity"
+                    width={20}
+                    height={20}
+                    className="w-6 h-6 hover:opacity-70 transition-opacity"
                   />
                 </Link>
               ))}
@@ -121,13 +125,17 @@ const Footer = () => {
 
         {/* ROW 4: Brand + Copyright */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-8 border-t border-foreground">
-          <img
-            src="https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/Frame-1000001218.png"
+          <Image
+            height={200}
+            width={200}
+            src="assets/Images/white_Logo.svg"
             alt="VirtuoSoft Logo"
-            className="h-10"
+            // className="w-50 h-10"
           />
-          <img
-            src="https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/Group-1000001432.png"
+          <Image
+            src="assets/Images/dmca.svg"
+            height={200}
+            width={200}
             alt="VirtuoSoft Brand"
             className="h-8"
           />
