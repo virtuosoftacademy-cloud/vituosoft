@@ -8,7 +8,7 @@ const stats = [
 
 function Success() {
     return (
-        <div className='px-32'>
+        <div className='px-16 lg:px-32'>
 
             <section className="relative bg-primary/80 text-white rounded overflow-hidden text-left
       pt-[50] px-5 pb-[50]
@@ -35,7 +35,7 @@ function Success() {
                     <h4 className="font-light text-3xl md:text-6xl">
                         Transforming Vision into
                     </h4>
-                    <h4 className="font-bold text-4xl mb-[25] md:text-5xl md:mb-[30]">
+                    <h4 className="font-bold text-3xl mt-2 md:mt-0 mb-[25] md:text-5xl md:mb-[30]">
                         Digital Success
                     </h4>
                     <a

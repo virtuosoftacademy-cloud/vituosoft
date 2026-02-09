@@ -1,27 +1,9 @@
 import { Button } from '@/components/ui/button';
-import { DatabaseZap, Package, Table, Users } from 'lucide-react';
 import React from 'react'
+import { aiAgentsEngage } from '../../constant';
 
 function Engage() {
-    const aiAgents = [
-        {
-            icon:Users,
-            title: "Teams That Deliver",
-            description:"Integrate a full team of senior developers and a project manager to accelerate your strategic roadmap. This model is ideal for long-term innovation and scaling."
-        },
-        {
-            icon:DatabaseZap,
-            title: "Offshore Powerhouse",
-            description:
-        "Create a dedicated extension of your tech department with top-tier, vetted engineering talent. Ideal for full project ownership and strategic growth."
-        },
-        {
-            icon:Package,
-            title: "Fixed Projects",
-            description:
-        "Streamline projects while reducing risks, ensuring timely delivery of top-quality results."
-        }
-    ];
+    
     return (
         <div className='bg-foreground px-10 mb-10 py-20'>
             <div className='max-w-7xl mx-auto'>
@@ -30,8 +12,8 @@ function Engage() {
                 </h2>
                 <div className='mt-10'>
                     {/* Cards */}
-                    <div className='flex gap-5'>
-                        {aiAgents.map((item, index) => (
+                    <div className='flex flex-wrap gap-5'>
+                        {aiAgentsEngage.map((item, index) => (
                             <div
                                 key={index}
                                 className={`

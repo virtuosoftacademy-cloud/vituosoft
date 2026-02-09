@@ -20,7 +20,7 @@ function Cta() {
                             </Link>
                         </Button>
                     </div>
-                    <div className="transition-all relative right-5 -mb-20 lg:mb-0 top-10 lg:absolute lg:right-8">
+                    <div className="transition-all relative pt-10 md:pt-0 md:-mb-20 lg:mb-0 md:top-10 lg:absolute lg:right-8">
                         <Image className="max-w-xs md:w-2xl" src={CTA} alt="CTA" />
                     </div>
                 </div>

@@ -7,6 +7,7 @@ import Success from '../_components/Success';
 import Empower from '../_components/Empower';
 import Engage from '../_components/Engage';
 import { aiAgentsHero } from '../../constant';
+import TimeLine from '../_components/TimeLine';
 
 // import ValueSection from '@/components/sections/ValueSection';
 // import Success from '@/components/sections/Success';
@@ -27,7 +28,7 @@ const services = [
       { Component: ValueSection },
       { Component: Success },
       { Component: Empower },
-      // { Component: TimeLine },
+      { Component: TimeLine },
       { Component: Engage },
       // { Component: FinalCta },
       // { Component: FaqSection },

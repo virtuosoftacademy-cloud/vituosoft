@@ -41,10 +41,10 @@ function Hero() {
 
           {/* Counter + Button */}
           <div className="py-10 lg:py-6  flex items-center justify-center flex-col lg:flex-row gap-8 lg:gap-6 px-4">
-            <div className="flex justify-center items-center gap-6">
-              <div className="flex items-center justify-center">
+            <div className="flex justify-center items-center gap-2 md:gap-6">
+              <div className="flex items-center justify-center ">
                 <div className="rounded-full bg-linear-[-90deg,white_5%,#D3E2FF] flex py-5 px-5 flex-col">
-                  <div className="text-[14px] font-bold">
+                  <div className="text-xs md:text-[14px] font-bold">
                     <CountUp
                       from={0}
                       to={10}
@@ -62,9 +62,9 @@ function Hero() {
                   <div>Years of<br />Excellence</div>
                 </div>
               </div>
-              <div className="flex items-center lg:justify-center justify-start -ml-3">
-                <div className="rounded-full bg-linear-[-90deg,white_5%,#D3E2FF] flex py-5 px-4 flex-col">
-                  <div className="text-[14px] font-bold">
+              <div className="flex items-center lg:justify-center justify-start lg:-ml-3">
+                <div className="rounded-full bg-linear-[-90deg,white_5%,#D3E2FF] flex p-4 lg:py-5 lg:px-4 flex-col">
+                  <div className="md:text-[14px] text-xs font-bold">
                     <CountUp
                       from={0}
                       to={92}
@@ -82,9 +82,9 @@ function Hero() {
                   <div className="font-light text-xs md:text-sm">Success<br />Rate</div>
                 </div>
               </div>
-              <div className="flex items-center justify-center -ml-3">
-                <div className="rounded-full bg-linear-[-90deg,white_5%,#D3E2FF] flex py-5 px-3 flex-col">
-                  <div className="text-[14px] font-bold">
+              <div className="flex items-center justify-center lg:-ml-3">
+                <div className="rounded-full bg-linear-[-90deg,white_5%,#D3E2FF] p-4 lg:py-5 lg:px-4 flex-col">
+                  <div className="text-xs md:text-[14px] font-bold">
                     <CountUp
                       from={0}
                       to={100}

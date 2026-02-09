@@ -157,16 +157,16 @@ export default function Nav() {
 
                     {/* RIGHT - Spotlight Video */}
                     <div className="row-span-2 flex flex-col">
-                      <h4 className="text-lg font-semibold mb-3">Spotlight</h4>
+                      {/* <h4 className="text-lg font-semibold mb-3">Spotlight</h4> */}
                       {/* <div className="flex-1 bg-muted/40 rounded-lg overflow-hidden border border-border"> */}
-                      <div className="aspect-square w-full">
+                      <div className="aspect-square w-full mt-6">
                         <Image
                           width="100"
                           height="100"
                           alt="/"
                           src={getSpotlightVideo(services_Nav[activeService].title)}
                           title={`${services_Nav[activeService].title} Spotlight Video`}
-                          className="w-6xl"
+                          className="w-sm h-64"
                         />
                         {/* <iframe
                             width="100%"

@@ -675,39 +675,53 @@ export const collabCard = [
 export const Faq_Home = [
   {
     value: "item-1",
-    question: "What is an AI Agent?",
-    answer: "An AI Agent is a smart system that operates independently to complete complex tasks. It analyzes situations, makes decisions and executes actions across business functions like customer service, operations and data management without constant human oversight."
+    question: "What makes Virtuosoft different from other agencies?",
+    answer:"We combine deep technical expertise with business acumen, acting as your strategic partner to ensure measurable outcomes rather than just delivering technical solutions."
   },
   {
     value: "item-2",
-    question: "How do AI Agents function?",
-    answer: "Yes. It comes with default styles that matches the other components."
+    question: "What is your design process for web and mobile apps?",
+    answer: "Our user-centered process involves discovery research, wireframing, interactive prototyping and usability testing to create designs that are both beautiful and functional across all devices."
   },
   {
     value: "item-3",
-    question: "What capabilities do AI Agents possess?",
-    answer: "Core capabilities include strategic planning for goal achievement, contextual understanding through data analysis, autonomous task execution, collaborative operation with human teams and continuous learning from interactions to improve performance over time."
+    question: "How can AI solutions benefit our specific business?",
+    answer: "We begin with a discovery workshop to identify your highest-value AI opportunities, whether it's automating processes, predicting customer behavior or extracting insights from your data."
   },
   {
     value: "item-4",
-    question: "How do AI Agents differ from basic automation tools?",
-    answer: "Unlike simple bots following rigid rules, AI Agents handle complex, multi-step processes requiring judgment. They adapt to new scenarios and make context-aware decisions, while traditional automation only repeats predefined actions without intelligence."
+    question: "What results can we expect from cloud migration?",
+    answer: "Typical outcomes include 30-50% reduction in IT costs, improved scalability, enhanced security and greater business flexibility through our carefully planned migration approach."
   },
   {
     value: "item-5",
-    question: "What business processes can AI Agents handle?",
-    answer: "They automate diverse operations including customer inquiry resolution, financial report generation, employee onboarding workflows, inventory management, content creation and data analysis, essentially any rule-based but complex workflow."
-  },
+    question: "What is your software development methodology?",
+    answer: "We use agile development with 2-week sprints, regular demos and transparent communication to ensure we're building exactly what you need while maintaining high code quality."},
   {
     value: "item-6",
-    question: "Can multiple AI Agents coordinate together?",
-    answer: "Yes. Multi-agent systems enable specialized AI Agents to collaborate on intricate processes. For instance, separate Agents can simultaneously manage order fulfillment, logistics coordination and customer communication while sharing relevant data."
+    question: "How do you ensure your project's security?",
+    answer: "We implement enterprise-grade security measures including encryption, access controls and continuous monitoring, tailored to your specific industry compliance requirements."
   },
   {
     value: "item-7",
-    question: "How secure is AI Agent implementation?",
-    answer: "We implement rigorous security protocols including data encryption, access controls and approval workflows. Human oversight options ensure sensitive operations receive mandatory review, maintaining compliance and risk management throughout all automated processes."
+    question: "What ongoing support do you provide after launch?",
+    answer: "We offer 24/7 monitoring, emergency support with guaranteed response times and regular maintenance to keep your systems running optimally."
   },
+  {
+    value:"item-8",
+    question:"How long do typical projects take to complete?",
+    answer:"Most projects deliver initial results within 2-4 weeks, with full implementation typically completing in 8-16 weeks depending on complexity and requirements."
+  },
+  {
+    value:"item-9",
+    question:"How do you handle data privacy and compliance?",
+    answer:"We build compliance into every project, following global standards like GDPR and HIPAA, with robust data protection protocols tailored to your industry." 
+  },
+  {
+    value:"item-10",
+    question:"How do we get started working with Virtuosoft?",
+    answer:"Begin with a complimentary discovery session where we analyze your needs and create a tailored proposal with clear timeline and investment details.",
+  }
 ];
 
 export const Faq_softwareeng_SoftwareDevelopment = [
