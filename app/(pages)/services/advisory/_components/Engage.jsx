@@ -12,7 +12,7 @@ function Engage() {
                 </h2>
                 <div className='mt-10'>
                     {/* Cards */}
-                    <div className='flex flex-wrap gap-5'>
+                    <div className='flex flex-wrap md:flex-nowrap gap-5'>
                         {aiAgentsEngage.map((item, index) => (
                             <div
                                 key={index}
