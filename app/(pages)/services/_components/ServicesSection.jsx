@@ -6,7 +6,7 @@ import { advisoryCategory, aiCategory, cloudCategory, engagementCategory, engine
 
 export default function ServicesSection() {
   return (
-    <div className="space-y-12 md:space-y-16 lg:space-y-20 py-12 md:py-16">
+    <div className="space-y-6 md:space-y-8 lg:space-y-10 py-12 md:py-16">
       <ServiceCard category={aiCategory} />
       <ServiceCard category={advisoryCategory} />
       <ServiceCard category={engineeringCategory} />

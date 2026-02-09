@@ -6,7 +6,7 @@ import Hero from './_components/Hero'
 import ServicesSection from './_components/ServicesSection'
 import { ReactLenis } from 'lenis/react'
 import Different from './_components/Different'
-import Faq from '@/components/common/Faq'
+import Faq from '@/app/(pages)/home/_components/Faq'
 
 function Services() {
     return (
@@ -15,9 +15,6 @@ function Services() {
                 <Hero />
                 <ServicesSection />
                 <Different />
-                <div className='py-20'>
-                <Faq/>
-                </div>
                 <Cta />
             </ReactLenis>
         </div>
