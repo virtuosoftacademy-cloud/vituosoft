@@ -1,42 +1,44 @@
+import Image from 'next/image';
 import React from 'react';
 
-// You can move this data to a separate file later
+const valueImg = 'assets/Images/service/ai';
+
 const valueItems = [
   {
     title: "Automate Complex Workflows",
     description:
       "Manual workflows slow teams down. AI Agents automate processes across finance, logistics and support, reducing errors, increasing throughput and freeing teams to focus on strategy and innovation.",
-    image: "https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/abstract_blue-5.png",
+    image: `/${valueImg}/automate.svg`,
   },
   {
     title: "Scale Without Added Costs",
     description:
       "Grow without growing overhead. AI Agents handle high-volume operations seamlessly, allowing your business to scale with efficiency, not expense.",
-    image: "https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/abstract_blue-97-1.png",
+    image: `/${valueImg}/scale.svg`,
   },
   {
     title: "Enhance Customer Experiences",
     description:
       "Deliver personal service at enterprise scale. AI Agents analyze behavior in real-time to predict needs, resolve issues instantly and create consistent, high-value interactions that build loyalty.",
-    image: "https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/abstract_blue-93-1.png",
+    image: `/${valueImg}/enhance.svg`,
   },
   {
     title: "Solve Problems Through Intelligent Reasoning",
     description:
       "When complex challenges arise, AI Agents think beyond automation. They apply advanced reasoning to optimize workflows, resolve issues autonomously and drive measurable improvements.",
-    image: "https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/abstract_blue-29.png",
+    image: `/${valueImg}/solve.svg`,
   },
   {
     title: "Mitigate Risks Before They Escalate",
     description:
       "From compliance to cybersecurity, AI Agents use predictive analytics to detect threats early, helping your business stay proactive, secure and regulation-ready.",
-    image: "https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/abstract_blue-87.png",
+    image: `/${valueImg}/mitigate.svg`,
   },
   {
     title: "Enable Smarter, Faster Decisions",
     description:
       "Real-time insight means faster, more confident decisions. AI Agents turn live data into clear actions, empowering leadership to adapt instantly to shifts in market, demand or operations.",
-    image: "https://virtuosoft.pk/virtuosoft/wp-content/uploads/2025/11/abstract_blue-33.png",
+    image: `/${valueImg}/enable.svg`,
   },
 ];
 
@@ -80,7 +82,9 @@ function ValueSection() {
               />
 
               <div className="relative z-10">
-                <img
+                <Image
+                  width={20}
+                  height={20}
                   src={item.image}
                   alt={item.title}
                   className="w-14 h-14 object-contain mb-5"

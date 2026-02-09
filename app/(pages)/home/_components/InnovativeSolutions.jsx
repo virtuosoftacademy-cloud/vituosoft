@@ -12,7 +12,7 @@ function InnovativeSolutions() {
         <div className="max-w-7xl mx-auto px-10 my-8 lg:my-10">
             <div className="-space-y-2 lg:-space-y-4">
                 <h4 className={`font-normal ${CommonHead}`}>
-                    Innovation{" "}
+                    Innovative{" "}
                     <span className="">
                         <strong>
                             <em>
@@ -34,7 +34,7 @@ function InnovativeSolutions() {
                         <div className="bg-chart-1 rounded-full size-1.5 lg:size-2.5 mt-5" />
                     </div>
                 </div>
-                <div className="text-5xl lg:text-[80px] font-medium mt-2 lg:mt-4">
+                <div className="text-5xl lg:text-[96px] font-medium mt-2 lg:mt-4 capitalize">
                     <p className="text-gray-200">Smart service.</p>
                 </div>
             </div>

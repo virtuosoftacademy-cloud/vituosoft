@@ -42,16 +42,16 @@ function Technology() {
                             className="group relative w-full max-w-[380] lg:max-w-[380] rounded-2xl bg-white p-7 sm:p-8 lg:p-9
             shadow-[0_5px_15px_rgba(0,0,0,0.05)]
             transition-all duration-400 ease-out
-            hover:-translate-y-1.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]
+            hover:-translate-y-1.5 hover:shadow-[0_20px_20px_rgba(0,0,0,0.08)]
             overflow-hidden"                        >
                             {/* Gradient border – modern, reliable method */}
                             <div
                                 className="
-            pointer-events-none absolute inset-0 rounded-[15px]
-            bg-linear-to-b from-primary to-white p-0.5 -z-10
+            pointer-events-none absolute inset-0 rounded-2xl
+            bg-linear-to-b from-primary to-white p-[0.2em] -z-10
           "
                             >
-                                <div className="h-full w-full rounded-[13px] bg-white" />
+                                <div className="h-full w-full rounded-xl bg-white" />
                             </div>
 
                             {/* Content */}
@@ -118,10 +118,10 @@ function Technology() {
                             <div
                                 className="
               pointer-events-none absolute inset-0 rounded-2xl
-              bg-linear-to-b from-blue-600 to-white p-0.5 -z-10
+              bg-linear-to-b from-blue-600 to-white  p-[0.2em] -z-10
             "
                             >
-                                <div className="h-full w-full rounded-[14px] bg-white" />
+                                <div className="h-full w-full rounded-xl bg-white" />
                             </div>
 
                             {/* Content */}
