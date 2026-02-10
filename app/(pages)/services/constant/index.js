@@ -231,11 +231,214 @@ export const aiAgentsEmpower = [
     }
 ]
 
-
+//Generative A.I
+//Hero
 export const genaiHero = {
   title: 'Generative AI',
   topDescription: 'Artificial Intelligence',
   bottomDescription:
     'At Virtuosoft, we use Generative AI to refine workflows, boost creativity and shape innovation, through smart and adaptive solutions built to strengthen collaboration and optimize performance.',
-  btnTitle: 'Discover AI Agents with Virtuosoft',
+  btnTitle: 'Build Creativity',
 };
+
+//Why are Businesses Adopting Generative AI Today?
+export const valueDataGen = [
+  {
+    titleNormal: "Why are Businesses Adopting",
+    titleBold: "Generative AI",
+    valueItems: [
+      {
+        title: "Streamlining Complex Operations",
+        description:"Generative AI automates intricate workflows, accelerating operations and reducing errors to ensure maximum efficiency and productivity across business processes.",
+        image: `/${valueImg}/automate.svg`,
+      },
+      {
+        title: "Optimizing IT Operations",
+        description:
+        "Intelligent automation modernizes IT infrastructure, minimizing downtime and improving system performance for a more agile, reliable and future-ready technology environment.",
+        image: `/${valueImg}/scale.svg`,
+      },
+      {
+        title: "Maximizing Resource Efficiency",
+        description:
+        "AI solutions increase output while reducing resource consumption, delivering cost savings without compromising quality, enabling businesses to achieve more with less.",
+        image: `/${valueImg}/enhance.svg`,
+      },
+      {
+        title: "Driving Predictive Insights",
+        description:
+        "Advanced analytics turn data into actionable foresight, allowing businesses to anticipate market changes, optimize strategies and make confident, AI-backed decisions.",
+        image: `/${valueImg}/solve.svg`,
+      },
+      {
+        title: "Enhancing Customer Experiences",
+        description:
+          "Generative AI delivers personalized, dynamic interactions across platforms, boosting engagement and building lasting loyalty with tailored, user-focused experiences.",
+        image: `/${valueImg}/mitigate.svg`,
+      },
+      {
+        title: "Ensuring Responsible AI Deployment",
+        description:
+          "Comprehensive AI governance balances innovation with security, maintaining compliance and protecting data while enabling ethical and reliable AI adoption.",
+        image: `/${valueImg}/enable.svg`,
+      },
+    ]
+  }
+]
+
+
+// TimeLine 
+//Process for Building Intelligent AI Agents
+export const stepsDataGen = [
+  {
+  titleBold:"Generative AI",
+  titlenormal:"Unleash Creativity with",
+  timeLineItems:[
+  {
+    title: "Define Your Vision",
+    description:
+      "Establish your creative goals, focusing on exactly what you want to generate. From compelling copy to stunning visuals, we ensure strategic alignment from the start.",
+  },
+  {
+    title: "Build Your Data Foundation",
+    description:
+      "Collect, organize and refine relevant datasets. High-quality, diverse data enables AI to understand context and deliver accurate, meaningful and effective outputs.",
+  },
+  {
+    title: "Architect Your AI Engine",
+    description:
+      "Select and design the ideal AI model, tailoring its core architecture to balance powerful creative capabilities with the efficiency your project demands.",
+  },
+  {
+    title: "Train & Refine the Intelligence",
+    description:
+      "Use curated data to train the AI. Continuous fine-tuning ensures outputs remain consistent, precise, and aligned with creative and business standards.",
+  },
+  {
+    title: "Validate Creative Output",
+    description:
+      "Every output undergoes thorough evaluation for accuracy, creativity and relevance, ensuring results align with project goals and maintain consistent quality.",
+  },
+  {
+    title: "Integrate & Launch Seamlessly",
+    description:
+      "The Generative AI solution is embedded into existing systems and processes, enabling smooth adoption and delivering value without operational disruption.",
+  },
+  {
+    title:"Evolve & Optimize Continuously",
+    description:"Continuous monitoring and fine-tuning allow the AI to learn from new data, stay aligned with emerging trends and sustain long-term innovation and performance."
+  }
+  ]
+}
+];
+
+//Empower
+//Empower Your Operations with AI Agents
+export const EmpowerGen = [
+  {
+    title: "Empower Your Operations with AI Agents",
+    items:[
+      {
+        title: "Business Workflow Automation",
+        description:
+          "Automate and connect workflows across finance, HR and logistics. These AI Agents streamline routine processes like invoicing, scheduling and tracking, to minimize errors, improve accuracy and increase overall operational efficiency across business functions."
+      },
+      {
+        title: "Bespoke AI Development",
+        description:
+          "Deploy AI agents customized with your business needs. From lead generation to data processing, each agent integrates seamlessly into existing systems, enhancing productivity, scalability and measurable business performance outcomes efficiently."
+      },
+      {
+        title: "AI-Powered Support Automation",
+        description:
+          "Deliver round-the-clock support with AI agents. They instantly respond, resolve issues and personalize communication, improving satisfaction, reducing response times and optimizing customer engagement across all digital interaction channels effectively."
+      },
+      {
+        title: "Task Automation Bots",
+        description:
+          "Automate repetitive tasks like data entry, scheduling and email processing. AI bots helps in eliminating manual errors, improve accuracy and free human teams for strategic, high-value projects driving measurable business growth consistently."
+      },
+      {
+        title: "Virtual Assistants",
+        description:
+          "Empower your workforce with AI-driven virtual assistants managing meetings, reminders and internal communication. These AI assistants improve daily productivity, streamline coordination and simplify complex administrative workflows for busy professionals efficiently."
+      },
+      {
+        title: "AI Operations Optimization",
+        description:
+          "Optimize monitoring inventory, forecasting demand, and managing logistics intelligently with AI agents. They prevent stockouts, identify bottlenecks and ensure continuous, seamless operations with data-driven automation and predictive decision-making precision."
+      },
+      {
+        title: "AI Data Processing Agents",
+        description:
+          "Extract, structure and process business data with accuracy. These AI agents automate information handling from invoices and reports, enabling faster insights, improved compliance and data-backed decision-making without manual intervention."
+      },
+      {
+        title: "Integrated AI Agent Networks",
+        description:
+          "Enable seamless teamwork with multiple AI agents managing interconnected workflows. These bot systems coordinate with operations like fulfillment and logistics, improving efficiency, execution speed and communication across business departments collaboratively."
+      },
+      {
+        title: "Generative AI Agents for Content Creation",
+        description:
+          "Empower Generative AI to create marketing materials, product descriptions and design concepts. These AI Agents accelerates creative output, maintains brand tone and supports content teams in delivering consistent quality faster across platforms."
+      },
+      {
+        title: "AI Chat Interaction Systems",
+        description:
+          "Develop advanced conversational AI that engages users naturally. These agents manage inquiries, automate communication and enhance interaction quality, reducing operational costs while improving response efficiency and overall customer satisfaction."
+      },
+      {
+        title: "Natural Language Processing (NLP) Agents",
+        description:
+          "Develop NLP agents that understand and interpret human language. Ideal for chatbots, analytics and feedback automation, these agents enhance comprehension, streamline responses and improve overall communication efficiency organization-wide."
+      },
+      {
+        title: "Custom ML Agent Design",
+        description:
+          "Design intelligent AI agents trained through machine learning. These agents develops systems for predictive analysis, pattern recognition and decision support, helping businesses operate smarter, faster and with measurable competitive advantage."
+      },
+      {
+        title: "Computer Vision Agents",
+        description:
+          "Specialize in Computer vision agents that help analyzing and interpreting visual data. They perform automated inspections, recognition and quality assessments, enhancing accuracy, safety and efficiency across industries relying on visual intelligence."
+      },
+      {
+        title: "AI-Powered Chatbots and Virtual Assistants",
+        description:
+          "Enhance customer experience with AI chatbots offering instant support. These smart agents deliver accurate responses, automate engagement and provide reliable communication, ensuring consistent service quality across all customer touchpoints."
+      },
+      {
+        title: "Predictive Analytics Agents",
+        description:
+          "Optimize Predictive Analytics Agents to evaluate trends and patterns using business data. These agents forecast outcomes, optimize resource allocation and empower leaders to make proactive, informed and strategic business decisions."
+      },
+      {
+        title: "AI Voice Command Agents",
+        description:
+          "Enable voice-driven operations with smart AI speech agents. They help to convert spoken commands into precise actions, supporting accessibility, automation and productivity through accurate, real-time voice understanding technology."
+      },
+      {
+        title: "Robotic Process Automation (RPA) Agents",
+        description:
+          "Enhance routine workflows like payroll and compliance with efficient RPA agents. They increase speed, reduce manual intervention and ensure accuracy, turning repetitive operations into fully optimized, self-running processes."
+      },
+      {
+        title: "AI Security Agents",
+        description:
+          "Secure your digital infrastructure with AI-powered monitoring. These agents detect threats, assess vulnerabilities and respond instantly, providing real-time defense, proactive protection and continuous system security."
+      },
+      {
+        title: "Recommendation System Agents",
+        description:
+          "Boost engagement with AI-driven recommendation engines. These AI agents analyze user behavior, predict preferences and deliver tailored content, enhancing user experience and improving conversion rates effectively."
+      },
+      {
+        title: "Sentiment Analysis Agents",
+        description:
+          "Interpret emotions within reviews, chats, and feedback with Sentiment Analysis Agents. They help your business understand audience perception, refine communication strategies and strengthen brand reputation intelligently."
+      }
+
+    ]
+    }
+]

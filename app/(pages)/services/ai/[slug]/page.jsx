@@ -6,7 +6,7 @@ import ValueSection from '../_components/ValueSection';
 import Success from '../_components/Success';
 import Empower from '../_components/Empower';
 import Engage from '../_components/Engage';
-import { aiAgentsEmpower, aiAgentsHero, genaiHero, stepsData, valueData } from '../../constant';
+import { aiAgentsEmpower, aiAgentsHero, EmpowerGen, genaiHero, stepsData, stepsDataGen, valueData, valueDataGen } from '../../constant';
 import TimeLine from '../_components/TimeLine';
 import Cta from '@/components/common/Cta';
 import Faq from '../_components/Faq';
@@ -30,7 +30,7 @@ const services = [
       { Component: Success },
       { Component: TimeLine, props: stepsData[0] },
       { Component: Empower, props: aiAgentsEmpower[0] },
-      // { Component: Blogs },
+      { Component: Blogs },
       { Component: Engage },
       { Component: Faq, props: { items: Faq_AI_CustomAgent } },
       { Component: Cta },
@@ -40,13 +40,15 @@ const services = [
     slug: 'generative-ai',
     title: 'Generative AI',
     heroData: genaiHero,
-
+    value: valueDataGen[0],
+    Data: EmpowerGen[0],
+    timeLine: stepsData[0],
     sections: [
       { Component: Hero, props: genaiHero },
-      { Component: ValueSection, props: valueData[0] },
+      { Component: ValueSection, props: valueDataGen[0] },
       { Component: Success },
-      { Component: TimeLine, props: stepsData[0] },
-      { Component: Empower, props: aiAgentsEmpower[0] },
+      { Component: TimeLine, props: stepsDataGen[0] },
+      { Component: Empower, props: EmpowerGen[0] },
       { Component: Blogs },
       { Component: Engage },
       { Component: Faq, props: { items: Faq_AI_CustomAgent } },
