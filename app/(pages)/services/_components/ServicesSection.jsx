@@ -10,9 +10,9 @@ export default function ServicesSection() {
       <ServiceCard category={aiCategory} />
       <ServiceCard category={advisoryCategory} />
       <ServiceCard category={engineeringCategory} />
-      <ServiceCard category={cloudCategory} />
+      {/* <ServiceCard category={cloudCategory} />
       <ServiceCard category={optimizationCategory}/>
-      <ServiceCard category={engagementCategory}/>
+      <ServiceCard category={engagementCategory}/> */}
     </div>
   )
 } 
