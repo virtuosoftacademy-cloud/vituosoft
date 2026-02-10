@@ -3,14 +3,64 @@ import { DatabaseZap, Package, Table, Users } from 'lucide-react';
 // A.I Agent
 // Hero
 export const aiAgentsHero = {
-  title: 'AI Agents',
+  title: 'AI Agent',
   topDescription: 'Artificial Intelligence',
   bottomDescription:
     'Empower your organization with intelligent AI agents that streamline operations, automate workflows, and deliver faster, data-driven decisions. ' +
     'At Virtuosoft, we build custom AI solutions that optimize efficiency, improve customer experiences, and unlock new levels of performance and growth.',
   btnTitle: 'Discover AI Agents with Virtuosoft',
 };
+
+// Value Section A.I
+//Why Every Modern Business Needs Intelligent AI Agents?
+const valueImg = 'assets/Images/service/ai';
+export const valueData = [
+  {
+    titleNormal: "Why Every Modern Business Needs Intelligent",
+    titleBold: "AI Agents",
+    valueItems: [
+      {
+        title: "Automate Complex Workflows",
+        description:
+          "Manual workflows slow teams down. AI Agents automate processes across finance, logistics and support, reducing errors, increasing throughput and freeing teams to focus on strategy and innovation.",
+        image: `/${valueImg}/automate.svg`,
+      },
+      {
+        title: "Scale Without Added Costs",
+        description:
+          "Grow without growing overhead. AI Agents handle high-volume operations seamlessly, allowing your business to scale with efficiency, not expense.",
+        image: `/${valueImg}/scale.svg`,
+      },
+      {
+        title: "Enhance Customer Experiences",
+        description:
+          "Deliver personal service at enterprise scale. AI Agents analyze behavior in real-time to predict needs, resolve issues instantly and create consistent, high-value interactions that build loyalty.",
+        image: `/${valueImg}/enhance.svg`,
+      },
+      {
+        title: "Solve Problems Through Intelligent Reasoning",
+        description:
+          "When complex challenges arise, AI Agents think beyond automation. They apply advanced reasoning to optimize workflows, resolve issues autonomously and drive measurable improvements.",
+        image: `/${valueImg}/solve.svg`,
+      },
+      {
+        title: "Mitigate Risks Before They Escalate",
+        description:
+          "From compliance to cybersecurity, AI Agents use predictive analytics to detect threats early, helping your business stay proactive, secure and regulation-ready.",
+        image: `/${valueImg}/mitigate.svg`,
+      },
+      {
+        title: "Enable Smarter, Faster Decisions",
+        description:
+          "Real-time insight means faster, more confident decisions. AI Agents turn live data into clear actions, empowering leadership to adapt instantly to shifts in market, demand or operations.",
+        image: `/${valueImg}/enable.svg`,
+      },
+    ]
+  }
+]
+
 // TimeLine 
+//Process for Building Intelligent AI Agents
 export const stepsData = [
   {
   titleBold:"AI Agents",
@@ -70,54 +120,8 @@ export const aiAgentsEngage = [
   }
 ];
 
-// Value Section A.I
-const valueImg = 'assets/Images/service/ai';
-export const valueData = [
-  {
-    titleBold: "Why Every Modern Business Needs Intelligent",
-    normaltitle: "AI Agents",
-    valueItems: [
-      {
-        title: "Automate Complex Workflows",
-        description:
-          "Manual workflows slow teams down. AI Agents automate processes across finance, logistics and support, reducing errors, increasing throughput and freeing teams to focus on strategy and innovation.",
-        image: `/${valueImg}/automate.svg`,
-      },
-      {
-        title: "Scale Without Added Costs",
-        description:
-          "Grow without growing overhead. AI Agents handle high-volume operations seamlessly, allowing your business to scale with efficiency, not expense.",
-        image: `/${valueImg}/scale.svg`,
-      },
-      {
-        title: "Enhance Customer Experiences",
-        description:
-          "Deliver personal service at enterprise scale. AI Agents analyze behavior in real-time to predict needs, resolve issues instantly and create consistent, high-value interactions that build loyalty.",
-        image: `/${valueImg}/enhance.svg`,
-      },
-      {
-        title: "Solve Problems Through Intelligent Reasoning",
-        description:
-          "When complex challenges arise, AI Agents think beyond automation. They apply advanced reasoning to optimize workflows, resolve issues autonomously and drive measurable improvements.",
-        image: `/${valueImg}/solve.svg`,
-      },
-      {
-        title: "Mitigate Risks Before They Escalate",
-        description:
-          "From compliance to cybersecurity, AI Agents use predictive analytics to detect threats early, helping your business stay proactive, secure and regulation-ready.",
-        image: `/${valueImg}/mitigate.svg`,
-      },
-      {
-        title: "Enable Smarter, Faster Decisions",
-        description:
-          "Real-time insight means faster, more confident decisions. AI Agents turn live data into clear actions, empowering leadership to adapt instantly to shifts in market, demand or operations.",
-        image: `/${valueImg}/enable.svg`,
-      },
-    ]
-  }
-]
-
-
+//Empower
+//Empower Your Operations with AI Agents
 export const aiAgentsEmpower = [
   {
     title: "Empower Your Operations with AI Agents",
@@ -228,4 +232,10 @@ export const aiAgentsEmpower = [
 ]
 
 
-//
+export const genaiHero = {
+  title: 'Generative AI',
+  topDescription: 'Artificial Intelligence',
+  bottomDescription:
+    'At Virtuosoft, we use Generative AI to refine workflows, boost creativity and shape innovation, through smart and adaptive solutions built to strengthen collaboration and optimize performance.',
+  btnTitle: 'Discover AI Agents with Virtuosoft',
+};

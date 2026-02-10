@@ -13,7 +13,7 @@ export default function ServiceCard({ category, showAll = true }) {
     textColor,
     imagePosition,
     accentImage,
-    cta,
+    href,
     services,
   } = category
   return (
@@ -58,7 +58,7 @@ export default function ServiceCard({ category, showAll = true }) {
               `}>
               {services.map((service, index) =>
                 <Link
-                  href={`/services/advisory/${service.label.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={`${href}/${service.label.toLowerCase().replace(/\s+/g, "-")}`}
                   key={index}
                 >
                   <div

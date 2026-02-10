@@ -45,7 +45,7 @@ export default function Hero(heroData ) {
                         </p>
                     </div>
                     <div className="flex justify-center md:justify-start">
-                        <Button className={'text-sm bg-white text-primary border-2 hover:text-accent font-bold capitalize md:text-lg'}>
+                        <Button className={'text-sm bg-white text-primary hover:text-accent font-bold capitalize md:text-lg'}>
                             <Link href={'/contact'}>
                                 <h2>
                                     {btnTitle}

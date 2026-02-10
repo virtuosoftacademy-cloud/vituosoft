@@ -6,7 +6,7 @@ import ValueSection from '../_components/ValueSection';
 import Success from '../_components/Success';
 import Empower from '../_components/Empower';
 import Engage from '../_components/Engage';
-import { aiAgentsEmpower, aiAgentsHero, stepsData, valueData } from '../../constant';
+import { aiAgentsEmpower, aiAgentsHero, genaiHero, stepsData, valueData } from '../../constant';
 import TimeLine from '../_components/TimeLine';
 import Cta from '@/components/common/Cta';
 import Faq from '../_components/Faq';
@@ -30,22 +30,20 @@ const services = [
       { Component: Success },
       { Component: TimeLine, props: stepsData[0] },
       { Component: Empower, props: aiAgentsEmpower[0] },
-      { Component: Blogs },
+      // { Component: Blogs },
       { Component: Engage },
       { Component: Faq, props: { items: Faq_AI_CustomAgent } },
       { Component: Cta },
     ],
   },
-  // Example for future services:
-  // {
-  //   slug: 'cloud-strategy',
-  //   title: 'Cloud Strategy',
-  //   sections: [
-  //     { Component: CloudHero },
-  //     { Component: Benefits },
-  //     ...
-  //   ],
-  // },
+  {
+    slug: 'generative-ai',
+    title: 'Generative AI',
+    heroData: genaiHero,
+    sections: [
+      { Component: Hero,props:genaiHero }
+    ],
+  },
 ];
 
 // Helper to find service by slug

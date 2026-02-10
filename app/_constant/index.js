@@ -452,8 +452,10 @@ export const aiCategory = {
   textColor: 'text-white',
   accentImage: `/${accentImg}/ai_data_service.png`,
   imagePosition: "-top-6 -right-4",
+  href:"/services/ai/",
   services: [
     { label: 'AI Agents', description: "Intelligent AI agents automating workflows, enhancing customer experiences and enabling real-time decisions for operational efficiency.", },
+    { label: 'Generative AI', description: "Advanced generative AI services enabling intelligent automation, personalized experiences and rapid prototyping for business transformation." },
     { label: 'Data Science & MLOps', description: "Comprehensive machine learning operations delivering faster deployments, improved accuracy and long-term operational excellence." },
     { label: 'Conversational AI', description: "We design and deploy conversational systems that understand context, intent, and user behavior. Our solutions automate support workflows, enhance customer engagement, and provide real time insights through intelligent dialog models tailored to your business processes." },
     { label: 'Computer Vision', description: "We build computer vision solutions that analyze images and video to detect objects, identities, behaviors, and anomalies. These systems enable real-time monitoring, compliance enforcement, automation, and data-driven decision-making across physical and digital environments." },
@@ -501,6 +503,7 @@ export const advisoryCategory = {
   textColor: 'text-white',
   bgColor: 'bg-linear-to-br from-[#084387] to-[#021021]',
   imagePosition: "top-0 right-0",
+  href:"/services/advisory/",
   services: [
     // {
     //   label: 'Discovery Workshops',

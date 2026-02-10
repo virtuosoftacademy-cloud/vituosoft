@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { ReactLenis } from 'lenis/react';
 import Hero from '../_components/Hero';
 import ValueSection from '../_components/ValueSection';
-import Success from '../_components/Success';
+import Success from '../../common/Success';
 import Empower from '../_components/Empower';
 import Engage from '../_components/Engage';
 import { aiAgentsEmpower, aiAgentsHero, stepsData, valueData } from '../../constant';
@@ -18,8 +18,8 @@ import Blogs from '@/app/(pages)/blogs/page';
 //  All services (array — easy to extend)
 const services = [
   {
-    slug: 'ai-agents',
-    title: 'AI Agents',
+    slug: 'product-strategy-&-roadmapping',
+    title: 'Product Strategy & Roadmapping',
     heroData: aiAgentsHero,
     value: valueData[0],
     Data: aiAgentsEmpower[0],
