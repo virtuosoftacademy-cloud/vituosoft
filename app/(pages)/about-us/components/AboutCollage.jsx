@@ -22,6 +22,7 @@ export default function AboutCollage() {
 
     observer.observe(wrapRef.current);
 
+    
     return () => observer.disconnect();
   }, []);
 
