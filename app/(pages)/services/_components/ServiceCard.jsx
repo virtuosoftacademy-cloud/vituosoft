@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
 
 
 export default function ServiceCard({ category, showAll = true }) {
@@ -14,7 +13,7 @@ export default function ServiceCard({ category, showAll = true }) {
     textColor,
     imagePosition,
     accentImage,
-    cta,
+    href,
     services,
   } = category
   return (
@@ -23,7 +22,7 @@ export default function ServiceCard({ category, showAll = true }) {
         className=
         {`relative 
         py-20 px-10 md:px-20 lg:px-32 
-        text-left 
+        text-left rounded
         overflow-hidden 
         shadow-2xl shadow-black/15
       ${bgColor} ${textColor}`}
@@ -53,19 +52,18 @@ export default function ServiceCard({ category, showAll = true }) {
               {subtitlebottom}
             </p>
           </div>
-          {showAll ?
             <div
               className={`
               grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:auto-rows-fr gap-6 lg:gap-8
               `}>
               {services.map((service, index) =>
-                <Link href={'/'}
+                <Link
+                  href={`${href}/${service.label.toLowerCase().replace(/\s+/g, "-")}`}
                   key={index}
-
                 >
                   <div
                     className=
-                    "group relative w-full max-w-[380] bg-transparent p-9  overflow-hidden"
+                    "group relative w-full max-w-[380] bg-transparent p-8 overflow-hidden"
                   >
                     {/* Animated glowing border on hover – using ::after via Tailwind arbitrary variants */}
                     <div
@@ -112,17 +110,8 @@ export default function ServiceCard({ category, showAll = true }) {
                 </Link>
               )}
 
-            </div> : (
-              <Button className={'bg-white text-primary border-2 hover:text-accent font-bold capitalize text-lg'}>
-                <Link href={'/contact'}>
-                  <h2>
-                    {cta}
-                  </h2>
-                </Link>
-              </Button>
-            )
-          }
-
+            </div>
+          
         </div>
       </section >
     </div >

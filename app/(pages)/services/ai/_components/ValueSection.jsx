@@ -6,7 +6,7 @@ function ValueSection(value) {
     <section className="py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
         <div className='text-center text-2xl md:text-4xl lg:text-[2.5rem] pb-12'>
-         <h4 >
+          <h4 >
             {titleNormal} {" "}
             <strong>
             {titleBold}
