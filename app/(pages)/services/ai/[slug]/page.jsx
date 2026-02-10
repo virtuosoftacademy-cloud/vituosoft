@@ -40,8 +40,17 @@ const services = [
     slug: 'generative-ai',
     title: 'Generative AI',
     heroData: genaiHero,
+
     sections: [
-      { Component: Hero,props:genaiHero }
+      { Component: Hero, props: genaiHero },
+      { Component: ValueSection, props: valueData[0] },
+      { Component: Success },
+      { Component: TimeLine, props: stepsData[0] },
+      { Component: Empower, props: aiAgentsEmpower[0] },
+      { Component: Blogs },
+      { Component: Engage },
+      { Component: Faq, props: { items: Faq_AI_CustomAgent } },
+      { Component: Cta },
     ],
   },
 ];
