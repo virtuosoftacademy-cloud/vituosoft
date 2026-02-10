@@ -12,7 +12,11 @@ function Cta() {
                     <h4 className="text-4xl lg:text-5xl xl:text-7xl capitalize">Talk to an <span className="font-semibold italic">Expert
                     </span>
                     </h4>
-                    <p className="text-sm lg:text-lg">Get professional insights to take your business to the next level.Connect with our experts and start your journey toward growth today.</p>
+                    <div className="-space-y-1.5">
+                    <p className="text-sm lg:text-lg">Get professional insights to take your business to the next level.
+                    </p>
+                    <p className="text-sm lg:text-lg">Connect with our experts and start your journey toward growth today.</p>
+                    </div>
                     <div className="mt-4">
                         <Button variant="secondary" size="xl">
                             <Link href={'/contact'}>

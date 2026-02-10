@@ -453,12 +453,11 @@ export const aiCategory = {
   accentImage: `/${accentImg}/ai_data_service.png`,
   imagePosition: "-top-6 -right-4",
   services: [
-    { label: 'AI Agents', description: "Create intelligent digital assistants and automation tools that work around the clock, reducing manual effort and boosting efficiency." },
-    { label: 'Generative AI', description: 'Bring ideas to life with AI that writes, designs and creates, helping your teams move from concept to content in seconds.', },
-    { label: 'Machine Learning', description: "Turn your data into foresight. Discover hidden patterns, forecast trends and make decisions with confidence." },
-    { label: 'Conversational AI', description: "Engage your customers with chatbots that actually understand, delivering natural, human-like conversations that enhance satisfaction." },
-    { label: 'Computer Vision', description: "Empower your systems to see and understand the world, from detecting objects to automating visual quality control." },
-    { label: 'Data Science & MLOps', description: "Build reliable data models that evolve with your business, backed by streamlined workflows and continuous improvement." },
+    { label: 'AI Agents', description: "Intelligent AI agents automating workflows, enhancing customer experiences and enabling real-time decisions for operational efficiency.", },
+    { label: 'Data Science & MLOps', description: "Comprehensive machine learning operations delivering faster deployments, improved accuracy and long-term operational excellence." },
+    { label: 'Conversational AI', description: "We design and deploy conversational systems that understand context, intent, and user behavior. Our solutions automate support workflows, enhance customer engagement, and provide real time insights through intelligent dialog models tailored to your business processes." },
+    { label: 'Computer Vision', description: "We build computer vision solutions that analyze images and video to detect objects, identities, behaviors, and anomalies. These systems enable real-time monitoring, compliance enforcement, automation, and data-driven decision-making across physical and digital environments." },
+    { label: 'Optical character recognition', description: "We implement OCR engines that accurately extract, classify, and structure data from scanned documents, images, and unstructured inputs. This enables automated workflows, reduces manual data entry, and improves data accuracy across enterprise operations." },
   ]
 }
 
@@ -503,29 +502,31 @@ export const advisoryCategory = {
   bgColor: 'bg-linear-to-br from-[#084387] to-[#021021]',
   imagePosition: "top-0 right-0",
   services: [
-    {
-      label: 'Discovery Workshops',
-      description: "Collaborate with experts to explore ideas, define goals and set a clear direction for your digital journey."
-    },
-    {
-      label: 'Technical Feasibility Study',
-      description: "Know what’s possible and what’s not. We evaluate your concepts from every angle before development begins."
-    },
+    // {
+    //   label: 'Discovery Workshops',
+    //   description: "Collaborate with experts to explore ideas, define goals and set a clear direction for your digital journey."
+    // },
+    // {
+    //   label: 'Technical Feasibility Study',
+    //   description: "Know what’s possible and what’s not. We evaluate your concepts from every angle before development begins."
+    // },
     {
       label: "Product Strategy & Roadmapping",
       description: "Turn your product vision into a detailed, achievable plan with defined milestones and measurable outcomes."
-    }, {
-      label: "UX / UI Consulting",
-      description: "Design experiences that people love, blending usability, simplicity and aesthetic appeal."
-    }, {
+    }, 
+    {
       label: "Digital Transformation Consulting",
       description: "Reimagine your organization with strategies that connect technology, people and processes for long-term growth."
-    }
+    },
+    // {
+    //   label: "UX / UI Consulting",
+    //   description: "Design experiences that people love, blending usability, simplicity and aesthetic appeal."
+    // }, 
   ],
 }
 
 export const engineeringCategory = {
-  title: 'Engineering & Development',
+  title: 'Software Engineering',
   subtitletop: 'Building the Future, One Line at a Time',
   subtitlebottom: 'From web platforms to enterprise applications, our engineering team turns ideas into scalable digital solutions. Every product is crafted for reliability, performance and real-world impact.',
   accentImage: `/${accentImg}/ed_service.png`,
@@ -534,28 +535,23 @@ export const engineeringCategory = {
   imagePosition: "top-0 right-0",
   services: [
     {
+      label: "Custom Software Development",
+      description: "Purpose-built software solutions designed around your business workflows, delivering scalability, reliability, and long-term competitive advantage."},
+    {
       label: 'Web & Mobile App Development',
-      description: "Create sleek, high-performing apps that engage users and deliver seamless experiences across all devices."
+      description: "High-performance web and mobile applications engineered for usability, security, and seamless user experiences across platforms."
     },
     {
-      label: "SaaS & Cloud-based App Development",
-      description: "Develop scalable platforms that grow with your business and keep you connected anytime, anywhere."
+      label: "App Modernization",
+      description: "Upgrading legacy applications through refactoring, re-architecture, and technology upgrades to improve performance, security, and maintainability."
     },
     {
-      label: "Product Development (MVP to Enterprise Scale)",
-      description: "Whether it’s an early prototype or a large-scale system, we bring your ideas to life with speed and precision."
+      label: "Database Migration ",
+      description: "Secure and structured migration of data across platforms, ensuring data integrity, minimal downtime, and improved performance at scale."
     },
     {
-      label: "App Modernization & Migration",
-      description: "Upgrade old systems with modern technology while enhancing security, performance and flexibility."
-    },
-    {
-      label: "API & Legacy System Integration",
-      description: "Connect everything. Integrate your tools, systems and platforms to work together as one efficient ecosystem."
-    },
-    {
-      label: "QA Automation & Testing",
-      description: "Deliver flawless products with testing that ensures every release is fast, stable and ready for users."
+      label: "Third-Party Integrations",
+      description: "Seamless integration of external systems, APIs, and platforms to unify data, automate processes, and extend application capabilities."
     }
   ],
 }

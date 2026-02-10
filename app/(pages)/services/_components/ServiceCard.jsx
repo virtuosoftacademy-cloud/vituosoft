@@ -52,7 +52,6 @@ export default function ServiceCard({ category, showAll = true }) {
               {subtitlebottom}
             </p>
           </div>
-          {showAll ?
             <div
               className={`
               grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:auto-rows-fr gap-6 lg:gap-8
@@ -64,7 +63,7 @@ export default function ServiceCard({ category, showAll = true }) {
                 >
                   <div
                     className=
-                    "group relative w-full max-w-[380] bg-transparent p-9 overflow-hidden"
+                    "group relative w-full max-w-[380] bg-transparent p-8 overflow-hidden"
                   >
                     {/* Animated glowing border on hover – using ::after via Tailwind arbitrary variants */}
                     <div
@@ -111,17 +110,8 @@ export default function ServiceCard({ category, showAll = true }) {
                 </Link>
               )}
 
-            </div> : (
-              <Button className={'bg-white text-primary border-2 hover:text-accent font-bold capitalize text-lg'}>
-                <Link href={'/contact'}>
-                  <h2>
-                    {cta}
-                  </h2>
-                </Link>
-              </Button>
-            )
-          }
-
+            </div>
+          
         </div>
       </section >
     </div >
