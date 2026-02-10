@@ -7,30 +7,45 @@ import LocationsHorizontalSection from "@/components/ui/LocationsHorizontalSecti
 import MobileHistoryTimeline from "@/components/ui/MobileHistoryTimeline";
 import AboutCollage from "./components/AboutCollage";
 
-
 export default function AboutUsPage() {
   return (
-    <>
+    <main className="font-host">
       {/* HERO SECTION */}
-      <section className="relative bg-white py-16 md:py-24 overflow-hidden font-host">
+      <section className="relative bg-white py-16 md:py-24 overflow-hidden">
         {/* Text */}
         <div className="mx-auto max-w-5xl text-center px-4 md:px-6 relative z-20">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight text-[#2B3439]">
-            Where innovation meets <br />
-            vision to unlock <br />
-            <span className="block mt-2 text-5xl sm:text-6xl md:text-8xl font-sofia font-bold italic text-gray-900">
-              Potential
-            </span>
-          </h1>
+<h1 className="text-center max-w-5xl mx-auto px-4 md:px-6 relative z-20 font-host">
+  {/* Main headline (Where innovation meets vision to unlock) */}
+  <span
+  className="block font-light text-[48px] leading-[40px] tracking-tight"
+  style={{ color: "rgba(43, 52, 57, 0.83)" }}
+>
+  Where innovation meets <br />
+  vision to unlock
+</span>
 
-          <p className="mt-6 text-gray-500 max-w-3xl mx-auto text-sm sm:text-base">
-            At Virtuosoft, we turn big ideas into scalable tech that helps businesses
-            move fast and stay ahead. It’s not just about saving time or cutting costs,
-            we create smooth experiences and open doors that uplift communities,
-            driving an impact that goes way beyond technology.
-          </p>
+
+  {/* Potential */}
+  <span
+    className="block font-sofia font-bold italic text-gray-900 text-[96px] mt-2"
+    style={{ lineHeight: 1, letterSpacing: 0 }}
+  >
+    Potential<span className="text-orange-500">.</span>
+  </span>
+</h1>
+
+{/* Paragraph below */}
+<p
+  className="mt-5 max-w-3xl mx-auto text-center text-gray-500 font-light text-[16px] leading-snug tracking-tight px-4"
+>
+  At Virtuosoft, we turn big ideas into scalable tech that helps businesses move
+  fast and stay ahead. It’s not just about saving time or cutting costs, we
+  create smooth experiences and open doors that uplift communities, driving an
+  impact that goes way beyond technology.
+</p>
+
+
         </div>
-
         {/* IMAGE COLLAGE (Animated) */}
         <AboutCollage />
       </section>
@@ -51,7 +66,7 @@ export default function AboutUsPage() {
       </div>
 
       {/* MISSION TEXT */}
-      <p className="mt-10 md:mt-20 max-w-3xl mx-auto text-center font-host text-sm sm:text-xl md:text-[25px] px-4 text-[#333]">
+      <p className="mt-10 md:mt-20 max-w-3xl mx-auto text-center text-sm sm:text-xl md:text-[25px] px-4 text-[#333]">
         At <span className="font-bold">Virtuosoft</span>, we focus on human values over
         traditional KPIs and profitability. Our mission is to deliver innovative
         software solutions that drive success for both clients and employees.
@@ -62,21 +77,47 @@ export default function AboutUsPage() {
         <FounderSection />
       </div>
 
-      {/* GROWTH HEADER */}
-      <div className="mt-16 md:mt-20 font-host px-4 ml-10 md:px-6 md:ml-20 text-left">
-        <h2 className="text-2xl sm:text-sm md:text-5xl lg:text-6xl font-light text-[#2B3439]">
-          Driven by <strong>Growth</strong>
-          <span className="inline-block w-3 h-3 bg-orange-500 rounded-full align-middle ml-2"></span>
-        </h2>
+{/* GROWTH HEADER */}
+<div className="mt-16 md:mt-20 px-4 ml-10 md:px-6 md:ml-20 text-left">
+  <h2
+    className="font-host font-light text-[#2B3439]"
+    style={{
+      fontSize: "36.13px",
+      lineHeight: "38.1px",
+      letterSpacing: "-0.01em",
+    }}
+  >
+    Driven by{" "}
+    <strong className="font-bold">
+      Growth
+    </strong>
+    <span className="inline-block w-3 h-3 bg-orange-500 rounded-full align-end ml-2"></span>
+  </h2>
 
-        <span className="block mt-1 sm:mt-4 text-2xl md:text-5xl lg:text-6xl font-light leading-normal">
-          Our Ongoing <strong>Rise</strong>
-        </span>
+  <span
+    className="block font-host font-light"
+    style={{
+      fontSize: "36.13px",
+      lineHeight: "38.1px",
+      letterSpacing: "-0.01em",
+      marginTop: "0.25rem", // mt-1
+    }}
+  >
+    Our Ongoing{" "}
+    <strong className="font-bold">
+      Rise
+    </strong>
+  </span>
 
-        <h3 className="mt-1 sm:mt-3 text-2xl md:text-5xl lg:text-6xl font-semibold text-gray-300 leading-normal">
-          The Journey
-        </h3>
-      </div>
+  <h3
+  className="mt-1 sm:mt-[-20] text-2xl md:text-5xl lg:text-6xl font-semibold leading-normal"
+  style={{ color: "rgba(43, 52, 57, 0.08)" }}
+>
+  The Journey
+</h3>
+
+</div>
+
 
       {/* TIMELINE */}
       <HistoryTimeline />
@@ -84,6 +125,6 @@ export default function AboutUsPage() {
 
       {/* LOCATIONS */}
       <LocationsHorizontalSection />
-    </>
+    </main>
   );
 }
