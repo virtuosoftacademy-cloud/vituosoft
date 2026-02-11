@@ -27,18 +27,17 @@ export const logos = [
 //Navbar
 export function getSpotlightVideo(title) {
   const videoMap = {
-    "Advisory": "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?q=90&w=1120&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "Artificial Intelligence": "https://images.unsplash.com/photo-1678347123725-2d0d31bc06bd?q=80&w=1102&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "Software Engineering": "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "Data Service": "https://plus.unsplash.com/premium_photo-1740363268539-cd9093c3b5d1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "Solutions": "https://plus.unsplash.com/premium_photo-1684225764999-3597a8da10ab?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "Expertise": "https://images.unsplash.com/photo-1720289024474-946b6feabfcb?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "Advisory": "2.png",
+    "Artificial Intelligence": "3.png",
+    "Software Engineering": "4.png",
+    "Data Service": "5.png",
+    "Solutions": "6.png",
+    "Expertise": "7.png",
   };
-  return videoMap[title] || "https://images.unsplash.com/photo-1720289024474-946b6feabfcb?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+  return videoMap[title] || "5.png";
 }
 export const services_Nav = [
   {
-    icon: Code2,
     title: "Advisory",
     subPages: [
       { label: "Product Strategy & Roadmapping", href: "#" },
@@ -46,10 +45,9 @@ export const services_Nav = [
     ],
   },
   {
-    icon: Smartphone,
     title: "Artificial Intelligence",
     subPages: [
-      { label: "Custom Agent Development", href: "#" },
+      { label: "AI Agent", href: "#" },
       { label: "Generative A.I", href: "#" },
       { label: "Data Science & MLOps", href: "#" },
       { label: "Conversational Intelligence", href: "#" },
@@ -58,7 +56,6 @@ export const services_Nav = [
     ],
   },
   {
-    icon: Palette,
     title: "Software Engineering",
     subPages: [
       { label: "Custom Software Development", href: "#" },
@@ -69,7 +66,6 @@ export const services_Nav = [
     ],
   },
   {
-    icon: Globe,
     title: "Data Service",
     subPages: [
       { label: "Data Consulting ", href: "#" },
@@ -80,20 +76,20 @@ export const services_Nav = [
   {
     title:"Solutions",
     subPages:[
-      {label:"ERP solutions",href:"/"},
-      {label:"BMC helix",href:"/"},
-      {label:"microsoft dynamics 365",href:"/"},
-      {label:"Manage Engine",href:"/"},
+      {label:"ERP solutions",href:"#"},
+      {label:"BMC helix",href:"#"},
+      {label:"microsoft dynamics 365",href:"#"},
+      {label:"Manage Engine",href:"#"},
     ]
   },
   {
     title:"Expertise",
     subPages:[
-      {label:"IT governance",href:"/"},
-      {label:"cybersecurity",href:"/"},
-      {label:"RPA",href:"/"},
-      {label:"DevOps",href:"/"},
-      {label:"IT service Management",href:"/"},
+      {label:"IT governance",href:"#"},
+      {label:"cybersecurity",href:"#"},
+      {label:"RPA",href:"#"},
+      {label:"DevOps",href:"#"},
+      {label:"IT service Management",href:"#"},
     ]
   }
   // {
@@ -369,76 +365,76 @@ export const teamMembers = [
     image: `/${imageBaseUrl}/Ibrahim.png`,
     linkedin: "https://www.linkedin.com/in/syedibrahimahmed-hr/"
   },
-  {
-    name: "Saad Athar",
-    role: "Head Of Business Development, Middle East",
-    description: "Saad Athar, a seasoned Chartered Accountant, serves as the Business Development Head for the Middle East. With over 15 years of experience in the MENA region and a career spanning nine countries, Saad brings unparalleled expertise in business development, strategy, and organizational growth. His specializations include systems and process optimization, budgeting, cost recovery models, project management, and ERP implementation. Proficient in English, Arabic, and Urdu, Saad is adept at fostering cross-border collaborations and negotiating contracts. An alumnus of the University of East London and Warwick Business School, with certifications from the International Council of Shopping Centres and Covey Labs, Saad embodies a commitment to excellence. His multicultural insights and strategic vision have been instrumental in expanding operations and driving success for the organization in the Middle East region.",
-    image: `/${imageBaseUrl}/saad.png`,
-    linkedin: "https://www.linkedin.com/in/saadathar-strategist/"
-  },
-  {
-    name: "Muhammad Rehan",
-    role: "Head of Tecnology",
-    description: "Muhammad Rehan is a Lead Full Stack Engineer at Virtuosoft with nearly 8 years of hands-on experience in software development. He has grown through multiple roles from Python Developer to Senior Engineer and now leads full stack development initiatives. His expertise includes backend systems, cloud infrastructure and scalable web applications using technologies such as Python, Node.js, AWS, Django and modern JavaScript frameworks. He plays a key role in building reliable, high-performance solutions for clients across different industries.",
-    image: `/${imageBaseUrl}/m_rehan.png`,
-    linkedin: "https://www.linkedin.com/in/rehan010/"
-  },
-  {
-    name: "Aumare javed",
-    role: "Business Development Consultant , Europe",
-    description: "Currently contributing to Caansoft, a sister concern of Virtuosoft, with over a decade of expertise in delivering cutting-edge software solutions. With a strong focus on user-centric design, they excel in enhancing efficiency and quality. Skilled in leading teams to craft solutions tailored to diverse business needs, they prioritize exceptional user experiences and aesthetic excellence, ensuring alignment with organizational goals",
-    image: `/${imageBaseUrl}/aumair_javed.png`,
-    linkedin: "#"
-  },
-  {
-    name: "Adil Hasan",
-    role: "Chief Operating Officer",
-    description: "Adil Hasan is a UI/UX Designer and Digital Artist with over two decades of experience creating user-centered digital experiences. He holds a degree in Digital Media from Karachi School of Art (2013), which deepened his expertise in motion design and interactive media. Adil specializes in crafting intuitive interfaces, compelling digital artwork and engaging animations that balance aesthetic appeal with functional design. Known for his meticulous attention to detail and creative problem-solving, he helps organizations elevate their digital presence through thoughtful, human-centered design.",
-    image: `/${imageBaseUrl}/azhar_rizvi.png`,
-    linkedin: "#"
-  },
-  {
-    name: "Ahmed Nawaz",
-    role: "Sr. Business Development Manager",
-    description: "Ahmed Nawaz is a Senior Manager of Business Operations at Virtuosoft with over 12 years of experience in business management and operations. He specializes in aligning strategy with execution, improving internal processes and managing cross-functional teams. Ahmed oversees core business functions including operations, administration, vendor management and compliance. Known for his practical approach and strong leadership, he helps drive efficiency, stability and long-term growth across the organization.",
-    image: `/${imageBaseUrl}/ahmed_nawaz.png`,
-    linkedin: "https://www.linkedin.com/in/ahnawaz17/"
-  },
-  {
-    name: "Adnan Malik",
-    role: "Cyber Security Expert",
-    description: "Mr. Adnan, holds a Bachelor’s in Computer System Engineering, from the University of Engineering & Technology, Peshawar.He is an adept cybersecurity professional with expertise in Security Operations, PCI DSS compliance, VAPT, Ethical Hacking, Cyber  Security Risk Management, ISO 27001, Cloud Security, and SIEM. He excels in Threat and Vulnerability Management,",
-    image: `/${imageBaseUrl}/adnan_malik.png`,
-    linkedin: "https://www.linkedin.com/in/adnanmalikinfo/"
-  },
-  {
-    name: "Sohail malik",
-    role: "Head of Financial BPO",
-    description: "Sohail Imdad is an Associate Chartered Accountant from ICAR he has more than ten years of working experience. During the course of employment in PwC, he gained valuable experience of audit and Assurance, Taxation and Accounting & Book Keeping of multiple industries. He has also served in fastest growing pharmaceutical of Pakistan as a Lead Treasury and also in the the top FMCG of Pakistan as the Head of Taxation.",
-    image: `/${imageBaseUrl}/sohail_malik.png`,
-    linkedin: "https://www.linkedin.com/in/suhail-imdad/"
-  },
-  {
-    name: "Wasif Shariq",
-    role: "Head of Growth",
-    description: "Wasif Shariq leads strategic planning, internal operations, client relationships and external partnerships. His core focus is helping founders and businesses build strong development teams within 48–72 hours, modernize their technology stacks and scale with confidence. With hands-on experience in software development, SaaS and team building, Wasif works closely with clients to turn ideas into practical, growth-ready solutions.",
-    image: `/${imageBaseUrl}/wasif_shariq.png`,
-    linkedin: "https://www.linkedin.com/in/mwasifshariq/"
-  },
-  {
-    name: "Usman ur rehman",
-    role: "Director of IT Governance and Services",
-    description:"Usman ur Rehman is the Director of Software Quality Assurance Services at Virtuosoft. He leads the QA department with a strong focus on product reliability, performance and defect prevention. With a sharp eye for detail and deep testing expertise, he ensures that all software meets high quality standards before delivery. Known for his dedication and responsibility, Usman is trusted for handling critical testing, bug detection and overall quality assurance across projects.",
-    image: `/${imageBaseUrl}/Usman-Ur-Rehman.png`,
-    linkedin: "https://www.linkedin.com/in/usman-ur-rehman-64b67223/"
-  },
-  {
-    name: "Tahir aziz",
-    role: "Business Development Consultant, USA",
-    description: "Data Engineering and Analytics Expert with over 14 years of experience in designing, developing, and implementing complex data warehousing and big data solutions. Proficient in ETL, data modeling, and data mining techniques using industry-leading tools like Teradata, Informatica, and Hadoop. Skilled in cloud technologies like AWS and Snowflake. Passionate about leveraging data to drive business insights and improve decision-making.",
-    image: `/${imageBaseUrl}/tahir.png`,
-    linkedin: "https://www.linkedin.com/in/mrtaz/"
-  }
+  // {
+  //   name: "Saad Athar",
+  //   role: "Head Of Business Development, Middle East",
+  //   description: "Saad Athar, a seasoned Chartered Accountant, serves as the Business Development Head for the Middle East. With over 15 years of experience in the MENA region and a career spanning nine countries, Saad brings unparalleled expertise in business development, strategy, and organizational growth. His specializations include systems and process optimization, budgeting, cost recovery models, project management, and ERP implementation. Proficient in English, Arabic, and Urdu, Saad is adept at fostering cross-border collaborations and negotiating contracts. An alumnus of the University of East London and Warwick Business School, with certifications from the International Council of Shopping Centres and Covey Labs, Saad embodies a commitment to excellence. His multicultural insights and strategic vision have been instrumental in expanding operations and driving success for the organization in the Middle East region.",
+  //   image: `/${imageBaseUrl}/saad.png`,
+  //   linkedin: "https://www.linkedin.com/in/saadathar-strategist/"
+  // },
+  // {
+  //   name: "Muhammad Rehan",
+  //   role: "Head of Tecnology",
+  //   description: "Muhammad Rehan is a Lead Full Stack Engineer at Virtuosoft with nearly 8 years of hands-on experience in software development. He has grown through multiple roles from Python Developer to Senior Engineer and now leads full stack development initiatives. His expertise includes backend systems, cloud infrastructure and scalable web applications using technologies such as Python, Node.js, AWS, Django and modern JavaScript frameworks. He plays a key role in building reliable, high-performance solutions for clients across different industries.",
+  //   image: `/${imageBaseUrl}/m_rehan.png`,
+  //   linkedin: "https://www.linkedin.com/in/rehan010/"
+  // },
+  // {
+  //   name: "Aumare javed",
+  //   role: "Business Development Consultant , Europe",
+  //   description: "Currently contributing to Caansoft, a sister concern of Virtuosoft, with over a decade of expertise in delivering cutting-edge software solutions. With a strong focus on user-centric design, they excel in enhancing efficiency and quality. Skilled in leading teams to craft solutions tailored to diverse business needs, they prioritize exceptional user experiences and aesthetic excellence, ensuring alignment with organizational goals",
+  //   image: `/${imageBaseUrl}/aumair_javed.png`,
+  //   linkedin: "#"
+  // },
+  // {
+  //   name: "Adil Hasan",
+  //   role: "Chief Operating Officer",
+  //   description: "Adil Hasan is a UI/UX Designer and Digital Artist with over two decades of experience creating user-centered digital experiences. He holds a degree in Digital Media from Karachi School of Art (2013), which deepened his expertise in motion design and interactive media. Adil specializes in crafting intuitive interfaces, compelling digital artwork and engaging animations that balance aesthetic appeal with functional design. Known for his meticulous attention to detail and creative problem-solving, he helps organizations elevate their digital presence through thoughtful, human-centered design.",
+  //   image: `/${imageBaseUrl}/azhar_rizvi.png`,
+  //   linkedin: "#"
+  // },
+  // {
+  //   name: "Ahmed Nawaz",
+  //   role: "Sr. Business Development Manager",
+  //   description: "Ahmed Nawaz is a Senior Manager of Business Operations at Virtuosoft with over 12 years of experience in business management and operations. He specializes in aligning strategy with execution, improving internal processes and managing cross-functional teams. Ahmed oversees core business functions including operations, administration, vendor management and compliance. Known for his practical approach and strong leadership, he helps drive efficiency, stability and long-term growth across the organization.",
+  //   image: `/${imageBaseUrl}/ahmed_nawaz.png`,
+  //   linkedin: "https://www.linkedin.com/in/ahnawaz17/"
+  // },
+  // {
+  //   name: "Adnan Malik",
+  //   role: "Cyber Security Expert",
+  //   description: "Mr. Adnan, holds a Bachelor’s in Computer System Engineering, from the University of Engineering & Technology, Peshawar.He is an adept cybersecurity professional with expertise in Security Operations, PCI DSS compliance, VAPT, Ethical Hacking, Cyber  Security Risk Management, ISO 27001, Cloud Security, and SIEM. He excels in Threat and Vulnerability Management,",
+  //   image: `/${imageBaseUrl}/adnan_malik.png`,
+  //   linkedin: "https://www.linkedin.com/in/adnanmalikinfo/"
+  // },
+  // {
+  //   name: "Sohail malik",
+  //   role: "Head of Financial BPO",
+  //   description: "Sohail Imdad is an Associate Chartered Accountant from ICAR he has more than ten years of working experience. During the course of employment in PwC, he gained valuable experience of audit and Assurance, Taxation and Accounting & Book Keeping of multiple industries. He has also served in fastest growing pharmaceutical of Pakistan as a Lead Treasury and also in the the top FMCG of Pakistan as the Head of Taxation.",
+  //   image: `/${imageBaseUrl}/sohail_malik.png`,
+  //   linkedin: "https://www.linkedin.com/in/suhail-imdad/"
+  // },
+  // {
+  //   name: "Wasif Shariq",
+  //   role: "Head of Growth",
+  //   description: "Wasif Shariq leads strategic planning, internal operations, client relationships and external partnerships. His core focus is helping founders and businesses build strong development teams within 48–72 hours, modernize their technology stacks and scale with confidence. With hands-on experience in software development, SaaS and team building, Wasif works closely with clients to turn ideas into practical, growth-ready solutions.",
+  //   image: `/${imageBaseUrl}/wasif_shariq.png`,
+  //   linkedin: "https://www.linkedin.com/in/mwasifshariq/"
+  // },
+  // {
+  //   name: "Usman ur rehman",
+  //   role: "Director of IT Governance and Services",
+  //   description:"Usman ur Rehman is the Director of Software Quality Assurance Services at Virtuosoft. He leads the QA department with a strong focus on product reliability, performance and defect prevention. With a sharp eye for detail and deep testing expertise, he ensures that all software meets high quality standards before delivery. Known for his dedication and responsibility, Usman is trusted for handling critical testing, bug detection and overall quality assurance across projects.",
+  //   image: `/${imageBaseUrl}/Usman-Ur-Rehman.png`,
+  //   linkedin: "https://www.linkedin.com/in/usman-ur-rehman-64b67223/"
+  // },
+  // {
+  //   name: "Tahir aziz",
+  //   role: "Business Development Consultant, USA",
+  //   description: "Data Engineering and Analytics Expert with over 14 years of experience in designing, developing, and implementing complex data warehousing and big data solutions. Proficient in ETL, data modeling, and data mining techniques using industry-leading tools like Teradata, Informatica, and Hadoop. Skilled in cloud technologies like AWS and Snowflake. Passionate about leveraging data to drive business insights and improve decision-making.",
+  //   image: `/${imageBaseUrl}/tahir.png`,
+  //   linkedin: "https://www.linkedin.com/in/mrtaz/"
+  // }
 ]
 
 
@@ -454,12 +450,18 @@ export const aiCategory = {
   imagePosition: "-top-6 -right-4",
   href:"/services/ai/",
   services: [
-    { label: 'AI Agents', description: "Intelligent AI agents automating workflows, enhancing customer experiences and enabling real-time decisions for operational efficiency.", },
-    { label: 'Generative AI', description: "Advanced generative AI services enabling intelligent automation, personalized experiences and rapid prototyping for business transformation." },
-    { label: 'Data Science & MLOps', description: "Comprehensive machine learning operations delivering faster deployments, improved accuracy and long-term operational excellence." },
-    { label: 'Conversational AI', description: "We design and deploy conversational systems that understand context, intent, and user behavior. Our solutions automate support workflows, enhance customer engagement, and provide real time insights through intelligent dialog models tailored to your business processes." },
-    { label: 'Computer Vision', description: "We build computer vision solutions that analyze images and video to detect objects, identities, behaviors, and anomalies. These systems enable real-time monitoring, compliance enforcement, automation, and data-driven decision-making across physical and digital environments." },
-    { label: 'Optical character recognition', description: "We implement OCR engines that accurately extract, classify, and structure data from scanned documents, images, and unstructured inputs. This enables automated workflows, reduces manual data entry, and improves data accuracy across enterprise operations." },
+    { label: 'AI Agent', description: "Intelligent AI agents automating workflows, enhancing customer experiences and enabling real-time decisions for operational efficiency.", slug:'ai-agent'},
+    { label: 'Generative AI', description: "Advanced generative AI services enabling intelligent automation, personalized experiences and rapid prototyping for business transformation.",slug:'generative-ai' },
+    { label: 'Data Science & MLOps', description: "Comprehensive machine learning operations delivering faster deployments, improved accuracy and long-term operational excellence.",slug:'data-science' },
+    { label: 'Conversational AI', description: "We design and deploy conversational systems that understand context, intent, and user behavior. Our solutions automate support workflows, enhance customer engagement, and provide real time insights through intelligent dialog models tailored to your business processes.",
+      slug:"conversational-intelligence"
+     },
+    { label: 'Computer Vision', description: "We build computer vision solutions that analyze images and video to detect objects, identities, behaviors, and anomalies. These systems enable real-time monitoring, compliance enforcement, automation, and data-driven decision-making across physical and digital environments.",
+      slug:"computer-vision"
+     },
+    { label: 'Optical character recognition', description: "We implement OCR engines that accurately extract, classify, and structure data from scanned documents, images, and unstructured inputs. This enables automated workflows, reduces manual data entry, and improves data accuracy across enterprise operations.",
+      slug:"optical-character-recognition"
+     },
   ]
 }
 
@@ -515,11 +517,13 @@ export const advisoryCategory = {
     // },
     {
       label: "Product Strategy & Roadmapping",
-      description: "Turn your product vision into a detailed, achievable plan with defined milestones and measurable outcomes."
+      description: "Turn your product vision into a detailed, achievable plan with defined milestones and measurable outcomes.",
+      // slug:"#"
     }, 
     {
       label: "Digital Transformation Consulting",
-      description: "Reimagine your organization with strategies that connect technology, people and processes for long-term growth."
+      description: "Reimagine your organization with strategies that connect technology, people and processes for long-term growth.",
+      // slug:"#"
     },
     // {
     //   label: "UX / UI Consulting",
@@ -539,22 +543,28 @@ export const engineeringCategory = {
   services: [
     {
       label: "Custom Software Development",
-      description: "Purpose-built software solutions designed around your business workflows, delivering scalability, reliability, and long-term competitive advantage."},
+      description: "Purpose-built software solutions designed around your business workflows, delivering scalability, reliability, and long-term competitive advantage.",
+      // slug:"#"
+    },
     {
       label: 'Web & Mobile App Development',
-      description: "High-performance web and mobile applications engineered for usability, security, and seamless user experiences across platforms."
+      description: "High-performance web and mobile applications engineered for usability, security, and seamless user experiences across platforms.",
+      // slug:"#"
     },
     {
       label: "App Modernization",
-      description: "Upgrading legacy applications through refactoring, re-architecture, and technology upgrades to improve performance, security, and maintainability."
+      description: "Upgrading legacy applications through refactoring, re-architecture, and technology upgrades to improve performance, security, and maintainability.",
+      // slug:"#"
     },
     {
       label: "Database Migration ",
-      description: "Secure and structured migration of data across platforms, ensuring data integrity, minimal downtime, and improved performance at scale."
+      description: "Secure and structured migration of data across platforms, ensuring data integrity, minimal downtime, and improved performance at scale.",
+      // slug:"#"
     },
     {
       label: "Third-Party Integrations",
-      description: "Seamless integration of external systems, APIs, and platforms to unify data, automate processes, and extend application capabilities."
+      description: "Seamless integration of external systems, APIs, and platforms to unify data, automate processes, and extend application capabilities.",
+      // slug:"#"
     }
   ],
 }

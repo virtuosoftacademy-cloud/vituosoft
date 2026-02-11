@@ -128,7 +128,7 @@ export default function Nav() {
                                     <div>
                                       <Link
                                         href={sub.href}
-                                        className="text-sm font-medium text-primary hover:underline"
+                                        className="text-sm font-medium text-primary hover:underline capitalize"
                                       >
                                         {sub.label}
                                       </Link>
@@ -159,14 +159,14 @@ export default function Nav() {
                     <div className="row-span-2 flex flex-col">
                       {/* <h4 className="text-lg font-semibold mb-3">Spotlight</h4> */}
                       {/* <div className="flex-1 bg-muted/40 rounded-lg overflow-hidden border border-border"> */}
-                      <div className="aspect-square w-full mt-6">
+                      <div className="aspect-square w-full mt-2">
                         <Image
                           width="100"
                           height="100"
                           alt="/"
                           src={getSpotlightVideo(services_Nav[activeService].title)}
                           title={`${services_Nav[activeService].title} Spotlight Video`}
-                          className="w-sm h-64"
+                          className="w-xs h-auto"
                         />
                         {/* <iframe
                             width="100%"
@@ -213,7 +213,7 @@ export default function Nav() {
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="lg:hidden mt-4 px-4">
-          <div className="flex flex-col items-center p-8 gap-8 text-xl font-medium bg-accent/95 backdrop-blur rounded-2xl border border-border/50">
+          <div className="flex flex-col p-8 gap-8 text-xl font-medium bg-accent/95 backdrop-blur rounded-2xl border border-border/50">
             <Link href="/about-us" onClick={() => setMobileOpen(false)}>
               About Us
             </Link>

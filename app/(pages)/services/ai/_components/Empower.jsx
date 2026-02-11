@@ -1,11 +1,10 @@
 'use client'
+
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useMotionValue, useAnimate } from 'framer-motion';
 import { aiAgentsEmpower } from '../../constant';
 
-
-export default function Empower(Data) {
-  const {title,items} = Data
+export default function Empower({ title, items }) {
   const containerRef = useRef(null);
   const [scope, animate] = useAnimate();
   const x = useMotionValue(0);
@@ -44,7 +43,7 @@ export default function Empower(Data) {
   };
 
   const goNext = () => {
-    if (currentIndex < aiAgentsEmpower.length - 1) {
+    if (currentIndex < items.length - 1) {
       slideTo(currentIndex + 1);
     }
   };
@@ -53,13 +52,12 @@ export default function Empower(Data) {
   const handleDragEnd = (_, info) => {
     if (cardWidth === 0) return;
 
-    const currentX = x.get();
     const movedBy = info.offset.x;
-    const threshold = cardWidth * 0.35; // drag 35% of card width → change slide
+    const threshold = cardWidth * 0.35;
 
     let newIndex = currentIndex;
 
-    if (movedBy < -threshold && currentIndex < aiAgentsEmpower.length - 1) {
+    if (movedBy < -threshold && currentIndex < items.length - 1) {
       newIndex += 1;
     } else if (movedBy > threshold && currentIndex > 0) {
       newIndex -= 1;
@@ -70,7 +68,7 @@ export default function Empower(Data) {
 
   // Approximate number of visible cards (used for drag limits)
   const cardsPerView = typeof window !== 'undefined' && window.innerWidth >= 1024 ? 4 : 1;
-  const maxDragOffset = -(aiAgentsEmpower.length - cardsPerView) * cardWidth;
+  const maxDragOffset = -(items.length - cardsPerView) * cardWidth;
 
   return (
     <section className="bg-foreground py-10 pr-16 overflow-hidden mt-20">
@@ -92,7 +90,7 @@ export default function Empower(Data) {
             </button>
             <button
               onClick={goNext}
-              disabled={currentIndex >= aiAgentsEmpower.length - 4}
+              disabled={currentIndex >= items.length - 4}
               className="w-12 h-12 md:w-[55] md:h-[55] rounded-full border border-[#7B7B7B] text-[#7B7B7B] text-3xl flex items-center justify-center transition-colors hover:border-white hover:text-white disabled:opacity-40 disabled:hover:border-[#7B7B7B] disabled:hover:text-[#7B7B7B] focus:outline-none"
               aria-label="Next slide"
             >

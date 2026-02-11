@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 function ValueSection(value) {
-  const {titleBold, titleNormal,valueItems } = value
+  const { titleBold, titleNormal, valueItems } = value
   return (
     <section className="py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
@@ -9,7 +9,7 @@ function ValueSection(value) {
           <h4 >
             {titleNormal} {" "}
             <strong>
-            {titleBold}
+              {titleBold || ''}
             </strong>
             ?
           </h4>
