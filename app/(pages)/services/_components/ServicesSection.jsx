@@ -9,10 +9,10 @@ export default function ServicesSection() {
     <div className="space-y-6 md:space-y-8 lg:space-y-10 py-12 md:py-16">
       <ServiceCard category={aiCategory} />
       <ServiceCard category={advisoryCategory} />
-      <ServiceCard category={engineeringCategory} />
+      {/* <ServiceCard category={engineeringCategory} />
       <ServiceCard category={cloudCategory} />
       <ServiceCard category={optimizationCategory}/>
-      <ServiceCard category={engagementCategory}/>
+      <ServiceCard category={engagementCategory}/> */}
     </div>
   )
 } 
