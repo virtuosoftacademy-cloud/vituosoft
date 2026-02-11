@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useMotionValue, useAnimate } from 'framer-motion';
-import { aiAgentsEmpower } from '../../constant';
+import { aiAgentsEmpower } from '../constant';
 
 export default function Empower({ title, items }) {
   const containerRef = useRef(null);

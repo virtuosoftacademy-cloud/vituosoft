@@ -518,12 +518,12 @@ export const advisoryCategory = {
     {
       label: "Product Strategy & Roadmapping",
       description: "Turn your product vision into a detailed, achievable plan with defined milestones and measurable outcomes.",
-      // slug:"#"
+      slug:"product-strategy"
     }, 
     {
       label: "Digital Transformation Consulting",
       description: "Reimagine your organization with strategies that connect technology, people and processes for long-term growth.",
-      // slug:"#"
+      slug:"digital-transformation"
     },
     // {
     //   label: "UX / UI Consulting",

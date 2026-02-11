@@ -1,7 +1,7 @@
 import StepWidget from "@/components/common/StepWidget";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { stepsData } from "../../constant";
+import { stepsData } from "../../ai/constant";
 
 export default function TimeLine(timeLine) {
   const {titleBold, titlenormal,timeLineItems } = timeLine
