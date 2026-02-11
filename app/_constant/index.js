@@ -540,31 +540,32 @@ export const engineeringCategory = {
   textColor: 'text-white',
   bgColor: 'bg-linear-to-br from-[#0E3043] to-[#485861]',
   imagePosition: "top-0 right-0",
+  href:"/services/softengineering/",
   services: [
     {
       label: "Custom Software Development",
       description: "Purpose-built software solutions designed around your business workflows, delivering scalability, reliability, and long-term competitive advantage.",
-      // slug:"#"
+      slug:"custom-software-development"
     },
     {
-      label: 'Web & Mobile App Development',
+      label: 'App Development (Mobile & Web)',
       description: "High-performance web and mobile applications engineered for usability, security, and seamless user experiences across platforms.",
-      // slug:"#"
+      slug:"app-development"
     },
     {
       label: "App Modernization",
       description: "Upgrading legacy applications through refactoring, re-architecture, and technology upgrades to improve performance, security, and maintainability.",
-      // slug:"#"
+      slug:"app-modernization"
     },
     {
-      label: "Database Migration ",
+      label: "Database Migration",
       description: "Secure and structured migration of data across platforms, ensuring data integrity, minimal downtime, and improved performance at scale.",
-      // slug:"#"
+      slug:"database-migration"
     },
     {
       label: "Third-Party Integrations",
       description: "Seamless integration of external systems, APIs, and platforms to unify data, automate processes, and extend application capabilities.",
-      // slug:"#"
+      slug:"third-party"
     }
   ],
 }

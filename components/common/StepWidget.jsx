@@ -8,8 +8,8 @@ export default function StepWidget({ heading, button, steps }) {
       <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-x-16">
 
         {/* LEFT COLUMN — STATIC / STICKY */}
-        <div className="lg:sticky lg:top-56 self-start pl-2 md:w-lg">
-          <h2 className="text-4xl sm:text-5xl font-light text-gray-900 leading-tight">
+        <div className="lg:sticky lg:top-56 self-start pl-2 md:w-xs">
+          <h2 className="text-4xl sm:text-5xl text-gray-900 leading-tight">
             {heading}
           </h2>
 

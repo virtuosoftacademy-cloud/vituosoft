@@ -15,16 +15,16 @@ function PostCard({post}) {
                             alt={title}
                             width={400}
                             height={400}
-                            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                            className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute top-4 left-4">
-                            <h3 className="bg-primary tracking-wider text-accent px-3 py-1 rounded-full text-xs font-medium">
+                            <h3 className="bg-primary tracking-wider text-accent px-3 py-1 rounded-full text-sm font-medium">
                                 {category}
                             </h3>
                         </div>
                     </div>
 
-                    <CardHeader>
+                    <CardHeader className={'-space-y-0.5!'}>
                         <div className="flex items-center space-x-4 text-sm text-slate-500 mb-2">
                             <div className="flex items-center space-x-1">
                                 <Calendar className="w-4 h-4" />
@@ -35,13 +35,13 @@ function PostCard({post}) {
                                 <span>{readTime}</span>
                             </div> */}
                         </div>
-                        <CardTitle className="text-lg font-serif group-hover:text-primary transition-colors">
+                        <CardTitle className="text-lg font-extrabold group-hover:text-primary transition-colors leading-5">
                             {title}
                         </CardTitle>
                     </CardHeader>
 
-                    <CardContent>
-                        <p className="text-slate-600 text-sm line-clamp-2">
+                    <CardContent className={'-mt-2'}>
+                        <p className="text-slate-600 text-sm">
                             {excerpt}
                         </p>
                     </CardContent>
