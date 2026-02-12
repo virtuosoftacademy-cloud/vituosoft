@@ -2,16 +2,16 @@
 import { notFound } from 'next/navigation';
 import { ReactLenis } from 'lenis/react';
 import Hero from '../_components/Hero';
-import ValueSection from '../_components/ValueSection';
-import Success from '../_components/Success';
 import Empower from '../_components/Empower';
 import { aiAgentsEmpower, aiAgentsHero, ComHero, ConHero, DataScienceHero, EmpowerCom, EmpowerCon, EmpowerDataScience, EmpowerGen, EmpowerOcr, genaiHero, OcrHero, stepsData, stepsDataCom, stepsDataCon, stepsDataGen, stepsDataOcr, stepsDataScience, valueData, valueDataCom, valueDataCon, valueDataGen, valueDataOcr, valueDataScience } from '../constant';
-import TimeLine from '../_components/TimeLine';
 import Cta from '@/components/common/Cta';
-import Faq from '../_components/Faq';
+import Faq from '../../../../../components/common/Faq';
 import { Faq_AI_ComputerVision, Faq_AI_ConversationalAI, Faq_AI_CustomAgent, Faq_AI_DataScience_MLOps, Faq_AI_GenerativeAI, Faq_AI_OCR } from '@/app/_constant';
 import Blogs from '@/app/(pages)/blogs/page';
 import Engage from '../../common/Engage';
+import Success from '../../common/Success';
+import TimeLine from '../../common/TimeLine';
+import ValueSection from '../../common/ValueSection';
 
 
 // ────────────────────────────────────────────────
@@ -162,7 +162,7 @@ export default async function ServicePage({ params }) {
 
   return (
     <ReactLenis root>
-      <main className="min-h-screen bg-background antialiased pt-40">
+      <main className="min-h-screen bg-background antialiased pt-2">
         {service.sections.map(({ Component, props = {} }, index) => (
           <Component key={index} {...props} />
         ))}

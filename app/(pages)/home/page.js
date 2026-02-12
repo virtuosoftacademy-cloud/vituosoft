@@ -6,7 +6,8 @@ import LogoCloud from "./_components/LogoCloud"
 import { ReactLenis } from 'lenis/react'
 import Technology from "./_components/Technology"
 import Cta from "@/components/common/Cta"
-import Faq from "@/app/(pages)/home/_components/Faq"
+import Faq from "@/components/common/Faq"
+import { Faq_Home } from "@/app/_constant"
 function Home() {
   return (
     <>
@@ -19,7 +20,7 @@ function Home() {
           <InnovativeSolutions />
           <Technology />
           <div>
-          <Faq />
+          <Faq items={Faq_Home}/>
           </div>
           <Cta />
         </div>

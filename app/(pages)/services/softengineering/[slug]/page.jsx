@@ -2,16 +2,16 @@
 import { notFound } from 'next/navigation';
 import { ReactLenis } from 'lenis/react';
 import Hero from '../_components/Hero';
-import ValueSection from '../_components/ValueSection';
-import Success from '../_components/Success';
+import ValueSection from '../../common/ValueSection';
 import Empower from '../_components/Empower';
-import { aiAgentsEmpower, aiAgentsHero, AppDevHero, ComHero, ConHero, CustomHero, DataScienceHero, EmpowerCom, EmpowerCon, EmpowerDataScience, EmpowerGen, EmpowerOcr, genaiHero, OcrHero, stepsData, stepsDataAppDev, stepsDataCom, stepsDataCon, stepsDataCustomSoftware, stepsDataGen, stepsDataOcr, stepsDataScience, valueData, valueDataAppDev, valueDataCom, valueDataCon, valueDataGen, valueDataOcr, valueDataScience } from '../constant';
-import TimeLine from '../_components/TimeLine';
+import {  AppDevHero, AppModHero, CustomEmpower, CustomHero, DataMigHero, EmpowerAppMod, EmpowerDataMig, EmpowerThirdParty, stepsDataAppDev, stepsDataAppMod, stepsDataCustomSoftware, stepsDataMig, stepsDataThirdParty, ThirdPartyHero, valueData, valueDataAppDev, valueDataAppMod, valueDataMig, valueDataThirdParty } from '../constant';
+import TimeLine from '../../common/TimeLine';
 import Cta from '@/components/common/Cta';
-import Faq from '../_components/Faq';
-import { Faq_AI_ComputerVision, Faq_AI_ConversationalAI, Faq_AI_CustomAgent, Faq_AI_DataScience_MLOps, Faq_AI_GenerativeAI, Faq_AI_OCR } from '@/app/_constant';
+import { Faq_softwareeng_ApplicationDevelopment, Faq_softwareeng_ApplicationModernization, Faq_softwareeng_databaseMigration, Faq_softwareeng_SoftwareDevelopment, Faq_softwareeng_thirdPartyIntegration } from '@/app/_constant';
 import Blogs from '@/app/(pages)/blogs/page';
 import Engage from '../../common/Engage';
+import Success from '../../common/Success';
+import Faq from '@/components/common/Faq';
 
 
 // ────────────────────────────────────────────────
@@ -22,17 +22,17 @@ const services = [
     title: 'Custom Software Development',
     heroData: CustomHero,
     value: valueData[0],
-    Data: aiAgentsEmpower[0],
+    Data: CustomEmpower[0],
     timeLine: stepsDataCustomSoftware[0],
     sections: [
       { Component: Hero, props: CustomHero },
       { Component: ValueSection, props: valueData[0] },
       { Component: Success },
       { Component: TimeLine, props: stepsDataCustomSoftware[0] },
-      { Component: Empower, props: aiAgentsEmpower[0] },
+      // { Component: Empower, props: CustomEmpower[0] },
       { Component: Blogs },
       { Component: Engage },
-      // { Component: Faq, props: { items: Faq_AI_Soft } },
+      { Component: Faq, props: { items: Faq_softwareeng_SoftwareDevelopment } },
       { Component: Cta },
     ],
   },
@@ -49,10 +49,67 @@ const services = [
       { Component: TimeLine, props: stepsDataAppDev[0] },
       { Component: Blogs },
       { Component: Engage },
-      // { Component: Faq, props: { items: Faq_AI_Soft } },
+      { Component: Faq, props: { items: Faq_softwareeng_ApplicationDevelopment } },
       { Component: Cta },
     ],
-  }
+  },
+  {
+    slug: 'app-modernization',
+    title: 'Application Modernization',
+    heroData: AppModHero,
+    value: valueDataAppMod[0],
+    timeLine: stepsDataAppMod[0],
+    Data: EmpowerAppMod[0],
+    sections: [
+      { Component: Hero, props: AppModHero },
+      { Component: ValueSection, props: valueDataAppMod[0] },
+      { Component: Success },
+      { Component: TimeLine, props: stepsDataAppMod[0] },
+      { Component: Empower, props: EmpowerAppMod[0] },
+      { Component: Blogs },
+      { Component: Engage },
+      { Component: Faq, props: { items: Faq_softwareeng_ApplicationModernization } },
+      { Component: Cta },
+    ],
+  },
+  {
+    slug: 'database-migration',
+    title: 'Database Migration',
+    heroData: DataMigHero,
+    value: valueDataMig[0],
+    timeLine: stepsDataMig[0],
+    Data: EmpowerDataMig[0],
+    sections: [
+      { Component: Hero, props: DataMigHero },
+      { Component: ValueSection, props: valueDataMig[0] },
+      { Component: Success },
+      { Component: TimeLine, props: stepsDataMig[0] },
+      { Component: Empower, props: EmpowerDataMig[0] },
+      { Component: Blogs },
+      { Component: Engage },
+      { Component: Faq, props: { items: Faq_softwareeng_databaseMigration } },
+      { Component: Cta },
+    ],
+  },
+  {
+    slug: 'third-party',
+    title: 'Third-Party Integration',
+    heroData: ThirdPartyHero,
+    value: valueDataThirdParty[0],
+    timeLine: stepsDataThirdParty[0],
+    Data: EmpowerThirdParty[0],
+    sections: [
+      { Component: Hero, props: ThirdPartyHero },
+      { Component: ValueSection, props: valueDataThirdParty[0] },
+      { Component: Success },
+      { Component: TimeLine, props: stepsDataThirdParty[0] },
+      { Component: Empower, props: EmpowerThirdParty[0] },
+      { Component: Blogs },
+      { Component: Engage },
+      { Component: Faq, props: { items: Faq_softwareeng_thirdPartyIntegration } },
+      { Component: Cta },
+    ],
+  },
 ];
 
 // Helper to find service by slug
@@ -83,7 +140,7 @@ export default async function ServicePage({ params }) {
 
   return (
     <ReactLenis root>
-      <main className="min-h-screen bg-background antialiased pt-40">
+      <main className="min-h-screen bg-background antialiased pt-2">
         {service.sections.map(({ Component, props = {} }, index) => (
           <Component key={index} {...props} />
         ))}

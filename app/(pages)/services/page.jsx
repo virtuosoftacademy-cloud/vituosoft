@@ -6,7 +6,6 @@ import Hero from './_components/Hero'
 import ServicesSection from './_components/ServicesSection'
 import { ReactLenis } from 'lenis/react'
 import Different from './_components/Different'
-import Faq from '@/app/(pages)/home/_components/Faq'
 
 function Services() {
     return (

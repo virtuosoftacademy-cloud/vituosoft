@@ -1,7 +1,7 @@
 import { DatabaseZap, Package, Users } from 'lucide-react';
 
 function Engage() {
-    const aiAgentsEngage = [
+    const EngageData = [
         {
             icon: Users,
             title: "Teams That Deliver",
@@ -29,7 +29,7 @@ function Engage() {
                 <div className='mt-10'>
                     {/* Cards */}
                     <div className='flex flex-wrap md:flex-nowrap gap-5'>
-                        {aiAgentsEngage.map((item, index) => (
+                        {EngageData.map((item, index) => (
                             <div
                                 key={index}
                                 className={`

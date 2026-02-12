@@ -2,7 +2,7 @@
 
 import StepItem from "./StepItem";
 
-export default function StepWidget({ heading, button, steps }) {
+export default function StepWidget({ heading, button, steps, outComes }) {
   return (
     <section className="relative py-24 px-8">
       <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-x-16">
@@ -29,6 +29,16 @@ export default function StepWidget({ heading, button, steps }) {
               />
             ))}
           </div>
+          {outComes && outComes.length>0 &&
+            (<div className="flex flex-col gap-2 md:pl-6">
+              <h2 className="text-3xl md:text-4xl"><strong>Business</strong> OutComes</h2>
+              {outComes.map((outCome, index) => (
+                <li key={index} className="list-disc">
+                  {outCome.point}
+                </li>
+              ))}
+            </div>)
+          }
         </div>
 
       </div>

@@ -12,7 +12,7 @@ export default function Hero(heroData ) {
             <section
                 className=
                 {`relative 
-        py-20 px-10 md:px-20 lg:px-32 
+        py-10 md:py-20 px-10 md:px-20 lg:px-32 
         text-left 
         overflow-hidden 
         shadow-2xl shadow-black/15
@@ -45,7 +45,7 @@ export default function Hero(heroData ) {
                         </p>
                     </div>
                     <div className="flex justify-center md:justify-start">
-                        <Button className={'text-sm bg-white text-[#084387] hover:bg-[#084387] hover:text-accent font-bold capitalize md:text-lg'}>
+                        <Button className={'bg-white text-[#084387] hover:bg-[#084387] hover:text-accent font-bold capitalize text-lg'}>
                             <Link href={'/contact'}>
                                 <h2>
                                     {btnTitle}

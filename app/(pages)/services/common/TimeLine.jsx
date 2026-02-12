@@ -1,10 +1,9 @@
 import StepWidget from "@/components/common/StepWidget";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { stepsData } from "../constant";
 
 export default function TimeLine(timeLine) {
-  const { titleParts, timeLineItems } = timeLine
+  const { titleParts, timeLineItems,businessOutComes } = timeLine
   return (
     <StepWidget
       heading={
@@ -26,6 +25,7 @@ export default function TimeLine(timeLine) {
         </Button>
       }
       steps={timeLineItems}
+      outComes={businessOutComes}
     />
   );
 }

@@ -69,6 +69,7 @@ export const stepsDataCustomSoftware = [
       { text: "Vision to Value-Driven", bold: true },
       "Deployment"
     ],
+
     timeLineItems: [
       {
         title: "Discovery & Strategic Blueprinting",
@@ -108,15 +109,32 @@ export const stepsDataCustomSoftware = [
         title: "Ongoing Support & Evolution",
         description: "We offer post-launch support, maintenance and iterative enhancements to ensure your software continues to deliver value and adapt to new needs."
       }
+    ],
+    businessOutComes: [
+      { 
+        point:"A perfectly aligned digital asset that accelerates core business processes"
+      },
+      {
+        point:"A unique, market-differentiating proprietary advantage"
+      },
+      {
+        point:"A unified, efficient and future-proof technology ecosystem"
+      },
+      {
+        point:"Enhanced security, compliance and complete ownership of your IP"
+      },
+      {
+        point:"Sustainable operational efficiency through intelligent automation"
+      }
     ]
   }
 ];
 
 //Empower
-//Empower Your Operations with AI Agents
-export const aiAgentsEmpower = [
+//End-to-End Tailored Technology Solutions
+export const CustomEmpower = [
   {
-    title: "Visual Intelligence Built for Real-World Impact",
+    title: "End-to-End Tailored Technology Solutions",
     items: [
       {
         title: "Enterprise Application Development",
@@ -308,56 +326,59 @@ export const EmpowerGen = [
   }
 ]
 
-//Data Science & MLOps
+//Application Modernization
 //Hero
-export const DataScienceHero = {
-  title: 'Data Science & MLOps',
-  topDescription: 'Artificial Intelligence',
+export const AppModHero = {
+  title: 'Application Modernization',
+  topDescription: 'Engineering',
   bottomDescription:
-    'At Virtuosoft, we bring together the power of Data Science and MLOps to transform raw information into intelligent, scalable and production-ready AI systems. From advanced analytics and predictive modeling to seamless deployment and continuous monitoring, we help organizations turn data into decisions and machine learning into measurable business impact.',
-  btnTitle: 'Build Intelligent, Scalable AI Systems',
+    'At Virtuosoft, we transform legacy systems into cloud-native platforms using microservices architecture, containerization and DevOps automation, delivering scalable, secure and future-ready applications that accelerate your digital evolution.',
+  btnTitle: 'Modernize with Virtuosoft',
 };
 // Value Section A.I
 //When Intelligence + Automation Become Your Competitive Advantage? 
-export const valueDataScience = [
+export const valueDataAppMod = [
   {
-    titleNormal: "When Intelligence + Automation Become Your Competitive Advantage",
-    // titleBold: "AI Agents",
+    titleParts: [
+      "Why Should ",
+      { text: "Businesses Modernize Their Applications", bold: true },
+      " Now"
+    ],
     valueItems: [
       {
-        title: "Data Complexity & Overload",
+        title: "Accelerate Digital Transformation",
         description:
-          "Drowning in data with no clarity? We transform unstructured information into meaningful insights using advanced analytics, ML models and visualization tools.",
+          "Modernization eliminates inefficient processes through automation and agile methodologies. We help you implement streamlined workflows that reduce operational friction and accelerate time-to-market for your digital initiatives.",
         image: `/${valueImg}/automate.svg`,
       },
       {
-        title: "Scaling AI with Confidence",
+        title: "Overcome Technical Debt",
         description:
-          "Struggling to maintain model performance as you grow? Our MLOps pipelines introduce autoscaling, real-time monitoring and drift detection to keep models stable and reliable.",
+          "Legacy systems create mounting maintenance costs and compatibility issues. Our modernization approach replaces outdated architecture with cloud-native solutions that scale effortlessly with your growing business needs.",
         image: `/${valueImg}/scale.svg`,
       },
       {
-        title: "Slow or Inconsistent ML Deployments",
+        title: "Optimize Total Cost of Ownership",
         description:
-          "Deploying models still feels manual or messy? We build automated CI/CD workflows, containerized environments and cloud-ready architectures for frictionless deployment.",
+          "Reduce unnecessary spending on legacy maintenance and inefficient infrastructure. Our solutions leverage cloud economics and automated processes to deliver significant cost savings while improving performance metrics.",
         image: `/${valueImg}/enhance.svg`,
       },
       {
-        title: "Security, Risk & Threat Detection Needs",
+        title: "Strengthen Security Posture",
         description:
-          "Need to identify anomalies, fraud or system breaches? Our data science frameworks provide predictive security insights and anomaly detection.",
+          "Outdated applications expose your business to evolving cyber threats. We integrate advanced security frameworks and compliance measures that protect your data and maintain regulatory adherence across all systems.",
         image: `/${valueImg}/solve.svg`,
       },
       {
-        title: "Cost Optimization Challenges",
+        title: "Enhance System Performance",
         description:
-          "Struggling with operational inefficiencies or unpredictable expenses? We use data-driven forecasting and optimization models to maximize ROI and reduce spending.",
+          "Eliminate bottlenecks slowing down your business operations. Our modernization improves application responsiveness and reliability, ensuring seamless user experiences even during peak demand periods.",
         image: `/${valueImg}/mitigate.svg`,
       },
       {
-        title: "Modernizing Legacy Systems",
+        title: "Future-Proof Your Technology",
         description:
-          "Outdated systems holding you back? We integrate legacy data with modern analytical ecosystems and robust MLOps frameworks.",
+          "Stay competitive with modern, adaptable technology stacks. We upgrade your infrastructure to support emerging innovations, ensuring your business remains agile and responsive to market changes.",
         image: `/${valueImg}/enable.svg`,
       },
     ]
@@ -366,76 +387,50 @@ export const valueDataScience = [
 
 // TimeLine 
 //Process for Building Intelligent AI Agents
-export const stepsDataScience = [
+export const stepsDataAppMod = [
   {
-    titleBold: "Process",
-    titlenormal: "Data Science + MLOps",
+    titleParts: [
+      { text: "Application Modernization", bold: true },
+      " Solutions"
+    ],
     timeLineItems: [
       {
-        title: "Define Objectives & Use Cases",
+        title: "System Review",
         description:
-          "Identify business challenges and determine where AI and analytics can create impact.",
+          "We begin by thoroughly assessing your current applications to pinpoint performance bottlenecks and technical debt.",
       },
       {
-        title: "Data Acquisition & Validation",
+        title: "Plan Creation",
         description:
-          "Consolidate data from multiple sources with strict quality checks.",
+          "Our team then creates a detailed, phased transformation plan aligned with your specific business objectives.",
       },
       {
-        title: "Data Exploration & Pattern Discovery",
+        title: "Architecture Design",
         description:
-          "Analyze trends, correlations and early insights that shape modeling decisions.",
+          "We design a scalable cloud-native foundation using microservices and modern technology stacks.",
       },
       {
-        title: "Feature Engineering",
+        title: "Code Upgrade",
         description:
-          "Transform raw variables into meaningful inputs for optimal model performance.",
+          "Next, we systematically modernize your codebase, enhancing functionality while maintaining business logic integrity.",
       },
       {
-        title: "Data Preparation & Splitting",
+        title: "Data Transfer",
         description:
-          "Organize datasets for training, validation and testing.",
+          "We carefully migrate and integrate your data assets to the new environment, ensuring integrity.",
       },
       {
-        title: "Model Selection & Architecture Design",
+        title: "Testing & Optimization",
         description:
-          "Choose the right ML/statistical models for your goals.",
+          "Each modernized component undergoes thorough testing for performance, security, and reliability validation.",
       },
       {
-        title: "Model Training & Experimentation",
-        description: "Iterate across algorithms, hyperparameters and configurations."
+        title: "Go-Live",
+        description: "We execute a carefully managed rollout with comprehensive monitoring and instant rollback capabilities."
       },
       {
-        title: "Model Evaluation & Benchmarking",
-        description: "Validate model performance using precision-based metrics."
-      },
-      {
-        title: "Optimization & Fine-Tuning",
-        description: "Enhance efficiency, accuracy and generalization."
-      },
-      {
-        title: "Model Packaging & Version Control",
-        description: "Containerize models and manage versions for governance."
-      },
-      {
-        title: "Automated CI/CD for ML Pipelines",
-        description: "Implement automated processes for training, testing and deployment."
-      },
-      {
-        title: "Deployment Across Environments",
-        description: "Launch models on cloud, hybrid or edge environments with full orchestration."
-      },
-      {
-        title: "Monitoring & Drift Detection",
-        description: "Track model behavior, accuracy, latency and health in real time."
-      },
-      {
-        title: "Feedback Loop & Continuous Learning",
-        description: "Incorporate new data and insights to refine models."
-      },
-      {
-        title: "Scaling & Enterprise Expansion",
-        description: "Extend successful models across departments, markets and use cases."
+        title: "Ongoing Updates",
+        description: "Finally, we implement ongoing optimizations based on real-world usage data and evolving needs."
       }
     ]
   }
@@ -443,93 +438,111 @@ export const stepsDataScience = [
 
 //Empower
 //Intelligent Solutions That Turn Data Into Decisions and Models Into Scalable Systems
-export const EmpowerDataScience = [
+export const EmpowerAppMod = [
   {
-    title: "Intelligent Solutions That Turn Data Into Decisions and Models Into Scalable Systems",
+    title: "Modernize Your Applications with Confidence and Speed",
     items: [
       {
-        title: "Advanced Analytics & Data Intelligence",
+        title: "Application Assessment & Modernization Strategy",
         description:
-          "Extract actionable insights from complex datasets using predictive modeling, statistical analysis and data mining."
+          "Gain a clear modernization roadmap with a deep assessment of your legacy systems. We identify technical gaps, inefficiencies and risks, then craft a tailored, business-aligned transformation strategy."
       },
       {
-        title: "Machine Learning Development",
+        title: "Cloud Migration & Optimization",
         description:
-          "Build high-accuracy ML models tailored to your business challenges, from forecasting to classification and optimization."
+          "Move from outdated on-prem systems to scalable cloud environments. We ensure seamless migration with minimal downtime while enhancing performance, flexibility and long-term cost efficiency."
       },
       {
-        title: "Deep Learning & NLP",
+        title: "Legacy System Reengineering",
         description:
-          "Deploy neural networks, sentiment analysis, text classification and computer vision systems for complex use cases."
+          "Rebuild and refactor aging applications into modern, scalable architectures. From monoliths to microservices, we future-proof your systems while preserving critical business logic."
       },
       {
-        title: "Data Engineering & Pipelines",
+        title: "API-Driven Integration",
         description:
-          "Design robust pipelines for clean, reliable datasets across cloud, hybrid and on-prem environments."
+          "Unlock interoperability with custom APIs and integrations. We connect legacy and modern systems to streamline workflows and enable real-time data exchange across your ecosystem."
       },
       {
-        title: "Model Deployment & Serving",
+        title: "UI/UX Modernization",
         description:
-          "Deploy ML models across cloud, edge or hybrid infrastructure using scalable orchestration."
+          "Upgrade outdated interfaces with intuitive, responsive and accessible designs. We deliver modern UI experiences that boost user satisfaction and productivity."
       },
       {
-        title: "Monitoring & Drift Detection",
+        title: "Performance Enhancement",
         description:
-          "Track real-time performance, detect degradation early and maintain long-term accuracy."
+          "Eliminate bottlenecks and maximize efficiency. Our team fine-tunes your applications for faster load times, higher reliability and sustained performance at scale."
+      },
+      {
+        title: "Security Hardening & Compliance",
+        description: "Strengthen your security posture with updated controls, encryption, threat protection and compliance with today’s standards. Your modernized systems stay secure and audit-ready."
+      },
+      {
+        title: "DevOps & Automation Enablement",
+        description: "Accelerate delivery with CI/CD pipelines, infrastructure automation and DevOps best practices. We modernize how your teams build, deploy and maintain applications."
+      },
+      {
+        title: "Data Modernization & Analytics",
+        description: "Transform legacy data into a strategic asset. We modernize storage, cleansing, governance and analytics to enable real-time insights and AI-ready data ecosystems."
+      },
+      {
+        title: "Continuous Support & Lifecycle Management",
+        description: "Modernization doesn’t end at deployment. We provide proactive monitoring, updates and maintenance to ensure your applications stay optimized, stable and future-ready."
       }
     ]
   }
 ]
 
-//Conversational AI
+//Database Migration
 //Hero
-export const ConHero = {
-  title: 'Conversational AI',
-  topDescription: 'Artificial Intelligence',
+export const DataMigHero = {
+  title: 'Database Migration',
+  topDescription: 'Engineering',
   bottomDescription:
-    'At Virtuosoft, we deliver next-generation Conversational AI solutions that elevate customer engagement and automate support experiences. From intelligent NLP chatbots to multimodal assistants powered by platforms like Dialogflow, Vertex AI and Google Cloud, we help businesses streamline operations and unlock smarter, more intuitive interactions.',
-  btnTitle: 'Start Automating',
+    'At Virtuosoft, we deliver secure, seamless and zero-downtime database migration services that help organizations modernize their data infrastructure. From legacy systems to cloud-native databases, we ensure data integrity, performance optimization and minimal business disruption throughout the migration journey.',
+  btnTitle: 'Migrate With Confidence',
 };
 
 //Why are Businesses Adopting Generative AI Today?
-export const valueDataCon = [
+export const valueDataMig = [
   {
-    titleNormal: "When Does Conversational AI Become Essential for Scaling Support & Sales?",
-    // titleBold: "Generative AI",
+    titleParts: [
+      "When Do You Need ",
+      { text: "Database Migration", bold: true }
+    ],
     valueItems: [
       {
-        title: "Delivering Superior Customer Experiences",
-        description: "AI-powered conversations enhance user journeys with personalized recommendations and real-time assistance. We build experiences that stay true to your brand’s tone, clarity, and identity.",
+        title: "Legacy Systems Limiting Growth",
+        description: "Outdated databases slow performance and restrict scalability. We migrate legacy systems to modern, high-performance platforms.",
         image: `/${valueImg}/automate.svg`,
       },
       {
-        title: "Expanding Support Capacity Effortlessly",
+        title: "Cloud Adoption & Modernization Initiatives",
         description:
-          "Virtual agents handle rising query volumes without sacrificing quality. Our integrations plug directly into your ecosystem for smooth, scalable operations.",
+          "Moving to AWS, Azure or Google Cloud? Our experts ensure smooth, secure cloud database transitions.",
         image: `/${valueImg}/scale.svg`,
       },
       {
-        title: "Reducing Support Costs Without Compromise",
+        title: "Performance Bottlenecks & Downtime Issues",
         description:
-          "Conversational AI significantly lowers dependency on large support teams. With VirtuoSoft, you optimize costs while maintaining high-quality interactions.",
+          "Improve query speed, availability and reliability with optimized database architectures.",
         image: `/${valueImg}/enhance.svg`,
       },
       {
-        title: "Ensuring Message Accuracy Across All Touchpoints",
+        title: "High Maintenance & Licensing Costs",
         description:
-          "Our AI ensures consistent, correct information through intelligent knowledge bases—minimizing errors and enhancing trust across every customer interaction.",
+          "Reduce infrastructure and licensing expenses by migrating to cost-effective, open-source or cloud-managed databases.",
         image: `/${valueImg}/solve.svg`,
       },
       {
-        title: "Delivering Instant Service Around the Clock",
+        title: "Security & Compliance Requirements",
         description:
-          "AI chatbots provide immediate, 24/7 responses across channels. Your customers are always heard — anytime, anywhere.",
+          "Meet modern compliance standards with encrypted, well-governed database environments.",
         image: `/${valueImg}/mitigate.svg`,
       },
       {
-        title: "Managing Multilingual Communication at Scale",
+        title: "Mergers, Acquisitions & System Consolidation",
         description:
-          "Our language-flexible AI solutions support global audiences with natural, fluent conversations across multiple languages.",
+          "Unify multiple databases into a single, streamlined data ecosystem.",
         image: `/${valueImg}/enable.svg`,
       },
     ]
@@ -537,57 +550,70 @@ export const valueDataCon = [
 ]
 
 // TimeLine 
-//Process for Building Intelligent AI Agents
-export const stepsDataCon = [
+//Our Database Migration Process
+export const stepsDataMig = [
   {
-    titleBold: "Conversational AI",
-    titlenormal: "Build Smarter Support & Sales Workflows with",
+    titleParts: [
+      "Our ",
+      { text: "Database Migration", bold: true },
+      "Process"
+    ],
     timeLineItems: [
       {
-        title: "Requirement Discovery",
+        title: "Discovery & Assessment",
         description:
-          "We begin by understanding your goals, audience needs and the outcomes you want your AI to achieve.",
+          "Analyze existing databases, dependencies, data volume and business constraints.",
       },
       {
-        title: "Experience & Flow Design",
+        title: "Migration Strategy & Planning",
         description:
-          "We design conversational flows, tone and persona, crafting interactions that feel natural and on-brand.",
+          " Define migration type (lift-and-shift, re-platform, re-architect) and success metrics.",
       },
       {
-        title: "Data Collection & Preparation",
+        title: "Data Mapping & Schema Design",
         description:
-          "Our team collects and analyzes relevant datasets to train AI models with high accuracy and contextual understanding.",
+          " Map data models, transform schemas and resolve compatibility issues.",
       },
       {
-        title: "AI Model Training",
+        title: "Environment Setup",
         description:
-          "We train NLP and intent-recognition models to understand queries, context and user behavior patterns.",
+          " Prepare target environments including cloud, hybrid or on-prem infrastructure.",
       },
       {
-        title: "System Integration",
+        title: "Migration Execution",
         description:
-          "We connect your AI with CRMs, websites, apps, helpdesks and communication channels for seamless workflows.",
+          "Perform secure data transfer using automated tools and proven methodologies.",
       },
       {
-        title: "Testing & Fine-Tuning",
+        title: "Validation & Testing",
         description:
-          "Models are rigorously tested for accuracy, reliability and stability, followed by iterative optimization.",
+          "Verify data accuracy, integrity, performance and application compatibility.",
       },
       {
-        title: "Launch & Deployment",
-        description: "We deploy the conversational AI solution across your selected platforms, ensuring smooth go-live execution."
+        title: "Cutover & Go-Live",
+        description:
+          "Execute controlled cutover with minimal downtime and rollback planning."
       },
       {
-        title: "Monitoring & Optimization",
-        description: "Our team tracks performance metrics and user behavior to enhance responses and improve accuracy over time."
+        title: "Post-Migration Optimization & Support",
+        description: "Optimize queries, tune performance and provide ongoing support."
+      }
+    ],
+      businessOutComes: [
+      { 
+        point:"Zero or Minimal Downtime"
       },
       {
-        title: "Continuous Feedback Loop",
-        description: "We collect user feedback, analyze conversations and refine models for better engagement and relevance."
+        point:"Improved Database Performance"
       },
       {
-        title: "Expansion & Scaling",
-        description: "As your needs grow, we enhance capabilities, add new use cases and scale the AI across departments and geographies."
+        point:"Enhanced Security & Compliance"
+      },
+      {
+        point:"Lower Operational Costs"
+      },
+      {
+        point:"Future-Ready Data Architecture"
       }
     ]
   }
@@ -595,109 +621,103 @@ export const stepsDataCon = [
 
 //Empower
 //Intelligent Solutions That Turn Data Into Decisions and Models Into Scalable Systems
-export const EmpowerCon = [
+export const EmpowerDataMig = [
   {
-    title: "Conversational AI Solutions Designed for Intelligent Customer Interactions",
+    title: "End-to-End Migration Expertise",
     items: [
       {
-        title: "Automated Customer Support",
+        title: "Legacy to Modern Database Migration",
         description:
-          "Deliver instant, round-the-clock responses with intelligent virtual assistants that resolve common queries and improve satisfaction."
+          "Migrate from outdated systems like Oracle, SQL Server or mainframes to modern platforms."
       },
       {
-        title: "Hyper-Personalized Experiences",
+        title: "Cloud Database Migration",
         description:
-          "AI adapts to user intent, behavior and history, delivering recommendations and responses tailored to each customer."
+          "Seamless migration to AWS RDS, Azure SQL, Google Cloud SQL, DynamoDB, BigQuery and more."
       },
       {
-        title: "Voice-Enabled Interactions",
+        title: "Cross-Database Migration",
         description:
-          "Provide hands-free, natural voice interfaces powered by cutting-edge speech-to-text and conversational AI."
+          "Move between heterogeneous databases (e.g., Oracle to PostgreSQL, MySQL to Aurora)."
       },
       {
-        title: "Multilingual Communication",
+        title: "Data Transformation & Cleansing",
         description:
-          "Engage global audiences with AI capable of understanding and responding in multiple languages with cultural nuance."
+          "Improve data quality through normalization, validation and enrichment."
       },
       {
-        title: "Smart Query Routing",
+        title: "Minimal Downtime Migration",
         description:
-          "Seamlessly escalate complex conversations from bots to human agents while preserving context and conversation history."
+          "Use replication and synchronization strategies to ensure business continuity."
       },
       {
-        title: "Sentiment-Aware Interactions",
+        title: "Security & Compliance Enablement",
         description:
-          "Use emotion and sentiment analysis to craft empathetic, tone-appropriate responses for better customer experiences."
+          "Encrypt data in transit and at rest while maintaining regulatory compliance."
       },
       {
-        title: "Insight-Driven Analytics",
-        description: "Analyze chat logs and user patterns to uncover trends, improve services and make data-driven decisions."
+        title: "Application Compatibility Assurance",
+        description: "Ensure applications continue to perform smoothly post-migration."
       },
       {
-        title: "Conversational Commerce",
-        description: "Enable users to browse, compare and purchase through conversational experiences, driving higher conversions."
-      },
-      {
-        title: "Automated Feedback & Surveys",
-        description: "Collect real-time feedback through chat interactions, enabling rapid insight gathering and continuous improvement."
-      },
-      {
-        title: "Custom Conversational AI Development",
-        description: "We engineer bespoke AI assistants tailored to your workflows, industry and customer engagement goals."
+        title: "Performance Tuning & Optimization",
+        description: "Optimize indexing, queries and configurations for peak efficiency."
       }
     ],
   }
 ]
 
-//Computer Vision
+//Third-Party Integration
 //Hero
-export const ComHero = {
-  title: 'Computer Vision',
-  topDescription: 'Artificial Intelligence',
+export const ThirdPartyHero = {
+  title: 'Third-Party Integration',
+  topDescription: 'Engineering',
   bottomDescription:
-    'At Virtuosoft, we build advanced computer vision solutions that enable machines to see, understand and act on visual data. From real-time image recognition to video analytics and automated inspection, we help businesses transform visual information into actionable intelligence that drives accuracy, efficiency and innovation.',
-  btnTitle: 'See Beyond Data',
+    'At Virtuosoft, we enable third-party integrations that connect your applications, platforms and data ecosystems. From APIs and SaaS tools to enterprise systems, we ensure secure, scalable and reliable integrations that enhance functionality, automate workflows and accelerate digital growth.',
+  btnTitle: 'Integrate Without Friction',
 };
 
-//Where Visual Intelligence Creates Business Advantage?
-export const valueDataCom = [
+//When Do You Need Third-Party Integration?
+export const valueDataThirdParty = [
   {
-    titleNormal: "Where Visual Intelligence Creates Business Advantage?",
-    // titleBold: "Generative AI",
+    titleParts: [
+      "When Do You Need ",
+      { text: "Third-Party Integration", bold: true }
+    ],
     valueItems: [
       {
-        title: "Visual Data Overload",
-        description: "Drowning in images and videos without insights? Our computer vision models extract meaning from visual data at scale, turning pixels into decisions.",
+        title: "Disconnected Systems & Data Silos",
+        description: "Break down silos by integrating platforms for real-time data exchange and unified operations.",
         image: `/${valueImg}/automate.svg`,
       },
       {
-        title: "Manual Inspection Bottlenecks",
+        title: "Expanding Digital Capabilities",
         description:
-          "Human inspection is slow and error-prone. We automate quality checks, defect detection and compliance monitoring with high-precision vision systems.",
+          " Add new features quickly by integrating external services such as payment gateways, CRM or analytics tools.",
         image: `/${valueImg}/scale.svg`,
       },
       {
-        title: "Security & Surveillance Challenges",
+        title: "Scaling Business Operations",
         description:
-          "Enhance safety with real-time object detection, facial recognition and behavior analysis to proactively identify risks and threats.",
+          "Ensure systems communicate efficiently as your business grows and transaction volumes increase.",
         image: `/${valueImg}/enhance.svg`,
       },
       {
-        title: "Operational Inefficiencies",
+        title: "Manual Processes & Workflow Inefficiencies",
         description:
-          "Optimize workflows with vision-powered automation, monitor production lines, track assets and reduce downtime with intelligent visual monitoring.",
+          "Automate repetitive tasks by integrating tools across sales, finance, marketing and operations.",
         image: `/${valueImg}/solve.svg`,
       },
       {
-        title: "Customer Experience Gaps",
+        title: "Multi-Platform Customer Experiences",
         description:
-          "Enable smarter retail, healthcare and digital experiences with visual search, gesture recognition and personalized interactions.",
+          "Deliver consistent user experiences across web, mobile and third-party channels.",
         image: `/${valueImg}/mitigate.svg`,
       },
       {
-        title: "Scalability & Accuracy Concerns",
+        title: "Security & Compliance Requirements",
         description:
-          "We build scalable computer vision pipelines that maintain accuracy across environments, lighting conditions and growing data volumes.",
+          "Ensure integrations meet industry standards for data protection and regulatory compliance.",
         image: `/${valueImg}/enable.svg`,
       },
     ]
@@ -705,97 +725,116 @@ export const valueDataCom = [
 ]
 
 // TimeLine 
-//From Visual Input to Intelligent Outcomes
-export const stepsDataCom = [
+//Our Integration Process
+export const stepsDataThirdParty = [
   {
-    titleBold: "From Visual Input to",
-    titlenormal: "Intelligent Outcomes",
+    titleParts: [
+      "Our ",
+      { text: "Integration Process", bold: true }
+    ],
     timeLineItems: [
       {
-        title: "Business & Use-Case Definition",
+        title: "Requirement Analysis",
         description:
-          "We identify where visual intelligence delivers measurable business impact and define success metrics.",
+          "Understand business objectives, integration scope and system dependencies.",
       },
       {
-        title: "Data Collection & Annotation",
+        title: "API & Architecture Assessment",
         description:
-          "We gather, clean and label image or video datasets to ensure high-quality training data.",
+          "Evaluate APIs, protocols, data formats and security requirements.",
       },
       {
-        title: "Model Selection & Architecture Design",
+        title: "Integration Strategy Design",
         description:
-          "We choose the right techniques, CNNs, transformers or hybrid models, based on accuracy and performance needs.",
+          "Define integration patterns (point-to-point, middleware, event-driven) and success criteria.",
       },
       {
-        title: "Model Training & Optimization",
+        title: "Development & Configuration",
         description:
-          "Models are trained and fine-tuned to recognize patterns, objects, movements or anomalies with precision.",
+          "Build and configure secure, scalable integrations using best practices.",
       },
       {
-        title: "Validation & Accuracy Testing",
+        title: "Data Mapping & Transformation",
         description:
-          "We rigorously test models across real-world scenarios to ensure robustness and reliability.",
+          "Ensure accurate data exchange through schema mapping and transformation logic.",
       },
       {
-        title: "Deployment & Integration",
+        title: "Testing & Validation",
         description:
-          "Deploy models into production environments, cloud, edge or on-prem and integrate with existing systems.",
+          "Test functionality, performance, error handling and security.",
       },
       {
-        title: "Real-Time Processing & Scaling",
-        description: "Enable low-latency inference and scalable processing for images and video streams."
+        title: "Deployment & Go-Live",
+        description: "Deploy integrations with monitoring and rollback strategies."
       },
       {
-        title: "Monitoring & Continuous Improvement",
-        description: "We monitor performance, detect drift and retrain models to maintain long-term accuracy."
+        title: "Monitoring & Optimization",
+        description: "Continuously monitor performance and optimize for reliability and scale."
       },
+    ],
+     businessOutComes: [
+      { 
+        point:"Unified System Connectivity"
+      },
+      {
+        point:"Faster Feature Enablement"
+      },
+      {
+        point:"Automated Workflows"
+      },
+      {
+        point:"Improved Data Accuracy"
+      },
+      {
+        point:"Scalable Integration Architecture"
+      }
     ]
   }
 ];
 
 //Empower
 //Visual Intelligence Built for Real-World Impact
-export const EmpowerCom = [
+export const EmpowerThirdParty = [
   {
-    title: "Visual Intelligence Built for Real-World Impact",
+    title: "Flexible, Secure & Scalable Integrations",
     items: [
       {
-        title: "Image & Object Recognition",
+        title: "API Integration (REST, GraphQL, SOAP)",
         description:
-          "Identify objects, faces, text and patterns with high accuracy across images and videos."
+          "Connect applications using modern and legacy APIs."
       },
       {
-        title: "Video Analytics & Real-Time Monitoring",
+        title: "SaaS & Cloud Platform Integration",
         description:
-          "Analyze live or recorded video streams for behavior detection, motion tracking and event recognition."
+          "Integrate tools like Salesforce, HubSpot, Stripe, Shopify, ServiceNow and more."
       },
       {
-        title: "Quality Inspection & Defect Detection",
+        title: "Payment Gateway Integration",
         description:
-          "Automate inspection processes in manufacturing and infrastructure with precision vision models."
+          "Enable secure payments with Stripe, PayPal, Square and regional providers."
       },
       {
-        title: "Facial Recognition & Biometrics",
+        title: "CRM & ERP Integration",
         description:
-          "Enable secure identity verification, access control and user authentication."
+          "Sync data across CRM, ERP and business systems for operational efficiency."
       },
       {
-        title: "Optical Character Recognition (OCR)",
+        title: "Middleware & iPaaS Solutions",
         description:
-          "Extract text from documents, images and scanned files to automate data processing."
+          "Leverage platforms like MuleSoft, Boomi and Zapier for scalable integration."
       },
       {
-        title: "Pose & Gesture Recognition",
+        title: "Event-Driven & Real-Time Integrations",
         description:
-          "Understand human movement for healthcare, sports analytics and interactive applications."
+          "Enable real-time updates using webhooks and message queues."
       },
       {
-        title: "Visual Search & Recommendation",
-        description: "Allow users to search products or content using images instead of text."
+        title: "Security & Authentication",
+        description: "Implement OAuth, JWT, API keys and encryption for secure data exchange."
       },
       {
-        title: "Edge Vision Solutions",
-        description: "Deploy lightweight models on cameras and edge devices for low-latency decision-making."
+        title: "Monitoring & Error Handling",
+        description: "Ensure reliability with logging, alerts and automated retries."
       }
     ],
   }

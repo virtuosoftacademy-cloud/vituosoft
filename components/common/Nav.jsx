@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/public/assets/Images/Logo.svg";
+import LogoV from "@/public/logoV.svg";
 import {
   ArrowRight,
+  ChevronUp,
   Menu,
   X,
 } from "lucide-react";
@@ -25,19 +27,23 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeService, setActiveService] = useState(0);
-  const [NavHidden, setNavHidden] = useState(false)
+  const [NavHidden, setNavHidden] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+
+  // For mobile — which service's subpages are open
+  const [openSubMobile, setOpenSubMobile] = useState(null);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 100);
-      setNavHidden(window.scrollY > 4000)
+      setNavHidden(window.scrollY > 4000);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const bg_animation =
-    "px-6 lg:px-10 w-[85%] bg-foreground py-8 rounded-2xl top-[69px] text-white shadow-[0_12px_35px_rgba(0,0,0,0.25)]";
-  // const ActiveIcon = services_Nav[activeService].icon;
+    "px-0 lg:px-10 w-[85%] bg-foreground py-8 rounded-2xl top-8 text-white shadow-[0_12px_35px_rgba(0,0,0,0.25)]";
 
   function ServiceItem({ service, isActive, onHover }) {
     return (
@@ -53,9 +59,6 @@ export default function Nav() {
             onMouseEnter={onHover}
           >
             <div className="flex items-center gap-3">
-              {/* <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-muted">
-                <Icon className="size-5" />
-              </div> */} 
               <div className="flex-1">
                 <div className="text-lg font-medium leading-none">{service.title}</div>
               </div>
@@ -69,25 +72,35 @@ export default function Nav() {
   return (
     <nav
       className={cn(
-        "fixed top-8 left-1/2 z-50 -translate-x-1/2 w-full mx-auto transition-all duration-500 max-w-7xl",
-        scrolled ? bg_animation : "bg-transparent py-5 shadow-none",
-        // NavHidden && 'opacity-0 pointer-events-none'
+        "sticky top-0 z-50 w-full mx-auto transition-all duration-500 max-w-7xl",
+        scrolled ? bg_animation : "bg-transparent py-8 shadow-none",
+        NavHidden && "-translate-y-34 pointer-events-none"
       )}
     >
-      <div className="flex items-center justify-between px-10 lg:px-0">
+      <div className="flex items-center justify-between px-6 lg:px-0 -my-2">
         {/* Logo */}
         <Link href="/">
-          <Image
-            src={Logo}
-            alt="Company Logo"
-            width={160}
-            height={48}
-            className={`transition-all duration-500 ${scrolled && "brightness-0 invert"}`}
-            priority
-          />
+          {scrolled ?
+            <Image
+              src={LogoV}
+              alt="Company Logo"
+              width={40}
+              height={48}
+              className={`transition-all duration-500 h-7 lg:h-8`}
+              priority
+            /> :
+            <Image
+              src={Logo}
+              alt="Company Logo"
+              width={160}
+              height={48}
+              className={`transition-all duration-500`}
+              priority
+            />
+          }
         </Link>
 
-        {/* Desktop Menu */}
+        {/* Desktop Menu – unchanged */}
         <div className="hidden lg:flex items-center gap-10">
           <Link href="/about-us" className="font-medium hover:text-primary transition-colors">
             About Us
@@ -96,13 +109,10 @@ export default function Nav() {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="hover:text-primary transition-colors">
-                  <Link href="/services">
-                    Services
-                  </Link>
+                  <Link href="/services">Services</Link>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-6 p-6 lg:w-[840] lg:grid-cols-[0.9fr_1.25fr_1fr]">
-                    {/* LEFT - Service List */}
+                  <div className="grid gap-6 p-6 lg:w-[840px] lg:grid-cols-[0.9fr_1.25fr_1fr]">
                     <ul className="row-span-3 grid gap-1.5">
                       {services_Nav.map((service, index) => (
                         <ServiceItem
@@ -114,7 +124,6 @@ export default function Nav() {
                       ))}
                     </ul>
 
-                    {/* MIDDLE - Detailed Preview */}
                     <div className="row-span-3 flex flex-col space-y-6 py-2">
                       <div className="space-y-4">
                         <div className="flex items-start shrink-0 gap-4">
@@ -122,8 +131,7 @@ export default function Nav() {
                             {services_Nav[activeService].subPages ? (
                               <div className="space-y-2.5">
                                 {services_Nav[activeService].subPages.map((sub, i) => (
-                                  <div key={i} className="flex items-center  gap-3">
-                                    {/* <Dot size={20} className="flex items-center text-primary" /> */}
+                                  <div key={i} className="flex items-center gap-3">
                                     <div className="flex items-center justify-center bg-black h-2 w-2" />
                                     <div>
                                       <Link
@@ -132,22 +140,18 @@ export default function Nav() {
                                       >
                                         {sub.label}
                                       </Link>
-                                    </ div>
+                                    </div>
                                   </div>
                                 ))}
                               </div>
-                            ) : (
-                              <p className="text-base text-muted-foreground leading-relaxed">
-                                {services[activeService].description}
-                              </p>
-                            )}
+                            ) : null}
                           </div>
                         </div>
                       </div>
 
-                      {services_Nav[activeService].href && !services[activeService].subPages && (
+                      {services_Nav[activeService].href && !services_Nav[activeService].subPages && (
                         <Link
-                          href={services[activeService].href}
+                          href={services_Nav[activeService].href}
                           className="inline-flex items-center text-base font-medium text-primary hover:underline"
                         >
                           Learn more <ArrowRight className="ml-2 h-5 w-5" />
@@ -155,40 +159,23 @@ export default function Nav() {
                       )}
                     </div>
 
-                    {/* RIGHT - Spotlight Video */}
                     <div className="row-span-2 flex flex-col">
-                      {/* <h4 className="text-lg font-semibold mb-3">Spotlight</h4> */}
-                      {/* <div className="flex-1 bg-muted/40 rounded-lg overflow-hidden border border-border"> */}
                       <div className="aspect-square w-full mt-2">
                         <Image
-                          width="100"
-                          height="100"
+                          width={100}
+                          height={100}
                           alt="/"
                           src={getSpotlightVideo(services_Nav[activeService].title)}
                           title={`${services_Nav[activeService].title} Spotlight Video`}
-                          className="w-xs h-auto"
+                          className="w-full h-full object-cover"
                         />
-                        {/* <iframe
-                            width="100%"
-                            height="100%"
-                            src={getSpotlightVideo(services[activeService].title)}
-                            title={`${services[activeService].title} Spotlight Video`}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          /> */}
                       </div>
                     </div>
-                    {/* <p className="text-xs text-muted-foreground mt-2.5 text-center">
-                        Watch a quick demo / showcase related to this service
-                      </p> */}
                   </div>
-                  {/* </div> */}
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-
 
           <Link href="/team" className="font-medium hover:text-primary transition-colors">
             Our Team
@@ -210,34 +197,133 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* ──────────────────────────────────────────────── */}
+      {/* MOBILE MENU – with dropdown + sub-dropdown */}
+      {/* ──────────────────────────────────────────────── */}
+      {/* ──────────────────────────────────────────────── */}
+      {/* MOBILE MENU – with smooth animated dropdowns */}
+      {/* ──────────────────────────────────────────────── */}
       {mobileOpen && (
-        <div className="lg:hidden mt-4 px-4">
-          <div className="flex flex-col p-8 gap-8 text-xl font-medium bg-accent/95 backdrop-blur rounded-2xl border border-border/50">
-            <Link href="/about-us" onClick={() => setMobileOpen(false)}>
+        <div className="lg:hidden mt-4 px-4 bg-foreground text-accent overflow-hidden">
+          <div className="flex flex-col py-8 px-8 gap-6 text-xl font-medium">
+            <Link
+              href="/about-us"
+              className="transition-colors hover:text-primary"
+            >
               About Us
             </Link>
 
-            <div className="w-full max-w-sm space-y-6">
-              <div className="font-semibold text-lg">Services</div>
-              {services_Nav.map((item) => (
+            {/* Services section with animated dropdown */}
+            <div>
+              <div
+                className="font-semibold flex items-center justify-between cursor-pointer transition-colors hover:text-primary"
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+              >
                 <Link
-                  key={item.title}
-                  href={item.href || "#"}
-                  className="block hover:text-primary transition-colors"
-                  onClick={() => setMobileOpen(false)}
+                  href="/services"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setMobileOpen(false);
+                  }}
                 >
-                  {item.title}
+                  Services
                 </Link>
-              ))}
+                <span
+                  className={cn(
+                    "text-2xl leading-none transition-transform duration-300",
+                    mobileServicesOpen && "rotate-180"
+                  )}
+                >
+                  <ChevronUp />
+                </span>
+              </div>
+
+              {/* Animated Services list container */}
+              <div
+                className={cn(
+                  "grid transition-all duration-400 ease-out",
+                  mobileServicesOpen ? "grid-rows-[1fr] opacity-100 pt-3" : "grid-rows-[0fr] opacity-0"
+                )}
+              >
+                <div className="overflow-hidden">
+                  <div className="flex flex-col gap-5 pl-4 border-l border-white/30 pt-3 pb-2">
+                    {services_Nav.map((service, index) => (
+                      <div key={service.title} className="space-y-3">
+                        {/* Service row – clickable to toggle subpages */}
+                        <div
+                          className="flex items-center justify-between cursor-pointer text-lg transition-colors hover:text-primary"
+                          onClick={() =>
+                            setOpenSubMobile(openSubMobile === index ? null : index)
+                          }
+                        >
+                          <Link
+                            href={service.href || "/services"}
+                            className="transition-colors"
+                          >
+                            {service.title}
+                          </Link>
+
+                          {service.subPages?.length > 0 && (
+                            <span
+                              className={cn(
+                                "text-xl transition-transform duration-300",
+                                openSubMobile === index && "rotate-180"
+                              )}
+                            >
+                              <ChevronUp />
+                            </span>
+                          )}
+                        </div>
+
+                        {/* Animated subpages container */}
+                        {service.subPages && (
+                          <div
+                            className={cn(
+                              "grid transition-all duration-300 ease-out",
+                              openSubMobile === index
+                                ? "grid-rows-[1fr] opacity-100"
+                                : "grid-rows-[0fr] opacity-0"
+                            )}
+                          >
+                            <div className="overflow-hidden">
+                              <div className="flex flex-col gap-3 pl-6 border-l border-white/20 pt-2 pb-1">
+                                {service.subPages.map((sub, i) => (
+                                  <Link
+                                    key={i}
+                                    href={sub.href}
+                                    className="text-base text-accent hover:decoration-primary hover:underline underline-offset-4 capitalize transition-colors"
+                                    onClick={() => setMobileOpen(false)}
+                                  >
+                                    {sub.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <Link href="/careers" onClick={() => setMobileOpen(false)}>
+            <Link
+              href="/team"
+              className="transition-colors hover:text-primary"
+            >
+              Our Team
+            </Link>
+
+            <Link
+              href="/careers"
+              className="transition-colors hover:text-primary"
+            >
               Careers
             </Link>
 
             <Button size="lg" className="w-full max-w-sm" asChild>
-              <Link href="/consultation" onClick={() => setMobileOpen(false)}>
+              <Link href="/contact">
                 Book a Consultation
               </Link>
             </Button>

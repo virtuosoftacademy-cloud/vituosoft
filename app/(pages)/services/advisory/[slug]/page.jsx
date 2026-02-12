@@ -2,17 +2,17 @@
 import { notFound } from 'next/navigation';
 import { ReactLenis } from 'lenis/react';
 import Hero from '../_components/Hero';
-import ValueSection from '../_components/ValueSection';
 import Success from '../../common/Success';
 import Empower from '../_components/Empower';
 import Engage from '../_components/Engage';
 import { aiAgentsEmpower, aiAgentsHero, stepsData, valueData } from '../../ai/constant';
-import TimeLine from '../_components/TimeLine';
 import Cta from '@/components/common/Cta';
-import Faq from '../_components/Faq';
 import { Faq_Advisory_DigitalTransformation, Faq_Advisory_ProductStrategy, Faq_AI_CustomAgent } from '@/app/_constant';
 import Blogs from '@/app/(pages)/blogs/page';
 import { DigitalHero, EmpowerDigitalTransformation, ProductStrategyEmpower, ProductStrategyHero, stepsDataDigitalTransformation, stepsDataProductStrategy, valueDataProductStrategy } from '../constant';
+import TimeLine from '../../common/TimeLine';
+import Faq from '@/components/common/Faq';
+import ValueSection from '../../common/ValueSection';
 
 
 // ────────────────────────────────────────────────
@@ -86,7 +86,7 @@ export default async function ServicePage({ params }) {
 
   return (
     <ReactLenis root>
-      <main className="min-h-screen bg-background antialiased pt-40">
+      <main className="min-h-screen bg-background antialiased pt-2">
         {service.sections.map(({ Component, props = {} }, index) => (
           <Component key={index} {...props} />
         ))}

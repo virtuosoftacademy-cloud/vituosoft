@@ -8,8 +8,7 @@ const stats = [
 
 function Success() {
     return (
-        <div className='px-16 lg:px-32'>
-
+        <div className='px-3 max-w-7xl mx-auto'>
             <section className="relative bg-primary/80 text-white rounded overflow-hidden text-left
       pt-[50] px-5 pb-[50]
       md:pt-[90] md:px-[60] md:pb-20
