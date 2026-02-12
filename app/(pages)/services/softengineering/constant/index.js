@@ -194,8 +194,10 @@ export const AppDevHero = {
 //Why are Businesses Adopting Generative AI Today?
 export const valueDataAppDev = [
   {
-    titleNormal: "Why Should You Invest in Custom",
-    titleBold: "Application Development",
+     titleParts: [
+      "Why Should You Invest in Custom ",
+      { text: "Application Development", bold: true }
+    ],
     valueItems: [
       {
         title: "Eliminate Operational Inefficiencies",
