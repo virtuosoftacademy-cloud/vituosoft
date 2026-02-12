@@ -6,24 +6,15 @@ function ValueSection(value) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
         <div className='text-center text-2xl md:text-4xl lg:text-[2.5rem] pb-12'>
           <h4>
-            {titleParts && titleParts.length > 0 ? (
-              // ── Flexible / parts mode ──
-              titleParts.map((part, i) =>
-                typeof part === "string" ? (
-                  <span key={i}>{part}</span>
-                ) : (
-                  <span key={i} className={part.bold ? "font-bold" : ""}>
-                    {part.text}
-                  </span>
-                )
-              )
+            {titleParts.map((part, i) =>
+            typeof part === 'string' ? (
+              part
             ) : (
-              // ── Simple / legacy mode ──
-              <>
-                {titleNormal}{" "}
-                {titleBold && <strong>{titleBold}</strong>}
-              </>
-            )}
+              <span key={i} className={part.bold ? "font-bold" : ""}>
+                {" "} {part.text} {" "}
+              </span>
+            )
+          )}
             {" "}?
           </h4>
         </div>

@@ -5,7 +5,7 @@ import { blogPosts } from './_components'
 function Blogs() {
     return (
         <>
-            <div className='mx-auto max-w-7xl px-8 pb-10 md:pb-0 md:py-20'>
+            <div className='mx-auto max-w-7xl px-8 py-14 md:py-20'>
                 <h4 className='text-3xl md:text-5xl pb-4 md:pb-8 text-center'>Latest <strong>
                     <em>
                         Insights

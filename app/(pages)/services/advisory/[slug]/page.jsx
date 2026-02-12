@@ -9,7 +9,7 @@ import { aiAgentsEmpower, aiAgentsHero, stepsData, valueData } from '../../ai/co
 import Cta from '@/components/common/Cta';
 import { Faq_Advisory_DigitalTransformation, Faq_Advisory_ProductStrategy, Faq_AI_CustomAgent } from '@/app/_constant';
 import Blogs from '@/app/(pages)/blogs/page';
-import { DigitalHero, EmpowerDigitalTransformation, ProductStrategyEmpower, ProductStrategyHero, stepsDataDigitalTransformation, stepsDataProductStrategy, valueDataProductStrategy } from '../constant';
+import { DigitalHero, EmpowerDigitalTransformation, ProductStrategyEmpower, ProductStrategyHero, stepsDataDigitalTransformation, stepsDataProductStrategy, valueDataDigital, valueDataProductStrategy } from '../constant';
 import TimeLine from '../../common/TimeLine';
 import Faq from '@/components/common/Faq';
 import ValueSection from '../../common/ValueSection';
@@ -41,12 +41,12 @@ const services = [
     slug: 'digital-transformation',
     title: 'Digital Transformation',
     heroData: DigitalHero,
-    value: valueDataProductStrategy[0],
+    value: valueDataDigital[0],
     Data: EmpowerDigitalTransformation[0],
     timeLine: stepsDataDigitalTransformation[0],
     sections: [
       { Component: Hero, props: DigitalHero },
-      { Component: ValueSection, props: valueDataProductStrategy[0] },
+      { Component: ValueSection, props: valueDataDigital[0] },
       { Component: Success },
       { Component: TimeLine, props: stepsDataDigitalTransformation[0] },
       { Component: Empower, props: EmpowerDigitalTransformation[0] },

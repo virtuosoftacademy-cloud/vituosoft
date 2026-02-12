@@ -16,8 +16,10 @@ export const aiAgentsHero = {
 const valueImg = 'assets/Images/service/ai';
 export const valueData = [
   {
-    titleNormal: "Why Every Modern Business Needs Intelligent",
-    titleBold: "AI Agents",
+    titleParts: [
+      "Why Every Modern Business Needs Intelligent",
+      { text: " AI Agents", bold: true },
+    ],
     valueItems: [
       {
         title: "Automate Complex Workflows",
@@ -63,8 +65,12 @@ export const valueData = [
 //Process for Building Intelligent AI Agents
 export const stepsData = [
   {
-    titleBold: "AI Agents",
-    titlenormal: "Process for Building Intelligent",
+    titleParts: [
+      "Process for Building Intelligent",
+      {
+        text: "AI Agents", bold: true
+      }
+    ],
     timeLineItems: [
       {
         title: "Understanding Business Goals",
@@ -244,8 +250,10 @@ export const genaiHero = {
 //Why are Businesses Adopting Generative AI Today?
 export const valueDataGen = [
   {
-    titleNormal: "Why are Businesses Adopting",
-    titleBold: "Generative AI",
+    titleParts: [
+      "Why are Businesses Adopting",
+      { text: " Generative AI", bold: true },
+    ],
     valueItems: [
       {
         title: "Streamlining Complex Operations",
@@ -291,8 +299,12 @@ export const valueDataGen = [
 //Process for Building Intelligent AI Agents
 export const stepsDataGen = [
   {
-    titleBold: "Generative AI",
-    titlenormal: "Unleash Creativity with",
+    titleParts: [
+      "Unleash Creativity with",
+      {
+        text: "Generative AI", bold: true
+      }
+    ],
     timeLineItems: [
       {
         title: "Define Your Vision",
@@ -395,7 +407,11 @@ export const DataScienceHero = {
 //When Intelligence + Automation Become Your Competitive Advantage? 
 export const valueDataScience = [
   {
-    titleNormal: "When Intelligence + Automation Become Your Competitive Advantage",
+     titleParts: [
+      "When",
+      { text: " Intelligence + Automation", bold: true },
+      "  Become Your Competitive Advantage"
+    ],
     // titleBold: "AI Agents",
     valueItems: [
       {
@@ -442,8 +458,10 @@ export const valueDataScience = [
 //Process for Building Intelligent AI Agents
 export const stepsDataScience = [
   {
-    titleBold: "Process",
-    titlenormal: "Data Science + MLOps",
+    titleParts: [
+      { text: "Data Science + MLOps", bold: true },
+      "Process",
+    ],
     timeLineItems: [
       {
         title: "Define Objectives & Use Cases",
@@ -564,12 +582,14 @@ export const ConHero = {
     'At Virtuosoft, we deliver next-generation Conversational AI solutions that elevate customer engagement and automate support experiences. From intelligent NLP chatbots to multimodal assistants powered by platforms like Dialogflow, Vertex AI and Google Cloud, we help businesses streamline operations and unlock smarter, more intuitive interactions.',
   btnTitle: 'Start Automating',
 };
-
-//Why are Businesses Adopting Generative AI Today?
+//When Does Conversational AI Become Essential for Scaling Support & Sales?
 export const valueDataCon = [
   {
-    titleNormal: "When Does Conversational AI Become Essential for Scaling Support & Sales?",
-    // titleBold: "Generative AI",
+    titleParts: [
+      "When Does",
+      { text: " Conversational AI", bold: true },
+      "Become Essential for Scaling Support & Sales"
+    ],
     valueItems: [
       {
         title: "Delivering Superior Customer Experiences",
@@ -614,8 +634,10 @@ export const valueDataCon = [
 //Process for Building Intelligent AI Agents
 export const stepsDataCon = [
   {
-    titleBold: "Conversational AI",
-    titlenormal: "Build Smarter Support & Sales Workflows with",
+    titleParts: [
+      "Build Smarter Support & Sales Workflows with",
+      { text: "Conversational AI", bold: true },
+    ],
     timeLineItems: [
       {
         title: "Requirement Discovery",
@@ -704,20 +726,20 @@ export const EmpowerCon = [
           "Use emotion and sentiment analysis to craft empathetic, tone-appropriate responses for better customer experiences."
       },
       {
-        title:"Insight-Driven Analytics",
-        description:"Analyze chat logs and user patterns to uncover trends, improve services and make data-driven decisions."
+        title: "Insight-Driven Analytics",
+        description: "Analyze chat logs and user patterns to uncover trends, improve services and make data-driven decisions."
       },
       {
-        title:"Conversational Commerce",
-        description:"Enable users to browse, compare and purchase through conversational experiences, driving higher conversions."
+        title: "Conversational Commerce",
+        description: "Enable users to browse, compare and purchase through conversational experiences, driving higher conversions."
       },
       {
-        title:"Automated Feedback & Surveys",
-        description:"Collect real-time feedback through chat interactions, enabling rapid insight gathering and continuous improvement."
+        title: "Automated Feedback & Surveys",
+        description: "Collect real-time feedback through chat interactions, enabling rapid insight gathering and continuous improvement."
       },
       {
-        title:"Custom Conversational AI Development",
-        description:"We engineer bespoke AI assistants tailored to your workflows, industry and customer engagement goals."
+        title: "Custom Conversational AI Development",
+        description: "We engineer bespoke AI assistants tailored to your workflows, industry and customer engagement goals."
       }
     ],
   }
@@ -736,8 +758,11 @@ export const ComHero = {
 //Where Visual Intelligence Creates Business Advantage?
 export const valueDataCom = [
   {
-    titleNormal: "Where Visual Intelligence Creates Business Advantage?",
-    // titleBold: "Generative AI",
+    titleParts: [
+      "Where",
+      { text: " Visual Intelligence", bold: true },
+      "Creates Business Advantage"
+    ],
     valueItems: [
       {
         title: "Visual Data Overload",
@@ -782,8 +807,10 @@ export const valueDataCom = [
 //From Visual Input to Intelligent Outcomes
 export const stepsDataCom = [
   {
-    titleBold: "From Visual Input to",
-    titlenormal: "Intelligent Outcomes",
+    titleParts: [
+      { text: "From Visual Input to", bold: true },
+      "Intelligent Outcomes",
+    ],
     timeLineItems: [
       {
         title: "Business & Use-Case Definition",
@@ -864,12 +891,12 @@ export const EmpowerCom = [
           "Understand human movement for healthcare, sports analytics and interactive applications."
       },
       {
-        title:"Visual Search & Recommendation",
-        description:"Allow users to search products or content using images instead of text."
+        title: "Visual Search & Recommendation",
+        description: "Allow users to search products or content using images instead of text."
       },
       {
-        title:"Edge Vision Solutions",
-        description:"Deploy lightweight models on cameras and edge devices for low-latency decision-making."
+        title: "Edge Vision Solutions",
+        description: "Deploy lightweight models on cameras and edge devices for low-latency decision-making."
       }
     ],
   }
@@ -888,8 +915,10 @@ export const OcrHero = {
 //Turning Documents into Digital Intelligence
 export const valueDataOcr = [
   {
-    titleNormal: "Turning Documents into ",
-    titleBold: "Digital Intelligence",
+    titleParts: [
+      "Turning Documents into ",
+      { text: "Digital Intelligence", bold: true },
+    ],
     valueItems: [
       {
         title: "Manual Data Entry Slowing You Down",
@@ -934,8 +963,10 @@ export const valueDataOcr = [
 //From Document Capture to Actionable Data
 export const stepsDataOcr = [
   {
-    titlenormal: "From Document Capture to",
-    titleBold: "Actionable Data",
+    titleParts: [
+      "From Document Capture to",
+      { text: "Actionable Data", bold: true },
+    ],
     timeLineItems: [
       {
         title: "Use-Case & Document Analysis",
@@ -1016,12 +1047,12 @@ export const EmpowerOcr = [
           "Extract data from passports, IDs, and licenses for onboarding and verification."
       },
       {
-        title:"OCR with NLP Intelligence",
-        description:"Combine OCR with NLP for classification, sentiment analysis, and entity extraction."
+        title: "OCR with NLP Intelligence",
+        description: "Combine OCR with NLP for classification, sentiment analysis, and entity extraction."
       },
       {
-        title:"Workflow Automation Integration",
-        description:"Trigger approvals, validations, and downstream actions using OCR-driven workflows."
+        title: "Workflow Automation Integration",
+        description: "Trigger approvals, validations, and downstream actions using OCR-driven workflows."
       }
     ],
   }

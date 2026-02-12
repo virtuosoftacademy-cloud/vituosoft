@@ -15,8 +15,10 @@ export const ProductStrategyHero = {
 const valueImg = 'assets/Images/service/ai';
 export const valueDataProductStrategy = [
   {
-    titleNormal: "When Does Your Business Need a ",
-    titleBold: "Strategic Product Roadmap",
+    titleParts: [
+      "When Does Your Business Need a ",
+      { text: "Strategic Product Roadmap", bold: true }
+    ],
     valueItems: [
       {
         title: "When Vision and Product Direction Don’t Align",
@@ -62,8 +64,10 @@ export const valueDataProductStrategy = [
 //Transforming Ideas into High-Impact Products
 export const stepsDataProductStrategy = [
   {
-    titleBold: "High-Impact Products",
-    titlenormal: "Transforming Ideas into",
+    titleParts: [
+      "Transforming Ideas into ",
+      { text: "High-Impact Products", bold: true }
+    ],
     timeLineItems: [
       {
         title: "Define the Vision & Target Users",
@@ -187,8 +191,10 @@ export const DigitalHero = {
 //Why are Businesses Adopting Generative AI Today?
 export const valueDataDigital = [
   {
-    titleNormal: "When is the Right Time to",
-    titleBold: "Transform",
+    titleParts: [
+      "When is the Right Time to",
+      { text: "Transform", bold: true }
+    ],
     valueItems: [
       {
         title: "Competing in the Digital Era",
@@ -234,8 +240,11 @@ export const valueDataDigital = [
 //Process for Building Intelligent AI Agents
 export const stepsDataDigitalTransformation = [
   {
-    // titleBold: "Generative AI",
-    titlenormal: "The Digital Transformation Process",
+    titleParts: [
+      "The ",
+      { text: "Digital Transformation", bold: true },
+      "Process"
+    ],
     timeLineItems: [
       {
         title: "Discovery & Evaluation",
@@ -272,8 +281,8 @@ export const stepsDataDigitalTransformation = [
         description: "Advanced analytics and business intelligence tools turn complex data into actionable insights, enabling faster and smarter strategic decision-making."
       },
       {
-        title:"Continuous Evolution",
-        description:"Digital success is an ongoing process. Systems are monitored, optimized and refined to adapt seamlessly to emerging market demands and technological shifts."
+        title: "Continuous Evolution",
+        description: "Digital success is an ongoing process. Systems are monitored, optimized and refined to adapt seamlessly to emerging market demands and technological shifts."
       }
     ]
   }
@@ -326,8 +335,8 @@ export const EmpowerDigitalTransformation = [
           "Enhance productivity with robotic automation that eliminates manual tasks, minimizes errors and redirects focus toward strategic growth initiatives."
       },
       {
-        title:"Mobile Solutions",
-        description:"Empower teams and customers with mobile-enabled systems that provide real-time data access, operational continuity and seamless on-the-go functionality."
+        title: "Mobile Solutions",
+        description: "Empower teams and customers with mobile-enabled systems that provide real-time data access, operational continuity and seamless on-the-go functionality."
       }
     ]
   }
