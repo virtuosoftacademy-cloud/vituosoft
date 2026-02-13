@@ -71,7 +71,7 @@ export default function ServiceCard({ category, showAll = true }) {
                   {/* Animated glowing border on hover – using ::after via Tailwind arbitrary variants */}
                   <div
                     className=
-                    "absolute inset-0 rounded-2xl pointer-events-none z-0 border-2 border-white/70 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out mask-image mask-l-from-black mask-l-from-85% mask-l-to-transparent"
+                    "absolute inset-0 rounded-2xl pointer-events-none z-0 border-2 border-white/70 md:opacity-0 md:group-hover:opacity-100 transition-all duration-500 ease-out mask-image mask-l-from-black mask-l-from-85% mask-l-to-transparent"
                   />
 
                   {/* Optional subtle hover background glow */}
@@ -95,15 +95,15 @@ export default function ServiceCard({ category, showAll = true }) {
                     <h4
                       className="
                         font-semibold text-2xl
-                        mb-2 text-gray-300
-                        group-hover:text-gray-100
+                        mb-2 text-accent md:text-gray-300
+                        md:group-hover:text-gray-100
         transition-colors duration-400"
                     >
                       {service.label}
                     </h4>
 
                     <p
-                      className="text-xs leading-relaxed text-gray-300 group-hover:text-gray-100 max-w-prose transition-colors duration-500"
+                      className="text-xs leading-relaxed text-accent md:text-gray-300 md:group-hover:text-gray-100 max-w-prose transition-colors duration-500"
                     >
                       {service.description}
 

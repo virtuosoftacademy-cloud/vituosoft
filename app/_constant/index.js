@@ -465,6 +465,21 @@ export const aiCategory = {
   ]
 }
 
+export const itCategory = {
+  title: 'IT Governance',
+  subtitletop: '',
+  subtitlebottom: "Structured Governance That Strengthens Control And Accountability",
+  bgColor: 'bg-linear-to-br from-primary to-[#003799]',
+  textColor: 'text-white',
+  accentImage: `/${accentImg}/ai_data_service.png`,
+  imagePosition: "-top-6 -right-4",
+  href:"/services/itgovernance/",
+  services: [
+    { label: 'Regulatory Compliance', description: "Ensure Business Operations Meet Industry Regulations, Standard And Legal Requirements To Maintain Trust And Avoid Penalties", slug:'#'},
+    { label: 'Governance Framework Development', description: "Design And Implement Structured It Governance Frameworks To Align Technology Strategy with Business Objectives Efficiently",slug:'#' },
+    { label: 'Resource Augmentation', description: "Provide Skilled IT Professionals And Expertise To Support Projects, Optimize Performance And Achieve Business Goals.",slug:'#' },
+  ]
+}
 export const cloudCategory = {
   title: 'Cloud Services',
   subtitletop: 'Powering Agility in a Connected World',
