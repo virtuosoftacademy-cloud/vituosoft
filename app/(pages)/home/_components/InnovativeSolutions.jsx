@@ -87,8 +87,8 @@ function InnovativeSolutions() {
 
                             <div
                                 className="flex flex-wrap gap-2.5
-                opacity-0 translate-y-4 transition-all duration-500 ease-out
-                  group-hover:opacity-100 group-hover:translate-y-0
+                md:opacity-0 md:translate-y-4 transition-all duration-500 ease-out
+                group-hover:opacity-100 group-hover:translate-y-0
                 "
                             >
                                 {service.buttons.map((btn, idx) => (

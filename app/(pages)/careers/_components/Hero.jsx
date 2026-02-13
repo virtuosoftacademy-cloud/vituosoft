@@ -35,7 +35,7 @@ function Hero() {
                     <p className="text-[16px]">
                         <span className="font-bold">
                             We believe in balance: great work deserves great fun.
-                        </span> From brainstorming sessions to coffee-fueled laughter, our culture thrives on creativity, teamwork, and shared success.
+                        </span> From brainstorming sessions to coffee-fueled laughter, our culture thrives on creativity, teamwork and shared success.
                     </p>
                 </div>
             </div>
@@ -46,7 +46,7 @@ function Hero() {
                     <h3 className={`${Italic} capitalize -my-4 md:-my-6`}>starts with you</h3>
                     <div className="bg-chart-1 rounded-full size-2 lg:size-4 relative bottom-3 md:bottom-8 left-[86%] md:left-[83%]" />
                     <div className="flex justify-center pb-10">
-                        <p className="text-sm lg:text-lg text-gray-400/80 font-light max-w-3xl">From brainstorming sessions to coffee-fueled laughter, our culture thrives on creativity, teamwork, and shared success.</p>
+                        <p className="text-sm lg:text-lg text-gray-400/80 font-light max-w-3xl">From brainstorming sessions to coffee-fueled laughter, our culture thrives on creativity, teamwork and shared success.</p>
                     </div>
                 </div>
                 <Image src={CareerImg3} alt="Our Career" width={400} height={400} className="w-4xl rounded-2xl" />

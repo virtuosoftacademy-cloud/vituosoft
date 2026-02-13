@@ -6,7 +6,7 @@ import { values_Section } from "@/app/_constant"
 import Image from "next/image"
 
 function Technology() {
-    
+
     return (
         <>
             <div className="max-w-7xl mx-auto px-10 my-12 lg:my-14">
@@ -40,9 +40,9 @@ function Technology() {
                     >
                         <Card
                             className="group relative w-full max-w-[380] lg:max-w-[380] rounded-2xl bg-white p-7 sm:p-8 lg:p-9
-            shadow-[0_5px_15px_rgba(0,0,0,0.05)]
+            shadow-[0_20px_20px_rgba(0,0,0,0.08)]
+            -translate-y-1.5
             transition-all duration-400 ease-out
-            hover:-translate-y-1.5 hover:shadow-[0_20px_20px_rgba(0,0,0,0.08)]
             overflow-hidden"                        >
                             {/* Gradient border – modern, reliable method */}
                             <div
@@ -108,9 +108,9 @@ function Technology() {
             w-full max-w-[380] lg:max-w-[380]
             rounded-2xl bg-white
             p-7 sm:p-8 lg:p-9
-            shadow-[0_5px_15px_rgba(0,0,0,0.05)]
             transition-all duration-400 ease-out
-            hover:-translate-y-1.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)]
+            shadow-[0_20px_20px_rgba(0,0,0,0.08)]
+            -translate-y-1.5
             overflow-hidden
           "
                         >

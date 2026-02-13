@@ -233,8 +233,8 @@ export const services_Section = [
     bgColor: "bg-[#0E3782]",
     textColor: "text-white",
     bgImage: `${IconServices}/ai.svg`,
-    gridClasses: "col-span-full md:col-span-1 lg:row-span-2 lg:min-h-[600px]",
-    hoverTranslate: "translate-y-48 group-hover:-translate-y-28 lg:group-hover:-translate-y-32",
+    gridClasses: "col-span-full md:col-span-1 lg:row-span-2 lg:min-h-[600px] py-10 md:py-0",
+    hoverTranslate: "md:translate-y-48 md:group-hover:-translate-y-28 lg:group-hover:-translate-y-32",
     buttons: [
       { label: "Custom Agent Development", href: "#" },
       { label: "Generative AI", href: "#" },
@@ -251,8 +251,8 @@ export const services_Section = [
     bgColor: "bg-[#003366]",
     textColor: "text-white",
     bgImage: `${IconServices}/advisory.svg`,
-    gridClasses: "col-span-full md:col-span-1 lg:row-span-1 lg:min-h-[300]",
-    hoverTranslate: "translate-y-20 group-hover:-translate-y-20 lg:group-hover:-translate-y-10",
+    gridClasses: "col-span-full md:col-span-1 lg:row-span-1 lg:min-h-[300] py-10 md:py-0",
+    hoverTranslate: "md:translate-y-20 group-hover:-traslate-y-5 md:group-hover:-translate-y-20 lg:group-hover:-translate-y-10",
     buttons: [
       { label: "Product Strategy & Roadmapping", href: "#" },
       { label: "Digital Transformation", href: "#" },
@@ -266,7 +266,7 @@ export const services_Section = [
     textColor: "text-[#111]",
     bgImage: `${IconServices}/be.svg`,
     gridClasses: "col-span-full md:col-span-1 lg:row-span-1 lg:min-h-[300]",
-    hoverTranslate: "translate-y-30 group-hover:-translate-y-20 lg:group-hover:-translate-y-2",
+    hoverTranslate: "md:translate-y-30 md:group-hover:-translate-y-20 lg:group-hover:-translate-y-2 py-10 md:py-0",
     isBusiness: true,
     buttons: [
       { label: "Regulatory Compliance", href: "#" },
@@ -282,7 +282,7 @@ export const services_Section = [
     textColor: "text-white",
     bgImage: `${IconServices}/engineering.svg`,
     gridClasses: "col-span-full md:col-span-2 lg:col-span-2 lg:row-span-1 min-h-[300px]",
-    hoverTranslate: "translate-y-50 md:translate-y-20 md:group-hover:-translate-y-16 lg:group-hover:-translate-y-10",
+    hoverTranslate: "md:translate-y-50 md:translate-y-20 md:group-hover:-translate-y-16 lg:group-hover:-translate-y-10 py-10 md:py-0",
     // isBusiness: true,
     MoreBtn: "/",
     buttons: [
