@@ -29,17 +29,33 @@ export default function Nav() {
   const [activeService, setActiveService] = useState(0);
   const [NavHidden, setNavHidden] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-
-  // For mobile — which service's subpages are open
   const [openSubMobile, setOpenSubMobile] = useState(null);
+
+  // Added only for detecting scroll direction
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
+      const currentScrollY = window.scrollY;
+
+      // Your original scrolled background logic
+      setScrolled(currentScrollY > 100);
+
+      // Hide logic: after half screen + only when scrolling down
+      const halfScreen = window.innerHeight / 2;
+
+      if (currentScrollY > halfScreen) {
+        setNavHidden(currentScrollY > lastScrollY);
+      } else {
+        setNavHidden(false);
+      }
+
+      setLastScrollY(currentScrollY);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const bg_animation =
     "px-0 lg:px-10 w-[85%] bg-foreground py-8 rounded-2xl top-8 text-white shadow-[0_12px_35px_rgba(0,0,0,0.25)]";
@@ -71,34 +87,36 @@ export default function Nav() {
   return (
     <nav
       className={cn(
-        "sticky top-0 z-50 w-full mx-auto transition-all duration-500 max-w-7xl bg-transparent py-8 shadow-none",
-        scrolled && `${bg_animation}`,
+        "sticky z-50 w-full mx-auto transition-all duration-500 max-w-7xl bg-transparent py-8 shadow-none",
+        scrolled && bg_animation,
+        NavHidden && "-translate-y-[130%]", // fully hides including shadow & rounded corners
       )}
     >
       <div className="flex items-center justify-between px-6 lg:px-0 -my-2">
         {/* Logo */}
         <Link href="/">
-          {scrolled ?
+          {scrolled ? (
             <Image
               src={LogoV}
               alt="Company Logo"
               width={40}
               height={48}
-              className={`transition-all duration-500 h-7 lg:h-8`}
+              className="transition-all duration-500 h-7 lg:h-8"
               priority
-            /> :
+            />
+          ) : (
             <Image
               src={Logo}
               alt="Company Logo"
               width={160}
               height={48}
-              className={`transition-all duration-500`}
+              className="transition-all duration-500"
               priority
             />
-          }
+          )}
         </Link>
 
-        {/* Desktop Menu – unchanged */}
+        {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-10">
           <Link href="/about-us" className="font-medium hover:text-primary transition-colors">
             About Us
@@ -195,23 +213,15 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* ──────────────────────────────────────────────── */}
-      {/* MOBILE MENU – with dropdown + sub-dropdown */}
-      {/* ──────────────────────────────────────────────── */}
-      {/* ──────────────────────────────────────────────── */}
-      {/* MOBILE MENU – with smooth animated dropdowns */}
-      {/* ──────────────────────────────────────────────── */}
+      {/* Mobile Menu */}
       {mobileOpen && (
         <div className="lg:hidden mt-4 px-4 bg-foreground text-accent overflow-hidden">
           <div className="flex flex-col py-8 px-8 gap-6 text-xl font-medium">
-            <Link
-              href="/about-us"
-              className="transition-colors hover:text-primary"
-            >
+            <Link href="/about-us" className="transition-colors hover:text-primary">
               About Us
             </Link>
 
-            {/* Services section with animated dropdown */}
+         {/* Services section with animated dropdown */}
             <div>
               <div
                 className="font-semibold flex items-center justify-between cursor-pointer transition-colors hover:text-primary"
@@ -306,24 +316,16 @@ export default function Nav() {
               </div>
             </div>
 
-            <Link
-              href="/team"
-              className="transition-colors hover:text-primary"
-            >
+            <Link href="/team" className="transition-colors hover:text-primary">
               Our Team
             </Link>
 
-            <Link
-              href="/careers"
-              className="transition-colors hover:text-primary"
-            >
+            <Link href="/careers" className="transition-colors hover:text-primary">
               Careers
             </Link>
 
             <Button size="lg" className="w-full max-w-sm" asChild>
-              <Link href="/contact">
-                Book a Consultation
-              </Link>
+              <Link href="/contact">Book a Consultation</Link>
             </Button>
           </div>
         </div>
