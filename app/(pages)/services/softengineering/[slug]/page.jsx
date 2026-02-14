@@ -3,15 +3,15 @@ import { notFound } from 'next/navigation';
 import { ReactLenis } from 'lenis/react';
 import Hero from '../_components/Hero';
 import ValueSection from '../../common/ValueSection';
-import Empower from '../_components/Empower';
 import {  AppDevHero, AppModHero, CustomEmpower, CustomHero, DataMigHero, EmpowerAppMod, EmpowerDataMig, EmpowerThirdParty, stepsDataAppDev, stepsDataAppMod, stepsDataCustomSoftware, stepsDataMig, stepsDataThirdParty, ThirdPartyHero, valueData, valueDataAppDev, valueDataAppMod, valueDataMig, valueDataThirdParty } from '../constant';
 import TimeLine from '../../common/TimeLine';
 import Cta from '@/components/common/Cta';
 import { Faq_softwareeng_ApplicationDevelopment, Faq_softwareeng_ApplicationModernization, Faq_softwareeng_databaseMigration, Faq_softwareeng_SoftwareDevelopment, Faq_softwareeng_thirdPartyIntegration } from '@/app/_constant';
 import Blogs from '@/app/(pages)/blogs/page';
-import Engage from '../../common/Engage';
 import Success from '../../common/Success';
 import Faq from '@/components/common/Faq';
+import Engage from '../../common/Engage';
+import Empower from '../../common/Empower';
 
 
 // ────────────────────────────────────────────────

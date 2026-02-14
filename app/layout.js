@@ -1,7 +1,5 @@
 import { Host_Grotesk, Sofia_Sans_Condensed } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/common/Nav";
-import Footer from "@/components/common/Footer";
 
 const Sofia_Sans_Cond = Sofia_Sans_Condensed({
   variable: "--font-sofia-condensed-sans",

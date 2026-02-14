@@ -5,12 +5,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
-
 export default function HorizontalScrollWrapper({
   children,
+  mobileHeight="auto",
   height = "100vh",
-  startOffset = 0,
-}) {
+  startOffset = 0
+ }) {
   const sectionRef = useRef(null);
   const trackRef = useRef(null);
 
@@ -52,11 +52,7 @@ export default function HorizontalScrollWrapper({
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-white"
-      style={{
-        height,
-        marginTop: "-1px",
-      }}
+      className={`relative overflow-hidden h-[${mobileHeight}] min-[${height}]`} 
     >
       <div ref={trackRef} className="w-max">
         {children}

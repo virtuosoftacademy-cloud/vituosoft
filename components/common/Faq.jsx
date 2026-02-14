@@ -5,7 +5,7 @@ import FaqCard from '@/components/ui/FaqCard';
 export default function Faq({ items = [] }) {         
   return (
     <div className="mx-auto max-w-[850px] px-6 sm:px-12 text-foreground pt-10">
-      <h4 className="lg:text-[42px] text-center mb-10">
+      <h4 className="text-2xl md:text-[42px] text-center mb-10">
         Frequently Asked <span className="font-bold">Questions</span>
       </h4>
 

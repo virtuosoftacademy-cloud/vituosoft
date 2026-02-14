@@ -1,11 +1,12 @@
-import Home from "./home/page"
+import Home from './home/page'
 
-function Page() {
+function page() {
     return (
         <div>
-            <Home />
+            <Home/>
         </div>
     )
 }
 
-export default Page
+export default page
+    

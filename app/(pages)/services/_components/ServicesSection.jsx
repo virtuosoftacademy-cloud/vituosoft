@@ -1,7 +1,7 @@
 
 
 import ServiceCard from "./ServiceCard"
-import { advisoryCategory, aiCategory, cloudCategory, engagementCategory, engineeringCategory, itCategory, optimizationCategory } from "@/app/_constant"
+import { advisoryCategory, aiCategory, cloudCategory, cyberCategory, dataServicesCategory, engineeringCategory, itCategory} from "@/app/_constant"
 
 
 export default function ServicesSection() {
@@ -11,6 +11,9 @@ export default function ServicesSection() {
       <ServiceCard category={advisoryCategory} />
       <ServiceCard category={engineeringCategory} />
       <ServiceCard category={itCategory} />
+      <ServiceCard category={dataServicesCategory} />
+      <ServiceCard category={cyberCategory}/>
+      {/* <ServiceCard category={cloudCategory}/> */}
     </div>
   )
 } 

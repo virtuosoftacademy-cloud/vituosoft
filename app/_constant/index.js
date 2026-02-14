@@ -1,16 +1,4 @@
-import {
-  ArrowRight,
-  Code2,
-  Dot,
-  DotSquare,
-  Globe,
-  LineChart,
-  Megaphone,
-  Palette,
-  Smartphone,
-  Menu,
-  X,
-} from "lucide-react";
+
 // Client Logos
 const logoIcon = 'assets/Images/ClientLogo/'
 export const logos = [
@@ -27,71 +15,81 @@ export const logos = [
 //Navbar
 export function getSpotlightVideo(title) {
   const videoMap = {
-    "Advisory": "2.png",
-    "Artificial Intelligence": "3.png",
-    "Software Engineering": "4.png",
-    "Data Service": "5.png",
-    "Solutions": "6.png",
-    "Expertise": "7.png",
+    "Advisory": "/2.png",
+    "Artificial Intelligence": "/3.png",
+    "Software Engineering": "/4.png",
+    "CyberSecurity":"/8.png",
+    "Data Service": "/5.png",
+    // "Solutions": "6.png",
+    // "Expertise": "7.png",
   };
-  return videoMap[title] || "5.png";
+  return videoMap[title] || "/5.png";
 }
 export const services_Nav = [
   {
     title: "Advisory",
     subPages: [
-      { label: "Product Strategy & Roadmapping", href: "#" },
-      { label: "Digital Transformation", href: "#" },
+      { label: "Product Strategy & Roadmapping", href: "/services/advisory/product-strategy" },
+      { label: "Digital Transformation", href: "/services/advisory/digital-transformation" },
     ],
   },
   {
     title: "Artificial Intelligence",
     subPages: [
-      { label: "AI Agent", href: "#" },
-      { label: "Generative A.I", href: "#" },
-      { label: "Data Science & MLOps", href: "#" },
-      { label: "Conversational Intelligence", href: "#" },
-      { label: "Computer Vision", href: "#" },
-      { label: "Optical Character Recognition", href: "#" },
+      { label: "AI Agent", href: "/services/ai/ai-agent" },
+      { label: "Generative A.I", href: "/services/ai/generative-ai" },
+      { label: "Data Science & MLOps", href: "/services/ai/data-science" },
+      { label: "Conversational Intelligence", href: "/services/ai/conversational-intelligence" },
+      { label: "Computer Vision", href: "/services/ai/computer-vision" },
+      { label: "Optical Character Recognition", href: "/services/ai/optical-character-recognition" },
     ],
   },
   {
     title: "Software Engineering",
     subPages: [
-      { label: "Custom Software Development", href: "#" },
-      { label: "Application Development (Mobile & Web)", href: "#" },
-      { label: "Application Modernization", href: "#" },
-      { label: "Database Migration", href: "#" },
-      { label: "Third-Party Integrations", href: "#" },
+      { label: "Custom Software Development", href: "/services/softengineering/custom-software-development" },
+      { label: "Application Development (Mobile & Web)", href: "/services/softengineering/app-development" },
+      { label: "Application Modernization", href: "/services/softengineering/app-modernization" },
+      { label: "Database Migration", href: "/services/softengineering/database-migration" },
+      { label: "Third-Party Integrations", href: "/services/softengineering/third-party" },
     ],
+  },
+  {
+    title:"CyberSecurity",
+    subPages:[
+      {label:"Solution Deployment and Management",href:"/services/cybersecurity/solution-deployment"},
+      {label:"Governance and Compliance",href:"/services/cybersecurity/governance-and-compliance"},
+      {label:"Cyber Assessments",href:"/services/cybersecurity/cyber-assessments"},
+      {label:"Managed Cybersecurity Service",href:"/services/cybersecurity/managed-cybersecurity-service"}
+    ]
   },
   {
     title: "Data Service",
     subPages: [
-      { label: "Data Consulting ", href: "#" },
-      { label: "Data Warehouse Solutions", href: "#" },
-      { label: "Data Analytics & BI", href: "#" },
+      { label: "Data Strategy Consulting ", href: "/services/dataservices/data-strategy" },
+      { label: "Data Warehouse Solutions", href: "/services/dataservices/data-warehouse" },
+      { label: "Data Analytics & BI", href: "/services/dataservices/data-analytics" },
     ],
   },
-  {
-    title:"Solutions",
-    subPages:[
-      {label:"ERP solutions",href:"#"},
-      {label:"BMC helix",href:"#"},
-      {label:"microsoft dynamics 365",href:"#"},
-      {label:"Manage Engine",href:"#"},
-    ]
-  },
-  {
-    title:"Expertise",
-    subPages:[
-      {label:"IT governance",href:"#"},
-      {label:"cybersecurity",href:"#"},
-      {label:"RPA",href:"#"},
-      {label:"DevOps",href:"#"},
-      {label:"IT service Management",href:"#"},
-    ]
-  }
+  // {
+  //   title:"Solutions",
+  //   subPages:[
+  //     {label:"ERP solutions",href:"#"},
+  //     {label:"BMC helix",href:"#"},
+  //     {label:"microsoft dynamics 365",href:"#"},
+  //     {label:"Manage Engine",href:"#"},
+  //   ]
+  // },
+  // {
+  //   title:"Expertise",
+  //   subPages:[
+  //     // {label:"IT governance",href:"#"},
+  //     // {label:"cybersecurity",href:"#"},
+  //     {label:"RPA",href:"#"},
+  //     {label:"DevOps",href:"#"},
+  //     // {label:"IT service Management",href:"#"},
+  //   ]
+  // }
   // {
   //   icon: LineChart,
   //   title: "Digital Marketing",
@@ -114,111 +112,111 @@ export const services_Nav = [
   // },
 ];
 // Footer Links and Data
-export const servicesData = [
-  {
-    title: 'Advisory',
-    items: [
-      { label: 'Discovery Workshop', href:"/" },
-      { label: 'Technical Feasibility Study', href:"/" },
-      { label: 'UI/UX Design', href:"/" },
-      { label: 'Product Strategy and Roadmapping', href:"/" },
-      { label: 'Digital Transformation', href:"/" },
-    ],
-  },
-  {
-    title: 'Artificial Intelligence',
-    items: [
-      { label: 'AI Workshop', href:"/" },
-      { label: 'AI PoC & MVP', href:"/" },
-      { label: 'AI Agents', href:"/" },
-      { label: 'Generative AI', href:"/" },
-      { label: 'Data Science & MLOps', href:"/" },
-    ],
-  },
-  {
-    title: 'Engineering',
-    items: [
-      { label: 'Application Development', href:"/" },
-      { label: 'Application Modernization', href:"/" },
-      { label: 'POC Development', href:"/" },
-      { label: 'Cloud Engineering', href:"/" },
-      { label: 'Product Development', href:"/" },
-    ],
-  },
-  {
-    title: 'IT Governance',
-    items: [
-      { label: 'Regulatory Compliance', href:"/" },
-      { label: 'Risk Management', href:"/" },
-      { label: 'ITIL', href:"/" },
-      { label: 'Resource Augmentation', href:"/" },
-    ],
-  },
-  {
-    title: 'Digital Marketing',
-    items: [
-      { label: 'Content Creation', href:"/" },
-      { label: 'Social Media Management', href:"/" },
-      { label: 'Ads Management', href:"/" },
-      { label: 'Copywriting', href:"/" },
-      { label: 'Creative Solutions', href:"/" },
-      { label: 'Video Editing', href:"/" },
-    ],
-  },
-  {
-    title: 'Business Enablement',
-    items: [
-      { label: 'Accounts & Finance', href:"/" },
-      { label: 'HR & Recruitment', href:"/" },
-    ],
-  },
-];
+// export const servicesData = [
+//   {
+//     title: 'Advisory',
+//     items: [
+//       { label: 'Discovery Workshop', href:"/" },
+//       { label: 'Technical Feasibility Study', href:"/" },
+//       { label: 'UI/UX Design', href:"/" },
+//       { label: 'Product Strategy and Roadmapping', href:"/" },
+//       { label: 'Digital Transformation', href:"/" },
+//     ],
+//   },
+//   {
+//     title: 'Artificial Intelligence',
+//     items: [
+//       { label: 'AI Workshop', href:"/" },
+//       { label: 'AI PoC & MVP', href:"/" },
+//       { label: 'AI Agents', href:"/" },
+//       { label: 'Generative AI', href:"/" },
+//       { label: 'Data Science & MLOps', href:"/" },
+//     ],
+//   },
+//   {
+//     title: 'Engineering',
+//     items: [
+//       { label: 'Application Development', href:"/" },
+//       { label: 'Application Modernization', href:"/" },
+//       { label: 'POC Development', href:"/" },
+//       { label: 'Cloud Engineering', href:"/" },
+//       { label: 'Product Development', href:"/" },
+//     ],
+//   },
+//   {
+//     title: 'IT Governance',
+//     items: [
+//       { label: 'Regulatory Compliance', href:"/" },
+//       { label: 'Risk Management', href:"/" },
+//       { label: 'ITIL', href:"/" },
+//       { label: 'Resource Augmentation', href:"/" },
+//     ],
+//   },
+//   {
+//     title: 'Digital Marketing',
+//     items: [
+//       { label: 'Content Creation', href:"/" },
+//       { label: 'Social Media Management', href:"/" },
+//       { label: 'Ads Management', href:"/" },
+//       { label: 'Copywriting', href:"/" },
+//       { label: 'Creative Solutions', href:"/" },
+//       { label: 'Video Editing', href:"/" },
+//     ],
+//   },
+//   {
+//     title: 'Business Enablement',
+//     items: [
+//       { label: 'Accounts & Finance', href:"/" },
+//       { label: 'HR & Recruitment', href:"/" },
+//     ],
+//   },
+// ];
 
-export const secondarySections = [
-  {
-    title: 'IT Service Management',
-    items: [
-      { label: 'BMC Helix', href:"/" },
-      { label: 'Manage Engine', href:"/" },
-    ],
-  },
-  {
-    title: 'Cyber Security',
-    items: [
-      { label: 'Solution Deployment', href:"/" },
-      { label: 'Governance & Compliance', href:"/" },
-      { label: 'Cyber Assessments', href:"/" },
-      { label: 'Managed Cybersecurity', href:"/" },
-    ],
-  },
-  {
-    title: 'Data & Analytics',
-    items: [
-      { label: 'Data Strategy Consulting', href:"/" },
-      { label: 'Data Warehouse', href:"/" },
-      { label: 'Data Analytics & BI', href:"/" },
-    ],
-  },
-];
+// export const secondarySections = [
+//   {
+//     title: 'IT Service Management',
+//     items: [
+//       { label: 'BMC Helix', href:"/" },
+//       { label: 'Manage Engine', href:"/" },
+//     ],
+//   },
+//   {
+//     title: 'Cyber Security',
+//     items: [
+//       { label: 'Solution Deployment', href:"/" },
+//       { label: 'Governance & Compliance', href:"/" },
+//       { label: 'Cyber Assessments', href:"/" },
+//       { label: 'Managed Cybersecurity', href:"/" },
+//     ],
+//   },
+//   {
+//     title: 'Data & Analytics',
+//     items: [
+//       { label: 'Data Strategy Consulting', href:"/" },
+//       { label: 'Data Warehouse', href:"/" },
+//       { label: 'Data Analytics & BI', href:"/" },
+//     ],
+//   },
+// ];
 
-export const solutions = ['Microsoft Dynamics 365', 'Power BI', 'BMC Helix', 'Odoo'];
+// export const solutions = ['Microsoft Dynamics 365', 'Power BI', 'BMC Helix', 'Odoo'];
 
-const IconSocial = "assets/Images/"
+const IconSocial = "assets/Images"
 export const socialLinks = [
   {
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/company/virtuosoft.pk/',
-    img: `${IconSocial}/linkedin.svg`
+    src: `/${IconSocial}/linkedin.svg`
   },
   {
     name: 'Facebook',
     href: 'https://www.facebook.com/share/1D7GPDPc44/?mibextid=LQQJ4d',
-    img: `${IconSocial}/facebook.svg`
+    src: `/${IconSocial}/facebook.svg`
   },
   {
     name: 'Instagram',
     href: 'https://www.instagram.com/virtuosoft_official?igsh=bHNzd2kxa2Z3eDhp&utm_source=qr',
-    img: `${IconSocial}/instagram.svg`
+    src: `/${IconSocial}/instagram.svg`
   },
 ];
 
@@ -324,7 +322,7 @@ const imageBaseUrl = "assets/Images/team";
 export const teamMembers = [
   {
     name: "M.Lukman",
-    role: "Chair Man",
+    role: "Chairman",
     description: "Mr. Muhammad Lukman, Chairman of Virtuosoft, served as the Chief Executive Officer (CEO) of the National Clearing Company of Pakistan Limited.",
     image: `/${imageBaseUrl}/lukman.png`,
     linkedin: "https://www.linkedin.com/in/muhammad-lukman-888288116"
@@ -352,11 +350,11 @@ export const teamMembers = [
 
   },
   {
-    name: "Asiya Nazeer",
-    role: "HR Operations",
-    description: "Asiya Nazeer is an HR Executive who specializes in recruitment, employee engagement and improving day-to-day HR processes to support organizational efficiency. With a strong interest in building positive workplace cultures, she focuses on employee satisfaction, smooth coordination and continuous improvement. Asiya is committed to learning, growing her HR expertise and contributing to long-term business success.",
-    image: `/${imageBaseUrl}/asiya-nazeer.png`,
-    linkedin: "https://www.linkedin.com/in/asiya-nazeer"
+    name: "Usman ur rehman",
+    role: "Director of IT Governance and Services",
+    description:"Usman ur Rehman is the Director of Software Quality Assurance Services at Virtuosoft. He leads the QA department with a strong focus on product reliability, performance and defect prevention. With a sharp eye for detail and deep testing expertise, he ensures that all software meets high quality standards before delivery. Known for his dedication and responsibility, Usman is trusted for handling critical testing, bug detection and overall quality assurance across projects.",
+    image: `/${imageBaseUrl}/Usman-Ur-Rehman.png`,
+    linkedin: "https://www.linkedin.com/in/usman-ur-rehman-64b67223/"
   },
   {
     name: "Syed Ibrahim Ahmed",
@@ -365,35 +363,28 @@ export const teamMembers = [
     image: `/${imageBaseUrl}/Ibrahim.png`,
     linkedin: "https://www.linkedin.com/in/syedibrahimahmed-hr/"
   },
+  {
+    name: "Asiya Nazeer",
+    role: "HR Operations",
+    description: "Asiya Nazeer is an HR Executive who specializes in recruitment, employee engagement and improving day-to-day HR processes to support organizational efficiency. With a strong interest in building positive workplace cultures, she focuses on employee satisfaction, smooth coordination and continuous improvement. Asiya is committed to learning, growing her HR expertise and contributing to long-term business success.",
+    image: `/${imageBaseUrl}/asiya-nazeer.png`,
+    linkedin: "https://www.linkedin.com/in/asiya-nazeer"
+  },
   // {
-  //   name: "Saad Athar",
-  //   role: "Head Of Business Development, Middle East",
-  //   description: "Saad Athar, a seasoned Chartered Accountant, serves as the Business Development Head for the Middle East. With over 15 years of experience in the MENA region and a career spanning nine countries, Saad brings unparalleled expertise in business development, strategy, and organizational growth. His specializations include systems and process optimization, budgeting, cost recovery models, project management, and ERP implementation. Proficient in English, Arabic, and Urdu, Saad is adept at fostering cross-border collaborations and negotiating contracts. An alumnus of the University of East London and Warwick Business School, with certifications from the International Council of Shopping Centres and Covey Labs, Saad embodies a commitment to excellence. His multicultural insights and strategic vision have been instrumental in expanding operations and driving success for the organization in the Middle East region.",
-  //   image: `/${imageBaseUrl}/saad.png`,
-  //   linkedin: "https://www.linkedin.com/in/saadathar-strategist/"
-  // },
-  // {
-  //   name: "Muhammad Rehan",
-  //   role: "Head of Tecnology",
+    //   name: "Muhammad Rehan",
+    //   role: "Head of Tecnology",
   //   description: "Muhammad Rehan is a Lead Full Stack Engineer at Virtuosoft with nearly 8 years of hands-on experience in software development. He has grown through multiple roles from Python Developer to Senior Engineer and now leads full stack development initiatives. His expertise includes backend systems, cloud infrastructure and scalable web applications using technologies such as Python, Node.js, AWS, Django and modern JavaScript frameworks. He plays a key role in building reliable, high-performance solutions for clients across different industries.",
   //   image: `/${imageBaseUrl}/m_rehan.png`,
   //   linkedin: "https://www.linkedin.com/in/rehan010/"
   // },
   // {
-  //   name: "Aumare javed",
-  //   role: "Business Development Consultant , Europe",
-  //   description: "Currently contributing to Caansoft, a sister concern of Virtuosoft, with over a decade of expertise in delivering cutting-edge software solutions. With a strong focus on user-centric design, they excel in enhancing efficiency and quality. Skilled in leading teams to craft solutions tailored to diverse business needs, they prioritize exceptional user experiences and aesthetic excellence, ensuring alignment with organizational goals",
-  //   image: `/${imageBaseUrl}/aumair_javed.png`,
-  //   linkedin: "#"
-  // },
-  // {
-  //   name: "Adil Hasan",
-  //   role: "Chief Operating Officer",
-  //   description: "Adil Hasan is a UI/UX Designer and Digital Artist with over two decades of experience creating user-centered digital experiences. He holds a degree in Digital Media from Karachi School of Art (2013), which deepened his expertise in motion design and interactive media. Adil specializes in crafting intuitive interfaces, compelling digital artwork and engaging animations that balance aesthetic appeal with functional design. Known for his meticulous attention to detail and creative problem-solving, he helps organizations elevate their digital presence through thoughtful, human-centered design.",
-  //   image: `/${imageBaseUrl}/azhar_rizvi.png`,
-  //   linkedin: "#"
-  // },
-  // {
+    //   name: "Aumare javed",
+    //   role: "Business Development Consultant , Europe",
+    //   description: "Currently contributing to Caansoft, a sister concern of Virtuosoft, with over a decade of expertise in delivering cutting-edge software solutions. With a strong focus on user-centric design, they excel in enhancing efficiency and quality. Skilled in leading teams to craft solutions tailored to diverse business needs, they prioritize exceptional user experiences and aesthetic excellence, ensuring alignment with organizational goals",
+    //   image: `/${imageBaseUrl}/aumair_javed.png`,
+    //   linkedin: "#"
+    // },
+    // {
   //   name: "Ahmed Nawaz",
   //   role: "Sr. Business Development Manager",
   //   description: "Ahmed Nawaz is a Senior Manager of Business Operations at Virtuosoft with over 12 years of experience in business management and operations. He specializes in aligning strategy with execution, improving internal processes and managing cross-functional teams. Ahmed oversees core business functions including operations, administration, vendor management and compliance. Known for his practical approach and strong leadership, he helps drive efficiency, stability and long-term growth across the organization.",
@@ -408,33 +399,33 @@ export const teamMembers = [
   //   linkedin: "https://www.linkedin.com/in/adnanmalikinfo/"
   // },
   // {
-  //   name: "Sohail malik",
-  //   role: "Head of Financial BPO",
-  //   description: "Sohail Imdad is an Associate Chartered Accountant from ICAR he has more than ten years of working experience. During the course of employment in PwC, he gained valuable experience of audit and Assurance, Taxation and Accounting & Book Keeping of multiple industries. He has also served in fastest growing pharmaceutical of Pakistan as a Lead Treasury and also in the the top FMCG of Pakistan as the Head of Taxation.",
-  //   image: `/${imageBaseUrl}/sohail_malik.png`,
-  //   linkedin: "https://www.linkedin.com/in/suhail-imdad/"
-  // },
-  // {
-  //   name: "Wasif Shariq",
-  //   role: "Head of Growth",
-  //   description: "Wasif Shariq leads strategic planning, internal operations, client relationships and external partnerships. His core focus is helping founders and businesses build strong development teams within 48–72 hours, modernize their technology stacks and scale with confidence. With hands-on experience in software development, SaaS and team building, Wasif works closely with clients to turn ideas into practical, growth-ready solutions.",
-  //   image: `/${imageBaseUrl}/wasif_shariq.png`,
-  //   linkedin: "https://www.linkedin.com/in/mwasifshariq/"
-  // },
-  // {
-  //   name: "Usman ur rehman",
-  //   role: "Director of IT Governance and Services",
-  //   description:"Usman ur Rehman is the Director of Software Quality Assurance Services at Virtuosoft. He leads the QA department with a strong focus on product reliability, performance and defect prevention. With a sharp eye for detail and deep testing expertise, he ensures that all software meets high quality standards before delivery. Known for his dedication and responsibility, Usman is trusted for handling critical testing, bug detection and overall quality assurance across projects.",
-  //   image: `/${imageBaseUrl}/Usman-Ur-Rehman.png`,
-  //   linkedin: "https://www.linkedin.com/in/usman-ur-rehman-64b67223/"
-  // },
-  // {
-  //   name: "Tahir aziz",
-  //   role: "Business Development Consultant, USA",
-  //   description: "Data Engineering and Analytics Expert with over 14 years of experience in designing, developing, and implementing complex data warehousing and big data solutions. Proficient in ETL, data modeling, and data mining techniques using industry-leading tools like Teradata, Informatica, and Hadoop. Skilled in cloud technologies like AWS and Snowflake. Passionate about leveraging data to drive business insights and improve decision-making.",
-  //   image: `/${imageBaseUrl}/tahir.png`,
-  //   linkedin: "https://www.linkedin.com/in/mrtaz/"
-  // }
+    //   name: "Wasif Shariq",
+    //   role: "Head of Growth",
+    //   description: "Wasif Shariq leads strategic planning, internal operations, client relationships and external partnerships. His core focus is helping founders and businesses build strong development teams within 48–72 hours, modernize their technology stacks and scale with confidence. With hands-on experience in software development, SaaS and team building, Wasif works closely with clients to turn ideas into practical, growth-ready solutions.",
+    //   image: `/${imageBaseUrl}/wasif_shariq.png`,
+    //   linkedin: "https://www.linkedin.com/in/mwasifshariq/"
+    // },
+    {
+      name: "Tahir aziz",
+      role: "Business Development Consultant, USA",
+      description: "Data Engineering and Analytics Expert with over 14 years of experience in designing, developing, and implementing complex data warehousing and big data solutions. Proficient in ETL, data modeling, and data mining techniques using industry-leading tools like Teradata, Informatica, and Hadoop. Skilled in cloud technologies like AWS and Snowflake. Passionate about leveraging data to drive business insights and improve decision-making.",
+      image: `/${imageBaseUrl}/tahir.png`,
+      linkedin: "https://www.linkedin.com/in/mrtaz/"
+    },
+    {
+      name: "Saad Athar",
+      role: "Head Of Business Development, Middle East",
+      description: "Saad Athar, a seasoned Chartered Accountant, serves as the Business Development Head for the Middle East. With over 15 years of experience in the MENA region and a career spanning nine countries, Saad brings unparalleled expertise in business development, strategy, and organizational growth. His specializations include systems and process optimization, budgeting, cost recovery models, project management, and ERP implementation. Proficient in English, Arabic, and Urdu, Saad is adept at fostering cross-border collaborations and negotiating contracts. An alumnus of the University of East London and Warwick Business School, with certifications from the International Council of Shopping Centres and Covey Labs, Saad embodies a commitment to excellence. His multicultural insights and strategic vision have been instrumental in expanding operations and driving success for the organization in the Middle East region.",
+      image: `/${imageBaseUrl}/saad.png`,
+      linkedin: "https://www.linkedin.com/in/saadathar-strategist/"
+    },
+    {
+      name: "Sohail malik",
+      role: "Head of Financial BPO",
+      description: "Sohail Imdad is an Associate Chartered Accountant from ICAR he has more than ten years of working experience. During the course of employment in PwC, he gained valuable experience of audit and Assurance, Taxation and Accounting & Book Keeping of multiple industries. He has also served in fastest growing pharmaceutical of Pakistan as a Lead Treasury and also in the the top FMCG of Pakistan as the Head of Taxation.",
+      image: `/${imageBaseUrl}/sohail_malik.png`,
+      linkedin: "https://www.linkedin.com/in/suhail-imdad/"
+    },
 ]
 
 
@@ -475,22 +466,50 @@ export const itCategory = {
   imagePosition: "-top-6 -right-4",
   href:"/services/itgovernance/",
   services: [
-    { label: 'Regulatory Compliance', description: "Ensure Business Operations Meet Industry Regulations, Standard And Legal Requirements To Maintain Trust And Avoid Penalties", slug:'#'},
-    { label: 'Governance Framework Development', description: "Design And Implement Structured It Governance Frameworks To Align Technology Strategy with Business Objectives Efficiently",slug:'#' },
-    { label: 'Resource Augmentation', description: "Provide Skilled IT Professionals And Expertise To Support Projects, Optimize Performance And Achieve Business Goals.",slug:'#' },
+    { label: 'Regulatory Compliance', description: "Ensure Business Operations Meet Industry Regulations, Standard And Legal Requirements To Maintain Trust And Avoid Penalties", slug:'regulatory-compliance'},
+    { label: 'Governance Framework Development', description: "Design And Implement Structured It Governance Frameworks To Align Technology Strategy with Business Objectives Efficiently",slug:'governance-framework-development' },
+    { label: 'Resource Augmentation', description: "Provide Skilled IT Professionals And Expertise To Support Projects, Optimize Performance And Achieve Business Goals.",slug:'resource-augmentation' },
   ]
 }
-export const cloudCategory = {
-  title: 'Cloud Services',
-  subtitletop: 'Powering Agility in a Connected World',
-  subtitlebottom: 'Cloud is more than storage, it’s a foundation for innovation. Our cloud services help you scale effortlessly, cut costs and build secure environments that grow with your needs.',
-  accentImage: `/${accentImg}/cs_service.png`,
+export const dataServicesCategory = {
+  title: 'Data Service',
+  subtitletop: '',
+  subtitlebottom: 'Turning Complex Data Into Valuable Insights',
+  accentImage: `/${accentImg}/as_service.png`,
   textColor: 'text-white',
-  bgColor: 'bg-linear-to-br from-[#734F9A] to-[#300032]',
+  bgColor: 'bg-linear-to-br from-[#084387] to-[#021021]',
+  imagePosition: "top-0 right-0",
+  href:"/services/dataservices/",
+  services: [
+    {
+      label: "Data Strategy Consulting",
+      description: "Develop actionable data strategies that align with business goals, maximize value and drive informed decision-making.",
+      slug:"data-strategy"
+    }, 
+    {
+      label: "Data Warehouse",
+      description: "Design and manage centralized data storage solutions to enable efficient access, integration and reporting.",
+      slug:"data-warehouse"
+    },
+    {
+      label: "Data Analytics and BI",
+      description: "Transform raw data into insights through analytics and business intelligence for smarter, data-driven decisions.",
+      slug:"data-analytics"
+    }, 
+  ],
+}
+
+export const cloudCategory = {
+  title: 'Cloud Engineering',
+  // subtitletop: 'Powering Agility in a Connected World',
+  subtitlebottom: 'Designing, migrating, and operating secure, scalable cloud environments that improve agility, resilience, and cost efficiency.',
+  accentImage: `/${accentImg}/as_service.png`,
+  textColor: 'text-white',
+  bgColor: 'bg-linear-to-br from-[#084387] to-[#021021]',
   imagePosition: "-top-6 -right-4",
   services: [
     {
-      label: 'Cloud Engineering & Architecture',
+      label: 'Cloud Consulting',
       description: "Design the perfect cloud setup with secure, flexible and built to support your business goals."
     },
     {
@@ -584,62 +603,39 @@ export const engineeringCategory = {
     }
   ],
 }
-
-export const optimizationCategory = {
-  title: 'Optimization & Enablement',
-  subtitletop: 'Making Systems Smarter and Teams Stronger',
-  subtitlebottom: 'Optimization is about doing more with less. We help you refine your systems, automate your processes and enhance performance so your business keeps running smoothly and scaling confidently.',
-  accentImage: `/${accentImg}/oe_service.png`,
+export const cyberCategory = {
+  title: 'Cyber Security',
+  // subtitletop: 'Smart Security That keeps Your Business Resilient',
+  subtitlebottom: 'Smart Security That keeps Your Business Resilient',
+  accentImage: `/${accentImg}/ed_service.png`,
   textColor: 'text-white',
-  bgColor: 'bg-linear-to-br from-[#498968] to-[#00192E]',
+  bgColor: 'bg-linear-to-br from-[#0E3043] to-[#485861]',
   imagePosition: "top-0 right-0",
+  href:"/services/cybersecurity/",
   services: [
     {
-      label: 'Software Audits',
-      description: "Get a clear view of your software health, uncover gaps, inefficiencies and opportunities for improvement."
+      label: "Solution Deployment and Management",
+      description: "Implement and manage security solutions to protect systems, networks and data from evolving cyber threats.",
+      slug:"solution-deployment"
     },
     {
-      label: "Quality Assurance",
-      description: "Ensure every release works as intended. Our QA team tests, validates and refines to deliver flawless user experiences."
+      label: 'Governance and Compliance',
+      description: "Establish policies and controls ensuring IT security practices meet regulatory standards and organizational requirements.",
+      slug:"governance-and-compliance"
     },
     {
-      label: "Support & Maintenance",
-      description: "Keep everything running perfectly with continuous monitoring, updates and technical support."
+      label: "Cyber Assessments",
+      description: "Conduct comprehensive evaluations of systems, networks and processes to identify vulnerabilities and strengthen defenses.",
+      slug:"cyber-assessments"
     },
     {
-      label: "Process Automation",
-      description: "Automate repetitive tasks and free your teams to focus on what really drives growth."
+      label: "Managed Cybersecurity Service",
+      description: "Provide continuous monitoring, threat detection and incident response to safeguard digital assets and maintain resilience.",
+      slug:"managed-cybersecurity-service"
     }
   ],
 }
 
-export const engagementCategory = {
-  title: 'Engagement Models',
-  subtitletop: 'Flexible Partnerships that Fit Your Goals',
-  subtitlebottom: 'Every business is unique and so is the way it builds technology. Our engagement models are designed to adapt, whether you need long-term collaboration, short-term support or expert talent on demand.',
-  accentImage: `/${accentImg}/em_models_service.png`,
-  textColor: 'text-white',
-  bgColor: 'bg-linear-to-br from-[#8F6982]/90 to-[#33004A]',
-  imagePosition: "top-0 right-0",
-  services: [
-    {
-      label: 'Dedicated Development Team',
-      description: "A team that works exclusively for you fully aligned with your goals and timelines."
-    },
-    {
-      label: "Offshore / Remote Team Setup",
-      description: "Extend your capabilities globally with skilled remote teams that deliver around the clock."
-    },
-    {
-      label: "Fixed Price Projects",
-      description: "Ideal for clearly defined goals. Predictable budgets, timelines and deliverables with zero surprises."
-    },
-    {
-      label: "Staff Augmentation",
-      description: "Scale your team instantly with specialists who blend seamlessly into your projects."
-    }
-  ],
-}
 
 // Services Page What Make Us Different? Section
 const iconDifferent = "assets/Images/service"

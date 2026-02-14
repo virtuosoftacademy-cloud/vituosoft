@@ -2,15 +2,15 @@
 import { notFound } from 'next/navigation';
 import { ReactLenis } from 'lenis/react';
 import Hero from '../_components/Hero';
-import { aiAgentsEmpower, aiAgentsHero, ComHero, ConHero, DataScienceHero, EmpowerCom, EmpowerCon, EmpowerDataScience, EmpowerGen, EmpowerOcr, genaiHero, OcrHero, stepsData, stepsDataCom, stepsDataCon, stepsDataGen, stepsDataOcr, stepsDataScience, valueData, valueDataCom, valueDataCon, valueDataGen, valueDataOcr, valueDataScience } from '../constant';
-import Cta from '@/components/common/Cta';
-import Faq from '../../../../../components/common/Faq';
-import { Faq_AI_ComputerVision, Faq_AI_ConversationalAI, Faq_AI_CustomAgent, Faq_AI_DataScience_MLOps, Faq_AI_GenerativeAI, Faq_AI_OCR } from '@/app/_constant';
-import Blogs from '@/app/(pages)/blogs/page';
-import Engage from '../../common/Engage';
 import Success from '../../common/Success';
+import Cta from '@/components/common/Cta';
+import { Faq_ITGovernance_GovernanceFrameworkDev, Faq_ITGovernance_RegulatoryCompliance, Faq_ITGovernance_ResourceAugmentation } from '@/app/_constant';
+import Blogs from '@/app/(pages)/blogs/page';
+import { EmpowerFramework, EmpowerResource, FrameworkHero, ProductRegulatory, ProductStrategyEmpower, ProductStrategyHero, regulatoryHero, resourceHero, stepsDataDigitalTransformation, stepsDataFramework, stepsDataProductStrategy, stepsDataRegulatory, stepsDataresource, valueDataDigital, valueDataFramework, valueDataProductStrategy, valueDataRegulatory, valueDataresource } from '../constant';
 import TimeLine from '../../common/TimeLine';
+import Faq from '@/components/common/Faq';
 import ValueSection from '../../common/ValueSection';
+import Engage from '../../common/Engage';
 import Empower from '../../common/Empower';
 
 
@@ -18,120 +18,62 @@ import Empower from '../../common/Empower';
 //  All services (array — easy to extend)
 const services = [
   {
-    slug: 'ai-agent',
-    title: 'AI Agent',
-    heroData: aiAgentsHero,
-    value: valueData[0],
-    Data: aiAgentsEmpower[0],
-    timeLine: stepsData[0],
+    slug: 'regulatory-compliance',
+    title: 'Regulatory Compliance',
+    heroData: regulatoryHero,
+    value: valueDataRegulatory[0],
+    Data: ProductRegulatory[0],
+    timeLine: stepsDataRegulatory[0],
     sections: [
-      { Component: Hero, props: aiAgentsHero },
-      { Component: ValueSection, props: valueData[0] },
+      { Component: Hero, props: regulatoryHero },
+      { Component: ValueSection, props: valueDataRegulatory[0] },
       { Component: Success },
-      { Component: TimeLine, props: stepsData[0] },
-      { Component: Empower, props: aiAgentsEmpower[0] },
+      { Component: TimeLine, props: stepsDataRegulatory[0] },
+      { Component: Empower, props: ProductRegulatory[0] },
       { Component: Blogs },
       { Component: Engage },
-      { Component: Faq, props: { items: Faq_AI_CustomAgent } },
+      { Component: Faq, props: { items: Faq_ITGovernance_RegulatoryCompliance } },
       { Component: Cta },
     ],
   },
   {
-    slug: 'generative-ai',
-    title: 'Generative AI',
-    heroData: genaiHero,
-    value: valueDataGen[0],
-    Data: EmpowerGen[0],
-    timeLine: stepsData[0],
+    slug: 'governance-framework-development',
+    title: 'Governance Framework Development',
+    heroData: FrameworkHero,
+    value: valueDataFramework[0],
+    Data: EmpowerFramework[0],
+    timeLine: stepsDataFramework[0],
     sections: [
-      { Component: Hero, props: genaiHero },
-      { Component: ValueSection, props: valueDataGen[0] },
+      { Component: Hero, props: FrameworkHero },
+      { Component: ValueSection, props: valueDataFramework[0] },
       { Component: Success },
-      { Component: TimeLine, props: stepsDataGen[0] },
-      { Component: Empower, props: EmpowerGen[0] },
+      { Component: TimeLine, props: stepsDataFramework[0] },
+      { Component: Empower, props: EmpowerFramework[0] },
       { Component: Blogs },
       { Component: Engage },
-      { Component: Faq, props: { items: Faq_AI_GenerativeAI } },
+      { Component: Faq, props: { items: Faq_ITGovernance_GovernanceFrameworkDev} },
       { Component: Cta },
     ],
   },
   {
-    slug: 'data-science',
-    title: 'Data Science & MLOps',
-    heroData: DataScienceHero,
-    value: valueDataGen[0],
-    Data: EmpowerDataScience[0],
-    timeLine: stepsDataScience[0],
+    slug: 'resource-augmentation',
+    title: 'Resource Augmentation',
+    heroData: resourceHero,
+    value: valueDataresource[0],
+    Data: EmpowerResource[0],
+    timeLine: stepsDataresource[0],
     sections: [
-      { Component: Hero, props: DataScienceHero },
-      { Component: ValueSection, props: valueDataScience[0] },
+      { Component: Hero, props: resourceHero },
+      { Component: ValueSection, props: valueDataresource[0] },
       { Component: Success },
-      { Component: TimeLine, props: stepsDataScience[0] },
-      { Component: Empower, props: EmpowerDataScience[0] },
+      { Component: TimeLine, props: stepsDataresource[0] },
+      { Component: Empower, props: EmpowerResource[0] },
       { Component: Blogs },
       { Component: Engage },
-      { Component: Faq, props: { items: Faq_AI_DataScience_MLOps } },
+      { Component: Faq, props: { items: Faq_ITGovernance_ResourceAugmentation} },
       { Component: Cta },
     ],
   },
-  {
-    slug: 'conversational-intelligence',
-    title: 'Conversational Intelligence',
-    heroData: ConHero,
-    value: valueDataCon[0],
-    Data: EmpowerCon[0],
-    timeLine: stepsDataCon[0],
-    sections: [
-      { Component: Hero, props: ConHero },
-      { Component: ValueSection, props: valueDataCon[0] },
-      { Component: Success },
-      { Component: TimeLine, props: stepsDataCon[0] },
-      { Component: Empower, props: EmpowerCon[0] },
-      { Component: Blogs },
-      { Component: Engage },
-      { Component: Faq, props: { items: Faq_AI_ConversationalAI } },
-      { Component: Cta },
-    ],
-  },
-  {
-    slug: 'computer-vision',
-    title: 'Computer Vision',
-    heroData: ComHero,
-    value: valueDataCon[0],
-    Data: EmpowerCom[0],
-    timeLine: stepsDataCom[0],
-    sections: [
-      { Component: Hero, props: ComHero },
-      { Component: ValueSection, props: valueDataCom[0] },
-      { Component: Success },
-      { Component: TimeLine, props: stepsDataCom[0] },
-      { Component: Empower, props: EmpowerCom[0] },
-      { Component: Blogs },
-      { Component: Engage },
-      { Component: Faq, props: { items: Faq_AI_ComputerVision } },
-      { Component: Cta },
-    ],
-  },
-  {
-    slug: 'optical-character-recognition',
-    title: 'Optical Character Recognition',
-    heroData: OcrHero,
-    value: valueDataOcr[0],
-    Data: EmpowerOcr[0],
-    timeLine: stepsDataOcr[0],
-    sections: [
-      { Component: Hero, props: OcrHero },
-      { Component: ValueSection, props: valueDataOcr[0] },
-      { Component: Success },
-      { Component: TimeLine, props: stepsDataOcr[0] },
-      { Component: Empower, props: EmpowerOcr[0] },
-      { Component: Blogs },
-      { Component: Engage },
-      { Component: Faq, props: { items: Faq_AI_OCR } },
-      { Component: Cta },
-    ],
-  },
-  
 ];
 
 // Helper to find service by slug

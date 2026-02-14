@@ -3,9 +3,6 @@ import { notFound } from 'next/navigation';
 import { ReactLenis } from 'lenis/react';
 import Hero from '../_components/Hero';
 import Success from '../../common/Success';
-import Empower from '../_components/Empower';
-import Engage from '../_components/Engage';
-import { aiAgentsEmpower, aiAgentsHero, stepsData, valueData } from '../../ai/constant';
 import Cta from '@/components/common/Cta';
 import { Faq_Advisory_DigitalTransformation, Faq_Advisory_ProductStrategy, Faq_AI_CustomAgent } from '@/app/_constant';
 import Blogs from '@/app/(pages)/blogs/page';
@@ -13,6 +10,8 @@ import { DigitalHero, EmpowerDigitalTransformation, ProductStrategyEmpower, Prod
 import TimeLine from '../../common/TimeLine';
 import Faq from '@/components/common/Faq';
 import ValueSection from '../../common/ValueSection';
+import Engage from '../../common/Engage';
+import Empower from '../../common/Empower';
 
 
 // ────────────────────────────────────────────────

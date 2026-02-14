@@ -1,16 +1,20 @@
 'use client'
 
-import dynamic from 'next/dynamic';
 import { ReactLenis } from 'lenis/react'
-const AboutUs = dynamic(() => import('./AboutUs'), {
+import Hero from './_components/Hero';
+import dynamic from 'next/dynamic';
+
+const DynamicComponents = dynamic(() => import('./_components/DynamicComponents'), {
   ssr: false,
 });
-export default function Page() {
+function AboutUs() {
   return (
     <>
-    <ReactLenis root>
-      <AboutUs />;
-    </ReactLenis>
+      <ReactLenis root>
+        <Hero />
+        <DynamicComponents />
+      </ReactLenis>
     </>
   )
 }
+export default AboutUs;

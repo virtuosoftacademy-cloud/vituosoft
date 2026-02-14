@@ -45,7 +45,7 @@ export default function FounderSection() {
     relative z-10
     bg-transparent md:bg-[#0B5CFF]
     rounded-[10px] md:rounded-[40px]
-    h-[140px] md:h-[280px] lg:h-[320px] xl:h-[350px]
+    h-[160px] md:h-[280px] lg:h-[320px] xl:h-[350px]
     md:w-[650px] lg:w-[752px] xl:w-[976px]
     px-2 md:px-1 lg:px-10 xl:px-16
     flex items-center gap-12 md:gap-2 lg:gap-12 overflow-visible
@@ -73,8 +73,8 @@ export default function FounderSection() {
     w-6/7
     bg-[#0B5CFF]
     rounded-r-[10px]
-    md:hidden
-    z-0
+    
+    z-0 
   "
 />
 
@@ -110,7 +110,7 @@ export default function FounderSection() {
     absolute z-20
 
     /* MOBILE */
-    w-[100px] h-[150px]
+    w-[100px] h-[170px]
     top-[30px] right-[-30px]
 
     /* TABLET */

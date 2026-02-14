@@ -1,5 +1,5 @@
 ' use client'
-import { secondarySections, servicesData, socialLinks, solutions } from '@/app/_constant';
+import { secondarySections, services_Nav, servicesData, socialLinks, solutions } from '@/app/_constant';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -9,18 +9,18 @@ import { Button } from '../ui/button';
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-accent/50 py-16 px-6 md:px-10 lg:px-16 font-sans">
+    <footer className="bg-foreground text-accent/50 py-16 px-6 md:px-10 lg:px-16">
       <div className="max-w-7xl mx-auto">
 
         {/* ROW 1: All main services – mapped from data */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-10 lg:gap-12 mb-16">
-          {servicesData.map((section) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12 mb-16">
+          {services_Nav.map((section) => (
             <div key={section.title}>
-              <h4 className="text-white uppercase text-xs tracking-wide font-semibold mb-6">
+              <h4 className="text-white uppercase text-xs md:text-lg tracking-wide font-semibold mb-6">
                 {section.title}
               </h4>
-              <ul className="space-y-3 text-sm">
-                {section.items.map((item) => (
+              <ul className="space-y-3 text-sm md:text-sm">
+                {section.subPages.map((item) => (
                   <li key={item.label}>
                     <Link
                       href={item.href}
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
 
         {/* ROW 2: Secondary sections + Solutions */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-16 border-t border-foreground pt-12">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-16 border-t border-foreground pt-12">
           {secondarySections.map((section) => (
             <div key={section.title}>
               <h4 className="text-white uppercase text-xs tracking-wide font-semibold mb-6">
@@ -70,11 +70,11 @@ const Footer = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* ROW 3: Address | Subscribe | Follow Us */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16 border-t border-[#222b36] pt-10 mb-10">
-          <div>
+          <div >
             <h4 className="text-white uppercase text-xs tracking-wide font-semibold mb-4">Address</h4>
             <p className="text-sm leading-relaxed">
               C, 35, Block 10 A, Gulshan-e-Iqbal,<br />Karachi, Pakistan
@@ -113,7 +113,7 @@ const Footer = () => {
                   className='border border-accent/20 rounded p-2'
                 >
                   <Image
-                    src={link.img}
+                    src={link.src}
                     alt={link.name}
                     width={20}
                     height={20}

@@ -7,16 +7,18 @@ export default function HorizontalScroll({ text }) {
     <HorizontalScrollWrapper
       startOffset={
         typeof window !== "undefined" && window.innerWidth < 640
-          ? window.innerWidth * 0.3 // mobile tighter start
+          ? window.innerWidth * 0.4 // mobile tighter start
           : window.innerWidth * 0.6 // desktop unchanged
       }
+      height="100vh"
+      mobileHeight="10vh"
     >
       <h2
         className="
-          whitespace-nowrap font-sofia font-bold italic text-gray-900
+          whitespace-nowrap text-gray-900
 
           /* MOBILE */
-          text-[25vw]
+          text-[35vw]
 
           /* SMALL TABLET */
           sm:text-[30vw]
@@ -27,7 +29,11 @@ export default function HorizontalScroll({ text }) {
           px-12 sm:px-16 md:px-24
         "
       >
-        {text}
+        <strong>
+          <em>
+            {text}
+          </em>
+        </strong>
       </h2>
     </HorizontalScrollWrapper>
   );

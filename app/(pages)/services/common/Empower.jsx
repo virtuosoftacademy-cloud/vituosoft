@@ -2,7 +2,6 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useMotionValue, useAnimate } from 'framer-motion';
-import { aiAgentsEmpower } from '../constant';
 
 export default function Empower({ title, items }) {
   const containerRef = useRef(null);
@@ -11,22 +10,30 @@ export default function Empower({ title, items }) {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardWidth, setCardWidth] = useState(0);
+  const [cardsPerView, setCardsPerView] = useState(1);
 
-  // Measure card width + gap on mount and resize
+  // Measure card width + gap + determine visible cards count
   useEffect(() => {
-    const updateWidth = () => {
-      if (containerRef.current) {
-        const card = containerRef.current.querySelector('.ai-card');
-        if (card) {
-          // card width + gap-5 = 20px
-          setCardWidth(card.offsetWidth + 20);
-        }
+    const updateLayout = () => {
+      if (!containerRef.current) return;
+
+      const w = window.innerWidth;
+
+      let perView = 1;
+      if (w >= 1024) perView = 4;       // lg+
+      else if (w >= 768) perView = 2;    // md (tablet)
+
+      setCardsPerView(perView);
+
+      const card = containerRef.current.querySelector('.ai-card');
+      if (card) {
+        setCardWidth(card.offsetWidth + 20); // gap-5 = 20px
       }
     };
 
-    updateWidth();
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
+    updateLayout();
+    window.addEventListener('resize', updateLayout);
+    return () => window.removeEventListener('resize', updateLayout);
   }, []);
 
   const slideTo = (index) => {
@@ -43,12 +50,11 @@ export default function Empower({ title, items }) {
   };
 
   const goNext = () => {
-    if (currentIndex < items.length - 1) {
+    if (currentIndex < items.length - cardsPerView) {
       slideTo(currentIndex + 1);
     }
   };
 
-  // Snap to nearest card after drag
   const handleDragEnd = (_, info) => {
     if (cardWidth === 0) return;
 
@@ -63,19 +69,20 @@ export default function Empower({ title, items }) {
       newIndex -= 1;
     }
 
+    // Clamp to valid range
+    newIndex = Math.max(0, Math.min(newIndex, items.length - cardsPerView));
+
     slideTo(newIndex);
   };
 
-  // Approximate number of visible cards (used for drag limits)
-  const cardsPerView = typeof window !== 'undefined' && window.innerWidth >= 1024 ? 4 : 1;
   const maxDragOffset = -(items.length - cardsPerView) * cardWidth;
 
   return (
-    <section className="bg-foreground py-10 pr-16 overflow-hidden mt-20">
-      <div className="relative max-w-7xl mx-auto">
+    <section className="bg-foreground py-10 md:pr-16 overflow-hidden mt-20">
+      <div className="relative max-w-7xl mx-auto px-6 md:px-0">
         {/* Title + Controls */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-8 md:mb-10">
-          <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight pl-5 md:pl-[70px] max-w-[500px]">
+          <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight md:pl-[70px] max-w-[500px]">
             {title}
           </h2>
 
@@ -90,7 +97,7 @@ export default function Empower({ title, items }) {
             </button>
             <button
               onClick={goNext}
-              disabled={currentIndex >= items.length - 4}
+              disabled={currentIndex >= items.length - cardsPerView}
               className="w-12 h-12 md:w-[55] md:h-[55] rounded-full border border-[#7B7B7B] text-[#7B7B7B] text-3xl flex items-center justify-center transition-colors hover:border-white hover:text-white disabled:opacity-40 disabled:hover:border-[#7B7B7B] disabled:hover:text-[#7B7B7B] focus:outline-none"
               aria-label="Next slide"
             >
@@ -102,7 +109,7 @@ export default function Empower({ title, items }) {
         {/* Slider Container */}
         <div
           ref={containerRef}
-          className="overflow-hidden pb-6 md:pl-5 lg:pl-20"
+          className="overflow-hidden pb-6 md:ml-16"
         >
           <motion.div
             ref={scope}
@@ -117,8 +124,11 @@ export default function Empower({ title, items }) {
               <div
                 key={index}
                 className={`
-                  ai-card shrink-0 w-[calc(100%-20px)] snap-center
-                  md:w-[calc((100%-70px)/4)] min-w-[calc((100%-70px)/4)]
+                  ai-card shrink-0 snap-center
+                  w-[calc(100%-20px)]                      /* mobile: ~full width */
+                  md:w-[calc((100%-40px)/2)]               /* tablet: 2 cards + gap */
+                  lg:w-[calc((100%-70px)/4)]               /* desktop: 4 cards + gaps */
+                  min-w-0
                   bg-accent/20 text-accent p-5 md:p-6
                   border-l-4 border-transparent hover:border-white/20
                   transition-all duration-300 hover:shadow-xl min-h-96

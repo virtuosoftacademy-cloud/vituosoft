@@ -24,7 +24,7 @@ export const valueData = [
         title: "Off-the-Shelf Software Limitations",
         description:
           "Generic platforms forcing you to adapt your workflow? We build software that adapts to you, automating and perfecting your unique business processes.",
-        image: `/ ${valueImg}/automate.svg`,
+        image: `/${valueImg}/automate.svg`,
       },
       {
         title: "Need for a Proprietary Competitive Edge",

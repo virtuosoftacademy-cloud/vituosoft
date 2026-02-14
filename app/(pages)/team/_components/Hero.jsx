@@ -1,7 +1,7 @@
 'use client'
 
 import { CommonHead, HeroHead, HeroHeadPages, HeroRegular, Italic } from "@/components/Styles/StyleClasses"
-import OurTeamImg from '@/public/assets/Images/team/ourteam.png'
+import OurTeamImg from '@/public/assets/Images/team/ourteam.jpeg'
 import Image from "next/image"
 function Hero() {
     return (

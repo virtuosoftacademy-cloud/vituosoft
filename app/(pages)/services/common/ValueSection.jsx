@@ -1,6 +1,6 @@
 import Image from 'next/image';
 function ValueSection(value) {
-  const { titleParts, valueItems, titleNormal, titleBold } = value
+  const { titleParts, valueItems} = value
   return (
     <section className="py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">

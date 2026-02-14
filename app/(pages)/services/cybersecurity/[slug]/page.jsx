@@ -2,136 +2,116 @@
 import { notFound } from 'next/navigation';
 import { ReactLenis } from 'lenis/react';
 import Hero from '../_components/Hero';
-import { aiAgentsEmpower, aiAgentsHero, ComHero, ConHero, DataScienceHero, EmpowerCom, EmpowerCon, EmpowerDataScience, EmpowerGen, EmpowerOcr, genaiHero, OcrHero, stepsData, stepsDataCom, stepsDataCon, stepsDataGen, stepsDataOcr, stepsDataScience, valueData, valueDataCom, valueDataCon, valueDataGen, valueDataOcr, valueDataScience } from '../constant';
-import Cta from '@/components/common/Cta';
-import Faq from '../../../../../components/common/Faq';
-import { Faq_AI_ComputerVision, Faq_AI_ConversationalAI, Faq_AI_CustomAgent, Faq_AI_DataScience_MLOps, Faq_AI_GenerativeAI, Faq_AI_OCR } from '@/app/_constant';
-import Blogs from '@/app/(pages)/blogs/page';
-import Engage from '../../common/Engage';
-import Success from '../../common/Success';
-import TimeLine from '../../common/TimeLine';
 import ValueSection from '../../common/ValueSection';
 import Empower from '../../common/Empower';
+import TimeLine from '../../common/TimeLine';
+import Cta from '@/components/common/Cta';
+import Blogs from '@/app/(pages)/blogs/page';
+import Success from '../../common/Success';
+import Faq from '@/components/common/Faq';
+import Engage from '../../common/Engage';
+import { CyberAssessmentsEmpower, CyberAssessmentsHero, CyberSecurityDeploymentEmpower, CyberSecurityDeploymentHero, GovernanceComplianceEmpower, GovernanceComplianceHero, ManagedCyberSecurityEmpower, ManagedCyberSecurityHero, stepsDataCyberAssessments, stepsDataCyberSecurityDeployment, stepsDataGovernanceCompliance, stepsDataManagedCyberSecurity, valueDataCyberAssessments, valueDataCyberSecurityDeployment, valueDataGovernanceCompliance, valueDataManagedCyberSecurity } from '../constant';
+import { Faq_CyberSecurity_CyberAssessment, Faq_CyberSecurity_GovernanceCompliance, Faq_CyberSecurity_SecurityDeployment, Faq_CyberSecurityManagedCybersecurity } from '@/app/_constant';
 
 
 // ────────────────────────────────────────────────
 //  All services (array — easy to extend)
 const services = [
   {
-    slug: 'ai-agent',
-    title: 'AI Agent',
-    heroData: aiAgentsHero,
-    value: valueData[0],
-    Data: aiAgentsEmpower[0],
-    timeLine: stepsData[0],
+    slug: 'solution-deployment',
+    title: 'Solution Deployment and Management',
+    heroData: CyberSecurityDeploymentHero,
+    value: valueDataCyberSecurityDeployment[0],
+    Data: CyberSecurityDeploymentEmpower[0],
+    timeLine: stepsDataCyberSecurityDeployment[0],
     sections: [
-      { Component: Hero, props: aiAgentsHero },
-      { Component: ValueSection, props: valueData[0] },
+      { Component: Hero, props: CyberSecurityDeploymentHero },
+      { Component: ValueSection, props: valueDataCyberSecurityDeployment[0] },
       { Component: Success },
-      { Component: TimeLine, props: stepsData[0] },
-      { Component: Empower, props: aiAgentsEmpower[0] },
+      { Component: TimeLine, props: stepsDataCyberSecurityDeployment[0] },
+      { Component: Empower, props: CyberSecurityDeploymentEmpower[0] },
       { Component: Blogs },
       { Component: Engage },
-      { Component: Faq, props: { items: Faq_AI_CustomAgent } },
+      { Component: Faq, props: { items: Faq_CyberSecurity_SecurityDeployment } },
       { Component: Cta },
     ],
   },
   {
-    slug: 'generative-ai',
-    title: 'Generative AI',
-    heroData: genaiHero,
-    value: valueDataGen[0],
-    Data: EmpowerGen[0],
-    timeLine: stepsData[0],
+    slug: 'governance-and-compliance',
+    title: 'Governance & Compliance Services',
+    heroData: GovernanceComplianceHero,
+    value: valueDataGovernanceCompliance[0],
+    Data: GovernanceComplianceEmpower[0],
+    timeLine: stepsDataGovernanceCompliance[0],
     sections: [
-      { Component: Hero, props: genaiHero },
-      { Component: ValueSection, props: valueDataGen[0] },
+      { Component: Hero, props: GovernanceComplianceHero },
+      { Component: ValueSection, props: valueDataGovernanceCompliance[0] },
       { Component: Success },
-      { Component: TimeLine, props: stepsDataGen[0] },
-      { Component: Empower, props: EmpowerGen[0] },
+      { Component: TimeLine, props: stepsDataGovernanceCompliance[0] },
+      { Component: Empower, props: GovernanceComplianceEmpower[0] },
       { Component: Blogs },
       { Component: Engage },
-      { Component: Faq, props: { items: Faq_AI_GenerativeAI } },
+      { Component: Faq, props: { items: Faq_CyberSecurity_GovernanceCompliance } },
       { Component: Cta },
     ],
   },
   {
-    slug: 'data-science',
-    title: 'Data Science & MLOps',
-    heroData: DataScienceHero,
-    value: valueDataGen[0],
-    Data: EmpowerDataScience[0],
-    timeLine: stepsDataScience[0],
+    slug: 'cyber-assessments',
+    title: 'Cyber Assessments',
+    heroData: CyberAssessmentsHero,
+    value: valueDataCyberAssessments[0],
+    Data: CyberAssessmentsEmpower[0],
+    timeLine: stepsDataCyberAssessments[0],
     sections: [
-      { Component: Hero, props: DataScienceHero },
-      { Component: ValueSection, props: valueDataScience[0] },
+      { Component: Hero, props: CyberAssessmentsHero },
+      { Component: ValueSection, props: valueDataCyberAssessments[0] },
       { Component: Success },
-      { Component: TimeLine, props: stepsDataScience[0] },
-      { Component: Empower, props: EmpowerDataScience[0] },
+      { Component: TimeLine, props: stepsDataCyberAssessments[0] },
+      { Component: Empower, props: CyberAssessmentsEmpower[0] },
       { Component: Blogs },
       { Component: Engage },
-      { Component: Faq, props: { items: Faq_AI_DataScience_MLOps } },
+      { Component: Faq, props: { items: Faq_CyberSecurity_CyberAssessment } },
       { Component: Cta },
     ],
   },
   {
-    slug: 'conversational-intelligence',
-    title: 'Conversational Intelligence',
-    heroData: ConHero,
-    value: valueDataCon[0],
-    Data: EmpowerCon[0],
-    timeLine: stepsDataCon[0],
+    slug: 'managed-cybersecurity-service',
+    title: 'Managed Cybersecurity Service',
+    heroData: ManagedCyberSecurityHero,
+    value: valueDataManagedCyberSecurity[0],
+    timeLine: stepsDataManagedCyberSecurity[0],
+    Data: ManagedCyberSecurityEmpower[0],
     sections: [
-      { Component: Hero, props: ConHero },
-      { Component: ValueSection, props: valueDataCon[0] },
+      { Component: Hero, props: ManagedCyberSecurityHero },
+      { Component: ValueSection, props: valueDataManagedCyberSecurity[0] },
       { Component: Success },
-      { Component: TimeLine, props: stepsDataCon[0] },
-      { Component: Empower, props: EmpowerCon[0] },
+      { Component: TimeLine, props: stepsDataManagedCyberSecurity[0] },
+      { Component: Empower, props: ManagedCyberSecurityEmpower[0] },
       { Component: Blogs },
       { Component: Engage },
-      { Component: Faq, props: { items: Faq_AI_ConversationalAI } },
+      { Component: Faq, props: { items: Faq_CyberSecurityManagedCybersecurity } },
       { Component: Cta },
     ],
   },
   {
-    slug: 'computer-vision',
-    title: 'Computer Vision',
-    heroData: ComHero,
-    value: valueDataCon[0],
-    Data: EmpowerCom[0],
-    timeLine: stepsDataCom[0],
+    slug: 'managed-cybersecurity-service',
+    title: 'Managed Cybersecurity Service',
+    heroData: ManagedCyberSecurityHero,
+    value: valueDataManagedCyberSecurity[0],
+    timeLine: stepsDataManagedCyberSecurity[0],
+    Data: ManagedCyberSecurityEmpower[0],
     sections: [
-      { Component: Hero, props: ComHero },
-      { Component: ValueSection, props: valueDataCom[0] },
+      { Component: Hero, props: ManagedCyberSecurityHero },
+      { Component: ValueSection, props: valueDataManagedCyberSecurity[0] },
       { Component: Success },
-      { Component: TimeLine, props: stepsDataCom[0] },
-      { Component: Empower, props: EmpowerCom[0] },
+      { Component: TimeLine, props: stepsDataManagedCyberSecurity[0] },
+      { Component: Empower, props: ManagedCyberSecurityEmpower[0] },
       { Component: Blogs },
       { Component: Engage },
-      { Component: Faq, props: { items: Faq_AI_ComputerVision } },
+      { Component: Faq, props: { items: Faq_CyberSecurityManagedCybersecurity } },
       { Component: Cta },
     ],
   },
-  {
-    slug: 'optical-character-recognition',
-    title: 'Optical Character Recognition',
-    heroData: OcrHero,
-    value: valueDataOcr[0],
-    Data: EmpowerOcr[0],
-    timeLine: stepsDataOcr[0],
-    sections: [
-      { Component: Hero, props: OcrHero },
-      { Component: ValueSection, props: valueDataOcr[0] },
-      { Component: Success },
-      { Component: TimeLine, props: stepsDataOcr[0] },
-      { Component: Empower, props: EmpowerOcr[0] },
-      { Component: Blogs },
-      { Component: Engage },
-      { Component: Faq, props: { items: Faq_AI_OCR } },
-      { Component: Cta },
-    ],
-  },
-  
 ];
 
 // Helper to find service by slug

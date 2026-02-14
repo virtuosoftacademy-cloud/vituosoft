@@ -36,7 +36,6 @@ export default function Nav() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 100);
-      setNavHidden(window.scrollY > 4000);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -72,9 +71,8 @@ export default function Nav() {
   return (
     <nav
       className={cn(
-        "sticky top-0 z-50 w-full mx-auto transition-all duration-500 max-w-7xl",
-        scrolled ? bg_animation : "bg-transparent py-8 shadow-none",
-        NavHidden && "-translate-y-34 pointer-events-none"
+        "sticky top-0 z-50 w-full mx-auto transition-all duration-500 max-w-7xl bg-transparent py-8 shadow-none",
+        scrolled && `${bg_animation}`,
       )}
     >
       <div className="flex items-center justify-between px-6 lg:px-0 -my-2">
