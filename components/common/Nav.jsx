@@ -35,27 +35,30 @@ export default function Nav() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
 
-      // Your original scrolled background logic
-      setScrolled(currentScrollY > 100);
+    setScrolled(currentScrollY > 100);
 
-      // Hide logic: after half screen + only when scrolling down
-      const halfScreen = window.innerHeight / 2;
+    if (mobileOpen) {
+      setNavHidden(false);
+      return;
+    }
 
-      if (currentScrollY > halfScreen) {
-        setNavHidden(currentScrollY > lastScrollY);
-      } else {
-        setNavHidden(false);
-      }
+    const halfScreen = window.innerHeight / 2;
 
-      setLastScrollY(currentScrollY);
-    };
+    if (currentScrollY > halfScreen) {
+      setNavHidden(currentScrollY > lastScrollY);
+    } else {
+      setNavHidden(false);
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+    setLastScrollY(currentScrollY);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [lastScrollY, mobileOpen]);
 
   const bg_animation =
     "px-0 lg:px-10 w-[85%] bg-foreground py-8 rounded-2xl top-8 text-white shadow-[0_12px_35px_rgba(0,0,0,0.25)]";
@@ -89,7 +92,7 @@ export default function Nav() {
       className={cn(
         "sticky z-50 w-full mx-auto transition-all duration-500 max-w-7xl bg-transparent py-8 shadow-none",
         scrolled && bg_animation,
-        NavHidden && "-translate-y-[130%]", // fully hides including shadow & rounded corners
+        NavHidden && "-translate-y-[160%]", // fully hides including shadow & rounded corners
       )}
     >
       <div className="flex items-center justify-between px-6 lg:px-0 -my-2">
