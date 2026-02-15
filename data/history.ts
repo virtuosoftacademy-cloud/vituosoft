@@ -1,11 +1,5 @@
-export type HistoryItem = {
-  year: string;
-  title: string;
-  description: string;
-  highlight?: boolean;
-};
 
-export const history: HistoryItem[] = [
+export const history= [
   {
     year: "2016",
     title: "Establised",
