@@ -1,12 +1,13 @@
 'use client'
 import CountUp from "@/components/ui/CountUp"
-import Star from '@/public/assets/Images/home/star.png'
-import Fire from '@/public/assets/Images/home/fire.png'
-import Tic from '@/public/assets/Images/home/tic.png'
+import Star from '@/public/assets/Images/home/star.svg'
+import Fire from '@/public/assets/Images/home/fire.svg'
+import Tic from '@/public/assets/Images/home/tic.svg'
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { HeroRegular, Italic } from "../../../../components/Styles/StyleClasses"
 import HeroImg from '@/public/assets/Images/home/home-bg.png'
+import Link from "next/link"
 function Hero() {
   return (
     <>
@@ -42,7 +43,7 @@ function Hero() {
           {/* Counter + Button */}
           <div className="py-10 lg:py-6  flex items-center justify-center flex-col lg:flex-row gap-8 lg:gap-6 px-4">
             <div className="flex justify-center items-center gap-2 md:gap-6">
-              <div className="flex items-center justify-center ">
+              <div className="flex items-center justify-center">
                 <div className="rounded-full bg-linear-[-90deg,white_5%,#D3E2FF] flex p-2 md:py-5 md:px-5 flex-col">
                   <div className="text-xs md:text-[14px] font-bold">
                     <CountUp
@@ -55,7 +56,7 @@ function Hero() {
                     />+
                   </div>
                 </div>
-                <div className="relative -top-5 -left-4">
+                <div className="relative -top-6 -left-5">
                   <Image src={Star} className="max-w-2xl md:size-6" alt="Star Icon" />
                 </div>
                 <div className="font-light text-xs md:text-sm">
@@ -75,7 +76,7 @@ function Hero() {
                     />%
                   </div>
                 </div>
-                <div className="relative -top-5 -left-4">
+                <div className="relative -top-6 -left-5">
                   <Image src={Fire} className="max-w-2xl md:size-6" alt="Fire Icon" />
                 </div>
                 <div >
@@ -95,7 +96,7 @@ function Hero() {
                     />+
                   </div>
                 </div>
-                <div className="relative -top-5 -left-4">
+                <div className="relative -top-6 -left-5">
                   <Image src={Tic} className="max-w-2xl md:size-6" alt="Tic Icon" />
                 </div>
                 <div >
@@ -103,7 +104,11 @@ function Hero() {
                 </div>
               </div>
             </div>
-            <Button variant="default" className="font-sans">Let's Talk</Button>
+            <Button variant="default" className="font-sans">
+              <Link href={'/contact'}>
+                Let's Talk
+              </Link>
+            </Button>
           </div>
 
         </div>

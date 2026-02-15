@@ -102,7 +102,7 @@ function InnovativeSolutions() {
                                         )}
                                         asChild
                                     >
-                                        <a href={btn.href}>{btn.label}</a>
+                                        <Link href={btn.href}>{btn.label}</Link>
                                     </Button>
                                 ))}
                                 {/* <Button className={''}><Link href={'/'}>More</Link></Button> */}
@@ -113,7 +113,7 @@ function InnovativeSolutions() {
             </div>
 
             <div className="text-center mt-8 lg:mt-10">
-                <Button variant="outline">
+                <Button className={'border'} variant="ghost">
                     <Link href="/services">
                         Load More
                     </Link>

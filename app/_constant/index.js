@@ -1,6 +1,6 @@
 
 // Client Logos
-const logoIcon = 'assets/Images/ClientLogo/'
+const logoIcon = '/assets/Images/ClientLogo/'
 export const logos = [
   { src: `${logoIcon}/tarabut.svg`, alt: "Tarabut" },
   { src: `${logoIcon}/neogies.svg`, alt: "Client" },
@@ -222,7 +222,8 @@ export const socialLinks = [
 
 //Home
 // Services Section 
-const IconServices = "assets/Images/home/"
+const IconServices = "/assets/Images/home/"
+
 export const services_Section = [
   {
     id: "ai",
@@ -234,12 +235,12 @@ export const services_Section = [
     gridClasses: "col-span-full md:col-span-1 lg:row-span-2 lg:min-h-[600px] py-10 md:py-0",
     hoverTranslate: "md:translate-y-48 md:group-hover:-translate-y-28 lg:group-hover:-translate-y-32",
     buttons: [
-      { label: "Custom Agent Development", href: "#" },
-      { label: "Generative AI", href: "#" },
-      { label: "Data Science & MLOps", href: "#" },
-      { label: "Conversational Intelligence", href: "#" },
-      { label: "Computer Vision", href: "#" },
-      { label: "Optical character recognition", href: "#" },
+      { label: "A.I Agent", href: "/services/ai/ai-agent" },
+      { label: "Generative AI", href: "/services/ai/generative-ai" },
+      { label: "Data Science & MLOps", href: "/services/ai/data-science" },
+      { label: "Conversational Intelligence", href: "/services/ai/conversational-intelligence" },
+      { label: "Computer Vision", href: "/services/ai/computer-vision" },
+      { label: "Optical character recognition", href: "/services/ai/optical-character-recognition" },
     ],
   },
   {
@@ -252,8 +253,8 @@ export const services_Section = [
     gridClasses: "col-span-full md:col-span-1 lg:row-span-1 lg:min-h-[300] py-10 md:py-0",
     hoverTranslate: "md:translate-y-20 group-hover:-traslate-y-5 md:group-hover:-translate-y-20 lg:group-hover:-translate-y-10",
     buttons: [
-      { label: "Product Strategy & Roadmapping", href: "#" },
-      { label: "Digital Transformation", href: "#" },
+      { label: "Product Strategy & Roadmapping", href: "/services/advisory/product-strategy" },
+      { label: "Digital Transformation", href: "/services/advisory/digital-transformation" },
     ],
   },
   {
@@ -267,9 +268,9 @@ export const services_Section = [
     hoverTranslate: "md:translate-y-30 md:group-hover:-translate-y-20 lg:group-hover:-translate-y-2 py-10 md:py-0",
     isBusiness: true,
     buttons: [
-      { label: "Regulatory Compliance", href: "#" },
-      { label: "Governance Framework Development", href: "#" },
-      { label: "Resource Augmentation", href: "#" },
+      { label: "Regulatory Compliance", href: "/services/itgovernance/regulatory-compliance" },
+      { label: "Governance Framework Development", href: "/services/itgovernance/governance-framework-development" },
+      { label: "Resource Augmentation", href: "/services/itgovernance/resource-augmentation" },
     ],
   },
   {
@@ -284,16 +285,16 @@ export const services_Section = [
     // isBusiness: true,
     MoreBtn: "/",
     buttons: [
-      { label: "Custom Software Development", href: "#" },
-      { label: "App Development", href: "#" },
-      { label: "App Modernization", href: "#" },
-      { label: "Database Migration", href: "#" },
-      { label: "Third-Party Integrations", href: "#" },
+      { label: "Custom Software Development", href: "/services/softengineering/custom-software-development" },
+      { label: "App Development", href: "/services/softengineering/app-development" },
+      { label: "App Modernization", href: "/services/softengineering/app-modernization" },
+      { label: "Database Migration", href: "/services/softengineering/database-migration" },
+      { label: "Third-Party Integrations", href: "/services/softengineering/third-party" },
     ],
   },
 ];
 // Values Section
-const IconValues = "assets/Images/home/"
+const IconValues = "/assets/Images/home/"
 export const values_Section = [
   {
     title: 'Teamwork',

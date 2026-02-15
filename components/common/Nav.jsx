@@ -61,7 +61,7 @@ export default function Nav() {
 }, [lastScrollY, mobileOpen]);
 
   const bg_animation =
-    "px-0 lg:px-10 w-[85%] bg-foreground py-8 rounded-2xl top-8 text-white shadow-[0_12px_35px_rgba(0,0,0,0.25)]";
+    "px-0 lg:px-10 w-[85%] bg-foreground rounded-2xl top-8 text-white shadow-[0_12px_35px_rgba(0,0,0,0.25)]";
 
   function ServiceItem({ service, isActive, onHover }) {
     return (
