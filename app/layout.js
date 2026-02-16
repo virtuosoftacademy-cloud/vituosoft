@@ -15,11 +15,6 @@ const Host_Grot = Host_Grotesk({
   subsets: ['latin']
 });
 
-export const metadata = {
-  title: "Virtuosoft",
-  description: "Created By Virtuosoft Limited",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
