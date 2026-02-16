@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath:"/virtuosoft.pk/virtuosoft",
-  assetPrefix:"/virtuosoft.pk/virtuosoft",
+  basePath:"https://virtuosoft.pk/virtuosoft",
+  assetPrefix:"https://virtuosoft.pk/virtuosoft/",
   output:"standalone",
   images: {
     unoptimized: true
