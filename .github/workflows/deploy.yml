@@ -22,15 +22,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Create .env file from secrets
-        run: |
-          touch .env
-          echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
-          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
-          echo "NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }}" >> .env
-          # Add one line per variable here — match your list from Step 1
-          # For multi-line or complex values, use: echo "VAR_NAME<<EOF" >> .env; echo "value line1" >> .env; echo "value line2" >> .env; echo "EOF" >> .env
-
       - name: Build Next.js (with .env loaded)
         run: npm run build
 
