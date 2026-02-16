@@ -1,5 +1,5 @@
 ' use client'
-import { services_Nav, socialLinks} from '@/app/_constant';
+import { services_Nav, socialLinks } from '@/app/_constant';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -102,7 +102,7 @@ Karachi, Pakistan`,
         </div> */}
 
         {/* ROW 3: Address | Subscribe | Follow Us */}
-        <div className="flex flex-row gap-10 lg:gap-16 border-t border-[#222b36] pt-10 mb-10">
+        <div className="flex flex-col md:flex-row gap-10 lg:gap-16 border-y border-[#222b36] py-10">
           <div className='flex flex-col'>
             <h4 className="text-white uppercase text-xs tracking-wide font-semibold mb-4">Address</h4>
             <div className='grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-6'>
@@ -166,24 +166,26 @@ Karachi, Pakistan`,
         </div>
 
         {/* ROW 4: Brand + Copyright */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-8 border-t border-foreground">
-          <Image
-            height={200}
-            width={200}
-            src={Logo}
-            alt="VirtuoSoft Logo"
-            className="w-40 h-8"
-          />
-          <Image
-            src={dmca}
-            height={200}
-            width={100}
-            alt="VirtuoSoft Brand"
-            className="h-8"
-          />
-          <span className="text-sm">
+        <div className="flex flex-col justify-between sm:flex-row items-start sm:items-center gap-6 pt-8 border-t border-foreground">
+          <div className='flex gap-8'>
+            <Image
+              height={200}
+              width={200}
+              src={Logo}
+              alt="VirtuoSoft Logo"
+              className="w-40 h-8"
+            />
+            <Image
+              src={dmca}
+              height={200}
+              width={100}
+              alt="VirtuoSoft Brand"
+              className="h-8"
+            />
+          </div>
+          <div className="text-sm">
             © {new Date().getFullYear()} Virtuosoft | All rights reserved.
-          </span>
+          </div>
         </div>
       </div>
     </footer>
