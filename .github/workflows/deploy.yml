@@ -34,7 +34,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
           local-dir: .next/standalone/
-          server-dir: ./public_html/
+          server-dir: ./
           exclude: |
             **/.git*
 
@@ -46,7 +46,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: .next/static/
-          server-dir: ./public_html/.next/static/
+          server-dir: ./.next/static/
 
       # Upload public folder
       - name: Deploy public folder
@@ -56,7 +56,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: public/
-          server-dir: ./public_html/
+          server-dir: ./
 
       # Upload root essentials (including the .env we just created)
       - name: Deploy root essentials
@@ -66,7 +66,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: ./public_html/
+          server-dir: ./
           include: |
             .env                      # ← Important: this uploads the .env
             package*.json

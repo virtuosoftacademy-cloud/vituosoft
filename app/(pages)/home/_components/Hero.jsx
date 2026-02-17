@@ -8,17 +8,19 @@ import { Button } from "@/components/ui/button"
 import { HeroRegular, Italic } from "../../../../components/Styles/StyleClasses"
 import HeroImg from '@/public/assets/Images/home/home-bg.png'
 import Link from "next/link"
+import Threads from "@/components/Threads"
 function Hero() {
   return (
     <>
       <section className="relative min-h-screen pt-30">
         <div className="absolute inset-0 -z-10">
-          <Image
+          {/* <Image
             src={HeroImg}
             alt="Technology"
             className="h-full object-cover"
             fill
-          />
+          /> */}
+          <Threads />
         </div>
         <div className="flex justify-center items-center flex-col px-10">
           <div className="-space-y-3 md:-space-y-8">
