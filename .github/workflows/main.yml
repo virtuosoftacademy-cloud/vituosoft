@@ -1,0 +1,74 @@
+name: Deploy Next.js to cPanel
+
+on:
+  push:
+    branches:
+      - main                     # or master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20         # match your Next.js version
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Next.js (with .env loaded)
+        run: npm run build
+
+      # Upload standalone (server + minimal deps)
+      - name: Deploy standalone to cPanel
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          local-dir: .next/standalone/
+          server-dir: ./
+          exclude: |
+            **/.git*
+
+      # Upload static assets
+      - name: Deploy .next/static
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: .next/static/
+          server-dir: ./.next/static/
+
+      # Upload public folder
+      - name: Deploy public folder
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: public/
+          server-dir: ./
+
+      # Upload root essentials (including the .env we just created)
+      - name: Deploy root essentials
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: ./
+          include: |
+            .env                      # ← Important: this uploads the .env
+            package*.json
+            next.config.js
+            .htaccess
