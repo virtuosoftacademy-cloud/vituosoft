@@ -9,20 +9,23 @@ import { HeroRegular, Italic } from "../../../../components/Styles/StyleClasses"
 import HeroImg from '@/public/assets/Images/home/home-bg.png'
 import Link from "next/link"
 import Threads from "@/components/Threads"
+import FloatingLines from "@/components/FloatingLines"
 function Hero() {
   return (
     <>
-      <section className="relative min-h-screen pt-30">
-        <div className="absolute inset-0 -z-10">
+      <section className="relative min-h-full md:min-h-screen pt-30">
+        <div className="absolute inset-0 -z-10 bg-transparent">
           {/* <Image
             src={HeroImg}
             alt="Technology"
             className="h-full object-cover"
             fill
           /> */}
-          <Threads />
+          <div className="h-full">
+          <FloatingLines />
+          </div>
         </div>
-        <div className="flex justify-center items-center flex-col px-10">
+        <div className="flex justify-center items-center flex-col px-10 bg-transparent">
           <div className="-space-y-3 md:-space-y-8">
             <h1 className={`ml-12 ${Italic}`}>
               Technology
