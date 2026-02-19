@@ -26,13 +26,15 @@ function Hero() {
           /> */}
           <div className="h-full">
             {/* <FloatingLines /> */}
-            <DarkVeil
+            {/* <DarkVeil
               hueShift={24}
               noiseIntensity={0.015}
               scanlineIntensity={0}
               speed={0.5}
               scanlineFrequency={0}
               warpAmount={0}
+            /> */}
+            <Threads
             />
           </div>
         </div>
