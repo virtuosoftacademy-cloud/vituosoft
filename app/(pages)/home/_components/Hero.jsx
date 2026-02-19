@@ -24,7 +24,7 @@ function Hero() {
             className="h-full object-cover"
             fill
           /> */}
-          <div className="h-full">
+          <div className="h-full opacity-65">
             {/* <FloatingLines /> */}
             {/* <DarkVeil
               hueShift={24}
@@ -35,9 +35,7 @@ function Hero() {
               warpAmount={0}
             /> */}
             <Threads
-              color={[0.41, 0.41, 0.41]}
-              amplitude={1.6}
-              distance={0.5}
+              color={[0.93, 0.26, 0.00]}
               enableMouseInteraction={true}
             />
           </div>
