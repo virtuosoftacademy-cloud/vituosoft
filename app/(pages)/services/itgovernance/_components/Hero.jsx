@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
-import Src from '@/public/assets/Images/service/as_service.png'
+import Src from '@/public/assets/Images/service/ai_data_service.png'
 
 export default function Hero(heroData ) {
     const { title, topDescription, bottomDescription, btnTitle } = heroData
@@ -16,7 +16,7 @@ export default function Hero(heroData ) {
         text-left 
         overflow-hidden 
         shadow-2xl shadow-black/15
-      bg-linear-to-br from-[#084387] to-[#021021] text-white`}
+      bg-linear-to-br from-primary to-[#084387] text-white`}
             >
                 <Image
                     width={120}
