@@ -35,6 +35,10 @@ function Hero() {
               warpAmount={0}
             /> */}
             <Threads
+              color={[0.41, 0.41, 0.41]}
+              amplitude={1.6}
+              distance={0.5}
+              enableMouseInteraction={true}
             />
           </div>
         </div>
