@@ -10,11 +10,12 @@ import HeroImg from '@/public/assets/Images/home/home-bg.png'
 import Link from "next/link"
 import Threads from "@/components/Threads"
 import FloatingLines from "@/components/FloatingLines"
+import DarkVeil from "@/components/DarkVeil"
 function Hero() {
   return (
     <>
-      <section className="relative min-h-full md:min-h-screen pt-30">
-        <div className="absolute inset-0 -z-10 bg-transparent">
+      <section className="relative min-h-full md:min-h-screen pt-20 -mt-22">
+        <div className="absolute inset-0 -z-10">
           {/* <Image
             src={HeroImg}
             alt="Technology"
@@ -22,10 +23,18 @@ function Hero() {
             fill
           /> */}
           <div className="h-full">
-          <FloatingLines />
+            {/* <FloatingLines /> */}
+            <DarkVeil
+              hueShift={20}
+              noiseIntensity={0.015}
+              scanlineIntensity={0}
+              speed={0.5}
+              scanlineFrequency={0}
+              warpAmount={0}
+            />
           </div>
         </div>
-        <div className="flex justify-center items-center flex-col px-10 bg-transparent">
+        <div className="flex justify-center items-center flex-col px-10 pt-30">
           <div className="-space-y-3 md:-space-y-8">
             <h1 className={`ml-12 ${Italic}`}>
               Technology
