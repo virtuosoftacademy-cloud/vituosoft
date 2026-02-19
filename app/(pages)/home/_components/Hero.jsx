@@ -6,11 +6,13 @@ import Tic from '@/public/assets/Images/home/tic.svg'
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { HeroRegular, Italic } from "../../../../components/Styles/StyleClasses"
-import HeroImg from '@/public/assets/Images/home/home-bg.png'
 import Link from "next/link"
+import DarkVeil from "@/components/DarkVeil"
+
+import HeroImg from '@/public/assets/Images/home/home-bg.png'
 import Threads from "@/components/Threads"
 import FloatingLines from "@/components/FloatingLines"
-import DarkVeil from "@/components/DarkVeil"
+
 function Hero() {
   return (
     <>
@@ -25,7 +27,7 @@ function Hero() {
           <div className="h-full">
             {/* <FloatingLines /> */}
             <DarkVeil
-              hueShift={20}
+              hueShift={24}
               noiseIntensity={0.015}
               scanlineIntensity={0}
               speed={0.5}

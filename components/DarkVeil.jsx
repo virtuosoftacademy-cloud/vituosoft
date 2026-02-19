@@ -75,7 +75,7 @@ void main() {
 
     col.rgb += (rand(gl_FragCoord.xy + uTime) - 0.5) * uNoise;
 
-    float alpha = clamp(length(col.rgb) * 1.5, 0.0, 1.0);   // adjust multiplier
+    float alpha = clamp(length(col.rgb) * 1.5, 0.0, 1.0);  
     gl_FragColor = vec4(clamp(col.rgb, 0.0, 1.0), alpha);
 }
 `;
@@ -161,7 +161,7 @@ export default function DarkVeil({
     <motion.div
       className="w-full h-full"
     >
-      <canvas ref={ref} className="w-full h-full block" />
+      <canvas ref={ref} className="w-full h-full block opacity-90" />
     </motion.div>
   );
 }
