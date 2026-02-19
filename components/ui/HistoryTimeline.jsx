@@ -37,12 +37,7 @@ return (
               className="relative min-w-[240px] sm:min-w-[300px] flex flex-col"
             >
               {/* DOT */}
-              <span
-  className={`absolute -top-6 left-0 w-4 h-4 rounded-full ${
-    index === 0 ? "bg-orange-500" : "bg-blue-600"
-  }`}
-/>
-
+              <span className="absolute -top-6 left-0 w-4 h-4 rounded-full bg-blue-600" />
 
               {/* YEAR */}
               <span className="text-sm sm:text-lg xl:text-xl text-blue-600 font-medium mb-2">

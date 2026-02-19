@@ -13,7 +13,7 @@ export default function HorizontalScroll({ text }) {
     >
       <h2
         className="
-          whitespace-nowrap font-host font-extrabold italic text-gray-900
+          whitespace-nowrap font-sofia font-bold italic text-gray-900
 
           /* MOBILE */
           text-[25vw]

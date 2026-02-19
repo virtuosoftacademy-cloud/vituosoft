@@ -398,7 +398,7 @@ export const GovernanceComplianceEmpower = [
 // Cyber Assessments
 // Hero
 export const CyberAssessmentsHero = {
-  title: 'Cyber Assessments',
+  title: 'Vulnerability Assessments & Penetration Testing',
   topDescription: 'Cyber Security',
   bottomDescription:
     'At Virtuosoft, our Cyber Assessment Services provide deep visibility into your security posture, ' +
@@ -830,3 +830,181 @@ export const ManagedCyberSecurityEmpower = [
   }
 ];
 
+// Cybersecurity Solution Deployment & Management
+// Hero
+export const CyberRiskManagementHero = {
+  title: 'Risk Management & Governance',
+  topDescription: 'Cyber Security',
+  bottomDescription:
+    'At Virtuosoft, we help organizations manage cyber risk with clarity and control. ' +
+    'Our Risk Management & Governance services align security programs with business objectives, ' +
+    'regulatory requirements and industry best practices, transforming cybersecurity from a technical ' +
+    'function into a strategic business enabler.',
+  btnTitle: 'Strengthen Your Security Governance',
+};
+
+// When Do You Need Risk Management & Governance?
+// const valueImg = 'assets/Images/service/ai';
+
+export const valueRiskManagement = [
+  {
+    titleParts: [
+      "When Do You Need ",
+      { text: "Risk Management & Governance?", bold: true }
+    ],
+    valueItems: [
+      {
+        title: "Unclear Security Ownership and Accountability",
+        description:
+          "Without defined roles, policies and oversight, security efforts become fragmented. " +
+          "We establish governance structures that create clarity, accountability and executive visibility.",
+        image: `/${valueImg}/automate.svg`,
+      },
+      {
+        title: "Rising Regulatory and Compliance Pressure",
+        description:
+          "Struggling to keep up with GDPR, HIPAA, PCI DSS, NIST or ISO standards? " +
+          "We help you interpret, implement and sustain compliance without slowing the business.",
+        image: `/${valueImg}/scale.svg`,
+      },
+      {
+        title: "Growing Cyber Risk Exposure",
+        description:
+          "As digital ecosystems expand, so do risks. Our risk-based approach identifies, prioritizes " +
+          "and mitigates threats before they impact operations or reputation.",
+        image: `/${valueImg}/enhance.svg`,
+      },
+      {
+        title: "Inconsistent Security Policies Across Teams",
+        description:
+          "Disparate practices increase exposure. We standardize policies, controls and procedures " +
+          "across departments for consistent, enforceable security.",
+        image: `/${valueImg}/solve.svg`,
+      },
+      {
+        title: "Limited Visibility into Security Posture",
+        description:
+          "If leadership lacks insight into risk levels, decisions suffer. We provide measurable risk " +
+          "metrics and dashboards that support informed decision-making.",
+        image: `/${valueImg}/mitigate.svg`,
+      },
+      {
+        title: "Need to Align Security with Business Strategy",
+        description:
+          "Security should enable growth, not block it. We align governance frameworks with business " +
+          "goals, ensuring protection supports innovation and scalability.",
+        image: `/${valueImg}/enable.svg`,
+      },
+    ]
+  }
+];
+
+// TimeLine
+// Our Structured Approach to Risk & Governance Excellence
+export const stepsDataRiskManagement = [
+  {
+    titleParts: [
+      "Our Structured Approach to ",
+      { text: "Risk & Governance Excellence", bold: true }
+    ],
+    timeLineItems: [
+      {
+        title: "Governance Assessment",
+        description:
+          "Evaluate current policies, roles, decision structures and overall security maturity.",
+      },
+      {
+        title: "Risk Identification & Classification",
+        description:
+          "Identify assets, threats, vulnerabilities and business impacts across the organization.",
+      },
+      {
+        title: "Risk Analysis & Prioritization",
+        description:
+          "Quantify and rank risks using industry frameworks and business impact analysis.",
+      },
+      {
+        title: "Policy & Control Framework Design",
+        description:
+          "Develop security policies, standards and controls aligned with ISO, NIST and regulatory requirements.",
+      },
+      {
+        title: "Compliance Mapping & Readiness",
+        description:
+          "Map controls to regulatory frameworks and prepare for audits and assessments.",
+      },
+      {
+        title: "Implementation & Enablement",
+        description:
+          "Operationalize governance through workflows, training and enforcement mechanisms.",
+      },
+      {
+        title: "Monitoring & Reporting",
+        description:
+          "Track risk posture, compliance status and control effectiveness with ongoing reporting.",
+      },
+      {
+        title: "Continuous Improvement",
+        description:
+          "Adapt governance and risk controls as threats, regulations and business needs evolve.",
+      },
+    ],
+    businessOutComes: [
+      { point: "Reduced Cyber and Compliance Risk" },
+      { point: "Clear Security Ownership & Accountability" },
+      { point: "Audit-Ready Governance Frameworks" },
+      { point: "Improved Executive Visibility into Risk" },
+      { point: "Security Aligned with Business Growth" }
+    ]
+  }
+];
+
+// Empower
+// Core Risk Management & Governance Capabilities
+export const CyberRiskManagementEmpower = [
+  {
+    title: "Core Risk Management & Governance Capabilities",
+    items: [
+      {
+        title: "Cyber Risk Assessment & Management",
+        description:
+          "Identify, analyze and prioritize cyber risks using structured, risk-based methodologies aligned with business impact."
+      },
+      {
+        title: "Governance Framework Design",
+        description:
+          "Establish roles, policies, decision models and oversight structures that align security with organizational strategy."
+      },
+      {
+        title: "Regulatory Compliance Management",
+        description:
+          "Support compliance with GDPR, HIPAA, PCI DSS, ISO 27001, NIST CSF, SOC and industry-specific mandates."
+      },
+      {
+        title: "Policy & Control Development",
+        description:
+          "Design and maintain security policies, procedures and control frameworks that are practical, enforceable and auditable."
+      },
+      {
+        title: "Third-Party & Vendor Risk Management",
+        description:
+          "Assess and manage risks introduced by vendors, partners and supply chains."
+      },
+      {
+        title: "Risk Monitoring & Reporting",
+        description:
+          "Provide dashboards, metrics and executive-level reporting for continuous risk visibility."
+      },
+      {
+        title: "Audit & Assurance Support",
+        description:
+          "Prepare organizations for internal and external audits with documented controls and evidence-ready processes."
+      },
+      {
+        title: "Security Awareness & Governance Training",
+        description:
+          "Enable teams and leadership to understand their roles in managing risk and maintaining compliance."
+      }
+    ]
+  }
+];

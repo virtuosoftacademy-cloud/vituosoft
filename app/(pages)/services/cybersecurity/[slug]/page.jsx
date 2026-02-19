@@ -10,8 +10,8 @@ import Blogs from '@/app/(pages)/blogs/page';
 import Success from '../../common/Success';
 import Faq from '@/components/common/Faq';
 import Engage from '../../common/Engage';
-import { CyberAssessmentsEmpower, CyberAssessmentsHero, CyberSecurityDeploymentEmpower, CyberSecurityDeploymentHero, GovernanceComplianceEmpower, GovernanceComplianceHero, ManagedCyberSecurityEmpower, ManagedCyberSecurityHero, stepsDataCyberAssessments, stepsDataCyberSecurityDeployment, stepsDataGovernanceCompliance, stepsDataManagedCyberSecurity, valueDataCyberAssessments, valueDataCyberSecurityDeployment, valueDataGovernanceCompliance, valueDataManagedCyberSecurity } from '../constant';
-import { Faq_CyberSecurity_CyberAssessment, Faq_CyberSecurity_GovernanceCompliance, Faq_CyberSecurity_SecurityDeployment, Faq_CyberSecurityManagedCybersecurity } from '@/app/_constant';
+import { CyberAssessmentsEmpower, CyberAssessmentsHero, CyberSecurityDeploymentEmpower, CyberSecurityDeploymentHero, GovernanceComplianceEmpower, GovernanceComplianceHero, ManagedCyberSecurityEmpower, ManagedCyberSecurityHero,CyberRiskManagementEmpower,CyberRiskManagementHero, stepsDataCyberAssessments, stepsDataCyberSecurityDeployment, stepsDataGovernanceCompliance, stepsDataManagedCyberSecurity,stepsDataRiskManagement, valueDataCyberAssessments, valueDataCyberSecurityDeployment, valueDataGovernanceCompliance, valueDataManagedCyberSecurity,valueRiskManagement } from '../constant';
+import { Faq_CyberSecurity_CyberAssessment, Faq_CyberSecurity_GovernanceCompliance, Faq_CyberSecurity_SecurityDeployment, Faq_CyberSecurityManagedCybersecurity,Faq_CyberSecurity_RiskManagement } from '@/app/_constant';
 
 
 // ────────────────────────────────────────────────
@@ -94,21 +94,21 @@ const services = [
     ],
   },
   {
-    slug: 'managed-cybersecurity-service',
-    title: 'Managed Cybersecurity Service',
-    heroData: ManagedCyberSecurityHero,
-    value: valueDataManagedCyberSecurity[0],
-    timeLine: stepsDataManagedCyberSecurity[0],
-    Data: ManagedCyberSecurityEmpower[0],
+    slug: 'risk-management',
+    title: 'Risk Management Service',
+    heroData: CyberRiskManagementHero,
+    value: valueRiskManagement[0],
+    timeLine: stepsDataRiskManagement[0],
+    Data: CyberRiskManagementEmpower[0],
     sections: [
-      { Component: Hero, props: ManagedCyberSecurityHero },
-      { Component: ValueSection, props: valueDataManagedCyberSecurity[0] },
+      { Component: Hero, props: CyberRiskManagementHero },
+      { Component: ValueSection, props: valueRiskManagement[0] },
       { Component: Success },
-      { Component: TimeLine, props: stepsDataManagedCyberSecurity[0] },
-      { Component: Empower, props: ManagedCyberSecurityEmpower[0] },
+      { Component: TimeLine, props: stepsDataRiskManagement[0] },
+      { Component: Empower, props: CyberRiskManagementEmpower[0] },
       { Component: Blogs },
       { Component: Engage },
-      { Component: Faq, props: { items: Faq_CyberSecurityManagedCybersecurity } },
+      { Component: Faq, props: { items: Faq_CyberSecurity_RiskManagement } },
       { Component: Cta },
     ],
   },
