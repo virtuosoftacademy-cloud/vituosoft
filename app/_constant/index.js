@@ -60,7 +60,8 @@ export const services_Nav = [
       {label:"Solution Deployment and Management",href:"/services/cybersecurity/solution-deployment"},
       {label:"Governance and Compliance",href:"/services/cybersecurity/governance-and-compliance"},
       {label:"Cyber Assessments",href:"/services/cybersecurity/cyber-assessments"},
-      {label:"Managed Cybersecurity Service",href:"/services/cybersecurity/managed-cybersecurity-service"}
+      {label:"Managed Cybersecurity Service",href:"/services/cybersecurity/managed-cybersecurity-service"},
+      {label:"Risk Management & Governance",href:"/services/cybersecurity/risk-management"}
     ]
   },
   {
@@ -337,8 +338,8 @@ export const teamMembers = [
   },
   {
     name: "Amir Akhtar Jamili",
-    role: "Director Cyber Security and IT - Governance",
-    description: "Mr. Amir Akhtar Jamili is a Senior Consultant at Virtuosoft Private Limited, specializing in information security and business continuity. With over 18 years of experience, he has worked with leading multinational and national IT companies across various domains including cybersecurity, IT services, governance, and disaster management. He holds multiple professional certifications and is pursuing a Ph.D. in Cyber Security from Management and Science University Malaysia. Mr. Jamili has been recognized with several prestigious awards, including the CISO Cyber Sentinels Award (2023, 2024) and the CIO 200 Award over the past five years.",
+    role: "Director Cybersecurity and IT - Governance",
+    description: "Mr. Amir Akhtar Jamili is a Senior Consultant at Virtuosoft Private Limited, specializing in information security and business continuity. With over 18 years of experience, he has worked with leading multinational and national IT companies across various domains including cybersecurity, IT services, governance, and disaster management. He holds multiple professional certifications and is pursuing a Ph.D. in Cybersecurity from Management and Science University Malaysia. Mr. Jamili has been recognized with several prestigious awards, including the CISO Cyber Sentinels Award (2023, 2024) and the CIO 200 Award over the past five years.",
     image: `/${imageBaseUrl}/directorcs.png`,
     linkedin: "https://www.linkedin.com/in/amir-jamili-a3b343a"
   },
@@ -633,6 +634,12 @@ export const cyberCategory = {
       label: "Managed Cybersecurity Service",
       description: "Provide continuous monitoring, threat detection and incident response to safeguard digital assets and maintain resilience.",
       slug:"managed-cybersecurity-service"
+    },
+    {
+      label: "Risk Management & Governance",
+      description: 
+      " A structured approach to identifying, prioritizing and mitigating cyber risks with the governance frameworks, policies and oversight needed to keep security aligned with business goals.",
+      slug:"risk-management"
     }
   ],
 }

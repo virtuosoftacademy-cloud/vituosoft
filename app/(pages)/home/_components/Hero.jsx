@@ -12,11 +12,13 @@ import DarkVeil from "@/components/DarkVeil"
 import HeroImg from '@/public/assets/Images/home/home-bg.png'
 import Threads from "@/components/Threads"
 import FloatingLines from "@/components/FloatingLines"
+import Antigravity from "@/components/Antigravity"
+import Particles from "@/components/Particles"
 
 function Hero() {
   return (
     <>
-      <section className="relative min-h-full md:min-h-screen pt-20 -mt-22">
+      <section className="relative min-h-full md:min-h-screen pt-20 -mt-20">
         <div className="absolute inset-0 -z-10">
           {/* <Image
             src={HeroImg}
@@ -24,7 +26,7 @@ function Hero() {
             className="h-full object-cover"
             fill
           /> */}
-          <div className="h-full">
+          <div className="h-full opacity-80">
             {/* <FloatingLines /> */}
             {/* <DarkVeil
               hueShift={24}
@@ -34,9 +36,23 @@ function Hero() {
               scanlineFrequency={0}
               warpAmount={0}
             /> */}
-            <Threads
+            {/* <Threads
               color={[0.93, 0.26, 0.00]}
               enableMouseInteraction={true}
+            /> */}
+            {/* <Antigravity
+             color="#ee4200"
+            /> */}
+            <Particles
+              particleCount={260}
+              particleSpread={12}
+              speed={0.1}
+              particleColors={["#0212f2", "#0212f2", "#0212f2"]}
+              alphaParticles={false}
+              particleBaseSize={60}
+              sizeRandomness={1}
+              cameraDistance={11}
+              disableRotation={false}
             />
           </div>
         </div>
@@ -76,7 +92,7 @@ function Hero() {
                     />+
                   </div>
                 </div>
-                <div className="relative -top-6 -left-5">
+                <div className="relative -top-4 md:-top-6 -left-5">
                   <Image src={Star} className="max-w-2xl md:size-6" alt="Star Icon" />
                 </div>
                 <div className="font-light text-xs md:text-sm">
@@ -96,7 +112,7 @@ function Hero() {
                     />%
                   </div>
                 </div>
-                <div className="relative -top-6 -left-5">
+                <div className="relative -top-4 md:-top-6 -left-5">
                   <Image src={Fire} className="max-w-2xl md:size-6" alt="Fire Icon" />
                 </div>
                 <div >
@@ -104,7 +120,7 @@ function Hero() {
                 </div>
               </div>
               <div className="flex items-center justify-center lg:-ml-3">
-                <div className="rounded-full bg-linear-[-90deg,white_5%,#D3E2FF] p-2 lg:py-5 lg:px-4 flex-col">
+                <div className="rounded-full bg-linear-[-90deg,white_5%,#D3E2FF] px-2 py-3 lg:py-5 lg:px-4 flex-col">
                   <div className="text-xs md:text-[14px] font-bold">
                     <CountUp
                       from={0}
@@ -116,7 +132,7 @@ function Hero() {
                     />+
                   </div>
                 </div>
-                <div className="relative -top-6 -left-5">
+                <div className="relative -top-3.5 md:-top-6 -left-5">
                   <Image src={Tic} className="max-w-2xl md:size-6" alt="Tic Icon" />
                 </div>
                 <div >
