@@ -55,7 +55,7 @@ export const services_Nav = [
     ],
   },
   {
-    title:"CyberSecurity",
+    title:"Cybersecurity",
     subPages:[
       {label:"Solution Deployment and Management",href:"/services/cybersecurity/solution-deployment"},
       {label:"Governance and Compliance",href:"/services/cybersecurity/governance-and-compliance"},
@@ -605,7 +605,7 @@ export const engineeringCategory = {
   ],
 }
 export const cyberCategory = {
-  title: 'Cyber Security',
+  title: 'Cybersecurity',
   // subtitletop: 'Smart Security That keeps Your Business Resilient',
   subtitlebottom: 'Smart Security That keeps Your Business Resilient',
   accentImage: `/${accentImg}/ed_service.png`,

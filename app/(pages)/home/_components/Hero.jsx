@@ -24,7 +24,7 @@ function Hero() {
             className="h-full object-cover"
             fill
           /> */}
-          <div className="h-full opacity-65">
+          <div className="h-full">
             {/* <FloatingLines /> */}
             {/* <DarkVeil
               hueShift={24}
