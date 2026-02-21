@@ -1,6 +1,6 @@
 
 // Client Logos
-const logoIcon = '/assets/Images/ClientLogo/'
+const logoIcon = 'assets/Images/ClientLogo/'
 export const logos = [
   { src: `${logoIcon}/tarabut.svg`, alt: "Tarabut" },
   { src: `${logoIcon}/neogies.svg`, alt: "Client" },
@@ -92,7 +92,6 @@ export const services_Nav = [
   //   ]
   // }
   // {
-  //   icon: LineChart,
   //   title: "Digital Marketing",
   //   subPages: [
   //     { label: "Content Creation", href: "#" },
@@ -113,65 +112,81 @@ export const services_Nav = [
   // },
 ];
 // Footer Links and Data
-// export const servicesData = [
-//   {
-//     title: 'Advisory',
-//     items: [
-//       { label: 'Discovery Workshop', href:"/" },
-//       { label: 'Technical Feasibility Study', href:"/" },
-//       { label: 'UI/UX Design', href:"/" },
-//       { label: 'Product Strategy and Roadmapping', href:"/" },
-//       { label: 'Digital Transformation', href:"/" },
-//     ],
-//   },
-//   {
-//     title: 'Artificial Intelligence',
-//     items: [
-//       { label: 'AI Workshop', href:"/" },
-//       { label: 'AI PoC & MVP', href:"/" },
-//       { label: 'AI Agents', href:"/" },
-//       { label: 'Generative AI', href:"/" },
-//       { label: 'Data Science & MLOps', href:"/" },
-//     ],
-//   },
-//   {
-//     title: 'Engineering',
-//     items: [
-//       { label: 'Application Development', href:"/" },
-//       { label: 'Application Modernization', href:"/" },
-//       { label: 'POC Development', href:"/" },
-//       { label: 'Cloud Engineering', href:"/" },
-//       { label: 'Product Development', href:"/" },
-//     ],
-//   },
-//   {
-//     title: 'IT Governance',
-//     items: [
-//       { label: 'Regulatory Compliance', href:"/" },
-//       { label: 'Risk Management', href:"/" },
-//       { label: 'ITIL', href:"/" },
-//       { label: 'Resource Augmentation', href:"/" },
-//     ],
-//   },
-//   {
-//     title: 'Digital Marketing',
-//     items: [
-//       { label: 'Content Creation', href:"/" },
-//       { label: 'Social Media Management', href:"/" },
-//       { label: 'Ads Management', href:"/" },
-//       { label: 'Copywriting', href:"/" },
-//       { label: 'Creative Solutions', href:"/" },
-//       { label: 'Video Editing', href:"/" },
-//     ],
-//   },
-//   {
-//     title: 'Business Enablement',
-//     items: [
-//       { label: 'Accounts & Finance', href:"/" },
-//       { label: 'HR & Recruitment', href:"/" },
-//     ],
-//   },
-// ];
+export const FooterData = [
+  {
+    title: "Advisory",
+    subPages: [
+      { label: "Product Strategy & Roadmapping", href: "/services/advisory/product-strategy" },
+      { label: "Digital Transformation", href: "/services/advisory/digital-transformation" },
+    ],
+  },
+  {
+    title: "Artificial Intelligence",
+    subPages: [
+      { label: "AI Agent", href: "/services/ai/ai-agent" },
+      { label: "Generative A.I", href: "/services/ai/generative-ai" },
+      { label: "Data Science & MLOps", href: "/services/ai/data-science" },
+      { label: "Conversational Intelligence", href: "/services/ai/conversational-intelligence" },
+      { label: "Computer Vision", href: "/services/ai/computer-vision" },
+      { label: "Optical Character Recognition", href: "/services/ai/optical-character-recognition" },
+    ],
+  },
+  {
+    title: "Software Engineering",
+    subPages: [
+      { label: "Custom Software Development", href: "/services/softengineering/custom-software-development" },
+      { label: "Application Development (Mobile & Web)", href: "/services/softengineering/app-development" },
+      { label: "Application Modernization", href: "/services/softengineering/app-modernization" },
+      { label: "Database Migration", href: "/services/softengineering/database-migration" },
+      { label: "Third-Party Integrations", href: "/services/softengineering/third-party" },
+    ],
+  },
+  {
+    title:"Cybersecurity",
+    subPages:[
+      {label:"Solution Deployment and Management",href:"/services/cybersecurity/solution-deployment"},
+      {label:"Governance and Compliance",href:"/services/cybersecurity/governance-and-compliance"},
+      {label:"Cyber Assessments",href:"/services/cybersecurity/cyber-assessments"},
+      {label:"Managed Cybersecurity Service",href:"/services/cybersecurity/managed-cybersecurity-service"},
+      {label:"Risk Management & Governance",href:"/services/cybersecurity/risk-management"}
+    ]
+  },
+  {
+    title: "Data Service",
+    subPages: [
+      { label: "Data Strategy Consulting ", href: "/services/dataservices/data-strategy" },
+      { label: "Data Warehouse Solutions", href: "/services/dataservices/data-warehouse" },
+      { label: "Data Analytics & BI", href: "/services/dataservices/data-analytics" },
+    ],
+  },
+  {
+    title: 'IT Governance',
+    subPages: [
+      { label: 'Regulatory Compliance', href:"/services/itgovernance/regulatory-compliance" },
+      { label: 'Governance Framework Development', href:"/services/itgovernance/governance-framework-development" },
+      // { label: 'ITIL', href:"/services/itgovernance/itil" },
+      { label: 'Resource Augmentation', href:"/services/itgovernance/resource-augmentation" },
+    ],
+  },
+  // {
+  //   title: 'Digital Marketing',
+  //   items: [
+  //     { label: 'Content Creation', href:"/" },
+  //     { label: 'Social Media Management', href:"/" },
+  //     { label: 'Ads Management', href:"/" },
+  //     { label: 'Copywriting', href:"/" },
+  //     { label: 'Creative Solutions', href:"/" },
+  //     { label: 'Video Editing', href:"/" },
+  //   ],
+  // },
+  // {
+  //   title: 'Business Enablement',
+  //   items: [
+  //     { label: 'Accounts & Finance', href:"/" },
+  //     { label: 'HR & Recruitment', href:"/" },
+  //   ],
+  // },
+];
 
 // export const secondarySections = [
 //   {

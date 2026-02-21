@@ -132,7 +132,7 @@ export default function Nav() {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-6 p-6 lg:w-[840px] lg:grid-cols-[0.9fr_1.25fr_1fr]">
-                    <ul className="row-span-3 grid gap-1.5">
+                    <ul className="row-span-3 grid">
                       {services_Nav.map((service, index) => (
                         <ServiceItem
                           key={service.title}

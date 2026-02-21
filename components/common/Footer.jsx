@@ -1,5 +1,5 @@
 ' use client'
-import { services_Nav, socialLinks } from '@/app/_constant';
+import { FooterData, services_Nav, socialLinks } from '@/app/_constant';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -42,14 +42,14 @@ Karachi, Pakistan`,
       <div className="max-w-7xl mx-auto">
 
         {/* ROW 1: All main services – mapped from data */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12 mb-16">
-          {services_Nav.map((section) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-16">
+          {FooterData.map((section) => (
             <div key={section.title}>
               <h4 className="text-white uppercase text-xs md:text-lg tracking-wide font-semibold mb-6">
                 {section.title}
               </h4>
               <ul className="space-y-3 text-sm md:text-sm">
-                {section.subPages.map((item) => (
+                {section.subPages?.map((item) => (
                   <li key={item.label}>
                     <Link
                       href={item.href}

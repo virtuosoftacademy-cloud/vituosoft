@@ -204,10 +204,10 @@ function ContactForm() {
                 </div>
             </div>
 
-            <div className="text-center pb-10">
+            {/* <div className="text-center pb-10">
                 <h3 className="text-4xl py-8 font-extrabold tracking-wider">Trusted By</h3>
                 <LogoCloud />
-            </div>
+            </div> */}
 
             {/* Success Popup */}
             {showSuccessPopup && (
