@@ -338,45 +338,48 @@ export const values_Section = [
 const imageBaseUrl = "assets/Images/team";
 export const teamMembers = [
   {
-    name: "M.Lukman",
+    name: "Muhammad Lukman",
     role: "Chairman",
-    description: "Mr. Muhammad Lukman, Chairman of Virtuosoft, served as the Chief Executive Officer (CEO) of the National Clearing Company of Pakistan Limited.",
+    description: "Muhammad Lukman is an established business leader with over 30 years of experience guiding organizations through financial, operational, and technology driven transformation. His career includes two decades as CEO of NCCPL and early professional grounding at PwC. He is recognized for shaping governance frameworks, strengthening financial systems, and steering complex change across large scale enterprises",
     image: `/${imageBaseUrl}/lukman.png`,
     linkedin: "https://www.linkedin.com/in/muhammad-lukman-888288116"
   },
   {
     name: "Shoaib Ur Rehman",
     role: "Chief Executive Officer",
-    description: "Shoaib Ur Rehman, CEO of Virtuosoft, brings over 20 years of expertise in Software Development, Cloud Computing, Big Data, and Open Source solutions.",
+    description: 
+    "Shoaib ur Rehman is a seasoned technology leader and enterprise innovator with over 20 years of experience delivering large-scale digital solutions across Pakistan, the UAE, MENA and global markets. As Chief Executive Officer of Virtuosoft, he leads the firm’s strategic vision, technology roadmap and delivery operations, guiding organizations through cloud modernization, data-driven transformation and human-centered system design.",
     image: `/${imageBaseUrl}/ceo.png`,
     linkedin: "https://www.linkedin.com/in/shoaib-rehman-226b621a"
   },
   {
     name: "Amir Akhtar Jamili",
     role: "Director Cybersecurity and IT - Governance",
-    description: "Mr. Amir Akhtar Jamili is a Senior Consultant at Virtuosoft Private Limited, specializing in information security and business continuity. With over 18 years of experience, he has worked with leading multinational and national IT companies across various domains including cybersecurity, IT services, governance, and disaster management. He holds multiple professional certifications and is pursuing a Ph.D. in Cybersecurity from Management and Science University Malaysia. Mr. Jamili has been recognized with several prestigious awards, including the CISO Cyber Sentinels Award (2023, 2024) and the CIO 200 Award over the past five years.",
+    description: "Amir Jamili is a senior cybersecurity executive with 18 years of experience building national grade security programs across financial and regulated sectors. As CISO and Secretary of the NCCPL IT Board, he has delivered major advancements in information security governance, enterprise resilience, and AI driven automation. Amir is widely recognized in the region for elevating cybersecurity maturity across critical institutions.",
     image: `/${imageBaseUrl}/directorcs.png`,
     linkedin: "https://www.linkedin.com/in/amir-jamili-a3b343a"
   },
   {
     name: "Azhar Rizvi",
     role: "Chief Operating Officer",
-    description: "Mr. Azher, an MBA graduate from SZABIST University, Dubai, is a seasoned Regional Marketing Manager with a strong background in market segm…",
+    description: 
+    "Azhar Rizvi brings 15 years of leadership experience across the Middle East, West Africa and Asia, specializing in growth operations, market expansion and trade marketing. As COO, he oversees operational strategy, client delivery and organizational performance, helping Virtuosoft scale sustainably across regional markets.",
     image: `/${imageBaseUrl}/azhar-2.png`,
     linkedin: "https://www.linkedin.com/in/azher-rizvi"
 
   },
   {
-    name: "Usman ur rehman",
-    role: "Director of IT Governance and Services",
-    description:"Usman ur Rehman is the Director of Software Quality Assurance Services at Virtuosoft. He leads the QA department with a strong focus on product reliability, performance and defect prevention. With a sharp eye for detail and deep testing expertise, he ensures that all software meets high quality standards before delivery. Known for his dedication and responsibility, Usman is trusted for handling critical testing, bug detection and overall quality assurance across projects.",
+    name: "Usman Ur Rehman",
+    role: "Director of IT Governance",
+    description:
+    "Usman is a seasoned technology leader with more than 6 years of experience in IT Governance, elevating service quality and transforming operations in enterprise environments. His background spans software quality assurance, DevOps practices, service optimization and governance frameworks, enabling him to guide organizations toward reliable, scalable and well governed technology ecosystems.",
     image: `/${imageBaseUrl}/Usman-Ur-Rehman.png`,
     linkedin: "https://www.linkedin.com/in/usman-ur-rehman-64b67223/"
   },
   {
     name: "Syed Ibrahim Ahmed",
     role: "Head of HR",
-    description: "With over 13 years of experience, Syed Ibrahim is a distinguished HR Manager known for his strategic leadership and contributions to organizational grow…",
+    description: "Ibrahim Ahmed is the Head of HR at Virtuosoft with strong experience and professional certifications in human resource management. He focuses on talent management, organizational development and building effective HR policies. With solid skills in communication, team leadership and strategic planning, he works to create a positive and inclusive work environment. His goal is to support Virtuosoft's growth by aligning HR strategies with the company's vision, values and long-term objectives.",
     image: `/${imageBaseUrl}/Ibrahim.png`,
     linkedin: "https://www.linkedin.com/in/syedibrahimahmed-hr/"
   },
