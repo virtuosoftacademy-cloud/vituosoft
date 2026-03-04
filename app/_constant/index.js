@@ -20,8 +20,8 @@ export function getSpotlightVideo(title) {
     "Software Engineering": "/4.png",
     "CyberSecurity":"/8.png",
     "Data Service": "/5.png",
-    // "Solutions": "6.png",
-    // "Expertise": "7.png",
+    "Solutions": "6.png",
+    "Expertise": "7.png",
   };
   return videoMap[title] || "/5.png";
 }
@@ -72,25 +72,25 @@ export const services_Nav = [
       { label: "Data Analytics & BI", href: "/services/dataservices/data-analytics" },
     ],
   },
-  // {
-  //   title:"Solutions",
-  //   subPages:[
-  //     {label:"ERP solutions",href:"#"},
-  //     {label:"BMC helix",href:"#"},
-  //     {label:"microsoft dynamics 365",href:"#"},
-  //     {label:"Manage Engine",href:"#"},
-  //   ]
-  // },
-  // {
-  //   title:"Expertise",
-  //   subPages:[
-  //     // {label:"IT governance",href:"#"},
-  //     // {label:"cybersecurity",href:"#"},
-  //     {label:"RPA",href:"#"},
-  //     {label:"DevOps",href:"#"},
-  //     // {label:"IT service Management",href:"#"},
-  //   ]
-  // }
+  {
+    title:"Solutions",
+    subPages:[
+      {label:"ERP solutions",href:"#"},
+      {label:"BMC helix",href:"#"},
+      {label:"microsoft dynamics 365",href:"#"},
+      {label:"Manage Engine",href:"#"},
+    ]
+  },
+  {
+    title:"Expertise",
+    subPages:[
+      // {label:"IT governance",href:"#"},
+      // {label:"cybersecurity",href:"#"},
+      {label:"RPA",href:"/services/Expertise/rpa"},
+      {label:"DevOps",href:"/services/Expertise/devops"},
+      // {label:"IT service Management",href:"#"},
+    ]
+  }
   // {
   //   title: "Digital Marketing",
   //   subPages: [
@@ -2348,5 +2348,148 @@ export const Faq_ITGovernance_ResourceAugmentation = [
     question: "What if the resource isn’t the right fit?",
     answer:
       "We replace them immediately at no extra cost. Our talent success team stays involved to ensure you always have the perfect match for your project."
+  }
+];
+
+export const Faq_Expertise_RPA = [
+  {
+    value: "item-1",
+    question: "What is Robotic Process Automation?",
+    answer:
+      "RPA is a technology that uses software robots to automate repetitive, rule-based digital tasks, allowing your team to focus on strategic work while improving accuracy and efficiency."
+  },
+  {
+    value: "item-2",
+    question: "How does RPA differ from traditional automation?",
+    answer:
+      "RPA mimics human actions at the interface level without complex coding, making it faster to deploy and easier to modify than traditional system-integrated automation."
+  },
+  {
+    value: "item-3",
+    question: "What processes are ideal for RPA automation?",
+    answer:
+      "Ideal processes include data entry, report generation, invoice processing, CRM updates and any high-volume repetitive computer-based tasks prone to human error."
+  },
+  {
+    value: "item-4",
+    question: "How long does typical RPA implementation take?",
+    answer:
+      "Most processes can be automated within 2-6 weeks, from initial assessment to full deployment and user training for your team."
+  },
+  {
+    value: "item-5",
+    question: "Will RPA work with our current software systems?",
+    answer:
+      "Yes. RPA integrates at the user interface level, working seamlessly with your existing ERP, CRM and other applications without requiring system modifications."
+  },
+  {
+    value: "item-6",
+    question: "What ROI can we expect from RPA implementation?",
+    answer:
+      "Businesses typically see 30-50% cost reduction in automated processes with full ROI achieved within 6-12 months through increased productivity and error reduction."
+  },
+  {
+    value: "item-7",
+    question: "How do you ensure RPA security?",
+    answer:
+      "We implement role-based access controls, comprehensive audit trails and data encryption to ensure your automated processes meet strict security standards."
+  },
+  {
+    value: "item-8",
+    question: "Can RPA scale with our business needs?",
+    answer:
+      "Yes, our RPA solutions are designed for easy scaling, allowing you to add new processes or increase bot capacity as your business requirements evolve."
+  },
+  {
+    value: "item-9",
+    question: "How does RPA benefit our employees?",
+    answer:
+      "RPA eliminates mundane tasks, enabling your staff to focus on higher-value activities like customer service, analysis and strategic initiatives that drive growth."
+  },
+  {
+    value: "item-10",
+    question: "What ongoing support do you provide?",
+    answer:
+      "We offer continuous monitoring, performance optimization and process updates to ensure your RPA solutions remain effective as your business evolves."
+  }
+];
+export const Faq_Expertise_DEVOPs = [
+  {
+    value: "item-1",
+    question: "What is DevOps?",
+    answer:
+      "DevOps combines development and operations to accelerate software delivery through automation, collaboration and continuous improvement throughout the application lifecycle."
+  },
+  {
+    value: "item-2",
+    question: "How does DevOps benefit our organization?",
+    answer:
+      "DevOps increases deployment frequency by up to 200%, reduces failure rates and accelerates time-to-market while maintaining superior code quality and system reliability."
+  },
+  {
+    value: "item-3",
+    question: "What's the difference between Agile and DevOps?",
+    answer:
+      "Agile focuses on development methodology, while DevOps extends this to include operations, creating a continuous delivery pipeline from code to customer."
+  },
+  {
+    value: "item-4",
+    question: "What tools and technologies do you implement?",
+    answer:
+      "We specialize in Jenkins for CI/CD, Docker for containerization, Kubernetes for orchestration, Terraform for infrastructure and comprehensive monitoring solutions."
+  },
+  {
+    value: "item-5",
+    question: "How does DevOps improve deployment reliability?",
+    answer:
+      "Our automated CI/CD pipelines ensure consistent, repeatable deployments with built-in testing and rollback capabilities that dramatically reduce human error."
+  },
+  {
+    value: "item-6",
+    question: "What is CI/CD and why is it crucial?",
+    answer:
+      "Continuous Integration and Continuous Deployment automate building, testing and releasing software, enabling frequent, reliable updates with minimal manual intervention."
+  },
+  {
+    value: "item-7",
+    question: "How do you help transform our team culture?",
+    answer:
+      "We foster collaboration between development and operations through shared goals, automated processes and blameless post-mortems that encourage continuous learning."
+  },
+  {
+    value: "item-8",
+    question: "What is Infrastructure as Code (IaC)?",
+    answer:
+      "IaC manages your infrastructure through machine-readable configuration files, enabling version control, repeatability and disaster recovery in minutes instead of days."
+  },
+  {
+    value: "item-9",
+    question: "How does DevOps optimize cloud costs?",
+    answer:
+      "Through automated scaling, resource optimization and continuous monitoring, we typically reduce cloud spending by 20-35% while improving performance."
+  },
+  {
+    value: "item-10",
+    question: "What security practices do you implement?",
+    answer:
+      "We embed security throughout the pipeline (DevSecOps) with automated scanning, compliance checks and security testing at every stage of development."
+  },
+  {
+    value: "item-11",
+    question: "Can DevOps work for our non-technical teams?",
+    answer:
+      "Yes, DevOps principles of automation, measurement and continuous improvement can transform any operational process, not just software development."
+  },
+  {
+    value: "item-12",
+    question: "How do you measure DevOps success?",
+    answer:
+      "We track key metrics including deployment frequency, lead time for changes, mean time to recovery and change failure rate to demonstrate clear ROI."
+  },
+  {
+    value: "item-13",
+    question: "What's your implementation approach?",
+    answer:
+      "We begin with an assessment, then implement in phases starting with CI/CD, followed by infrastructure automation and ongoing optimization based on your goals."
   }
 ];
