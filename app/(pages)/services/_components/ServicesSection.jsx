@@ -1,7 +1,7 @@
 
 
 import ServiceCard from "./ServiceCard"
-import { advisoryCategory, aiCategory, cloudCategory, cyberCategory, dataServicesCategory, engineeringCategory, itCategory} from "@/app/_constant"
+import { advisoryCategory, aiCategory, cloudCategory, cyberCategory, engineeringCategory, itCategory} from "@/app/_constant"
 
 
 export default function ServicesSection() {

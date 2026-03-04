@@ -32,7 +32,7 @@ export const teamMembers = [
     {
         name: "Amir Akhtar Jamili",
         role: "Director Cyber Security and IT - Governance",
-        description: "Mr. Amir Akhtar Jamili is a Senior Consultant at Virtuosoft Private Limited, specializing in information security and business continuity. With over 18 years of experience, he has worked with leading multinational and national IT companies across various domains including cybersecurity, IT services, governance, and disaster management. He holds multiple professional certifications and is pursuing a Ph.D. in Cyber Security from Management and Science University Malaysia. Mr. Jamili has been recognized with several prestigious awards, including the CISO Cyber Sentinels Award (2023, 2024) and the CIO 200 Award over the past five years.",
+        description: "Amir Jamili is a senior cybersecurity executive with 18 years of experience building national grade security programs across financial and regulated sectors. As CISO and Secretary of the NCCPL IT Board, he has delivered major advancements in information security governance, enterprise resilience, and AI driven automation. Amir is widely recognized in the region for elevating cybersecurity maturity across critical institutions.",
         image: `/${imageBaseUrl}/directorcs.png`,
         linkedin: "https://www.linkedin.com/in/amir-jamili-a3b343a"
     },
@@ -412,6 +412,91 @@ export const engagementCategory = {
         }
     ],
 }
+
+export const dataServicesCategory = {
+    title: 'Data Services',
+    subtitletop: 'Turning Complex Data Into Valuable Insights',
+    subtitlebottom: 'We help organizations unlock the full value of their data by building scalable architectures, implementing advanced analytics and enabling data-driven decision-making across the enterprise.',
+    accentImage: `/${accentImg}/em_models_service.png`,
+    textColor: 'text-white',
+    bgColor: 'bg-linear-to-br from-[#8F6982]/90 to-[#33004A]',
+    imagePosition: "top-0 right-0",
+    services: [
+        {
+            label: 'Data Strategy Consulting',
+            description: "Develop actionable data strategies that align with business goals, maximize value and drive informed decision-making."
+        },
+        {
+            label: "Data Warehousing",
+            description: "Design and manage centralized data storage solutions to enable efficient access, integration and reporting."
+        },
+        {
+            label: "Data Analytics and BI",
+            description: "Transform raw data into insights through analytics and business intelligence for smarter, data-driven decisions."
+        },
+        {
+            label: "Databricks as a Service (DBaaS)",
+            description: "SaaS-grade data platforms built on Databricks at up to 1/3rd the cost. We implement, operate and optimize scalable lakehouse architectures using Databricks and best-fit tools, avoiding vendor lock-in while ensuring performance, flexibility and ownership."
+        }
+    ],
+}
+
+export const itCategory = {
+    title: 'IT Governance',
+    subtitletop: 'Structured Governance That Strengthens Control And Accountability',
+    subtitlebottom: 'We help organizations establish strong governance foundations that enhance transparency, accountability and strategic alignment between technology initiatives and business objectives.',
+    accentImage: `/${accentImg}/em_models_service.png`,
+    textColor: 'text-white',
+    bgColor: 'bg-linear-to-br from-[#8F6982]/90 to-[#33004A]',
+    imagePosition: "top-0 right-0",
+    services: [
+        {
+            label: 'Regulatory Compliance',
+            description: "Ensure business operations meet industry regulations, standards and legal requirements to maintain trust and avoid penalties."
+        },
+        {
+            label: "Governance Framework Development",
+            description: "Design and implement structured IT governance frameworks to align technology strategy with business objectives efficiently."
+        },
+        {
+            label: "Resource Augmentation",
+            description: "Provide skilled IT professionals and expertise to support projects, optimize performance and achieve business goals."
+        }
+    ],
+}
+
+export const cyberCategory = {
+    title: 'Cybersecurity & OT Security',
+    subtitletop: 'Securing Industrial & Digital Environments',
+    subtitlebottom: 'Virtuosoft offers comprehensive OT security services to safeguard industrial environments, including ICS, SCADA, PLCs and operational networks. Our services focus on securing IT–OT convergence, reducing cyber risk and ensuring continuous and safe operations. We align OT security implementations with industry standards and regulatory requirements while minimizing disruption to critical systems.',
+    accentImage: `/${accentImg}/em_models_service.png`,
+    textColor: 'text-white',
+    bgColor: 'bg-linear-to-br from-[#8F6982]/90 to-[#33004A]',
+    imagePosition: "top-0 right-0",
+    services: [
+        {
+            label: 'Security Solution Deployment',
+            description: "Implement and manage security solutions to protect systems, networks and data from evolving cyber threats."
+        },
+        {
+            label: "Governance & Compliance",
+            description: "Establish policies and controls ensuring IT security practices meet regulatory standards and organizational requirements."
+        },
+        {
+            label: "Vulnerability Assessment & Penetration Testing",
+            description: "Conduct comprehensive VAPT evaluations of systems, networks and processes to identify vulnerabilities and strengthen defenses."
+        },
+        {
+            label: "Managed Cybersecurity Service",
+            description: "Provide continuous monitoring, threat detection and incident response to safeguard digital assets and maintain resilience."
+        },
+        {
+            label: "Risk Management & Governance",
+            description: "Identify, assess and mitigate technical, operational, security and compliance risks across digital initiatives. This includes data security, system dependencies, scalability risks, vendor lock-in, process failures and regulatory exposure. Our approach ensures startups build on safe foundations while enterprises maintain resilience, governance and long-term operational trust."
+        }
+    ],
+}
+
 
 // Services Page What Make Us Different? Section
 const iconDifferent = "assets/Images/service"
