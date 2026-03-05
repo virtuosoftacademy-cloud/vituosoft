@@ -8,10 +8,10 @@ import Src from '@/public/assets/Images/service/ai_data_service.png'
 export default function Hero(heroData ) {
     const { title, topDescription, bottomDescription, btnTitle } = heroData
     return (
-        <div className={`px-6 md:px-10 lg:px-16 xl:px-30`}>
+        <div className="px-6 md:px-10 lg:px-0 xl:px-0 flex justify-center">
             <section
                 className=
-                {`relative 
+                {`relative w-full lg:w-[67%]
         py-10 md:py-20 px-10 md:px-20 lg:px-32 
         text-left 
         overflow-hidden 

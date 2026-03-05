@@ -60,8 +60,8 @@ export default function Nav() {
   return () => window.removeEventListener("scroll", handleScroll);
 }, [lastScrollY, mobileOpen]);
 
-  const bg_animation =
-    "px-0 lg:px-10 w-[85%] bg-foreground rounded-2xl top-8 text-white shadow-[0_12px_35px_rgba(0,0,0,0.25)]";
+const bg_animation =
+"mx-auto w-[96%] md:w-[92%] lg:w-[75%] xl:w-[57%] lg:px-0 xl:px-1 bg-foreground rounded-xl top-6 text-white shadow-[0_12px_35px_rgba(0,0,0,0.25)]";
 
   function ServiceItem({ service, isActive, onHover }) {
     return (
@@ -90,12 +90,12 @@ export default function Nav() {
   return (
     <nav
       className={cn(
-        "sticky z-50 w-full mx-auto transition-all duration-500 max-w-7xl bg-transparent py-8 shadow-none",
+        "sticky z-50 w-full mx-auto transition-all duration-500 max-w-7xl bg-transparent mt-4 py-3 shadow-none",
         scrolled && bg_animation,
         NavHidden && "-translate-y-[160%]", // fully hides including shadow & rounded corners
       )}
     >
-      <div className="flex items-center justify-between px-6 lg:px-0 -my-2">
+      <div className="flex items-center justify-between px-6 lg:px-4 xl:px-0 -my-2">
         {/* Logo */}
         <Link href="/">
           {scrolled ? (
@@ -120,14 +120,14 @@ export default function Nav() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-10">
-          <Link href="/about-us" className="font-medium hover:text-primary transition-colors">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-10">
+          <Link href="/about-us" className="font-medium px-3 py-2 hover:text-primary transition-colors">
             About Us
           </Link>
-          <NavigationMenu>
-            <NavigationMenuList>
+          <NavigationMenu className="flex items-center">
+            <NavigationMenuList className="flex items-center">
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="hover:text-primary transition-colors">
+                <NavigationMenuTrigger className="px-3 py-2 hover:text-primary transition-colors">
                   <Link href="/services">Services</Link>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -196,10 +196,10 @@ export default function Nav() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <Link href="/team" className="font-medium hover:text-primary transition-colors">
+          <Link href="/team" className="font-medium px-3 py-2 hover:text-primary transition-colors">
             Our Team
           </Link>
-          <Link href="/careers" className="font-medium hover:text-primary transition-colors">
+          <Link href="/careers" className="font-medium px-3 py-2 hover:text-primary transition-colors">
             Careers
           </Link>
         </div>
@@ -327,7 +327,7 @@ export default function Nav() {
               Careers
             </Link>
 
-            <Button size="lg" className="w-full max-w-sm" asChild>
+            <Button asChild size="lg" className="hidden lg:flex rounded-2xl">
               <Link href="/contact">Book a Consultation</Link>
             </Button>
           </div>

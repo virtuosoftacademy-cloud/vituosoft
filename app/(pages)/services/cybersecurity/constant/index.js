@@ -17,7 +17,7 @@
     {
       titleParts: [
         "When Is It Time to Strengthen Cybersecurity Through ",
-        { text: "Expert Deployment & Management?", bold: true }
+        { text: "Expert Deployment & Management", bold: true }
       ],
       valueItems: [
         {
@@ -413,7 +413,7 @@
     {
       titleParts: [
         "When Are Cyber Assessments ",
-        { text: "Critical for Business Security?", bold: true }
+        { text: "Critical for Business Security", bold: true }
       ],
       valueItems: [
         {
@@ -629,7 +629,7 @@
     {
       titleParts: [
         "When Are Managed Cybersecurity Services ",
-        { text: "Essential for Your Organization?", bold: true }
+        { text: "Essential for Your Organization", bold: true }
       ],
       valueItems: [
         {
@@ -850,7 +850,7 @@
     {
       titleParts: [
         "When Do You Need ",
-        { text: "Risk Management & Governance?", bold: true }
+        { text: "Risk Management & Governance", bold: true }
       ],
       valueItems: [
         {

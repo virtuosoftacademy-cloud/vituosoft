@@ -2,7 +2,7 @@
 // Hero
 export const RpaHero = {
   title: 'Robotic Process Automation (RPA) Transformation',
-  topDescription: 'RPA (Robotic Process Automation)',
+  topDescription: 'Expertise',
   bottomDescription:
     'At Virtuosoft, we empower enterprises to reimagine workflows through intelligent automation using Robotic Process Automation (RPA). ' +
     'By integrating cognitive bots and optimizing repetitive processes, businesses achieve greater accuracy, efficiency and compliance with scalable and resilient automation solutions.',
@@ -182,7 +182,7 @@ export const RpaEmpower = [
 // Hero
 export const DevOpsHero = {
   title: 'DevOps Transformation & Implementation',
-  topDescription: 'DevOps',
+  topDescription: 'Expertise',
   bottomDescription:
     'DevOps combines development and operations to accelerate software delivery through automation, collaboration ' +
     'and continuous improvement throughout the application lifecycle.',

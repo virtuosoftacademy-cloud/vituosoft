@@ -20,10 +20,10 @@ export function getSpotlightVideo(title) {
     "Software Engineering": "/4.png",
     "CyberSecurity":"/8.png",
     "Data Service": "/5.png",
-    "Solutions": "6.png",
-    "Expertise": "7.png",
+    "Solutions": "/6.png",
+    "Expertise": "/7.png",
   };
-  return videoMap[title] || "/5.png";
+  return videoMap[title] || "/8.png";
 }
 export const services_Nav = [
   {
@@ -75,10 +75,10 @@ export const services_Nav = [
   {
     title:"Solutions",
     subPages:[
-      {label:"ERP solutions",href:"#"},
-      {label:"BMC helix",href:"#"},
-      {label:"microsoft dynamics 365",href:"#"},
-      {label:"Manage Engine",href:"#"},
+      {label:"ERP solutions",href:"/services/Solutions/erp"},
+      {label:"BMC helix",href:"/services/Solutions/bmc-helix"},
+      {label:"microsoft dynamics 365",href:"/services/Solutions/microsoft-360"},
+      {label:"Manage Engine",href:"/services/Solutions/manage-engine"},
     ]
   },
   {
@@ -2492,4 +2492,246 @@ export const Faq_Expertise_DEVOPs = [
     answer:
       "We begin with an assessment, then implement in phases starting with CI/CD, followed by infrastructure automation and ongoing optimization based on your goals."
   }
+];
+export const Faq_Dynamics = [
+  {
+    value: "item-1",
+    question: "What is Microsoft Dynamics?",
+    answer:
+      "Microsoft Dynamics is an integrated business platform that unifies your CRM and ERP systems to manage customers, operations, finance and sales in one intelligent solution.",
+  },
+  {
+    value: "item-2",
+    question: "How can Dynamics transform our business?",
+    answer:
+      "It streamlines operations, provides real-time customer insights, automates sales processes and delivers actionable analytics that drive growth and operational excellence.",
+  },
+  {
+    value: "item-3",
+    question: "Will Dynamics integrate with our current tools?",
+    answer:
+      "Yes, Dynamics seamlessly connects with Office 365, Power BI and your existing business applications through robust APIs and pre-built connectors.",
+  },
+  {
+    value: "item-4",
+    question: "Is Dynamics suitable for growing businesses?",
+    answer:
+      "Yes. Dynamics scales perfectly from startups to enterprises with flexible modules that grow with your evolving business needs and complexity.",
+  },
+  {
+    value: "item-5",
+    question: "How secure is our data in Dynamics?",
+    answer:
+      "Microsoft's enterprise-grade security protects your data with advanced encryption, compliance certifications and granular access controls that meet global standards.",
+  },
+  {
+    value: "item-6",
+    question: "What training and support do you provide?",
+    answer:
+      "We offer comprehensive training, detailed documentation and ongoing technical support to ensure your team maximizes value from day one.",
+  },
+  {
+    value: "item-7",
+    question: "What's the typical implementation timeline?",
+    answer:
+      "Most implementations complete within 8-16 weeks, with phased rollouts that deliver value quickly while minimizing business disruption.",
+  },
+  {
+    value: "item-8",
+    question: "Can we customize Dynamics for our industry?",
+    answer:
+      "Yes, we tailor industry-specific solutions for manufacturing, retail, healthcare and professional services with customized workflows and reporting.",
+  },
+  {
+    value: "item-9",
+    question: "How does Dynamics support remote teams?",
+    answer:
+      "The cloud-based platform enables secure access from anywhere, with mobile apps and collaboration tools that keep distributed teams connected and productive.",
+  },
+  {
+    value: "item-10",
+    question: "How do we start our Dynamics journey?",
+    answer:
+      "Begin with our discovery workshop to identify your key requirements and develop a phased implementation roadmap tailored to your business goals.",
+  },
+];
+export const Faq_Helix = [
+  {
+    value: "item-1",
+    question: "What is BMC Helix in simple terms?",
+    answer:
+      "BMC Helix is a cloud-based platform that helps businesses manage IT services, operations and automation using AI.",
+  },
+  {
+    value: "item-2",
+    question: "Is BMC Helix only for large enterprises?",
+    answer:
+      "No. While it supports large-scale operations, it’s flexible and suitable for mid-sized organizations as well.",
+  },
+  {
+    value: "item-3",
+    question: "How long does a Helix implementation take?",
+    answer:
+      "Most implementations take 8–16 weeks, depending on scope, customization and integrations.",
+  },
+  {
+    value: "item-4",
+    question: "Can Helix integrate with tools we already use?",
+    answer:
+      "Yes. Helix integrates with ServiceNow, Jira, AWS, Azure, CMDBs and many enterprise applications.",
+  },
+  {
+    value: "item-5",
+    question: "Does BMC Helix support cloud, on-prem, or hybrid?",
+    answer:
+      "It is cloud-native but can integrate with on-prem and hybrid infrastructures.",
+  },
+  {
+    value: "item-6",
+    question: "What ITSM features does Helix offer?",
+    answer:
+      "Incident, problem, change, asset, service catalog, knowledge management and automation.",
+  },
+  {
+    value: "item-7",
+    question: "Does Helix include AIOps capabilities?",
+    answer:
+      "Yes. It provides anomaly detection, event correlation, root-cause analysis and predictive monitoring.",
+  },
+  {
+    value: "item-8",
+    question: "Can we migrate from a legacy BMC system?",
+    answer:
+      "Yes. We offer structured migration from BMC Remedy ITSM and earlier products.",
+  },
+  {
+    value: "item-9",
+    question: "Will training be provided for our teams?",
+    answer:
+      "Yes, we provide hands-on training, documentation and change enablement sessions.",
+  },
+  {
+    value: "item-10",
+    question: "Is BMC Helix secure?",
+    answer:
+      "Yes. It includes strong access control, encrypted data, compliance reporting and audit trails.",
+  },
+];
+export const Faq_ERP = [
+  {
+    value: "item-1",
+    question: "What is an ERP system?",
+    answer:
+      "An ERP system helps manage all major business operations, like finance, HR, sales and inventory, in one single platform.",
+  },
+  {
+    value: "item-2",
+    question: "How do I know if my business needs an ERP?",
+    answer:
+      "If you're using multiple tools, facing data inconsistencies or dealing with manual processes, it might be time for an ERP.",
+  },
+  {
+    value: "item-3",
+    question: "How long does an ERP implementation take?",
+    answer:
+      "Typically 3–9 months depending on business size, number of modules and customization needed.",
+  },
+  {
+    value: "item-4",
+    question: "Can ERP work for small businesses too?",
+    answer:
+      "Yes. Modern ERP systems are scalable and flexible, making them ideal for small and midsize companies.",
+  },
+  {
+    value: "item-5",
+    question: "Will ERP replace all my existing software?",
+    answer:
+      "Not necessarily. ERP can integrate with many tools you already use, eliminating the need for complete replacement.",
+  },
+  {
+    value: "item-6",
+    question: "What kind of ERP systems do you work with?",
+    answer:
+      "We support a range of ERP platforms including cloud, on-premise and custom-built ERP systems.",
+  },
+  {
+    value: "item-7",
+    question: "Is training included in the implementation process?",
+    answer:
+      "Yes, we provide full training and documentation to ensure your team is confident using the system.",
+  },
+  {
+    value: "item-8",
+    question: "What happens after ERP goes live?",
+    answer:
+      "We offer continuous support, updates and improvements to keep your ERP running smoothly.",
+  },
+  {
+    value: "item-9",
+    question: "Will ERP help improve reporting and analytics?",
+    answer:
+      "Yes. ERP consolidates data and provides real-time dashboards for faster, more accurate decisions.",
+  },
+  {
+    value: "item-10",
+    question: "Is security a concern with ERP systems?",
+    answer:
+      "We implement strict access controls, encryption and monitoring to keep your data protected and compliant.",
+  },
+];
+export const Faq_ManageEngine = [
+  {
+    value: "item-1",
+    question: "What is ManageEngine used for?",
+    answer:
+      "ManageEngine is a suite of IT management tools for service management, security, identity governance, endpoint control, monitoring and automation.",
+  },
+  {
+    value: "item-2",
+    question: "Is ManageEngine suitable for small businesses?",
+    answer:
+      "Yes, it scales from small businesses to large enterprises with flexible modules.",
+  },
+  {
+    value: "item-3",
+    question: "Can ManageEngine integrate with our existing IT tools?",
+    answer:
+      "Yes, ManageEngine integrates with Active Directory, HR systems, monitoring tools, cloud apps and third-party platforms.",
+  },
+  {
+    value: "item-4",
+    question: "Can you customize ManageEngine to fit our workflows?",
+    answer:
+      "Yes. We tailor automation, forms, SLAs, permissions, templates and dashboards to match your exact processes.",
+  },
+  {
+    value: "item-5",
+    question: "Does ManageEngine work for remote teams?",
+    answer:
+      "Yes. Endpoint Central, MDM and remote access tools support distributed devices and users.",
+  },
+  {
+    value: "item-6",
+    question: "Is ManageEngine secure?",
+    answer:
+      "Yes, it offers encryption, auditing, access controls, MFA and compliance-ready logging.",
+  },
+  {
+    value: "item-7",
+    question: "How long does implementation take?",
+    answer:
+      "Typically 2–10 weeks depending on the modules and complexity.",
+  },
+  {
+    value: "item-8",
+    question: "Can you help with compliance requirements?",
+    answer:
+      "Yes, we set up auditing, reporting and access controls for ISO, GDPR, HIPAA, SOC and other standards.",
+  },
+  {
+    value: "item-9",
+    question: "Do you provide ongoing support?",
+    answer:
+      "Yes, we offer managed services, optimization, monitoring and extended technical support.",
+  },
 ];
