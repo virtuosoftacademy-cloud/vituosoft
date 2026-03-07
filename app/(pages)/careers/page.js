@@ -1,25 +1,23 @@
 'use client'
 import React from 'react'
-import Hero from './_components/Hero'
 import { ReactLenis } from 'lenis/react'
-import Cta from '@/components/common/Cta'
+import Hero from './_components/Hero'
 import Collaboration from './_components/Collaboration'
-import Job from './_components/Job'
+import JobList from './_components/JobList' // New import
+import Cta from '@/components/common/Cta'
 
 function Careers() {
   return (
-    <>
-      <div className='mx-auto'>
-        <ReactLenis root>
-          <Hero />
-          <Collaboration/>
-          {/* <Job/> */}
-          <div className='pt-10'>
+    <main className='mx-auto bg-white'>
+      <ReactLenis root>
+        <Hero />
+        <Collaboration />
+        <JobList /> {/* This handles all titles and job cards */}
+        <div className='pt-10'>
           <Cta />
-          </div>
-        </ReactLenis>
-      </div>
-    </>
+        </div>
+      </ReactLenis>
+    </main>
   )
 }
 

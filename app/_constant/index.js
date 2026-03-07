@@ -2735,3 +2735,116 @@ export const Faq_ManageEngine = [
       "Yes, we offer managed services, optimization, monitoring and extended technical support.",
   },
 ];
+// Add/Update this in /app/_constant/index.js
+
+export const careersHeader = {
+    title: "Career Jobs At",
+    company: "Virtuosoft",
+};
+
+export const jobListings = [
+    {
+        id: "devops-engineer",
+        title: "DevOps Engineer",
+        type: "Full-time",
+        location: "In person",
+        shortDesc: "Architect and manage cloud infrastructure on AWS and OCI. Lead CI/CD, Kubernetes, and IaC automation.",
+        fullDescription: "As a DevOps Engineer at Virtuosoft, you will be responsible for designing, deploying, maintaining, and improving our cloud infrastructure. You’ll manage containerized environments, CI/CD pipelines, and ensure robust networking and security practices.",
+        requirements: [
+            "5+ years of professional experience as a DevOps Engineer",
+            "Proven experience managing Docker and Kubernetes in production",
+            "Expertise in Terraform and Infrastructure as Code (IaC)",
+            "Strong networking knowledge (VPNs, IPsec tunnels, firewalls)",
+            "Proficiency in Bash and/or Python scripting",
+            "Experience with AWS and Oracle Cloud Infrastructure (OCI)"
+        ],
+        benefits: ["Market Competitive Salary", "Complimentary Lunch", "Medical Coverage", "Growth Opportunities"]
+    },
+    {
+        id: "crm-power-apps-developer",
+        title: "Dynamics 365 CRM & Power Apps Developer",
+        type: "Full-time",
+        location: "Remote",
+        shortDesc: "Design and implement customized CRM solutions using Dynamics 365, Power Platform, and Azure integrations.",
+        fullDescription: "We are seeking a skilled developer to customize CRM components, develop plugins, and integrate Dynamics 365 with third-party systems using Web APIs and Power Automate.",
+        requirements: [
+            "3+ years of post-degree experience in Microsoft Dynamics CRM / 365",
+            "Strong expertise in .NET, C#, and Microsoft platform technologies",
+            "Hands-on experience with Power Automate, Power Apps, and Power BI",
+            "Experience with data migration (SSIS, KingswaySoft)",
+            "Knowledge of Azure services and REST APIs"
+        ],
+        benefits: ["Remote Work Mode", "Shift: 6:00 PM – 3:00 AM", "Competitive Salary", "Professional Growth"]
+    },
+    {
+        id: "lead-backend-engineer",
+        title: "Lead Backend Engineer",
+        type: "Full-time",
+        location: "In person",
+        shortDesc: "Lead NestJS microservices architecture, MongoDB optimization, and AWS/EKS cloud-native deployments.",
+        fullDescription: "Take ownership of backend systems, design scalable distributed solutions, and collaborate with cross-functional teams to deliver high-performance applications using NestJS and Node.js.",
+        requirements: [
+            "3–5 years of professional experience in backend development",
+            "Strong hands-on experience with NestJS, Node.js, and TypeScript",
+            "Proficiency with MongoDB schema design and performance tuning",
+            "Hands-on experience with AWS, Docker, and Kubernetes (EKS)",
+            "Experience integrating APIs like Stripe, Algolia, and Meta SDKs"
+        ],
+        benefits: ["Market Competitive Salary", "Complimentary Lunch", "Medical Coverage", "Cutting-edge Tech Stack"]
+    },
+    {
+        id: "digital-marketing-specialist",
+        title: "Digital Marketing Specialist",
+        type: "Full-time",
+        location: "On-site",
+        shortDesc: "Drive growth through direct response copywriting, paid media (Meta/Google/TikTok), and marketing automation.",
+        fullDescription: "The ideal candidate is an expert at blending direct response copywriting, paid media campaigns, and marketing automation to drive leads and conversions.",
+        requirements: [
+            "2–4 years of proven experience in performance marketing",
+            "Expertise in Meta Ads, Google Ads, and TikTok Ads",
+            "Strong direct-response copywriting skills for ads and sales funnels",
+            "Familiarity with Zapier and CRM automation (HubSpot, etc.)",
+            "Analytical mindset to track CTR, ROAS, and CPA"
+        ],
+        benefits: ["Market Competitive Salary", "Complimentary Lunch", "Medical Coverage", "Flexible Working Hours"]
+    },
+    {
+        id: "creative-graphic-designer",
+        title: "Creative Graphic Designer",
+        type: "Full-time",
+        location: "In person",
+        shortDesc: "Versatile visual storyteller designing for digital, social media, branding, and print platforms.",
+        fullDescription: "We are looking for a generalist designer comfortable working across multiple mediums—from branding and logos to digital ads and motion graphics.",
+        requirements: [
+            "3+ years of proven work experience in graphic design",
+            "Expert knowledge of Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
+            "Experience with Canva, Figma, or Sketch",
+            "Understanding of typography, color theory, and branding",
+            "Basic motion graphics or video editing is a plus"
+        ],
+        benefits: ["Market Competitive Salary", "Complimentary Lunch", "Medical Coverage", "Creative Environment"]
+    },
+    {
+        id: "data-engineer-analyst",
+        title: "Data Engineer / Data Analyst",
+        type: "Full-time",
+        location: "In person (Karachi)",
+        shortDesc: "Build scalable ETL pipelines, optimize data models, and create BI dashboards using Python and SQL.",
+        fullDescription: "Collect, process, and analyze large datasets to provide actionable insights. You will build ETL/ELT pipelines and maintain dashboards in Power BI or Tableau.",
+        requirements: [
+            "5+ years of experience in Data Engineering or Data Analysis",
+            "Strong SQL and Python skills",
+            "Experience with ETL/ELT pipelines and cloud platforms (AWS/Azure/GCP)",
+            "Proficiency in Power BI, Tableau, or Looker",
+            "Knowledge of Big Data (Spark, Airflow, Snowflake) is preferred"
+        ],
+        benefits: ["Competitive Salary", "Complimentary Lunch", "Medical Coverage", "Growth & Learning Environment"]
+    }
+];
+
+export const openApp = {
+    title: "Open application",
+    type: "Full-time",
+    location: "Doha, QA",
+    shortDesc: "Don't see your role available? Apply for an open application!"
+};
