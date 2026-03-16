@@ -88,7 +88,6 @@ export const services_Nav = [
       // {label:"cybersecurity",href:"#"},
       {label:"RPA",href:"/services/Expertise/rpa"},
       {label:"DevOps",href:"/services/Expertise/devops"},
-      // {label:"IT service Management",href:"#"},
     ]
   }
   // {
@@ -168,6 +167,24 @@ export const FooterData = [
       { label: 'Resource Augmentation', href:"/services/itgovernance/resource-augmentation" },
     ],
   },
+   {
+    title: 'Solutions',
+    subPages: [
+      { label: 'ERP Solutions', href:"/services/Solutions/erp" },
+      { label: 'BMC Hleix', href:"/services/Solutions/bmc-helix" },
+      { label: 'Microsoft Dynamics 365', href:"/services/Solutions/microsoft-360" },
+      { label: 'Manage Engine', href:"/services/Solutions/manage-engine" },
+    ],
+  },
+    {
+    title: 'Expertise',
+    subPages: [
+      { label: 'RPA', href:"/services/Expertise/rpa" },
+      { label: 'DevOps', href:"/services/Expertise/devops" },
+    ],
+  },
+  
+  
   // {
   //   title: 'Digital Marketing',
   //   items: [
@@ -2738,113 +2755,120 @@ export const Faq_ManageEngine = [
 // Add/Update this in /app/_constant/index.js
 
 export const careersHeader = {
-    title: "Career Jobs At",
+    title: "Opportunities At",
     company: "Virtuosoft",
 };
 
 export const jobListings = [
     {
-        id: "devops-engineer",
-        title: "DevOps Engineer",
+        id: "junior-data-engineer",
+        title: "Junior Data Engineer",
+        department: "Data Science",
         type: "Full-time",
-        location: "In person",
-        shortDesc: "Architect and manage cloud infrastructure on AWS and OCI. Lead CI/CD, Kubernetes, and IaC automation.",
-        fullDescription: "As a DevOps Engineer at Virtuosoft, you will be responsible for designing, deploying, maintaining, and improving our cloud infrastructure. You’ll manage containerized environments, CI/CD pipelines, and ensure robust networking and security practices.",
+        location: "On-Site",
+        fullDescription: "We are looking for a Junior Data Engineer with strong logical thinking and fast query-writing ability to support the development of data pipelines, ETL processes and reporting systems. This role is ideal for someone passionate about data engineering, SQL optimization and cloud-based data platforms.",
         requirements: [
-            "5+ years of professional experience as a DevOps Engineer",
-            "Proven experience managing Docker and Kubernetes in production",
-            "Expertise in Terraform and Infrastructure as Code (IaC)",
-            "Strong networking knowledge (VPNs, IPsec tunnels, firewalls)",
-            "Proficiency in Bash and/or Python scripting",
-            "Experience with AWS and Oracle Cloud Infrastructure (OCI)"
+            "6 to 18 months of experience in Data Engineering or a related role",
+            "Fast and efficient SQL query writing ability",
+            "Basic to intermediate Python programming skills",
+            "Understanding of data warehousing principles",
+            "Knowledge of ETL/ELT processes and data pipelines",
+            "Familiarity with Power BI for reporting and dashboards",
+            "Basic knowledge of AWS services (EC2, Lambda, Redshift) or GCP"
         ],
-        benefits: ["Market Competitive Salary", "Complimentary Lunch", "Medical Coverage", "Growth Opportunities"]
+        benefits: ["Market Competitive Salary", "Growth Opportunities", "Data Systems Training", "9:30 AM to 6:30 PM shift"]
     },
     {
-        id: "crm-power-apps-developer",
-        title: "Dynamics 365 CRM & Power Apps Developer",
-        type: "Full-time",
+        id: "frontend-developer-angularjs",
+        title: "Frontend Developer (Angular-JS)",
+        department: "Engineering",
+        type: "Evening Shift",
         location: "Remote",
-        shortDesc: "Design and implement customized CRM solutions using Dynamics 365, Power Platform, and Azure integrations.",
-        fullDescription: "We are seeking a skilled developer to customize CRM components, develop plugins, and integrate Dynamics 365 with third-party systems using Web APIs and Power Automate.",
+        fullDescription: "We are looking for a skilled Frontend Developer with strong expertise in AngularJS (1.x) to develop and maintain dynamic web applications. The ideal candidate has deep JavaScript knowledge, strong UI development skills, and the ability to optimize performance across browsers and devices.",
         requirements: [
-            "3+ years of post-degree experience in Microsoft Dynamics CRM / 365",
-            "Strong expertise in .NET, C#, and Microsoft platform technologies",
-            "Hands-on experience with Power Automate, Power Apps, and Power BI",
-            "Experience with data migration (SSIS, KingswaySoft)",
-            "Knowledge of Azure services and REST APIs"
+            "4+ years of relevant professional experience required",
+            "Strong hands-on experience with AngularJS (1.x)",
+            "Proficiency in JavaScript, jQuery, HTML5, CSS3, JSON",
+            "Experience with responsive frameworks like Bootstrap",
+            "Effective use of $httpProvider, promises, and deferred objects",
+            "Strong understanding of frontend security and session handling",
+            "Ability to work in an evening shift"
         ],
-        benefits: ["Remote Work Mode", "Shift: 6:00 PM – 3:00 AM", "Competitive Salary", "Professional Growth"]
-    },
-    {
-        id: "lead-backend-engineer",
-        title: "Lead Backend Engineer",
-        type: "Full-time",
-        location: "In person",
-        shortDesc: "Lead NestJS microservices architecture, MongoDB optimization, and AWS/EKS cloud-native deployments.",
-        fullDescription: "Take ownership of backend systems, design scalable distributed solutions, and collaborate with cross-functional teams to deliver high-performance applications using NestJS and Node.js.",
-        requirements: [
-            "3–5 years of professional experience in backend development",
-            "Strong hands-on experience with NestJS, Node.js, and TypeScript",
-            "Proficiency with MongoDB schema design and performance tuning",
-            "Hands-on experience with AWS, Docker, and Kubernetes (EKS)",
-            "Experience integrating APIs like Stripe, Algolia, and Meta SDKs"
-        ],
-        benefits: ["Market Competitive Salary", "Complimentary Lunch", "Medical Coverage", "Cutting-edge Tech Stack"]
-    },
-    {
-        id: "digital-marketing-specialist",
-        title: "Digital Marketing Specialist",
-        type: "Full-time",
-        location: "On-site",
-        shortDesc: "Drive growth through direct response copywriting, paid media (Meta/Google/TikTok), and marketing automation.",
-        fullDescription: "The ideal candidate is an expert at blending direct response copywriting, paid media campaigns, and marketing automation to drive leads and conversions.",
-        requirements: [
-            "2–4 years of proven experience in performance marketing",
-            "Expertise in Meta Ads, Google Ads, and TikTok Ads",
-            "Strong direct-response copywriting skills for ads and sales funnels",
-            "Familiarity with Zapier and CRM automation (HubSpot, etc.)",
-            "Analytical mindset to track CTR, ROAS, and CPA"
-        ],
-        benefits: ["Market Competitive Salary", "Complimentary Lunch", "Medical Coverage", "Flexible Working Hours"]
+        benefits: ["Remote Work Mode", "Evening Shift", "Market Competitive Salary", "Scalable Product Environment"]
     },
     {
         id: "creative-graphic-designer",
         title: "Creative Graphic Designer",
+        department: "Creative & Design",
         type: "Full-time",
-        location: "In person",
-        shortDesc: "Versatile visual storyteller designing for digital, social media, branding, and print platforms.",
-        fullDescription: "We are looking for a generalist designer comfortable working across multiple mediums—from branding and logos to digital ads and motion graphics.",
+        location: "On-Site",
+        fullDescription: "We are looking for a proactive Creative Generalist who can design for brands, build UX-focused web layouts and support video production workflows. This role blends visual design, UX/UI thinking and video editing support, with a strong emphasis on ownership and delivery discipline.",
         requirements: [
-            "3+ years of proven work experience in graphic design",
-            "Expert knowledge of Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
-            "Experience with Canva, Figma, or Sketch",
-            "Understanding of typography, color theory, and branding",
-            "Basic motion graphics or video editing is a plus"
+            "2 to 3 years of relevant professional experience",
+            "Ability to design across multiple brands and platforms",
+            "Experience in UX/UI thinking for web layouts",
+            "Support for video production and editing workflows",
+            "Strong emphasis on ownership and communication",
+            "Design, Media or related degree preferred"
         ],
-        benefits: ["Market Competitive Salary", "Complimentary Lunch", "Medical Coverage", "Creative Environment"]
+        benefits: ["Market Competitive Salary", "Professional Creative Team", "On-site Perks", "9:30 AM to 6:30 PM shift"]
     },
     {
-        id: "data-engineer-analyst",
-        title: "Data Engineer / Data Analyst",
-        type: "Full-time",
-        location: "In person (Karachi)",
-        shortDesc: "Build scalable ETL pipelines, optimize data models, and create BI dashboards using Python and SQL.",
-        fullDescription: "Collect, process, and analyze large datasets to provide actionable insights. You will build ETL/ELT pipelines and maintain dashboards in Power BI or Tableau.",
+        id: "microsoft-dynamics-365-crm",
+        title: "Microsoft Dynamics 365 CRM",
+        department: "IT Services",
+        type: "Full-time (EST Shift)",
+        location: "Remote",
+        fullDescription: "We are looking for a skilled Microsoft Dynamics 365 CRM & Power Apps Developer to design, customize and implement high-impact CRM solutions. The ideal candidate excels in Dynamics 365 integrations, Power Platform tools and scalable enterprise solutions.",
         requirements: [
-            "5+ years of experience in Data Engineering or Data Analysis",
-            "Strong SQL and Python skills",
-            "Experience with ETL/ELT pipelines and cloud platforms (AWS/Azure/GCP)",
-            "Proficiency in Power BI, Tableau, or Looker",
-            "Knowledge of Big Data (Spark, Airflow, Snowflake) is preferred"
+            "Strong experience in Dynamics 365 CRM customization and integration",
+            "Proficiency in .NET, C#, JavaScript and Microsoft technologies",
+            "Hands-on expertise with Power Platform tools (Power Automate, Power BI)",
+            "Experience in data migration (SSIS, KingswaySoft or equivalent)",
+            "Understanding of Azure services, APIs and cloud integrations",
+            "Willingness to work in EST Time Zone (6 PM to 2:30 AM)"
         ],
-        benefits: ["Competitive Salary", "Complimentary Lunch", "Medical Coverage", "Growth & Learning Environment"]
+        benefits: ["Remote Work", "Cutting-edge Microsoft Tech", "Enterprise IT exposure", "Competitive Salary"]
+    },
+    {
+        id: "devops-engineer",
+        title: "DevOps Engineer",
+        department: "IT Services",
+        type: "Full-time",
+        location: "On-site",
+        fullDescription: "As a DevOps Engineer at Virtuosoft, you'll design, deploy and maintain robust cloud infrastructure using modern DevOps practices. You'll collaborate with development teams to implement secure, scalable and highly available systems.",
+        requirements: [
+            "3+ years of professional experience in DevOps",
+            "Architect and manage AWS/OCI infrastructure using Terraform",
+            "Manage Kubernetes, Docker and CI/CD pipelines (GitHub Actions)",
+            "Configure networking, VPNs and security settings",
+            "Monitor systems using Prometheus, Datadog and ELK Stack",
+            "Automation skills with Bash/Python"
+        ],
+        benefits: ["Market Competitive Salary", "Kubernetes Environment", "Security Hardening exposure", "Cloud Certifications support"]
+    },
+    {
+        id: "dotnet-developer",
+        title: ".NET Developer",
+        department: "Engineering",
+        type: "Contract (1 Year)",
+        location: "Karachi (Remote/On-site)",
+        fullDescription: "As a .NET Developer at Virtuosoft, you’ll design, develop and maintain enterprise-grade applications using modern Microsoft technologies. You’ll collaborate with cross-functional teams to deliver secure, scalable and high-quality software solutions.",
+        requirements: [
+            "5+ years of relevant professional experience",
+            "Expertise in .NET / .NET Core, ASP.NET, C#, MVC, and MVVM",
+            "Build and integrate RESTful APIs and OData services",
+            "Design and optimize SQL Server queries and stored procedures",
+            "Implement Identity Management using Active Directory/ADFS",
+            "Source control management using TFS"
+        ],
+        benefits: ["1 Year Renewable Contract", "Enterprise-level projects", "Evening Shift (6 PM – 2:30 AM)", "Modern Microsoft Stack"]
     }
 ];
 
 export const openApp = {
     title: "Open application",
     type: "Full-time",
-    location: "Doha, QA",
+    location: "Karachi",
     shortDesc: "Don't see your role available? Apply for an open application!"
 };

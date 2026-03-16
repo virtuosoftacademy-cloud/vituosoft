@@ -1,36 +1,54 @@
+'use client'
 import Link from 'next/link';
+import { ArrowRight } from "lucide-react";
 
-export default function JobCard({ job, isOpenApp = false }) {
+export default function JobCard({ job, isOpenApp = false, variant = "featured" }) {
     if (!job) return null;
 
+    const destination = isOpenApp ? `/contact` : `/careers/${job.id}`;
+
+    // Conditional styling based on variant
+    const isCompact = variant === "compact";
+
     return (
-        <div className="relative group overflow-hidden rounded-2xl mb-6 shadow-[0_10px_25px_rgba(0,0,0,0.02)]">
-            {/* 1. THE BORDER LAYER */}
-            {isOpenApp ? (
-                <div className="absolute inset-0 rounded-2xl border-2 border-dashed border-primary pointer-events-none" />
-            ) : (
-                <div className="pointer-events-none absolute inset-0 rounded-2xl bg-linear-to-b from-primary to-white p-0.5">
-                    <div className="h-full w-full rounded-[14px] bg-white" />
-                </div>
-            )}
+        <Link href={destination} className="block h-full group">
+            {/* Changed items-center to items-start to fix top-heavy alignment */}
+            <div className={`relative bg-white border border-slate-200 rounded-lg transition-all duration-300 hover:shadow-lg hover:border-blue-400 flex justify-between items-start h-full 
+                ${isCompact ? 'p-5 min-h-[130px]' : 'p-8 min-h-[180px]'}`}
+            >
+                {/* Left Side: Text Content */}
+                {/* Added pr-12 to ensure title doesn't hit the arrow */}
+                <div className="flex flex-col text-left pr-12">
+                    {/* Compact tag logic */}
+                    {isCompact && (
+                        <span className="text-[10px] font-bold text-slate-400 mb-1 leading-none">
+                            {job.type || "Full time"}
+                        </span>
+                    )}
 
-            {/* 2. THE CONTENT LAYER */}
-            <div className="relative z-10 p-8 md:p-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 bg-white/50">
-                <div className="max-w-3xl">
-                    <h3 className="text-2xl font-bold text-black mb-1">{job.title}</h3>
-                    <p className="font-mono text-sm text-gray-400 uppercase tracking-widest mb-4">
-                        {job.type} • {job.location}
+                    {/* Title styling */}
+                    <h3 className={`font-bold text-slate-800 leading-tight group-hover:text-blue-600 transition-colors
+                        ${isCompact ? 'text-[17px] mb-2' : 'text-xl md:text-2xl mb-3'}`}
+                    >
+                        {job.title}
+                    </h3>
+                    
+                    {/* Location styling */}
+                    <p className={`text-slate-500 font-normal
+                        ${isCompact ? 'text-sm' : 'text-lg'}`}
+                    >
+                        {job.location}
                     </p>
-                    <p className="text-gray-600 leading-relaxed">{job.shortDesc}</p>
                 </div>
 
-                <Link 
-                    href={isOpenApp ? `/contact` : `/careers/${job.id}`}
-                    className="bg-black text-white px-8 py-3 rounded font-mono text-sm hover:bg-gray-800 transition-all shrink-0"
-                >
-                    {isOpenApp ? "Apply now" : "View role"}
-                </Link>
+                {/* Right Side: Arrow Icon */}
+                {/* Added mt-1 to align arrow with the first line of the title */}
+                <div className="shrink-0 mt-1">
+                    <ArrowRight className={`text-blue-600 transition-transform duration-300 group-hover:translate-x-2 
+                        ${isCompact ? 'size-5' : 'size-6'}`} 
+                    />
+                </div>
             </div>
-        </div>
+        </Link>
     );
 }

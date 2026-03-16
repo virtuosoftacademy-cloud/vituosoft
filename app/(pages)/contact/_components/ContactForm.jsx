@@ -1,205 +1,307 @@
 'use client'
 
-import { useState, useRef, Suspense } from 'react'
+import { useState, useRef, Suspense, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
-import { Mail, Upload } from "lucide-react"
+import { X, ChevronDown, Video, AlertCircle, Github } from "lucide-react"
+import Captcha from './Captcha'
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
-// Constants defined outside
-const Project_Type = [
-    { id: 1, label: "$5k - $25K", ProjectValue: "5k_25K" },
-    { id: 2, label: "$25k - $50K", ProjectValue: "25k_50K" },
-    { id: 3, label: "$50k - $100K", ProjectValue: "50k_100K" },
-    { id: 4, label: "$100k +", ProjectValue: "100K_+" },
-]
+const DEPARTMENTS = ["AI", "Engineering", "Finance", "Sales", "Marketing", "Design (UIUX)", "Administration", "IT Services", "Data Science"];
+const JOINING_OPTIONS = ["Immediate", "1 Month", "2 Months", "As soon as possible"];
+const SALUTATIONS = ["Mr.", "Mrs.", "Ms."];
 
 function FormFields() {
     const searchParams = useSearchParams();
-    const preFilledRole = searchParams.get('role') || ""; 
-    
-    const fileInputRef = useRef(null);
+    const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+    const [isAgreed, setIsAgreed] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const roleFromUrl = searchParams.get('role');
+
+    const [errors, setErrors] = useState({});
+
     const [formData, setFormData] = useState({
-        firstName: '',
-        companyName: '',
-        mobile: '',
-        email: '',
-        message: '',
-        budget: '',
-        resume: null
-    })
+        salutation: '', fullName: '', email: '', phone: '', linkedin: '', github: '', city: '',
+        address: '', desiredJoining: '', portfolio: '', loomLink: '',
+        resume: null, applyingFor: roleFromUrl || ""
+    });
 
-    const [errors, setErrors] = useState({})
-    const [showSuccessPopup, setShowSuccessPopup] = useState(false)
-    const [isSubmitting, setIsSubmitting] = useState(false)
+    const salutationRef = useRef(null);
+    const deptDropdownRef = useRef(null);
+    const joiningDropdownRef = useRef(null);
+    const fileInputRef = useRef(null);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target
-        setFormData(prev => ({ ...prev, [name]: value }))
-        if (errors[name]) setErrors(prev => ({ ...prev, [name]: '' }))
-    }
+    const [isSalutationOpen, setIsSalutationOpen] = useState(false);
+    const [isDeptOpen, setIsDeptOpen] = useState(false);
+    const [isJoiningOpen, setIsJoiningOpen] = useState(false);
+    const [selectedDepts, setSelectedDepts] = useState([]);
 
-    const handleFileChange = (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            setFormData(prev => ({ ...prev, resume: file }));
-            setErrors(prev => ({ ...prev, resume: '' }));
+    const validate = () => {
+        let newErrors = {};
+        if (!formData.salutation) newErrors.salutation = "Required";
+        if (!formData.fullName.trim()) newErrors.fullName = "Name is required";
+        if (!formData.phone.trim()) newErrors.phone = "Phone is required";
+        if (!formData.city.trim()) newErrors.city = "City is required";
+        if (!formData.address.trim()) newErrors.address = "Address is required";
+        if (!formData.desiredJoining) newErrors.desiredJoining = "Select joining date";
+        if (selectedDepts.length === 0) newErrors.depts = "Select at least one area";
+        if (!formData.resume) newErrors.resume = "Please upload your resume";
+        // Loom Link Validation (Ab mandatory hai)
+if (!formData.loomLink || !formData.loomLink.trim()) {
+    newErrors.loomLink = "Loom video link is required";
+} else if (!formData.loomLink.includes('loom.com')) {
+    newErrors.loomLink = "Must be a valid Loom link";
+}
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) newErrors.email = "Invalid email address";
+        if (!formData.linkedin.includes('linkedin.com')) newErrors.linkedin = "Enter a valid LinkedIn URL";
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
+    const toggleDepartment = (dept) => {
+        setSelectedDepts(prev =>
+            prev.includes(dept) ? prev.filter(d => d !== dept) : [...prev, dept]
+        );
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (validate()) {
+            setIsSubmitting(true);
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwq-PZjWdHsWKq6MkLx84KXq2D3KoXn5As0yyocFlew1RzmwFpYUA2iowqwNql30vUQ/exec';
+
+            const toBase64 = file => new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = () => resolve(reader.result);
+                reader.onerror = error => reject(error);
+            });
+
+            try {
+                let resumeBase64 = null;
+                if (formData.resume) {
+                    resumeBase64 = await toBase64(formData.resume);
+                }
+
+                const payload = {
+                    salutation: formData.salutation,
+                    fullName: formData.fullName,
+                    email: formData.email,
+                    phone: formData.phone,
+                    linkedin: formData.linkedin,
+                    portfolio: formData.github, 
+                    address: formData.address,
+                    selectedDepts: selectedDepts.join(", "),
+                    city: formData.city,
+                    desiredJoining: formData.desiredJoining,
+                    loomLink: formData.loomLink,
+                    applyingFor: roleFromUrl ? roleFromUrl.replace(/-/g, ' ') : "",
+                    resumeData: resumeBase64,
+                    resumeName: formData.resume ? formData.resume.name : "candidate_resume.pdf"
+                };
+
+                await fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+
+                alert("Application Sent Successfully!");
+                window.location.reload();
+            } catch (error) {
+                console.error("Submission Error!", error);
+                alert("Error: " + error.message);
+            } finally {
+                setIsSubmitting(false);
+            }
         }
-    }
+    };
 
-    const handleBudgetSelect = (value) => {
-        setFormData(prev => ({ ...prev, budget: value }))
-        if (errors.budget) {
-            setErrors(prev => ({ ...prev, budget: '' }))
-        }
-    }
+    useEffect(() => {
+        const handleClick = (e) => {
+            if (salutationRef.current && !salutationRef.current.contains(e.target)) setIsSalutationOpen(false);
+            if (deptDropdownRef.current && !deptDropdownRef.current.contains(e.target)) setIsDeptOpen(false);
+            if (joiningDropdownRef.current && !joiningDropdownRef.current.contains(e.target)) setIsJoiningOpen(false);
+        };
+        document.addEventListener("mousedown", handleClick);
+        return () => document.removeEventListener("mousedown", handleClick);
+    }, []);
 
-    const validateForm = () => {
-        const newErrors = {}
-        if (!formData.firstName.trim()) newErrors.firstName = "First name is required"
-        if (preFilledRole === "" && !formData.companyName.trim()) newErrors.companyName = "Company name is required"
-        if (!formData.mobile.trim()) newErrors.mobile = "Mobile number is required"
-        if (!formData.email.trim()) {
-            newErrors.email = "Email is required"
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-            newErrors.email = "Invalid email format"
-        }
-        if (!formData.message.trim()) newErrors.message = "This field is required"
-        if (preFilledRole === "" && !formData.budget) newErrors.budget = "Please select a budget"
-        if (preFilledRole !== "" && !formData.resume) newErrors.resume = "Please upload your resume"
-
-        setErrors(newErrors)
-        return Object.keys(newErrors).length === 0
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        if (isSubmitting || !validateForm()) return
-        
-        setIsSubmitting(true)
-        setTimeout(() => {
-            setIsSubmitting(false)
-            setShowSuccessPopup(true)
-            setFormData({ firstName: '', companyName: '', mobile: '', email: '', message: '', budget: '', resume: null })
-        }, 1200)
-    }
-
-    // Exact input style from your original UI
-    const inputStyle = "w-full py-3 bg-white outline-0 focus:border-b-ring-2 focus:border-b-primary border-b text-foreground placeholder-foreground/70";
+    const labelStyle = "text-[12px] text-[#646d8c] font-medium block mb-1";
+    const inputBase = "w-full py-2 bg-white outline-0 border rounded-md px-3 text-sm transition-all";
+    const errorText = "text-[10px] text-red-500 mt-1 flex items-center gap-1 font-semibold";
 
     return (
-        <div className="flex justify-center gap-8 py-10">
-            {/* The Main Container with Blue Gradient Border matching your original code */}
-            <div className="group relative rounded-xl text-left bg-white p-12 shadow-[0_10px_25px_rgba(0,0,0,0.05)] overflow-hidden translate-0 max-w-3xl w-full">
-                
-                {/* BLUE GRADIENT BORDER LOGIC (Exactly as your code) */}
-                <div className="pointer-events-none absolute inset-0 rounded-[15px] bg-linear-to-r from-primary/60 to-white p-0.5 -z-10">
-                    <div className="h-full w-full rounded-[13px] bg-white" />
-                </div>
+        <div className="flex flex-col items-center justify-center bg-white pb-20 px-4">
+            <div className="w-full max-w-4xl relative rounded-xl text-left bg-white p-8 md:p-12 shadow-[0_10px_25px_rgba(0,0,0,0.05)] overflow-visible border">
+                <form className="space-y-8" onSubmit={handleSubmit}>
 
-                <form onSubmit={handleSubmit} className="space-y-6 text-sm">
-                    
-                    {/* Pre-filled field (Only for Job Applications) */}
-                    {preFilledRole !== "" && (
-                        <div className="border-b-2 border-primary/20 pb-4 mb-6">
-                            <label className="text-[10px] uppercase text-gray-400 font-bold tracking-widest block mb-1">
-                                Applying For Position
-                            </label>
-                            <div className="text-xl md:text-sm font-normal">
-                                {preFilledRole}
-                            </div>
+                    {roleFromUrl && (
+                        <div className="mb-8">
+                            <label className={labelStyle}>Applying For Position</label>
+                            <input type="text" value={roleFromUrl.replace(/-/g, ' ')} readOnly className={cn(inputBase, "bg-slate-50 border-slate-200 text-black font-bold cursor-not-allowed")} />
                         </div>
                     )}
 
-                    <div className="grid md:grid-cols-1 gap-6">
-                        <div>
-                            <input type="text" name="firstName" value={formData.firstName} placeholder="First Name" onChange={handleChange} className={`${inputStyle} ${errors.firstName ? 'border-red-500' : ''}`} />
-                            {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
+                    <div className="grid md:grid-cols-12 gap-6">
+                        <div className="md:col-span-2 relative" ref={salutationRef}>
+                            <label className={labelStyle}>Salutation*</label>
+                            <div onClick={() => setIsSalutationOpen(!isSalutationOpen)} className={cn("min-h-[42px] border rounded-md p-1.5 flex items-center cursor-pointer", errors.salutation ? "border-red-500 bg-red-50" : "border-slate-300 bg-white")}>
+                                <span className="text-sm ml-1 text-slate-700">{formData.salutation || "-None-"}</span>
+                                <ChevronDown className="ml-auto size-4 text-slate-400" />
+                            </div>
+                            {isSalutationOpen && (
+                                <div 
+                                    className="absolute z-[100] w-full mt-1 bg-white border border-slate-200 rounded-md shadow-lg overflow-y-auto max-h-40"
+                                    onClick={(e) => e.stopPropagation()}
+                                >
+                                    {SALUTATIONS.map(sal => (
+                                        <div key={sal} onClick={() => { setFormData({ ...formData, salutation: sal }); setIsSalutationOpen(false); }} className="px-3 py-2 text-sm hover:bg-blue-50 cursor-pointer text-slate-700">{sal}</div>
+                                    ))}
+                                </div>
+                            )}
                         </div>
 
-                        {preFilledRole === "" && (
-                            <div>
-                                <input type="text" name="companyName" value={formData.companyName} placeholder="Company Name" onChange={handleChange} className={`${inputStyle} ${errors.companyName ? 'border-red-500' : ''}`} />
-                                {errors.companyName && <p className="text-red-500 text-xs mt-1">{errors.companyName}</p>}
+                        <div className="md:col-span-5">
+                            <label className={labelStyle}>Full Name*</label>
+                            <input type="text" onChange={(e) => setFormData({ ...formData, fullName: e.target.value })} className={cn(inputBase, errors.fullName ? "border-red-500 bg-red-50" : "border-slate-300")} />
+                            {errors.fullName && <span className={errorText}>{errors.fullName}</span>}
+                        </div>
+
+                        <div className="md:col-span-5">
+                            <label className={labelStyle}>Phone Number*</label>
+                            <div className="relative flex items-center">
+                                <div className="absolute left-3 flex items-center gap-2 border-r border-slate-200 pr-2 h-5 pointer-events-none">
+                                    <img src="/pak.png" alt="PK" className="h-4 w-auto object-contain" />
+                                    <span className="text-sm font-semibold text-slate-600">+92</span>
+                                </div>
+                                <input type="tel" placeholder="300 1234567" onChange={(e) => setFormData({ ...formData, phone: `+92${e.target.value}` })} className={cn(inputBase, "pl-20", errors.phone ? "border-red-500 bg-red-50" : "border-slate-300")} />
+                            </div>
+                            {errors.phone && <span className={errorText}>{errors.phone}</span>}
+                        </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <label className={labelStyle}>Email*</label>
+                            <input type="email" onChange={(e) => setFormData({ ...formData, email: e.target.value })} className={cn(inputBase, errors.email ? "border-red-500 bg-red-50" : "border-slate-300")} />
+                        </div>
+                        <div>
+                            <label className={labelStyle}>LinkedIn Profile*</label>
+                            <input type="text" onChange={(e) => setFormData({ ...formData, linkedin: e.target.value })} className={cn(inputBase, errors.linkedin ? "border-red-500 bg-red-50" : "border-slate-300")} />
+                        </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <label className={labelStyle}>GitHub Profile (Optional)</label>
+                            <div className="relative">
+                                <input type="text" placeholder="github.com/username" onChange={(e) => setFormData({ ...formData, github: e.target.value })} className={cn(inputBase, "pl-10", "border-slate-300")} />
+                                <Github className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
+                            </div>
+                        </div>
+                        <div>
+                            <label className={labelStyle}>Permanent Address*</label>
+                            <input type="text" onChange={(e) => setFormData({ ...formData, address: e.target.value })} className={cn(inputBase, errors.address ? "border-red-500 bg-red-50" : "border-slate-300")} />
+                        </div>
+                    </div>
+
+                    <div className="relative" ref={deptDropdownRef}>
+                        <label className={labelStyle}>Area of Expertise *</label>
+                        <div onClick={() => setIsDeptOpen(!isDeptOpen)} className={cn("min-h-[42px] border rounded-md p-1.5 flex flex-wrap items-center gap-2 cursor-pointer", errors.depts ? "border-red-500 bg-red-50" : "border-slate-300 bg-white")}>
+                            {selectedDepts.length === 0 && <span className="text-gray-400 text-xs ml-2">Select...</span>}
+                            {selectedDepts.map(dept => (
+                                <div key={dept} className="flex items-center gap-1.5 bg-[#eef2ff] border border-blue-100 text-[#3b82f6] px-3 py-1 rounded-full text-xs font-semibold">
+                                    {dept} <X className="size-3" onClick={(e) => { e.stopPropagation(); toggleDepartment(dept); }} />
+                                </div>
+                            ))}
+                            <ChevronDown className={cn("ml-auto mr-2 size-4 text-slate-400 transition-transform", isDeptOpen && "rotate-180")} />
+                        </div>
+                        {isDeptOpen && (
+                            <div 
+                                className="absolute z-[100] w-full mt-1 bg-white border border-blue-400 rounded-lg shadow-xl max-h-60 overflow-y-auto"
+                                onClick={(e) => e.stopPropagation()}
+                                onWheel={(e) => e.stopPropagation()}
+                            >
+                                {DEPARTMENTS.map(dept => (
+                                    <div key={dept} onClick={() => toggleDepartment(dept)} className={cn("px-4 py-2.5 text-sm cursor-pointer", selectedDepts.includes(dept) ? 'bg-blue-50 text-blue-700 font-bold' : 'hover:bg-slate-50 text-slate-600')}>{dept}</div>
+                                ))}
                             </div>
                         )}
                     </div>
 
-                    <div>
-                        <input type="tel" name="mobile" value={formData.mobile} placeholder="Mobile Number" onChange={handleChange} className={`${inputStyle} ${errors.mobile ? 'border-red-500' : ''}`} />
-                        {errors.mobile && <p className="text-red-500 text-xs mt-1">{errors.mobile}</p>}
-                    </div>
-
-                    <div>
-                        <input type="email" name="email" value={formData.email} placeholder="Email" onChange={handleChange} className={`${inputStyle} ${errors.email ? 'border-red-500' : ''}`} />
-                        {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
-                    </div>
-
-                    {/* Resume Upload logic (Only for Job Applications) */}
-                    {preFilledRole !== "" && (
-                        <div className="py-2">
-                            <label className="text-gray-400 block mb-2 font-bold uppercase text-[10px] tracking-widest">Attach CV / Resume</label>
-                            <div onClick={() => fileInputRef.current.click()} className="border-b py-3 flex items-center justify-between cursor-pointer hover:text-primary transition-all">
-                                <span className={formData.resume ? "text-primary font-bold" : "text-gray-400"}>
-                                    {formData.resume ? formData.resume.name : "Select PDF/Doc file"}
-                                </span>
-                                <Upload className="size-4" />
-                                <input type="file" ref={fileInputRef} onChange={handleFileChange} className="hidden" accept=".pdf,.doc,.docx" />
-                            </div>
-                            {errors.resume && <p className="text-red-500 text-xs mt-1">{errors.resume}</p>}
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <label className={labelStyle}>City*</label>
+                            <input type="text" onChange={(e) => setFormData({ ...formData, city: e.target.value })} className={cn(inputBase, errors.city ? "border-red-500 bg-red-50" : "border-slate-300")} />
                         </div>
-                    )}
-
-                    <div>
-                        <textarea name="message" value={formData.message} rows={3} onChange={handleChange} className={`${inputStyle} ${errors.message ? 'border-red-500' : ''}`} placeholder={preFilledRole !== "" ? "About your experience..." : "Tell me about your project..."} />
-                        {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
+                        <div className="relative" ref={joiningDropdownRef}>
+                            <label className={labelStyle}>Desired Joining*</label>
+                            <div onClick={() => setIsJoiningOpen(!isJoiningOpen)} className={cn("min-h-[42px] border rounded-md p-1.5 flex items-center cursor-pointer", errors.desiredJoining ? "border-red-500 bg-red-50" : "border-slate-300 bg-white")}>
+                                <span className="text-sm ml-2 text-slate-700">{formData.desiredJoining || "Select..."}</span>
+                                <ChevronDown className={cn("ml-auto mr-2 size-4 text-slate-400 transition-transform", isJoiningOpen && "rotate-180")} />
+                            </div>
+                            {isJoiningOpen && (
+                                <div 
+                                    className="absolute z-[100] w-full mt-1 bg-white border border-blue-400 rounded-lg shadow-xl max-h-60 overflow-y-auto"
+                                    onClick={(e) => e.stopPropagation()}
+                                    onWheel={(e) => e.stopPropagation()}
+                                >
+                                    {JOINING_OPTIONS.map(option => (
+                                        <div key={option} onClick={() => { setFormData({ ...formData, desiredJoining: option }); setIsJoiningOpen(false); }} className={cn("px-4 py-2.5 text-sm cursor-pointer", formData.desiredJoining === option ? 'bg-blue-50 text-blue-700 font-bold' : 'hover:bg-slate-50 text-slate-600')}>{option}</div>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                     </div>
 
-                    {preFilledRole === "" && (
-                        <div className="text-foreground/70">
-                            <label>Budget</label>
-                            <div className="mt-6 font-medium text-[15px] tracking-wider space-x-2 flex flex-wrap gap-2">
-                                {Project_Type.map(type => (
-                                    <span 
-                                        key={type.id} 
-                                        onClick={() => handleBudgetSelect(type.ProjectValue)}
-                                        className={`rounded-full border px-4 py-2 cursor-pointer transition-all duration-500 
-                                            ${formData.budget === type.ProjectValue ? 'border-primary text-primary bg-primary/10' : 'hover:border-primary hover:text-primary'}`}
-                                    >
-                                        {type.label}
-                                    </span>
-                                ))}
-                            </div>
-                            {errors.budget && <p className="text-red-500 text-xs mt-2">{errors.budget}</p>}
-                        </div>
-                    )}
+                   <div>
+    <label className={labelStyle}>Why should we hire you? (Loom Video)*</label>
+    <div className="relative">
+        <input 
+            type="url" 
+            placeholder="Share a Loom Video Link" 
+            onChange={(e) => setFormData({ ...formData, loomLink: e.target.value })} 
+            className={cn(inputBase, "pl-10", errors.loomLink ? "border-red-500 bg-red-50" : "border-slate-300")} 
+        />
+        <Video className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
+    </div>
+    {/* Error message display logic */}
+    {errors.loomLink && <span className={errorText}><AlertCircle size={10} /> {errors.loomLink}</span>}
+</div>
 
-                    <button type="submit" disabled={isSubmitting} className="w-full bg-primary hover:bg-primary/90 text-accent font-semibold py-4 rounded-lg transition-colors flex items-center justify-center space-x-2">
-                        <Mail className="h-5 w-5" />
-                        <span>{isSubmitting ? 'Sending...' : (preFilledRole !== "" ? 'Submit Application' : 'Send Message')}</span>
-                    </button>
+                    <div className={cn("relative border-2 border-dashed rounded-xl p-8 text-center", errors.resume ? "border-red-500 bg-red-50" : "border-cyan-400 bg-cyan-50/30")}>
+                        <input type="file" className="hidden" ref={fileInputRef} onChange={(e) => setFormData({ ...formData, resume: e.target.files[0] })} accept=".pdf" />
+                        <div onClick={() => fileInputRef.current.click()} className="cursor-pointer">
+                            <p className="text-blue-600 font-bold mb-1">Upload Your Resume or Drag & Drop</p>
+                            {formData.resume && <p className="mt-2 text-primary font-bold italic">{formData.resume.name}</p>}
+                        </div>
+                    </div>
+
+                    <Captcha onVerify={(status) => setIsCaptchaVerified(status)} />
+
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-6 border-t border-slate-100">
+                        <Button type="submit" size="lg" disabled={!isCaptchaVerified || !isAgreed || isSubmitting} className="active:scale-95 transition-all px-12">
+                            {isSubmitting ? "Sending..." : "Send Application"}
+                        </Button>
+                        <label className="flex items-center gap-2 text-xs text-slate-500 cursor-pointer">
+                            <input type="checkbox" checked={isAgreed} onChange={(e) => setIsAgreed(e.target.checked)} className="accent-blue-600 size-4" />
+                            <span>I agree to the <span className="text-blue-600">Privacy Policy</span></span>
+                        </label>
+                    </div>
                 </form>
             </div>
-
-            {/* Success Popup (Identical to your original code) */}
-            {showSuccessPopup && (
-                <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-                    <div className="bg-white rounded-xl p-10 max-w-md w-[90%] text-center shadow-2xl relative" onClick={e => e.stopPropagation()}>
-                        <button className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-xl" onClick={() => setShowSuccessPopup(false)}>×</button>
-                        <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-green-100 flex items-center justify-center">
-                            <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                        </div>
-                        <h2 className="text-2xl font-bold text-gray-800 mb-3">Thank You!</h2>
-                        <p className="text-gray-600 mb-8">Successfully Sent!</p>
-                        <button onClick={() => setShowSuccessPopup(false)} className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors font-medium">Close</button>
-                    </div>
-                </div>
-            )}
         </div>
     )
 }
 
 export default function ContactForm() {
     return (
-        <Suspense fallback={<div className="h-screen flex items-center justify-center">Loading...</div>}>
+        <Suspense fallback={<div className="h-screen flex items-center justify-center font-mono text-blue-600">Loading Application...</div>}>
             <FormFields />
         </Suspense>
     )
