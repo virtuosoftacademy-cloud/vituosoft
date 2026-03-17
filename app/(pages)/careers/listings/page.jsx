@@ -1,6 +1,7 @@
 'use client'
 import { useState, useMemo } from 'react'
 import { jobListings,openApp } from '@/app/_constant'
+import { ReactLenis } from 'lenis/react';
 import JobCard from '../_components/JobCard'
 
 export default function JobListingPage() {
@@ -27,6 +28,7 @@ export default function JobListingPage() {
     const departments = ["All", ...new Set(jobListings.map(job => job.department))];
 
     return (
+        <ReactLenis root options={{ lerp: 0.1, smooth: true }}>
         <div className="bg-white min-h-screen py-16 px-6 md:px-20">
             <div className="max-w-7xl mx-auto">
                 <header className="text-center mb-12">
@@ -93,5 +95,6 @@ export default function JobListingPage() {
                 </div>
             </div>
         </div>
+    </ReactLenis>
     );
 }

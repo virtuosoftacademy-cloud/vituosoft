@@ -1,5 +1,6 @@
 'use client'
 import { use } from 'react';
+import { ReactLenis } from 'lenis/react';
 import { jobListings, openApp } from "@/app/_constant";
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
@@ -16,6 +17,7 @@ export default function JobDetailPage({ params }) {
 
     if (!job) {
         return (
+            
             <div className="flex flex-col items-center justify-center min-h-screen font-mono">
                 <p className="text-xl mb-4 text-slate-800">Position Not Found</p>
                 <Link href="/careers" className="text-primary underline font-bold">Return to Careers</Link>
@@ -33,6 +35,7 @@ export default function JobDetailPage({ params }) {
     };
 
     return (
+        <ReactLenis root options={{ lerp: 0.1, smooth: true }}>
         <div className="bg-white min-h-screen py-16 px-6 md:px-20">
             <div className="max-w-6xl mx-auto">
                 {/* Back Button */}
@@ -116,5 +119,6 @@ export default function JobDetailPage({ params }) {
                 </div>
             </div>
         </div>
+         </ReactLenis>
     );
 }
