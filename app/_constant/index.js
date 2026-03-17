@@ -37,7 +37,7 @@ export const services_Nav = [
     title: "Artificial Intelligence",
     subPages: [
       { label: "AI Agent", href: "/services/ai/ai-agent" },
-      { label: "Generative A.I", href: "/services/ai/generative-ai" },
+      { label: "Generative AI", href: "/services/ai/generative-ai" },
       { label: "Data Science & MLOps", href: "/services/ai/data-science" },
       { label: "Conversational Intelligence", href: "/services/ai/conversational-intelligence" },
       { label: "Computer Vision", href: "/services/ai/computer-vision" },

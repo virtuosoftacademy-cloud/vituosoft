@@ -15,7 +15,7 @@ export const valueDataRpa = [
   {
     titleParts: [
       "When to Embrace ",
-      { text: "RPA Transformation?", bold: true }
+      { text: "RPA Transformation", bold: true }
     ],
     valueItems: [
       {
@@ -194,7 +194,7 @@ export const valueDataDevOps = [
   {
     titleParts: [
       "Why Your Organization Should Implement ",
-      { text: "DevOps?", bold: true }
+      { text: "DevOps", bold: true }
     ],
     valueItems: [
       {

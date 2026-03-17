@@ -18,7 +18,7 @@ export const valueDataDataStrategy = [
   {
     titleParts: [
       "Why Is a Data Strategy ",
-      { text: "Your Foundation for Growth?", bold: true }
+      { text: "Your Foundation for Growth", bold: true }
     ],
     valueItems: [
       {
